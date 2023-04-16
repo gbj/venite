@@ -455,29 +455,49 @@
       "style": "day"
     },
     {
-      "lookup": { "type": "slug" },
-      "metadata": { "liturgyversions": [] },
-      "slug": "the-angelus",
-      "sharing": {
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "status": "published",
-        "collaborators": [],
-        "privacy": "public",
-        "organization": "venite"
-      },
-      "hidden": false,
-      "source": { "source": "", "api": "", "citation": "" },
-      "language": "en",
-      "type": "liturgy",
       "condition": {
         "conditions": [
           { "preference": { "key": "angelus", "is": true, "value": "before" } }
         ],
         "mode": "and"
       },
-      "version": "Rite-II",
-      "lastRevision": 61,
-      "label": "The Angelus"
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-II",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-II",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "hidden": false,
@@ -1833,28 +1853,49 @@
       }
     },
     {
-      "sharing": {
-        "collaborators": [],
-        "organization": "venite",
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "status": "published"
-      },
-      "slug": "the-angelus",
-      "type": "liturgy",
-      "lastRevision": 61,
-      "metadata": {},
-      "language": "en",
-      "hidden": false,
       "condition": {
-        "mode": "and",
         "conditions": [
-          { "preference": { "is": true, "key": "angelus", "value": "after" } }
-        ]
+          { "preference": { "key": "angelus", "is": true, "value": "after" } }
+        ],
+        "mode": "and"
       },
-      "label": "The Angelus",
-      "lookup": { "type": "slug" },
-      "version": "Rite-II"
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-II",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-II",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "version": "Rite-II",

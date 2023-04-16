@@ -1,5 +1,1919 @@
 [
   {
+    "version_label": null,
+    "version": "loc",
+    "style": "short",
+    "citation": "Salmo 50:14",
+    "language": "es",
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "collaborators": [],
+      "organization": "venite"
+    },
+    "hidden": false,
+    "type": "bible-reading",
+    "label": null,
+    "metadata": {
+      "omit_response": true,
+      "response": null
+    },
+    "value": [
+      {
+        "text": "Sacrifica a Dios alabanza, y paga tus votos al Altísimo."
+      }
+    ],
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "slug": "offertory_1"
+  },
+  {
+    "version": "loc",
+    "slug": "offertory_2",
+    "version_label": null,
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "style": "short",
+    "sharing": {
+      "privacy": "public",
+      "collaborators": [],
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published"
+    },
+    "type": "bible-reading",
+    "citation": "Salmo 96:8",
+    "hidden": false,
+    "language": "es",
+    "value": [
+      {
+        "text": "Rindan al Señor la gloria debida a su Nombre; traigan ofrendas, y entren en sus atrios."
+      }
+    ],
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    },
+    "label": null
+  },
+  {
+    "style": "short",
+    "type": "bible-reading",
+    "value": [
+      {
+        "text": "Si traes tu ofrenda al altar, y allí te acuerdas de que tu hermano tiene algo contra ti, deja allí tu ofrenda delante del altar, y anda, reconcíliate primero con tu h ermano, y entonces ven y presenta tu ofrenda."
+      }
+    ],
+    "hidden": false,
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "version_label": null,
+    "citation": "San Mateo 5:23, 24",
+    "slug": "offertory_5",
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "collaborators": [],
+      "organization": "venite"
+    },
+    "language": "es",
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    },
+    "version": "loc",
+    "label": null
+  },
+  {
+    "hidden": false,
+    "type": "text",
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "language": "es",
+    "version": "loc",
+    "sharing": {
+      "collaborators": [],
+      "privacy": "public",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published"
+    },
+    "value": [
+      "Presentemos al Señor con alegría las ofrendas y oblaciones de nuestra vida y de nuestro trabajo."
+    ],
+    "style": "text",
+    "label": null,
+    "version_label": null,
+    "citation": null,
+    "slug": "offertory_9",
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    }
+  },
+  {
+    "slug": "offertory_3",
+    "sharing": {
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "status": "published",
+      "collaborators": []
+    },
+    "hidden": false,
+    "version": "loc",
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    },
+    "style": "short",
+    "citation": "Efesios 5:2",
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "label": null,
+    "version_label": null,
+    "value": [
+      {
+        "text": "Anden en amor, como también Cristo nos amó, y se entregó a sí mismo por nosotros, ofrenda y sacrificio a Dios."
+      }
+    ],
+    "language": "es",
+    "type": "bible-reading"
+  },
+  {
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    },
+    "citation": "Hebreos 13:14, 15",
+    "version": "loc",
+    "style": "short",
+    "version_label": null,
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public"
+    },
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "slug": "offertory_6",
+    "value": [
+      {
+        "text": "Ofrezcamos siempre a Dios, por medio de Cristo, sacrificio de alabanza, es decir, fruto de labios que confiesan su Nombre. Y de hacer bien y de la ayuda mutua no se olviden; porque de tales sacrificios se agrada Dios."
+      }
+    ],
+    "hidden": false,
+    "label": null,
+    "language": "es",
+    "type": "bible-reading"
+  },
+  {
+    "slug": "offertory_4",
+    "metadata": {
+      "omit_response": true,
+      "response": null
+    },
+    "citation": "Romanos 12:1",
+    "version_label": null,
+    "hidden": false,
+    "value": [
+      {
+        "text": "Hermanos, les ruego por las misericordias de Dios, que presenten sus cuerpos en sacrificio vivo, santo, agradable a Dios, que es su culto racional."
+      }
+    ],
+    "style": "short",
+    "type": "bible-reading",
+    "language": "es",
+    "label": null,
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "sharing": {
+      "collaborators": [],
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "organization": "venite",
+      "status": "published"
+    },
+    "version": "loc"
+  },
+  {
+    "value": [
+      {
+        "text": "Tuya es, oh Señor, la magnificencia y el p oder, la gloria, la victoria y el honor; porque todas las cosas que están en los cielos y en la tierra son tuyas. Tuyo, oh Señor, es el reino, y tú eres excelso sobre todos."
+      }
+    ],
+    "language": "es",
+    "version_label": null,
+    "metadata": {
+      "response": null,
+      "omit_response": true
+    },
+    "slug": "offertory_8",
+    "sharing": {
+      "collaborators": [],
+      "privacy": "public",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "organization": "venite"
+    },
+    "version": "loc",
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "type": "bible-reading",
+    "hidden": false,
+    "style": "short",
+    "citation": "1 Crónicas 29:11",
+    "label": null
+  },
+  {
+    "metadata": {
+      "omit_response": true,
+      "response": null
+    },
+    "style": "short",
+    "value": [
+      {
+        "text": "Señor, digno eres de recibir la gloria y la honra y el poder; porque tú creaste todas las cosas, y por tu voluntad existen y fueron creadas."
+      }
+    ],
+    "version_label": null,
+    "language": "es",
+    "citation": "Apocalipsis 4:11",
+    "category": ["offertory_sentence", "Opening Sentence"],
+    "version": "loc",
+    "hidden": false,
+    "sharing": {
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "type": "bible-reading",
+    "slug": "offertory_7",
+    "label": null
+  },
+  {
+    "slug": "prayer_a",
+    "date_modified": {
+      "seconds": 1610564379,
+      "nanoseconds": 146000000
+    },
+    "label": "Plegaria Eucarística A",
+    "lastRevision": 13,
+    "language": "es",
+    "source": {
+      "source": "",
+      "api": "",
+      "citation": ""
+    },
+    "category": [null, "Eucharistic Prayer"],
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public"
+    },
+    "value": [
+      {
+        "version": "bcp1979",
+        "category": ["sursum_corda"],
+        "style": "preces",
+        "metadata": {
+          "response": null
+        },
+        "hidden": false,
+        "type": "responsive",
+        "value": [
+          {
+            "label": "Celebrante",
+            "text": "El Señor sea con ustedes."
+          },
+          {
+            "text": "Y con tu espíritu.",
+            "label": "Pueblo"
+          },
+          {
+            "label": "Celebrante",
+            "text": "Elevemos los corazones."
+          },
+          {
+            "text": "Los elevamos al Señor.",
+            "label": "Pueblo"
+          },
+          {
+            "label": "Celebrante",
+            "text": "Demos gracias a Dios nuestro Señor."
+          },
+          {
+            "label": "Pueblo",
+            "text": "Es justo darle gracias y alabanza."
+          }
+        ],
+        "language": "es",
+        "slug": "sursum_corda_god",
+        "label": null,
+        "citation": null
+      },
+      {
+        "hidden": false,
+        "value": [
+          "En verdad es digno, justo y saludable, darte gracias, en todo tiempo y lugar, Padre omnipotente, Creador de cielo y tierra."
+        ],
+        "citation": null,
+        "label": null,
+        "style": "text",
+        "type": "text",
+        "category": [null],
+        "version_label": null,
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "slug": "prepreface_a",
+        "language": "es"
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "lookup": {
+          "type": "slug",
+          "filter": "seasonal"
+        },
+        "slug": "proper_preface"
+      },
+      {
+        "label": null,
+        "language": "es",
+        "citation": null,
+        "category": [null],
+        "value": [
+          "Por tanto te alabamos, uniendo nuestras voces con los Angeles y Arcángeles, y con todos los coros celestiales que, proclamando la gloria de tu Nombre, por siempre cantan este himno: "
+        ],
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "type": "text",
+        "hidden": false,
+        "style": "text",
+        "version": "bcp1979",
+        "slug": "postpreface_a",
+        "version_label": null
+      },
+      {
+        "citation": null,
+        "category": [""],
+        "version_label": null,
+        "type": "text",
+        "style": "text",
+        "hidden": false,
+        "label": null,
+        "slug": "sanctus",
+        "language": "es",
+        "value": [
+          "Santo, santo, santo es el Señor, Dios del universo.\nLlenos están el cielo y la tierra de tu gloria.\n    Hosanna en el cielo.\nBendito el que viene en nombre del Señor.\n    Hosanna en el cielo."
+        ],
+        "metadata": {
+          "response": "",
+          "omit_response": true
+        },
+        "version": "bcp1979"
+      },
+      {
+        "version_label": null,
+        "version": "bcp1979",
+        "hidden": false,
+        "source": {
+          "citation": "",
+          "source": "",
+          "api": "https://www.venite.app/api"
+        },
+        "category": [null],
+        "style": "text",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "value": [
+          "Padre Santo y bondadoso: En tu amor infinito nos hiciste para ti, y cuando caímos en pecado y quedamos esclavos del mal y de la muerte, tú, en tu misericordia, enviaste a Jesucristo, tu Hijo único y eterno, p ara compartir nuestra naturaleza humana, para vivir y morir como uno de nosotros, y así reconciliarnos contigo, el Dios y Padre de todos.",
+          "Extendió sus brazos sobre la cruz y se ofreció en obediencia a tu voluntad, un sacrificio perfecto por todo el mundo."
+        ],
+        "citation": null,
+        "label": null,
+        "type": "text",
+        "language": "es",
+        "slug": "prayer_body_a"
+      },
+      {
+        "version_label": null,
+        "hidden": false,
+        "version": "bcp1979",
+        "label": null,
+        "value": [
+          "Al decir las palabras relativas al pan, el Celebrante lo toma en sus manos o impone una mano sobre él; y al decir la palabras relativas al cáliz, lo toma en sus manos o impone una mano sobre él y sobre cualquier otro recipiente con vino que hubiere de consagrarse."
+        ],
+        "type": "rubric",
+        "category": [null],
+        "language": "es",
+        "citation": null,
+        "slug": "institution_rubric"
+      },
+      {
+        "hidden": false,
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "language": "es",
+        "value": [
+          "En la noche en que fue entregado al sufrimiento y a la muerte, nuestro Señor Jesucristo tomó pan; y dándote gracias, lo partió y lo dio a sus discípulos, y dijo: “Tomen y coman. Este es mi Cuerpo, entregado por ustedes. Hagan esto como memoria l mío.”",
+          "Después de la cena tomó el cáliz; y dándote gracias, se lo entregó, y dijo: “Beban todos de él. Esta es mi Sangre del nuevo Pacto, sangre derramada por ustedes y por muchos para el perdón de los pecados. Siempre que lo beban, háganlo como memorial mío.”"
+        ],
+        "type": "text",
+        "style": "text",
+        "category": [null],
+        "label": null,
+        "slug": "institution",
+        "citation": null,
+        "version_label": null
+      },
+      {
+        "label": null,
+        "value": [
+          {
+            "text": "Por tanto, proclamamos el misterio de fe: ",
+            "optional": false,
+            "response": "Cristo ha muerto.\nCristo ha resucitado.\nCristo volverá."
+          }
+        ],
+        "hidden": false,
+        "style": "litany",
+        "slug": "acclamation_a",
+        "metadata": {
+          "response": null
+        },
+        "citation": "",
+        "type": "responsive",
+        "version": "bcp1979",
+        "language": "es",
+        "category": [null],
+        "version_label": null
+      },
+      {
+        "slug": "prayer_conclusion_a",
+        "label": null,
+        "style": "text",
+        "value": [
+          "Padre, en este sacrificio de alabanza y acción de gracias, celebramos el memorial de nuestra redenció n. Recordando su muerte, resurrección y ascención, te ofrecemos estos dones.",
+          "Santifícalos con tu Espíritu Santo, y así serán para tu pueblo el Cuerpo y la Sangre de tu Hijo, la santa comida y la santa bebida de la vida nueva en él que no tiene fin. Santifícanos también, para que recibamos fielmente este Santo Sacramento y seamos perseverantes en tu servicio en paz y unidad. Y en el día postrero, llévanos con todos tus santos al gozo de tu reino eterno.",
+          "Todo esto te pedimos por tu Hijo Jesucristo. Por él, y con él y en él, en la unidad del Espíritu Santo, tuyos son el honor y la gloria, Padre omnipotente, ahora y por siempre."
+        ],
+        "language": "es",
+        "hidden": false,
+        "citation": null,
+        "version": "bcp1979",
+        "category": [null],
+        "type": "text",
+        "version_label": null,
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        }
+      }
+    ],
+    "metadata": {
+      "liturgyversions": ["loc"],
+      "supplement": true,
+      "evening": false
+    },
+    "version": "LOC",
+    "type": "liturgy",
+    "hidden": false
+  },
+  {
+    "version": "LOC",
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "hidden": false,
+    "type": "liturgy",
+    "category": [null, "Eucharistic Prayer"],
+    "label": "Plegaria Eucarística B",
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "collaborators": []
+    },
+    "language": "es",
+    "value": [
+      {
+        "label": null,
+        "slug": "sursum_corda",
+        "version_label": "BCP (“give him”)",
+        "hidden": false,
+        "citation": null,
+        "style": "preces",
+        "value": [
+          {
+            "text": "El Señor sea con ustedes.",
+            "label": "Celebrante"
+          },
+          {
+            "text": "Y con tu espíritu.",
+            "label": "Pueblo"
+          },
+          {
+            "label": "Celebrante",
+            "text": "Elevemos los corazones."
+          },
+          {
+            "label": "Pueblo",
+            "text": "Los elevamos al Señor."
+          },
+          {
+            "text": "Demos gracias a Dios nuestro Señor.",
+            "label": "Celebrante"
+          },
+          {
+            "label": "Pueblo",
+            "text": "Es justo darle gracias y alabanza."
+          }
+        ],
+        "category": ["sursum_corda"],
+        "version": "bcp1979",
+        "metadata": {
+          "response": null
+        },
+        "type": "responsive",
+        "language": "es"
+      },
+      {
+        "version_label": null,
+        "version": "bcp1979",
+        "slug": "prepreface_a",
+        "type": "text",
+        "value": [
+          "En verdad es digno, justo y saludable, darte gracias, en todo tiempo y lugar, Padre omnipotente, Creador de cielo y tierra. "
+        ],
+        "category": [null],
+        "citation": null,
+        "language": "es",
+        "hidden": false,
+        "style": "text",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "label": null
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "lookup": {
+          "type": "slug",
+          "filter": "seasonal"
+        },
+        "slug": "proper_preface"
+      },
+      {
+        "version_label": null,
+        "version": "bcp1979",
+        "slug": "postpreface_a",
+        "type": "text",
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "style": "text",
+        "hidden": false,
+        "label": null,
+        "citation": null,
+        "category": [null],
+        "language": "es",
+        "value": [
+          "Por tanto te alabamos, uniendo nuestras voces con los Angeles y Arcángeles, y con todos los coros c elestiales que, proclamando la gloria de tu Nombre, por siempre cantan este himno: "
+        ]
+      },
+      {
+        "version": "bcp1979",
+        "type": "text",
+        "metadata": {
+          "omit_response": true,
+          "response": ""
+        },
+        "style": "text",
+        "language": "es",
+        "slug": "sanctus",
+        "label": null,
+        "hidden": false,
+        "version_label": null,
+        "value": [
+          "Santo, santo, santo es el Señor, Dios del universo.\nLlenos están el cielo y la tierra de tu gloria.\n    Hosanna en el cielo.\nBendito el que viene en nombre del Señor.\n    Hosanna en el cielo."
+        ],
+        "citation": null,
+        "category": [""]
+      },
+      {
+        "source": {
+          "api": "https://www.venite.app/api",
+          "citation": "",
+          "source": ""
+        },
+        "label": null,
+        "language": "es",
+        "category": [null],
+        "version_label": null,
+        "hidden": false,
+        "type": "text",
+        "citation": null,
+        "value": [
+          "Te damos gracias, oh Dios, por la bondad y el amor que tú nos has manifestado en la creación; en el llamado a Israel para ser tu pueblo; en tu Verbo r evelado a través de los profetas; y, sobre todo, en el Verbo hecho carne, Jesús, tu Hijo. Pues en la plenitud de los tiempos le has enviado para que se encarnara de María la Virgen a fin de ser el Salvador y Redentor del mundo. En él, nos has librado del mal, y nos has hecho dignos de estar en tu presencia. En él, nos has sacado del error a la verdad, del pecado a la rectitud, y de la muerte a la vida. "
+        ],
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "style": "text",
+        "slug": "prayer_body_b"
+      },
+      {
+        "label": null,
+        "hidden": false,
+        "type": "rubric",
+        "value": [
+          "Al decir las palabras relativas al pan, el Celebrante lo toma en sus manos o impone una mano sobre él; y al decir las palabras relativas al cáliz, lo toma en sus manos o impone una mano sobre él y sobre cualquier otro recipiente con vino que hubiere de consagrarse."
+        ],
+        "language": "es",
+        "citation": null,
+        "category": [null],
+        "version_label": null,
+        "slug": "institution_rubric",
+        "version": "bcp1979"
+      },
+      {
+        "label": null,
+        "type": "text",
+        "version": "bcp1979",
+        "style": "text",
+        "slug": "institution_b",
+        "value": [
+          "En la víspera de su muerte por nosotros, nuestro Señor Jesucristo tomó pan; y dándote gracias, lo partió y lo dio a sus discípulos, y dijo: “Tomen y coman. Este es mi Cuerpo, entregado por ustedes. Hagan esto como memorial mío.”",
+          "Después de la cena tomó el cáliz; y dándote gracias, se lo entregó, y dijo: “Beban todos de él. Esta es mi San gre del nuevo Pacto, sangre derramada por ustedes y por muchos para el perdón de los pecados. Siempre que lo beban, háganlo como memorial mío.”"
+        ],
+        "category": [null],
+        "hidden": false,
+        "citation": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "language": "es",
+        "version_label": null
+      },
+      {
+        "label": null,
+        "hidden": false,
+        "language": "es",
+        "value": [
+          {
+            "response": "Recordamos su muerte,\nProclamamos su resurrección,\nEsperamos su venida en gloria;",
+            "optional": false,
+            "text": "Por tanto, oh Padre, según su mandato, "
+          }
+        ],
+        "style": "litany",
+        "metadata": {
+          "response": null
+        },
+        "type": "responsive",
+        "citation": null,
+        "category": [null],
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": "https://www.venite.app/api"
+        },
+        "version_label": null,
+        "slug": "acclamation_b",
+        "version": "bcp1979"
+      },
+      {
+        "version_label": null,
+        "type": "text",
+        "citation": null,
+        "category": [null],
+        "slug": "prayer_conclusion_b",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "value": [
+          "Y te ofrecemos nuestro sacrificio de alabanza y acción de gracias, Señor de todos; ofreciéndote, de tu creación, este pan y este vino.",
+          "Te suplicamos, Dios bondadoso, que envíes tu Espíritu Santo sobre estos dones, para que sean el Sacramento del Cuerpo de Cristo y su Sangre del nuevo Pacto. Unenos a tu Hijo en su sacrificio, a fin de que, por medio de él, seamos aceptables, siendo santificados por el Espíritu Santo. En la plenitud de los tiempos, sujeta todas las cosas a tu Cristo y llévanos a la patria celestial donde, con [_______ y] todos tus santos, entremos en la herencia eterna de tus hijos; por Jesucristo nuestro Señor, el primogénito de toda la creación, la cabeza de la Iglesia, y el autor de nuestra salvación.",
+          "Por él, y con él y en él, en la unidad del Espíritu Santo, tuyos son el honor y la gloria, Padre omnipotente, ahora y por siempre."
+        ],
+        "version": "bcp1979",
+        "label": null,
+        "style": "text",
+        "hidden": false,
+        "language": "es"
+      }
+    ],
+    "date_modified": {
+      "seconds": 1609789263,
+      "nanoseconds": 580000000
+    },
+    "slug": "prayer_b",
+    "metadata": {
+      "evening": false,
+      "supplement": true,
+      "liturgyversions": ["bcp1979"]
+    },
+    "lastRevision": 19
+  },
+  {
+    "type": "liturgy",
+    "label": "Prayer C",
+    "sharing": {
+      "organization": "venite",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "status": "published",
+      "privacy": "public"
+    },
+    "language": "es",
+    "version": "LOC",
+    "lastRevision": 9,
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "category": [null, "Eucharistic Prayer"],
+    "metadata": {
+      "evening": false,
+      "liturgyversions": [],
+      "supplement": true
+    },
+    "hidden": false,
+    "value": [
+      {
+        "metadata": {
+          "response": null
+        },
+        "version_label": "BCP (“give him”)",
+        "slug": "sursum_corda",
+        "citation": null,
+        "style": "preces",
+        "value": [
+          {
+            "label": "Celebrante",
+            "text": "El Señor sea con ustedes."
+          },
+          {
+            "text": "Y con tu espíritu.",
+            "label": "Pueblo"
+          },
+          {
+            "text": "Elevemos los corazones.",
+            "label": "Celebrante"
+          },
+          {
+            "text": "Los elevamos al Señor.",
+            "label": "Pueblo"
+          },
+          {
+            "text": "Demos gracias a Dios nuestro Señor.",
+            "label": "Celebrante"
+          },
+          {
+            "text": "Es justo darle gracias y alabanza.",
+            "label": "Pueblo"
+          }
+        ],
+        "category": ["sursum_corda"],
+        "language": "es",
+        "hidden": false,
+        "version": "bcp1979",
+        "type": "responsive",
+        "label": null
+      },
+      {
+        "source": {
+          "api": "https://www.venite.app/api",
+          "source": "bcp1979",
+          "citation": "p. 370"
+        },
+        "slug": "preface_c",
+        "citation": null,
+        "type": "responsive",
+        "value": [
+          {
+            "text": "Dios de todo poder, Soberano del universo, tú eres digno de gloria y alabanza.",
+            "response": "Gloria a ti, ahora y por siempre.",
+            "optional": false
+          },
+          {
+            "text": "A tu mandato, todas las cosas lleg aron a ser: la vasta extensión del espacio interestelar, las galaxias, los soles, los planetas en su trayectoria, y esta frágil tierra, nuestro hogar insular.",
+            "response": "Por tu voluntad fueron creadas y tienen su ser.",
+            "optional": false
+          },
+          {
+            "text": "De los elementos primarios formaste la raza huma na y nos bendijiste con la memoria, la razón y la destreza. Nos hiciste soberanos de la creación. Mas nos volvimos contra ti, traicionando tu confianza, y también nos volvimos unos contra otros.",
+            "response": "Ten misericordia, Señor, porque somos pecadores delante de ti.",
+            "optional": false
+          },
+          {
+            "text": "Una y otra vez, nos llamaste a regresar. Por los profetas y los sabios, nos revelaste tu justa Ley. Y en la plenitud de los tiempos enviaste a tu único Hijo, nacido de mujer, para cumplir tu Ley, y abrirnos el camino de libertad y paz.",
+            "response": "Por su sangre nos ha reconciliado.\nPor sus heridas somos sanados.",
+            "optional": false
+          }
+        ],
+        "version_label": null,
+        "version": "bcp1979",
+        "category": [null],
+        "style": "litany",
+        "label": null,
+        "hidden": false,
+        "metadata": {
+          "response": null
+        },
+        "language": "es"
+      },
+      {
+        "language": "es",
+        "slug": "postpreface_c",
+        "category": [null],
+        "citation": null,
+        "version_label": null,
+        "version": "bcp1979",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "hidden": false,
+        "label": null,
+        "style": "text",
+        "value": [
+          "Por tanto te alabamos, uniéndonos a los coros celestiales, con los profetas, apóstoles y mártires, y con aquéllos de todas las generaciones que te han buscado con esperanza, para proclamar con ellos el incesante himno de tu gloria:"
+        ],
+        "type": "text"
+      },
+      {
+        "version_label": null,
+        "metadata": {
+          "response": "",
+          "omit_response": true
+        },
+        "value": [
+          "Santo, santo, santo es el Señor, Dios del universo.\nLlenos están el cielo y la tierra de tu gloria.\n    Hosanna en el cielo.\nBendito el que viene en nombre del Señor.\n    Hosanna en el cielo."
+        ],
+        "citation": null,
+        "label": null,
+        "type": "text",
+        "hidden": false,
+        "language": "es",
+        "category": [""],
+        "slug": "sanctus",
+        "style": "text",
+        "version": "bcp1979"
+      },
+      {
+        "type": "text",
+        "value": [
+          "Y así, Padre, los que hemos sido redimidos por él y hechos un pueblo nuevo por medio del agua y del Espíritu, traemos ahora ante ti estos dones. Santifícalos por tu Espíritu Santo para que sean el Cuerpo y la Sangre de nuestro Señor Jesucristo."
+        ],
+        "version_label": null,
+        "citation": null,
+        "version": "bcp1979",
+        "language": "es",
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "slug": "epiclesis_c",
+        "hidden": false,
+        "category": [null],
+        "label": null,
+        "style": "text"
+      },
+      {
+        "version_label": null,
+        "category": [null],
+        "type": "rubric",
+        "citation": null,
+        "version": "bcp1979",
+        "language": "es",
+        "value": [
+          "Al decir las palabras relativas al pan el Celebrante lo toma en sus manos o impone una mano sobre el; y al decir las palabras relativas al cáliz lo toma en sus manos o impone una mano sobre él y sobre cualquier otro recipiente con vino que hubiere de consagrarse."
+        ],
+        "label": null,
+        "hidden": false,
+        "slug": "institution_rubric"
+      },
+      {
+        "style": "text",
+        "category": [null],
+        "version": "bcp1979",
+        "hidden": false,
+        "language": "es",
+        "slug": "institution_c",
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "value": [
+          "En la noche en que fue traicionado, tomó pan, dijo la bendición, partió el pan y lo dio a sus amigos, y dijo: “Tomen y coman. Este es mi Cuerpo, entregado por ustedes. Hagan esto como memorial mío.”",
+          "Después de la cena tomó el cáliz, dio gracias, y dijo: “Beban todos de él. Esta es mi Sangre del nuevo Pacto, sangre derramada por ustedes y por muchos para el perdón de los pecados. Siempre que lo beban, háganlo como memorial mío.” "
+        ],
+        "citation": null,
+        "label": null,
+        "type": "text",
+        "version_label": null
+      },
+      {
+        "citation": null,
+        "value": [
+          {
+            "optional": false,
+            "text": "Recordando ahora su obra de redención, y ofreciéndote este sacrificio de ac ción de gracias,",
+            "response": "Celebramos su muerte y resurrección,\nmientras esperamos el día de su venida."
+          },
+          {
+            "response": "Señor resucitado, muéstrate a nosotros en la fracción del Pan.",
+            "text": "Señor Dios de nuestros Padres; Dios de Abrahán, Isaac y Jacob; Dios y Padre de nuestro Señor Jesucristo: Abre nuestros ojos para ver tu mano en el mundo que nos rodea. Líbranos de la presunción de acercarnos a esta Mesa buscando sólo consuelo y no fortaleza; buscando sólo perdón y no renovación. Que la gracia de esta Santa Comunión nos haga un solo cuerpo, un solo espíritu en Cristo, a fin de que dignamente sirvam os al mundo en su nombre.",
+            "optional": false
+          }
+        ],
+        "version": "bcp1979",
+        "hidden": false,
+        "style": "litany",
+        "label": null,
+        "type": "responsive",
+        "metadata": {
+          "response": null
+        },
+        "category": [null],
+        "language": "es",
+        "slug": "acclamation_c",
+        "version_label": null
+      },
+      {
+        "category": [null],
+        "version_label": null,
+        "type": "text",
+        "language": "es",
+        "version": "bcp1979",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "value": [
+          "Padre, acepta estas plegarias y alabanzas, por Jesucristo, nuestro gran Sumo Sacerdote, a quien contigo y el Espíritu Santo, tu Iglesia rinde honor, gloria y adoración de generación en generación."
+        ],
+        "citation": null,
+        "style": "text",
+        "label": null,
+        "hidden": false,
+        "slug": "prayer_conclusion_c"
+      }
+    ],
+    "date_modified": {
+      "seconds": 1603679674,
+      "nanoseconds": 400000000
+    },
+    "slug": "prayer_c"
+  },
+  {
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "label": "Prayer D",
+    "type": "liturgy",
+    "slug": "prayer_d",
+    "sharing": {
+      "status": "published",
+      "collaborators": [],
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "version": "LOC",
+    "metadata": {
+      "liturgyversions": [],
+      "supplement": true,
+      "evening": false
+    },
+    "language": "es",
+    "category": [null, "Eucharistic Prayer"],
+    "value": [
+      {
+        "type": "responsive",
+        "version": "bcp1979",
+        "category": ["sursum_corda"],
+        "hidden": false,
+        "style": "preces",
+        "slug": "sursum_corda_god",
+        "metadata": {
+          "response": null
+        },
+        "value": [
+          {
+            "text": "El Señor sea con ustedes.",
+            "label": "Celebrante"
+          },
+          {
+            "label": "Pueblo",
+            "text": "Y con tu espíritu."
+          },
+          {
+            "text": "Elevemos los corazones.",
+            "label": "Celebrante"
+          },
+          {
+            "label": "Pueblo",
+            "text": "Los elevamos al Señor."
+          },
+          {
+            "text": "Demos gracias a Dios nuestro Señor.",
+            "label": "Celebrante"
+          },
+          {
+            "text": "Es justo darle gracias y alabanza.",
+            "label": "Pueblo"
+          }
+        ],
+        "citation": null,
+        "label": null,
+        "version_label": "BCP (“give God”)",
+        "language": "es"
+      },
+      {
+        "hidden": false,
+        "version_label": null,
+        "source": {
+          "source": "",
+          "api": "https://www.venite.app/api",
+          "citation": ""
+        },
+        "metadata": {
+          "omit_response": true,
+          "response": null
+        },
+        "category": [null],
+        "label": null,
+        "value": [
+          "En verdad, oh Padre, es justo glorificarte y darte gracias; porque sólo tú eres Dios, vivo y verdadero, morando en luz inaccesible desde siempre y para siempre.",
+          "Fuente de vida y toda bondad, hiciste todas las cosas y las colmaste de tu bendición; tú las creaste para que se regocijen en el esplendor de tu gloria.",
+          "Innumerables ángeles están delante de ti para servirte noche y día; y contemplando la gloria de tu presencia, te ofrecen alabanza sin cesar. Y con ellos, también nosotros, y por nuestra voz las demás criaturas bajo el cielo, te aclamamos y glorificamos tu Nombre, cantando (diciendo): "
+        ],
+        "citation": null,
+        "slug": "preface_d",
+        "style": "text",
+        "version": "bcp1979",
+        "type": "text",
+        "language": "es"
+      },
+      {
+        "category": [""],
+        "language": "es",
+        "slug": "sanctus",
+        "style": "text",
+        "version_label": null,
+        "type": "text",
+        "metadata": {
+          "response": "",
+          "omit_response": true
+        },
+        "version": "bcp1979",
+        "value": [
+          "Santo, santo, santo es el Señor, Dios del universo.\nLlenos están el cielo y la tierra de tu gloria.\n    Hosanna en el cielo.\nBendito el que viene en nombre del Señor.\n    Hosanna en el cielo. "
+        ],
+        "citation": null,
+        "label": null,
+        "hidden": false
+      },
+      {
+        "hidden": false,
+        "style": "text",
+        "type": "text",
+        "version": "bcp1979",
+        "version_label": null,
+        "category": [null],
+        "citation": null,
+        "language": "es",
+        "slug": "postpreface_d",
+        "value": [
+          "Te aclamamos, santo Señor, glorioso en poder. Tus grandes obras revelan tu sabiduría y amor. Nos formaste a tu propia Imagen, encomendándonos el mundo entero, para que, en obediencia a ti, nuestro Creador, pudiéramos regir y servir a todas tus criaturas. Cuando por desobediencia nos alejamos de ti, no nos abandonaste al poder de la muerte. En tu misericordia, viniste en nuestra ayuda, para que buscándote, te encontráramos. Una y otra vez nos has llamado al pacto contigo, y por los profetas nos enseñaste la esperanza de salvación.",
+          "Tanto amaste al mundo, Padre, que en la plenitud del tiempo nos enviaste como Salvador a tu único Hijo. Encarnado por obra del Espíritu Santo y nacido de María, la Virgen, vivió como uno de nosotros, empero sin pecado. A los pobres proclamó las buenas nuevas de salvación; a los prisioneros, libertad; a los afligidos, gozo. Para cumplir tus designios, se entreg ó a la muerte y, resucitando de la tumba, destruyó la muerte e hizo nueva la creación entera.",
+          "Y a fin de que no viviésemos más para nosotros mismos, sino para él, que por nosotros murió y resucitó, envió al Espíritu Santo como su primicia a los que creen, para completar su obra en el mundo y llevar a plenitud la santificación de todos."
+        ],
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "label": null
+      },
+      {
+        "category": [null],
+        "value": [
+          "Al decir las palabras relativas al pan, el Celebrante lo toma en sus manos o impone una mano sobre él; y al decir las palabras relativas al cáliz, lo toma en sus manos o impone una mano sobre él y sobre cualquier otro recipiente con vino que hubiere de consagrarse."
+        ],
+        "label": null,
+        "citation": null,
+        "language": "es",
+        "hidden": false,
+        "slug": "institution_rubric",
+        "type": "rubric",
+        "version": "bcp1979",
+        "version_label": null
+      },
+      {
+        "language": "es",
+        "value": [
+          "Llegada la hora en que había de ser glorificado por ti, su Padre celestial, habiendo amado a los suyos que estaban en el mundo, los amó hasta el final; y mie ntras cenaba con ellos, tomó pan, y dándote gracias, lo partió y se lo dio a sus discípulos, y dijo: “Tomen y coman. Este es mi Cuerpo, entregado por ustedes. Hagan esto como memorial mío.”",
+          "Después de la cena tomó el cáliz; y dándote gracias, se lo entregó, y dijo: “Beban todos de él. Esta es mi Sangre del nuevo Pacto, sangre derramada por ustedes y por muchos para el perdón de los pecados. Siempre que lo beban, háganlo como memorial mío.”"
+        ],
+        "hidden": false,
+        "type": "text",
+        "slug": "institution_d",
+        "version_label": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "style": "text",
+        "category": [null],
+        "label": null,
+        "version": "bcp1979",
+        "citation": null
+      },
+      {
+        "hidden": false,
+        "style": "litany",
+        "version_label": null,
+        "type": "responsive",
+        "slug": "acclamation_d",
+        "citation": null,
+        "language": "es",
+        "metadata": {
+          "response": null
+        },
+        "value": [
+          {
+            "text": "Padre, celebramos ahora este memorial de nuestra redención. Recordando la muerte de Cristo y su descenso entre los muertos, proclamando su resurrección y ascensión a tu derecha, esperando su venida en gloria; y ofreciéndote, de las dádivas que tú nos has dado, este pan y este cáliz, te alabamos y te bendecimos.",
+            "optional": false,
+            "response": "Te alabamos, te bendecimos,\nte damos gracias,\ny oramos a ti, Señor nuestro Dios. "
+          }
+        ],
+        "version": "bcp1979",
+        "category": [null],
+        "label": null
+      },
+      {
+        "label": null,
+        "metadata": {
+          "response": null,
+          "omit_response": true
+        },
+        "type": "text",
+        "style": "text",
+        "value": [
+          "Señor, te rogamos que en tu bondad y misericordia, tu Espíritu Santo descienda sobre nosotros y sobre estos dones, santificándolos y mostrando que son dones santos para tu pueblo santo, el pan de vida y el cáliz de salvación, el Cuerpo y la Sangre de tu Hijo Jesucristo.",
+          "Concede que todos los que compartan este pan y este cáliz sean un solo cuerpo y un solo espíritu, un sacrificio vivo en Cristo, para alabanza de tu Nombre.",
+          "Recuerda, Señor, a tu Iglesia, una, santa, católica y apostólica, redimida por la sangre de tu Cristo. Manifiesta su unidad, guarda su fe y presérvala en paz.",
+          "[Recuerda a (NN. y) todos los que ministran en tu Iglesia.]",
+          "[Recuerda a todo tu pueblo y a aquéllos que buscan tu verdad.]",
+          "[Recuerda a ______.]",
+          "[Recuerda a todos los que han muerto en la paz de Cristo y a aquéllos cuya fe sólo tu conoces; llévalos al lugar de eterno gozo y luz.]",
+          "Y concede que alcancemos nuestra herencia con [la Bendita Virgen María, con los patriarcas, profetas, apóstoles y mártires, (con _______) y] todos los santos que han encontrado favor contigo en tiempos pasados. Junto con ellos te alabamos y te damos gloria, por tu Hijo Jesucristo nuestro Señor."
+        ],
+        "citation": null,
+        "language": "es",
+        "version": "bcp1979",
+        "hidden": false,
+        "version_label": null,
+        "category": [null],
+        "slug": "intercessions_d"
+      },
+      {
+        "category": [null],
+        "label": null,
+        "version_label": null,
+        "language": "es",
+        "type": "text",
+        "slug": "prayer_conclusion_d",
+        "style": "text",
+        "value": [
+          "Por Cristo, y con Cristo y en Cristo, tuyos son el honor y la gloria, omnipotente Dios y Padre, en la unidad del Espíritu Santo, por los siglos de los siglos."
+        ],
+        "version": "bcp1979",
+        "metadata": {
+          "response": "AMEN.",
+          "omit_response": false
+        },
+        "hidden": false,
+        "citation": null
+      }
+    ],
+    "hidden": false,
+    "lastRevision": 14,
+    "date_modified": {
+      "seconds": 1604346014,
+      "nanoseconds": 68000000
+    }
+  },
+  {
+    "lastRevision": 1,
+    "source": {
+      "api": "",
+      "citation": "",
+      "source": ""
+    },
+    "date_modified": {
+      "seconds": 1604544640,
+      "nanoseconds": 960000000
+    },
+    "label": "Fórmula I",
+    "style": "litany",
+    "hidden": false,
+    "sharing": {
+      "status": "published",
+      "organization": "venite",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": []
+    },
+    "version": "loc",
+    "value": [
+      {
+        "optional": false,
+        "response": "",
+        "text": "Con todo el corazón y con toda la mente, oremos al Señor, diciendo: “Señor, ten piedad.”"
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "text": "Por la paz de lo alto, por la misericordia de Dios y por la salvación de nuestras almas, oremos al Señor.",
+        "optional": true
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "optional": false,
+        "text": "Por la paz del mundo, por el bienestar de la santa Iglesia de Dios y por la unidad de todos los pue blos, oremos al Señor."
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "text": "Por nuestro Obispo, y por todos los clérigos y laicos, oremos al Señor.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "response": "Señor, ten piedad.",
+        "text": "Por nuestro Presidente, por los gobernantes de las naciones y por todas las autoridades, oremos al Señor."
+      },
+      {
+        "optional": false,
+        "response": "Señor, ten piedad.",
+        "text": "Por esta ciudad (pueblo, aldea, _______), por todas las ciudades y comunidades, y por los que viven en ellas, oremos al Señor."
+      },
+      {
+        "optional": true,
+        "response": "Señor, ten piedad.",
+        "text": "Por un clima apacible y por la abundancia de los frutos de la tierra, oremos al Señor."
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "optional": false,
+        "text": "Por la buena tierra que Dios nos ha dado, y por la sabiduría y el deseo de conservarla, oremos al Señor."
+      },
+      {
+        "text": "Por todos los que viajan por tierra, mar o aire [o el espacio], oremos al Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": true
+      },
+      {
+        "text": "Por los ancianos e inváli dos, los viudos y huérfanos, por los enfermos y los que yacen en el lecho del dolor, oremos al Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": false
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "optional": true,
+        "text": "Por ______, oremos al Señor."
+      },
+      {
+        "optional": false,
+        "text": "Por los pobres y oprimidos, por los desempleados e indigentes, por los encarcelados y cautivos, y por todos los que se acuerdan y cuidan de ellos, oremos al Señor.",
+        "response": "Señor, ten piedad."
+      },
+      {
+        "text": "Por todos los que han muerto en la esperanza de la resurrección y por todos los difuntos, oremos al Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "response": "Señor, ten piedad.",
+        "text": "Por la liberación de todo peligro, violencia, opresión y degradación, oremos al Señor."
+      },
+      {
+        "text": "Por la absolución y remisión de nuestros pecados y ofensas, oremos al Señor.",
+        "optional": true,
+        "response": "Señor, ten piedad."
+      },
+      {
+        "text": "Para que terminemos nuestra vida en fe y esperanza, sin sufrimiento ni reproche, oremos al Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": false
+      },
+      {
+        "text": "Defiéndenos, líbranos, y en tu compasión protégenos, oh Señor, por medio de tu gracia.",
+        "optional": true,
+        "response": "Señor, ten piedad."
+      },
+      {
+        "text": "En la comunión de [____ y de todos] los santos, encomendémonos los unos a los otros, y toda nuestra vida a Cristo nuestro Dios.",
+        "optional": false,
+        "response": "A ti, Señor nuestro Dios."
+      }
+    ],
+    "version_label": "Fórmula I",
+    "language": "es",
+    "category": ["potp", "Prayers of the People"],
+    "citation": null,
+    "type": "responsive",
+    "metadata": {
+      "response": ""
+    },
+    "slug": "potp_form_i"
+  },
+  {
+    "type": "responsive",
+    "citation": null,
+    "category": ["potp", "Prayers of the People"],
+    "slug": "potp_form_ii",
+    "metadata": {
+      "response": "[Pausa]"
+    },
+    "version_label": "Fórmula II",
+    "version": "loc",
+    "label": "Fórmula II",
+    "hidden": false,
+    "language": "es",
+    "value": [
+      {
+        "text": "Pido sus oraciones por el pueblo de Dios esparcido por todo el mundo; por ______, nuestro(s) Obispo(s); por esta asamblea; y por todos los ministros y fieles.\n\nOren por la Iglesia. ",
+        "optional": false
+      },
+      {
+        "text": "Pido sus oraciones por la paz; por la concordia entre las naciones y por el bienestar de todos los pueblos.\n\nOren por la justicia y la paz. ",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "Pido sus oraciones por los pobres, los enfermos, los hambrientos, los oprimidos y los prisioneros.\n\nOren por los que se hallan en necesidad o tribulación. "
+      },
+      {
+        "text": "Pido sus oraciones por cuantos buscan a Dios o un conocimiento más profundo de él.\n\nOren para que le encuentren y sean encontrados por él.",
+        "optional": false
+      },
+      {
+        "text": "Pido sus oraciones por los que han partido de esta vida [especialmente por _________].\n\nOren por los difuntos.",
+        "optional": false
+      },
+      {
+        "optional": true,
+        "text": "Pido sus oraciones por _________."
+      },
+      {
+        "text": "Pido que den gracias por ________. ",
+        "optional": true
+      },
+      {
+        "text": "Alaben a Dios por aquéllos de todas las generaciones en quienes Cristo ha sido glorificado [especialmente _____________, a quien recordamos hoy].\n\nOren para que también nosotros recibamos la gracia de glorificar a Cristo en nuestro tiempo. ",
+        "optional": false
+      }
+    ],
+    "style": "litany",
+    "sharing": {
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": []
+    }
+  },
+  {
+    "citation": null,
+    "style": "litany",
+    "version": "loc",
+    "metadata": {
+      "response": null
+    },
+    "slug": "potp_form_iii",
+    "label": "Fórmula III",
+    "type": "responsive",
+    "version_label": "Fórmula III",
+    "sharing": {
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": [],
+      "status": "published"
+    },
+    "hidden": false,
+    "language": "es",
+    "value": [
+      {
+        "optional": false,
+        "text": "Padre, te suplicamos por tu santa Iglesia Católica.",
+        "response": "Que todos seamos uno."
+      },
+      {
+        "response": "Concede que todos los miembros de la Iglesia te sirvan en verdad y humildad.",
+        "text": "Que tu Nombre sea glorificado por todo el género humano.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "Te pedimos por todos los obispos, presbíteros y diáconos.",
+        "response": "Que sean fieles ministros de tu Palabra y Sacramentos."
+      },
+      {
+        "text": "Te pedimos por cuantos gobiernan y ejercen autoridad en todas las naciones del mundo.",
+        "optional": false,
+        "response": "Que haya justicia y paz en la tierra."
+      },
+      {
+        "optional": false,
+        "text": "Danos gracia para hacer tu voluntad en todo cuanto emprendamos.",
+        "response": "Que nuestras obras sean agradables a tus ojos."
+      },
+      {
+        "text": "Ten compasión de los que sufren de dolor o angustia.",
+        "response": "Que sean librados de sus aflicciones.",
+        "optional": false
+      },
+      {
+        "text": "Otorga descanso eterno a los difuntos.",
+        "optional": false,
+        "response": "Que sobre ellos resplandezca la luz perpetua."
+      },
+      {
+        "optional": false,
+        "response": "Que también nosotros tengamos parte en tu reino celestial.",
+        "text": "Te alabamos por tus santos que han entrado en el gozo del Señor."
+      },
+      {
+        "response": "[Silencio]",
+        "text": "Oremos por nuestras necesidades y las necesidades de los demás. ",
+        "optional": false
+      }
+    ],
+    "category": ["potp", "Prayers of the People"]
+  },
+  {
+    "type": "responsive",
+    "category": ["potp", "Prayers of the People"],
+    "value": [
+      {
+        "text": "Oremos por la Iglesia y por el mundo. \n\nOmnipotente Dios, concede que cuantos confesamos tu Nombre estemos unidos en tu verdad, vivamos unánimes en tu amor y manifestemos tu gloria en el mundo. ",
+        "optional": false,
+        "response": "[Silencio]"
+      },
+      {
+        "optional": false,
+        "text": "Señor, en tu misericordia",
+        "response": "atiende nuestra súplica."
+      },
+      {
+        "optional": false,
+        "response": "[Silencio]",
+        "text": "Dirige al pueblo de este país y de todas las naciones por caminos de justicia y paz, para que nos respetemos unos a otros y procuremos el bien común."
+      },
+      {
+        "text": "Señor, en tu misericordia",
+        "optional": false,
+        "response": "atiende nuestra súplica."
+      },
+      {
+        "response": "[Silencio]",
+        "text": "Danos reverencia por la tierra, que es creación tuya, para que utilicemos debidamente sus recursos en servicio de los demás y para tu honra y gloria.",
+        "optional": false
+      },
+      {
+        "response": "atiende nuestra súplica.",
+        "text": "Señor, en tu misericordia",
+        "optional": false
+      },
+      {
+        "text": "Bendice a aquéllos cuyas vidas están unidas a las nuestras, y concede que sirvamos a Cristo en ellos y nos amemos unos a otros, así como él nos ama.",
+        "optional": false,
+        "response": "[Silencio]"
+      },
+      {
+        "optional": false,
+        "text": "Señor, en tu misericordia",
+        "response": "atiende nuestra súplica."
+      },
+      {
+        "response": "[Silencio]",
+        "optional": false,
+        "text": "Consuela y sana a todos aquéllos que sufren en cuerpo, mente o espíritu; en sus tribulaciones dales valor y esperanza, y llévalos al gozo de tu salvación. "
+      },
+      {
+        "optional": false,
+        "response": "atiende nuestra súplica.",
+        "text": "Señor, en tu misericordia"
+      },
+      {
+        "text": "Encomendamos a tu misericordia a todos los difuntos, para que tu voluntad se cumpla en ellos; y te pedimos que nos hagas partícipes con todos tus santos de tu reino eterno. ",
+        "optional": false,
+        "response": "[Silencio]"
+      },
+      {
+        "response": "atiende nuestra súplica.",
+        "text": "Señor, en tu misericordia",
+        "optional": false
+      }
+    ],
+    "lastRevision": 0,
+    "hidden": false,
+    "sharing": {
+      "organization": "venite",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "privacy": "public"
+    },
+    "label": "Fórmula IV",
+    "citation": null,
+    "version": "loc",
+    "metadata": {
+      "response": null
+    },
+    "language": "es",
+    "slug": "potp_form_iv",
+    "style": "litany",
+    "date_modified": {
+      "seconds": 1604544609,
+      "nanoseconds": 989000000
+    },
+    "version_label": "Fórmula IV"
+  },
+  {
+    "label": "Fórmula V",
+    "citation": null,
+    "sharing": {
+      "organization": "venite",
+      "status": "published",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "collaborators": [],
+      "privacy": "public"
+    },
+    "version_label": "Fórmula V",
+    "slug": "potp_form_v",
+    "type": "responsive",
+    "version": "loc",
+    "style": "litany",
+    "category": ["potp", "Prayers of the People"],
+    "value": [
+      {
+        "optional": false,
+        "text": "En paz oremos al Señor, diciendo: “Señor, ten piedad.” \n\nPor la santa Iglesia de Dios, para que esté llena de verdad y amor y se halle sin mancha en el día de tu venida, te suplicamos Señor. ",
+        "response": "Señor, ten piedad."
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "text": "Por N. nuestro Primado, por N.(N.) nuestro (s) Obispo (s), por todos los obispos y demás ministros, y por todo el pueblo santo de Dios, te suplicamos Señor.",
+        "optional": false
+      },
+      {
+        "optional": false,
+        "text": "Por cuantos temen a Dios y creen en ti, Cristo Señor, para que cesen nuestras divisiones y todos seamos uno, como tú y el Padre son uno, te suplicamos Señor.",
+        "response": "Señor, ten piedad."
+      },
+      {
+        "text": "Por la misión de la Iglesia, para que en testimonio fiel proclame el Evangelio hasta los confines de la tierra, te suplicamos Señor.",
+        "optional": false,
+        "response": "Señor, ten piedad."
+      },
+      {
+        "optional": true,
+        "response": "Señor, ten piedad.",
+        "text": "Por los que aún no creen y por los que han perdido la fe, para que reciban la luz del Evangelio, te suplicamos Señor."
+      },
+      {
+        "text": "Por la paz del mundo, para que entre las naciones y los pueblos crezca un espíritu de respeto y comprensión, te suplicamos Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": false
+      },
+      {
+        "text": "Por los que tienen cargos de responsabilidad pública [especialmente ______], para que sirvan a la justicia y promuevan la dignidad y la libertad de toda persona, te suplicamos Señor.",
+        "optional": false,
+        "response": "Señor, ten piedad."
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "optional": false,
+        "text": "Por todos los que viven y trabajan en esta comunidad [especialmente ______ ], te suplicamos Señor."
+      },
+      {
+        "optional": true,
+        "response": "Señor, ten piedad.",
+        "text": "Por tu bendición sobre todo trabajo humano y por el uso debido de las riquezas de la creación, para que el mundo sea librado de la pobreza, el hambre y el desastre, te suplicamos Señor."
+      },
+      {
+        "optional": false,
+        "response": "Señor, ten piedad.",
+        "text": "Por los pobres, los perseguidos, los enfermos y todos cuantos sufren; por los refugiados, los prisioneros y por todos los que están en peligr o, para que hallen alivio y protección, te suplicamos Señor."
+      },
+      {
+        "text": "Por esta congregación [por los presentes y los ausentes], para que nos libres de dureza de corazón y manifestemos tu gloria en todo lo que hagamos, te suplicamos Señor.",
+        "response": "Señor, ten piedad.",
+        "optional": false
+      },
+      {
+        "response": "Señor, ten piedad.",
+        "optional": true,
+        "text": "Por nuestros enemigos y por cuantos nos desean el mal; y por aquéllos a quienes hemos agraviado u ofendido, te suplicamos Señor."
+      },
+      {
+        "optional": true,
+        "response": "Señor, ten piedad.",
+        "text": "Por nosotros, por el perdón de nuestros pecados y por la gracia del Espíritu Santo para enmendar nuestras vidas, te suplicamos Señor."
+      },
+      {
+        "optional": false,
+        "text": "Por todos los que se han encomendado a nuestras oraciones; por nuestras familias, amigos y vecinos, para que, libres de ansiedad, vivan en gozo, paz y salud, te suplicamos Señor.",
+        "response": "Señor, ten piedad."
+      },
+      {
+        "optional": true,
+        "response": "Señor, ten piedad.",
+        "text": "Por ______, te suplicamos Señor."
+      },
+      {
+        "optional": false,
+        "response": "Señor, ten piedad.",
+        "text": "Por cuantos han muerto en la comunión de tu Iglesia, y por aquéllos cuya fe sólo tú conoces, para que con todos tus santos tengan descanso en ese lugar donde no hay dolor ni tristeza, sino vida eterna, te suplicamos Señor."
+      },
+      {
+        "text": "Gozándonos en la comunión de [la siempre Bendita Virgen María, (del bienaventurado N.) y] todos los santos, encomendémonos los unos a los otros, y toda nuestra vida, a Cristo nuestro Dios.",
+        "response": "A ti, Señor nuestro Dios.",
+        "optional": false
+      }
+    ],
+    "hidden": false,
+    "language": "es",
+    "metadata": {
+      "response": null
+    }
+  },
+  {
+    "source": {
+      "source": "",
+      "citation": "",
+      "api": ""
+    },
+    "type": "liturgy",
+    "value": [
+      {
+        "source": {
+          "citation": "",
+          "source": "",
+          "api": ""
+        },
+        "value": ["Fórmula VI"],
+        "metadata": {
+          "level": 3
+        },
+        "style": "text",
+        "type": "heading",
+        "hidden": false
+      },
+      {
+        "style": "text",
+        "value": ["En paz oramos a ti, Señor Dios."],
+        "type": "text",
+        "hidden": false
+      },
+      {
+        "value": ["Silencio"],
+        "type": "rubric",
+        "hidden": false
+      },
+      {
+        "hidden": false,
+        "style": "litany",
+        "type": "responsive",
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "value": [
+          {
+            "text": "Por todos los seres humanos en su vida y trabajo diarios;",
+            "response": "Por nuestras familias, amigos y vecinos, y por los que están solos.",
+            "label": ""
+          },
+          {
+            "response": "Por cuantos trabajan por la justicia, la libertad y la paz.",
+            "text": "Por esta comunidad, por esta nación, y por el mundo entero;"
+          },
+          {
+            "text": "Por el uso justo y adecuado de tu creación;",
+            "response": "Por las víctimas del hambre, el temor, la injusticia y la opresión."
+          },
+          {
+            "response": "Por cuantos se hallan en peligro, tristeza, o cualquier otra adversidad;",
+            "text": "Por los que ministran a los enfermos, a los desamparados y a los necesitados."
+          },
+          {
+            "response": "Por todos los que proclaman el Evangelio, y cuantos buscan la Verdad.",
+            "text": "Por la paz y unidad de la Iglesia de Dios;"
+          },
+          {
+            "text": "Por [N. nuestro Primado, y por N. (N.) nuestro(s) obispo(s), y por] todos los obispos y demás ministros;",
+            "response": "Por todos los que sirven a Dios en su Iglesia."
+          }
+        ],
+        "metadata": {},
+        "category": []
+      },
+      {
+        "style": "text",
+        "value": [
+          "Por las necesidades e intereses especiales de esta congregación."
+        ],
+        "type": "text",
+        "hidden": false
+      },
+      {
+        "type": "rubric",
+        "value": ["Pausa", "El Pueblo puede añadir sus propias peticiones."],
+        "hidden": false
+      },
+      {
+        "type": "responsive",
+        "value": [
+          {
+            "response": "Porque grande es tu misericordia.",
+            "text": "Atiéndenos, Señor;",
+            "label": ""
+          }
+        ],
+        "hidden": false,
+        "style": "responsive"
+      },
+      {
+        "type": "text",
+        "hidden": false,
+        "style": "text",
+        "value": [
+          "Te damos gracias, Señor, por todas las bendiciones de esta vida. "
+        ]
+      },
+      {
+        "value": [
+          "Pausa",
+          "El Pueblo puede añadir sus propias acciones de gracias."
+        ],
+        "hidden": false,
+        "type": "rubric"
+      },
+      {
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "value": [
+          {
+            "text": "Te exaltaremos, oh Dios nuestro Rey;",
+            "response": "Y alabaremos tu Nombre para siempre."
+          }
+        ],
+        "hidden": false,
+        "style": "text",
+        "metadata": {
+          "rollup": false
+        },
+        "category": [],
+        "type": "responsive"
+      },
+      {
+        "type": "text",
+        "style": "text",
+        "hidden": false,
+        "value": [
+          "Te pedimos por todos los que han muerto, para que tengan un lugar en tu reino eterno."
+        ]
+      },
+      {
+        "value": ["Pausa", "El Pueblo puede añadir sus propias peticiones."],
+        "hidden": false,
+        "type": "rubric"
+      },
+      {
+        "hidden": false,
+        "value": [
+          {
+            "text": "Señor, concédeles tu misericordia;",
+            "label": "",
+            "response": "Porque en ti han confiado."
+          }
+        ],
+        "style": "responsive",
+        "type": "responsive"
+      },
+      {
+        "hidden": false,
+        "value": ["También te pedimos por el perdón de nuestros pecados. "],
+        "style": "text",
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "value": ["Se puede guardar un período de silencio."],
+        "type": "rubric"
+      },
+      {
+        "value": ["El que dirige y el Pueblo:"],
+        "type": "rubric",
+        "hidden": false
+      },
+      {
+        "source": {
+          "source": "",
+          "citation": "",
+          "api": ""
+        },
+        "type": "text",
+        "hidden": false,
+        "display_format": "unison",
+        "style": "prayer",
+        "metadata": {
+          "rollup": false,
+          "response": "Amén.",
+          "omit_response": false
+        },
+        "category": [],
+        "value": [
+          "Ten misericordia de nosotros, Padre de toda bondad;\nen tu compasión perdona nuestros pecados,\nlos conocidos y los desconocidos;\nlo que hemos hecho y lo que hemos dejado de hacer.\nSustenta a tus siervos con tu Espíritu,\npara que vivamos y te sirvamos en novedad de vida,\npara honra y gloria de tu Nombre;\npor Jesucristo nuestro Señor."
+        ]
+      }
+    ],
+    "date_modified": {
+      "seconds": 1609900873,
+      "nanoseconds": 442000000
+    },
+    "id": "vMCgf4uMDO424L3euSEO",
+    "lastRevision": 108,
+    "language": "es",
+    "date_created": {
+      "seconds": 1609900227,
+      "nanoseconds": 805000000
+    },
+    "version": "loc",
+    "sharing": {
+      "organization": "venite",
+      "collaborators": [],
+      "status": "published",
+      "privacy": "public",
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "slug": "form-vi",
+    "label": "Fórmula VI",
+    "category": ["Prayers of the People"],
+    "metadata": {
+      "preferences": {},
+      "supplement": true,
+      "liturgyversions": [],
+      "evening": false,
+      "special_preferences": {}
+    },
+    "hidden": false
+  },
+  {
     "type": "text",
     "style": "prayer",
     "slug": "christmas-day",

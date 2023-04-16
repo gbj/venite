@@ -1,0 +1,1478 @@
+{
+  "sharing": {
+    "status": "draft",
+    "collaborators": [],
+    "organization": "venite",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "privacy": "public"
+  },
+  "version": "LOC",
+  "hidden": false,
+  "type": "liturgy",
+  "lastRevision": 1029,
+  "value": [
+    {
+      "metadata": { "level": 1, "omit_response": false },
+      "source": { "source": "", "citation": "", "api": "" },
+      "type": "heading",
+      "category": [],
+      "style": "text",
+      "value": ["La Santa Eucaristía"],
+      "hidden": false
+    },
+    {
+      "metadata": { "level": 1 },
+      "type": "heading",
+      "value": [""],
+      "style": "date",
+      "hidden": false,
+      "language": "es"
+    },
+    {
+      "value": ["Heading"],
+      "metadata": { "level": 1 },
+      "hidden": false,
+      "style": "day",
+      "type": "heading",
+      "language": "es"
+    },
+    {
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "true", "key": "palms", "is": false } }
+        ],
+        "mode": "and"
+      },
+      "type": "heading",
+      "metadata": { "omit_response": false, "level": 2 },
+      "hidden": false,
+      "category": [],
+      "source": { "citation": "", "api": "", "source": "" },
+      "value": ["Palabra de Dios"],
+      "style": "text"
+    },
+    {
+      "sharing": {
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite",
+        "status": "published"
+      },
+      "metadata": {
+        "supplement": false,
+        "evening": false,
+        "special_preferences": {},
+        "preferences": {},
+        "liturgyversions": []
+      },
+      "slug": "palms",
+      "language": "en",
+      "date_modified": { "seconds": 1603550236, "nanoseconds": 509000000 },
+      "lastRevision": 84,
+      "lookup": { "type": "slug" },
+      "hidden": false,
+      "type": "liturgy",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "is": true, "value": "true", "key": "palms" } }
+        ]
+      },
+      "version": "Rite-II",
+      "label": "Palms",
+      "date_created": { "seconds": 1603549748, "nanoseconds": 777000000 },
+      "source": { "source": "", "api": "", "citation": "" },
+      "category": []
+    },
+    {
+      "condition": {
+        "conditions": [
+          { "preference": { "is": false, "value": "true", "key": "palms" } }
+        ],
+        "mode": "and"
+      },
+      "value": ["Puede cantarse un himno, salmo o antífona."],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "key": "palms", "value": "true", "is": false } }
+        ]
+      },
+      "type": "rubric",
+      "hidden": false,
+      "value": ["Todos de pie, el Celebrante dice:"]
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "label": "",
+          "response": "",
+          "text": "Bendito sea Dios: Padre, Hijo y Espíritu Santo."
+        },
+        {
+          "label": "Pueblo",
+          "text": "Y bendito sea su reino, ahora y por siempre. Amén."
+        }
+      ],
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "season": {
+              "only": [],
+              "except": ["Lent", "HolyWeek", "Easter", "Ascension"]
+            }
+          },
+          { "preference": { "key": "palms", "is": false, "value": "true" } }
+        ]
+      },
+      "style": "preces",
+      "type": "responsive"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "except": [], "only": ["Easter", "Ascension"] } }
+        ]
+      },
+      "type": "responsive",
+      "style": "preces",
+      "hidden": false,
+      "value": [
+        {
+          "label": "",
+          "response": "",
+          "text": "¡Aleluya! Cristo ha resucitado."
+        },
+        {
+          "text": "¡Es verdad! El Señor ha resucitado. ¡Aleluya!",
+          "label": "Pueblo"
+        }
+      ]
+    },
+    {
+      "type": "responsive",
+      "value": [
+        {
+          "response": "",
+          "text": "Bendigan al Señor, quien perdona todos nuestros pecados.",
+          "label": ""
+        },
+        { "text": "Para siempre es su misericordia.", "label": "Pueblo" }
+      ],
+      "style": "preces",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "season": { "except": [], "only": ["Lent", "HolyWeek"] } },
+          { "preference": { "key": "palms", "value": "true", "is": false } }
+        ]
+      },
+      "hidden": false
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "is": false, "value": "true", "key": "palms" } }
+        ]
+      },
+      "hidden": false,
+      "value": ["El Celebrante puede decir:"],
+      "type": "rubric"
+    },
+    {
+      "hidden": false,
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "palms", "value": "true", "is": false } }
+        ],
+        "mode": "and"
+      },
+      "response": "Amén.",
+      "value": [
+        "Dios omnipotente, para quien todos los corazones están manifiestos, todos los deseos son conocidos y ningún secreto se halla encubierto: Purifica los pensamientos de nuestros corazones por la inspiración de tu Santo Espíritu, para que perfectamente te amemos y dignamente proclamemos la grandeza de tu santo Nombre; por Cristo nuestro Señor."
+      ],
+      "label": "",
+      "type": "text",
+      "metadata": { "omit_response": false },
+      "source": { "api": "", "source": "", "citation": "" },
+      "category": [],
+      "style": "prayer"
+    },
+    {
+      "type": "option",
+      "value": [
+        {
+          "style": "text",
+          "value": [
+            "Gloria a Dios en el cielo,\n\ty en la tierra paz a quienes ama el Señor.",
+            "Por tu inmensa gloria\n\tte alabamos,\n\tte bendecimos,\n\tte adoramos,\n\tte glorificamos,\n\tte damos gracias,\nSeñor Dios, Rey celestial,\nDios Padre todopoderoso.",
+            "Señor, Hijo único Jesucristo,\nSeñor Dios, Cordero de Dios,\nHijo del Padre:\nTú que quitas el pecado del mundo,\n\tten piedad de nosotros;\nTú que quitas el pecado del mundo,\n\tatiende nuestra súplica;\nTú que estás sentado a la derecha del Padre,\n\tten piedad de nosotros:",
+            "Porque sólo tú eres Santo,\nsólo tú Señor,\nsólo tú Altísimo, Jesucristo,\n\tcon el Espíritu Santo\n\ten la gloria de Dios Padre.\n\tAmén. "
+          ],
+          "metadata": { "omit_response": false },
+          "hidden": false,
+          "label": "Gloria in Excelsis",
+          "type": "text",
+          "category": [],
+          "version_label": "Gloria",
+          "display_format": "unison",
+          "source": { "api": "", "source": "", "citation": "" }
+        },
+        {
+          "version_label": "Kyrie",
+          "metadata": {},
+          "hidden": false,
+          "style": "responsive",
+          "source": { "api": "", "citation": "", "source": "" },
+          "category": [],
+          "value": [
+            {
+              "response": "Cristo, ten piedad [de nosotros].",
+              "text": "Señor, ten piedad [de nosotros].",
+              "label": ""
+            },
+            { "response": "", "text": "Señor, ten piedad [de nosotros]." }
+          ],
+          "type": "responsive"
+        },
+        {
+          "type": "responsive",
+          "style": "responsive",
+          "category": [],
+          "source": { "api": "", "source": "", "citation": "" },
+          "hidden": false,
+          "metadata": {},
+          "version_label": "Trisagion",
+          "value": [
+            {
+              "label": "",
+              "text": "Santo Dios,\nSanto Poderoso,\nSanto Inmortal,",
+              "response": "Ten piedad de nosotros."
+            }
+          ]
+        }
+      ],
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "value": "true", "key": "palms", "is": false } }
+        ]
+      },
+      "metadata": { "selected": 0, "editor_selected": 0 }
+    },
+    {
+      "hidden": false,
+      "metadata": { "omit_response": false, "level": 3 },
+      "category": [],
+      "type": "heading",
+      "style": "text",
+      "source": { "citation": "", "source": "", "api": "" },
+      "value": ["Colecta del Día"]
+    },
+    {
+      "type": "rubric",
+      "hidden": false,
+      "value": ["El Celebrante dice al pueblo:"]
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        { "label": "", "text": "El Señor sea con ustedes.", "response": "" },
+        { "text": "Y con tu espíritu.", "label": "Pueblo" },
+        { "text": "Oremos.", "label": "Celebrante" }
+      ],
+      "style": "preces"
+    },
+    {
+      "source": { "citation": "", "api": "", "source": "" },
+      "hidden": false,
+      "label": "Colecta del Día",
+      "lookup": { "type": "collect", "allow_multiple": false, "rotate": false },
+      "metadata": {
+        "omit_label": false,
+        "rollup": false,
+        "omit_response": false
+      },
+      "type": "text",
+      "style": "prayer",
+      "category": [],
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "category": [],
+      "type": "heading",
+      "hidden": false,
+      "value": ["Lecciones"],
+      "source": { "source": "", "citation": "", "api": "" },
+      "style": "text",
+      "metadata": { "level": 2, "omit_response": false }
+    },
+    {
+      "label": "La Primera Lectura",
+      "language": "es",
+      "type": "bible-reading",
+      "lookup": {
+        "table": { "preference": "lectionary" },
+        "allow_multiple": false,
+        "type": "lectionary",
+        "item": { "preference": "readingA" },
+        "rotate": false
+      },
+      "category": [],
+      "version": { "preference": "bibleVersion" },
+      "style": "long",
+      "source": { "api": "", "citation": "", "source": "" },
+      "metadata": {
+        "intro": {
+          "category": ["Bible Reading Introduction"],
+          "style": "text",
+          "language": "es",
+          "type": "text",
+          "sharing": {
+            "privacy": "public",
+            "status": "published",
+            "organization": "venite"
+          },
+          "value": ["Lectura de ${longName}."]
+        }
+      },
+      "hidden": false
+    },
+    {
+      "value": [
+        {
+          "style": "responsive",
+          "hidden": false,
+          "metadata": {},
+          "version_label": "BCP",
+          "source": { "source": "", "api": "", "citation": "" },
+          "value": [
+            {
+              "text": "Palabra del Señor.",
+              "label": "",
+              "response": "Demos gracias a Dios."
+            }
+          ],
+          "category": [],
+          "type": "responsive"
+        }
+      ],
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "hidden": false,
+      "category": [],
+      "source": { "source": "", "citation": "", "api": "" },
+      "type": "option"
+    },
+    {
+      "version": { "preference": "psalterVersion" },
+      "metadata": {
+        "omit_gloria": true,
+        "insert_seasonal_antiphon": false,
+        "changeable": false,
+        "omit_antiphon": false
+      },
+      "style": "psalm",
+      "type": "psalm",
+      "lookup": {
+        "rotate": false,
+        "type": "lectionary",
+        "item": "morning_psalms",
+        "table": { "preference": "lectionary" },
+        "allow_multiple": false
+      },
+      "category": [],
+      "source": { "api": "", "citation": "", "source": "" },
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "category": [],
+      "lookup": {
+        "table": { "preference": "lectionary" },
+        "type": "lectionary",
+        "rotate": false,
+        "item": { "preference": "readingB" }
+      },
+      "source": { "source": "", "api": "", "citation": "" },
+      "type": "bible-reading",
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "none", "is": false, "key": "readingB" } }
+        ],
+        "mode": "and"
+      },
+      "metadata": {
+        "intro": {
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "status": "published"
+          },
+          "category": ["Bible Reading Introduction"],
+          "value": ["Lectura de ${longName}."],
+          "style": "text",
+          "type": "text",
+          "language": "es"
+        }
+      },
+      "version": { "preference": "bibleVersion" },
+      "style": "long",
+      "label": "La Segunda Lectura",
+      "language": "es"
+    },
+    {
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "type": "responsive",
+          "source": { "citation": "", "api": "", "source": "" },
+          "style": "responsive",
+          "hidden": false,
+          "metadata": {},
+          "category": [],
+          "value": [
+            {
+              "response": "Demos gracias a Dios.",
+              "text": "Palabra del Señor.",
+              "label": ""
+            }
+          ],
+          "version_label": "BCP"
+        }
+      ],
+      "hidden": false,
+      "type": "option",
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "readingB", "value": "none", "is": false } }
+        ],
+        "mode": "and"
+      }
+    },
+    {
+      "style": "long",
+      "source": { "source": "", "citation": "", "api": "" },
+      "hidden": false,
+      "type": "bible-reading",
+      "lookup": {
+        "rotate": false,
+        "type": "lectionary",
+        "table": { "preference": "lectionary" },
+        "item": "gospel"
+      },
+      "metadata": {
+        "intro": {
+          "value": [
+            {
+              "text": "Santo Evangelio de nuestro Señor Jesucristo, según ${shortName}.",
+              "response": "¡Gloria a ti, Cristo Señor!"
+            }
+          ],
+          "language": "en",
+          "hidden": false,
+          "metadata": {},
+          "lastRevision": 13,
+          "category": ["Bible Reading Introduction"],
+          "style": "responsive",
+          "source": { "citation": "", "source": "", "api": "" },
+          "version": "bcp1979",
+          "sharing": {
+            "organization": "venite",
+            "collaborators": [],
+            "privacy": "public",
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "type": "responsive",
+          "date_modified": { "nanoseconds": 106000000, "seconds": 1606586010 },
+          "slug": "gospel-intro",
+          "label": "",
+          "date_created": { "seconds": 1606585913, "nanoseconds": 503000000 }
+        }
+      },
+      "category": [],
+      "version": { "preference": "bibleVersion" },
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "true", "is": false, "key": "palms" } }
+        ],
+        "mode": "and"
+      },
+      "label": "El Evangelio"
+    },
+    {
+      "source": { "source": "", "citation": "", "api": "" },
+      "type": "bible-reading",
+      "category": [],
+      "hidden": false,
+      "metadata": {
+        "intro": {
+          "date_created": { "seconds": 1606585913, "nanoseconds": 503000000 },
+          "category": ["Bible Reading Introduction"],
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "status": "published",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "date_modified": { "nanoseconds": 106000000, "seconds": 1606586010 },
+          "style": "text",
+          "value": [
+            "The Passion of our Lord Jesus Christ according to ${shortName}."
+          ],
+          "version": "bcp1979",
+          "type": "text",
+          "slug": "gospel-intro",
+          "metadata": {},
+          "lastRevision": 13,
+          "source": { "source": "", "citation": "", "api": "" },
+          "label": "",
+          "hidden": false,
+          "language": "es"
+        }
+      },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "value": "true", "key": "palms", "is": true } }
+        ]
+      },
+      "style": "long",
+      "label": "El Evangelio",
+      "language": "es",
+      "version": { "preference": "bibleVersion" },
+      "lookup": {
+        "rotate": false,
+        "type": "lectionary",
+        "item": "gospel",
+        "table": { "preference": "lectionary" }
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "text": "El Evangelio del Señor.",
+          "response": "Te alabamos, Cristo Señor.",
+          "label": ""
+        }
+      ],
+      "style": "responsive",
+      "type": "responsive",
+      "condition": {
+        "conditions": [
+          { "preference": { "value": "true", "key": "palms", "is": false } }
+        ],
+        "mode": "and"
+      }
+    },
+    {
+      "type": "heading",
+      "value": ["Sermón"],
+      "category": [],
+      "source": { "api": "", "citation": "", "source": "" },
+      "hidden": false,
+      "metadata": { "level": 3, "omit_response": false },
+      "style": "text"
+    },
+    {
+      "hidden": false,
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          { "preference": { "is": true, "key": "renewal", "value": "no" } },
+          {
+            "preference": { "is": false, "value": "true", "key": "footwashing" }
+          }
+        ]
+      },
+      "type": "rubric",
+      "value": [
+        "Los domingos, y en otras Fiestas Mayores, todos de pie, dicen:"
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "option",
+      "source": { "citation": "", "api": "", "source": "" },
+      "condition": {
+        "conditions": [
+          { "preference": { "is": true, "key": "renewal", "value": "no" } },
+          {
+            "preference": { "key": "footwashing", "value": "true", "is": false }
+          }
+        ],
+        "mode": "and"
+      },
+      "category": [],
+      "value": [
+        {
+          "value": [
+            "Creemos en un solo Dios,\n\tPadre todopoderoso,\n\tCreador de cielo y tierra,\n\tde todo lo visible e invisible.",
+            "Creemos en un solo Señor, Jesucristo,\n\tHijo único de Dios,\n\tnacido del Padre antes de todos los siglos:\n\tDios de Dios, Luz de Luz,\n\tDios verdadero de Dios verdadero,\n\tengendrado, no creado,\n\tde la misma naturaleza que el Padre,\n\tpor quien todo fue hecho;\n\tque por nosotros\n\ty por nuestra salvación\n\tbajó del cielo:\n\tpor obra del Espíritu Santo\n\tse encarnó de María, la Virgen,\n\ty se hizo hombre.\n\tPor nuestra causa fue crucificado\n\ten tiempos de Poncio Pilato:\n\tpadeció y fue sepultado.\n\tResucitó al tercer día, según las Escrituras,\n\tsubió al cielo\n\ty está sentado a la derecha del Padre.\n\tDe nuevo vendrá con gloria\n\tpara juzgar a vivos y muertos,\n\ty su reino no tendrá fin.",
+            "Creemos en el Espíritu Santo,\n\tSeñor y dador de vida,\n\tque procede del Padre y del Hijo,\n\tque con el Padre y el Hijo\n\trecibe una misma adoración y gloria,\n\ty que habló por los profetas.\n\tCreemos en la Iglesia,\n\tque es una, santa, católica y apostólica.\n\tReconocemos un solo Bautismo\n\tpara el perdón de los pecados.\n\tEsperamos la resurrección de los muertos\n\ty la vida del mundo futuro. Amén. "
+          ],
+          "display_format": "unison",
+          "label": "El Credo Niceno",
+          "hidden": false,
+          "category": [],
+          "metadata": {
+            "rollup": false,
+            "omit_response": false,
+            "omit_label": false
+          },
+          "source": { "api": "", "source": "", "citation": "" },
+          "version_label": "BCP",
+          "type": "text",
+          "style": "text"
+        }
+      ],
+      "metadata": { "editor_selected": 0, "selected": 0 }
+    },
+    {
+      "language": "en",
+      "type": "liturgy",
+      "date_modified": { "nanoseconds": 624000000, "seconds": 1603561955 },
+      "version": "Rite-II",
+      "lookup": { "type": "slug" },
+      "lastRevision": 86,
+      "category": [],
+      "sharing": {
+        "status": "published",
+        "privacy": "public",
+        "organization": "venite",
+        "collaborators": [],
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+      },
+      "metadata": {
+        "evening": false,
+        "special_preferences": {},
+        "supplement": false,
+        "liturgyversions": [],
+        "preferences": {}
+      },
+      "hidden": false,
+      "slug": "renewal-of-baptismal-vows",
+      "condition": {
+        "conditions": [
+          { "preference": { "key": "renewal", "value": "yes", "is": true } }
+        ],
+        "mode": "and"
+      },
+      "label": "The Renewal of Baptismal Vows",
+      "date_created": { "nanoseconds": 470000000, "seconds": 1603561650 },
+      "source": { "citation": "", "source": "", "api": "" }
+    },
+    {
+      "metadata": {
+        "preferences": {},
+        "supplement": true,
+        "evening": false,
+        "special_preferences": {},
+        "liturgyversions": []
+      },
+      "lookup": { "type": "slug", "rotate": false },
+      "date_modified": { "seconds": 1603827111, "nanoseconds": 501000000 },
+      "source": { "api": "", "source": "", "citation": "" },
+      "type": "liturgy",
+      "sharing": {
+        "collaborators": [],
+        "status": "published",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "privacy": "public",
+        "organization": "venite"
+      },
+      "language": "en",
+      "slug": "footwashing",
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "preference": { "is": true, "key": "footwashing", "value": "true" }
+          }
+        ]
+      },
+      "version": "Rite-II",
+      "lastRevision": 89,
+      "date_created": { "seconds": 1603561650, "nanoseconds": 470000000 },
+      "hidden": false,
+      "label": "The Renewal of Baptismal Vows",
+      "category": []
+    },
+    {
+      "style": "text",
+      "source": { "api": "", "source": "", "citation": "" },
+      "value": ["Oración de los Fieles"],
+      "type": "heading",
+      "category": [],
+      "hidden": false,
+      "metadata": { "level": 3, "omit_response": false }
+    },
+    {
+      "hidden": false,
+      "style": "short",
+      "source": { "source": "", "api": "", "citation": "" },
+      "lookup": { "type": "category", "rotate": false },
+      "category": ["Prayers of the People"],
+      "metadata": {
+        "evening": false,
+        "supplement": false,
+        "liturgyversions": []
+      },
+      "type": "liturgy",
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "type": "text",
+      "source": { "source": "", "api": "", "citation": "" },
+      "lookup": { "filter": "—", "rotate": false, "type": "category" },
+      "metadata": { "omit_response": false },
+      "category": ["POTP Collect"],
+      "hidden": false,
+      "style": "prayer"
+    },
+    {
+      "value": ["Confesión de Pecado"],
+      "source": { "citation": "p. 360", "api": "", "source": "BCP" },
+      "style": "text",
+      "category": [],
+      "hidden": false,
+      "metadata": { "omit_response": false, "level": 3 },
+      "type": "heading"
+    },
+    {
+      "value": ["El Diácono o el Celebrante dice:"],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "value": [
+        "Confesemos nuestros pecados contra Dios y contra nuestro prójimo. "
+      ],
+      "hidden": false,
+      "style": "text",
+      "type": "text"
+    },
+    {
+      "value": [
+        "Puede guardarse un período de silencio.",
+        "Ministro y Pueblo:"
+      ],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "source": { "source": "", "citation": "", "api": "" },
+      "style": "prayer",
+      "response": "Amén. ",
+      "metadata": { "omit_response": false },
+      "category": [],
+      "value": [
+        "Dios de misericordia,\nconfesamos que hemos pecado contra ti\npor pensamiento, palabra y obra,\npor lo que hemos hecho\ny lo que hemos dejado de hacer.\nNo te hemos amado con todo el corazón;\nno hemos amado a nuestro prójimo como a nosotros mismos.\nSincera y humildemente nos arrepentimos.\nPor amor de tu Hijo Jesucristo,\nten piedad de nosotros y perdónanos;\nasí tu voluntad será nuestra alegría\ny andaremos por tus caminos,\npara gloria de tu Nombre."
+      ],
+      "type": "text",
+      "display_format": "unison"
+    },
+    {
+      "value": [
+        "El Obispo, si está presente, o el Sacerdote, puesto de pie, dice:"
+      ],
+      "type": "rubric",
+      "hidden": false
+    },
+    {
+      "response": "Amén.",
+      "value": [
+        "Dios omnipotente tenga misericordia de ustedes, perdone todos sus pecados por Jesucristo nuestro Señor, les fortalezca en toda bondad y, por el poder del Espíritu Santo, les conserve en la vida eterna."
+      ],
+      "type": "text",
+      "style": "prayer",
+      "hidden": false
+    },
+    {
+      "category": [],
+      "hidden": false,
+      "type": "heading",
+      "style": "text",
+      "value": ["La Paz"],
+      "source": { "api": "", "citation": "", "source": "" },
+      "metadata": { "omit_response": false, "level": 3 }
+    },
+    {
+      "type": "rubric",
+      "value": ["Todos de pie, el Celebrante dice:"],
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "text": "La paz del Señor sea siempre con ustedes.",
+          "label": "",
+          "response": ""
+        },
+        { "text": "Y con tu espíritu.", "label": "Pueblo" }
+      ],
+      "type": "responsive",
+      "style": "preces"
+    },
+    {
+      "value": [
+        "Los Ministros y el Pueblo pueden saludarse mutuamente en el nombre del Señor."
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "category": [],
+      "value": ["Santa Comunión"],
+      "type": "heading",
+      "hidden": false,
+      "metadata": { "level": 2, "omit_response": false },
+      "style": "text",
+      "source": { "source": "", "citation": "", "api": "" }
+    },
+    {
+      "category": ["offertory_sentence"],
+      "hidden": false,
+      "style": "short",
+      "metadata": {},
+      "type": "bible-reading",
+      "lookup": { "type": "category", "rotate": false, "filter": "—" },
+      "source": { "citation": "", "api": "", "source": "" },
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "category": ["Eucharistic Prayer"],
+      "metadata": {},
+      "style": "short",
+      "source": { "citation": "", "source": "", "api": "" },
+      "lookup": { "rotate": false, "filter": "—", "type": "category" },
+      "hidden": false,
+      "type": "bible-reading",
+      "language": "es",
+      "version": "loc"
+    },
+    {
+      "type": "option",
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "value": [
+        {
+          "category": [],
+          "style": "text",
+          "value": ["Oremos como nuestro Salvador Cristo nos enseñó. "],
+          "type": "text",
+          "source": { "source": "", "api": "", "citation": "" },
+          "version_label": "Traditional",
+          "metadata": { "omit_response": false },
+          "hidden": false
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "value": [
+        "Padre nuestro que estás en el cielo,\n\tsantificado sea tu Nombre,\n\tvenga tu reino,\n\thágase tu voluntad,\n\t\ten la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\n\tcomo también nosotros perdonamos\n\t\ta los que nos ofenden.\nNo nos dejes caer en tentación\n\ty líbranos del mal.\nPorque tuyo es el reino,\n\ttuyo es el poder,\n\ty tuya es la gloria,\n\tahora y por siempre."
+      ],
+      "type": "text",
+      "style": "prayer",
+      "response": "Amén.",
+      "display_format": "unison"
+    },
+    {
+      "hidden": false,
+      "metadata": { "level": 3, "omit_response": false },
+      "source": { "source": "", "api": "", "citation": "" },
+      "type": "heading",
+      "value": ["Fracción del Pan"],
+      "style": "text",
+      "category": []
+    },
+    {
+      "hidden": false,
+      "value": [
+        "El Celebrante parte el Pan consagrado.",
+        "Se guarda un período de silencio."
+      ],
+      "type": "rubric"
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": ["Luego puede cantarse o decirse:"]
+    },
+    {
+      "style": "responsive",
+      "value": [
+        {
+          "text": "[¡Aleluya!] Cristo, nuestra Pascua, se ha sacrificado por nosotros.",
+          "response": "¡Celebremos la fiesta! [¡Aleluya!]",
+          "label": ""
+        }
+      ],
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "type": "rubric",
+      "hidden": false,
+      "value": [
+        "Durante la Cuaresma se omite el ¡Aleluya! y también puede omitirse en otras ocasiones, excepto durante la Estación de Pascua."
+      ]
+    },
+    {
+      "type": "rubric",
+      "value": [
+        "En lugar de, o además de, lo precedente puede usarse cualquier otra antífona apropiada."
+      ],
+      "hidden": false
+    },
+    {
+      "metadata": { "editor_selected": 1, "selected": 1 },
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "category": [],
+          "type": "text",
+          "value": ["Los Dones de Dios para el Pueblo de Dios."],
+          "hidden": false,
+          "metadata": { "omit_response": false },
+          "version_label": "Corto",
+          "style": "text",
+          "source": { "citation": "", "source": "", "api": "" }
+        },
+        {
+          "style": "text",
+          "type": "text",
+          "category": [],
+          "value": [
+            "Los Dones de Dios para el Pueblo de Dios. Tómenlos en memoria de que Cristo murió por ustedes, y aliméntense de él en sus corazones, por fe y con agradecimiento. "
+          ],
+          "version_label": "Largo",
+          "metadata": { "omit_response": false },
+          "source": { "citation": "", "source": "", "api": "" },
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "Los ministros reciben el Sacramento en ambas especies e inmediatamente después lo dan al pueblo."
+      ]
+    },
+    {
+      "value": [
+        "Se da a los comulgantes el Pan y el Cáliz con estas palabras:"
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "hidden": false,
+      "metadata": { "editor_selected": 1, "selected": 1 },
+      "type": "option",
+      "value": [
+        {
+          "hidden": false,
+          "value": [
+            "El Cuerpo (la Sangre) de nuestro Señor Jesucristo te guarde en la vida eterna. [Amén.]"
+          ],
+          "type": "text",
+          "style": "text"
+        },
+        {
+          "style": "text",
+          "value": [
+            "El Cuerpo de Cristo, pan del cielo. [Amén.]\nLa Sangre de Cristo, cáliz de salvación. [Amén.]"
+          ],
+          "type": "text",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "type": "rubric",
+      "value": ["Después de la Comunión, el Celebrante dice:"],
+      "hidden": false
+    },
+    { "value": ["Oremos."], "hidden": false, "type": "text", "style": "text" },
+    { "type": "rubric", "hidden": false, "value": ["Celebrante y Pueblo:"] },
+    {
+      "type": "option",
+      "value": [
+        {
+          "value": [
+            "Eterno Dios, Padre celestial,\nen tu bondad nos has aceptado como miembros vivos\nde tu Hijo, nuestro Salvador Jesucristo;\nnos has nutrido con alimento espiritual\nen el Sacramento de su Cuerpo y de su Sangre.\nEnvíanos ahora en paz al mundo;\nrevístenos de fuerza y de valor\npara amarte y servirte\ncon alegría y sencillez de corazón;\npor Cristo nuestro Señor."
+          ],
+          "style": "prayer",
+          "version_label": "Eterno Dios, Padre celestial",
+          "response": "Amén.",
+          "source": { "api": "", "citation": "", "source": "" },
+          "display_format": "unison",
+          "metadata": { "rollup": false, "omit_response": false },
+          "category": [],
+          "type": "text",
+          "hidden": false
+        },
+        {
+          "type": "text",
+          "hidden": false,
+          "display_format": "unison",
+          "source": { "citation": "", "source": "", "api": "" },
+          "category": [],
+          "style": "prayer",
+          "metadata": { "rollup": false, "omit_response": false },
+          "version_label": "Omnipotente y sempiterno Dios",
+          "value": [
+            "Omnipotente y sempiterno Dios, te damos gracias\nporque nos has nutrido con el alimento espiritual\ndel preciosísimo Cuerpo y Sangre\nde tu Hijo, nuestro Salvador Jesucristo;\ny porque nos aseguras, en estos santos misterios,\nque somos miembros vivos del Cuerpo de tu Hijo\ny herederos de tu reino eterno.\nY ahora, Padre, envíanos al mundo para cumplir la misión\nque tú nos has encomendado,\npara amarte y servirte\ncomo fieles testigos de Cristo nuestro Señor.\nA él, a ti y al Espíritu Santo,\nsea todo honor y gloria, ahora y por siempre. "
+          ]
+        }
+      ],
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "hidden": false
+    },
+    {
+      "type": "rubric",
+      "hidden": false,
+      "value": [
+        "El Obispo, si está presente, o el Sacerdote, puede bendecir al pueblo."
+      ]
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [
+        "El Diácono, o el Celebrante, despide al pueblo con estas palabras:s"
+      ]
+    },
+    {
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "value": [
+        {
+          "type": "responsive",
+          "version_label": "Salgamos en nombre de Cristo",
+          "metadata": {},
+          "value": [
+            {
+              "text": "Salgamos en nombre de Cristo.",
+              "label": "",
+              "response": ""
+            },
+            { "label": "Pueblo", "text": "Demos gracias a Dios." }
+          ],
+          "source": { "source": "", "citation": "", "api": "" },
+          "category": [],
+          "hidden": false,
+          "style": "preces"
+        },
+        {
+          "style": "preces",
+          "source": { "citation": "", "source": "", "api": "" },
+          "version_label": "Vayan en paz",
+          "type": "responsive",
+          "metadata": {},
+          "hidden": false,
+          "category": [],
+          "value": [
+            {
+              "response": "",
+              "label": "",
+              "text": "Vayan en paz para amar y servir al Señor."
+            },
+            { "text": "Demos gracias a Dios.", "label": "Pueblo" }
+          ]
+        },
+        {
+          "type": "responsive",
+          "category": [],
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "label": "",
+              "text": "Salgamos con gozo al mundo, en el poder del Espíritu."
+            },
+            { "text": "Demos gracias a Dios.", "label": "Pueblo" }
+          ],
+          "source": { "api": "", "source": "", "citation": "" },
+          "hidden": false,
+          "metadata": {},
+          "version_label": "Salgamos con gozo al mundo"
+        },
+        {
+          "metadata": {},
+          "source": { "api": "", "citation": "", "source": "" },
+          "category": [],
+          "style": "preces",
+          "type": "responsive",
+          "version_label": "Bendigamos al Señor",
+          "value": [
+            { "label": "", "response": "", "text": "Bendigamos al Señor." },
+            { "text": "Demos gracias a Dios.", "label": "Pueblo" }
+          ],
+          "hidden": false
+        }
+      ],
+      "type": "option",
+      "hidden": false,
+      "condition": {
+        "conditions": [
+          {
+            "season": {
+              "except": ["Easter", "Ascension", "Pentecost", "Pentecost"],
+              "only": []
+            }
+          }
+        ],
+        "mode": "and"
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "hidden": false,
+          "metadata": {},
+          "source": { "source": "", "api": "", "citation": "" },
+          "version_label": "Salgamos en nombre de Cristo",
+          "type": "responsive",
+          "style": "preces",
+          "value": [
+            {
+              "response": "",
+              "text": "Salgamos en nombre de Cristo. ¡Aleluya, aleluya!",
+              "label": ""
+            },
+            {
+              "text": "Demos gracias a Dios. ¡Aleluya, aleluya!",
+              "label": "Pueblo"
+            }
+          ],
+          "category": []
+        },
+        {
+          "version_label": "Vayan en paz",
+          "source": { "api": "", "source": "", "citation": "" },
+          "style": "preces",
+          "value": [
+            {
+              "label": "",
+              "text": "Vayan en paz para amar y servir al Señor. ¡Aleluya, aleluya!",
+              "response": ""
+            },
+            {
+              "label": "Pueblo",
+              "text": "Demos gracias a Dios. ¡Aleluya, aleluya!"
+            }
+          ],
+          "metadata": {},
+          "type": "responsive",
+          "hidden": false,
+          "category": []
+        },
+        {
+          "version_label": "Salgamos con gozo al mundo",
+          "hidden": false,
+          "value": [
+            {
+              "response": "",
+              "label": "",
+              "text": "Salgamos con gozo al mundo, en el poder del Espíritu. ¡Aleluya, aleluya!"
+            },
+            {
+              "text": "Demos gracias a Dios. ¡Aleluya, aleluya!",
+              "label": "Pueblo"
+            }
+          ],
+          "category": [],
+          "metadata": {},
+          "source": { "citation": "", "source": "", "api": "" },
+          "style": "preces",
+          "type": "responsive"
+        },
+        {
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "metadata": {},
+          "version_label": "Bendigamos al Señor",
+          "type": "responsive",
+          "value": [
+            {
+              "response": "",
+              "text": "Bendigamos al Señor. ¡Aleluya, aleluya!",
+              "label": ""
+            },
+            {
+              "label": "Pueblo",
+              "text": "Demos gracias a Dios. ¡Aleluya, aleluya!"
+            }
+          ],
+          "style": "preces",
+          "category": []
+        }
+      ],
+      "type": "option",
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "condition": {
+        "mode": "and",
+        "conditions": [
+          {
+            "season": {
+              "only": [],
+              "except": ["Easter", "Ascension", "Pentecost", "Pentecost"]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "id": "2FifJvZaLhFw7u2QV5BQ",
+  "category": [],
+  "label": "Eucaristía",
+  "source": { "source": "", "api": "", "citation": "" },
+  "language": "es",
+  "date_created": { "seconds": 1678660790, "nanoseconds": 435000000 },
+  "slug": "eucharist",
+  "metadata": {
+    "preferences": {
+      "psalterVersion": {
+        "category": "Traducciones",
+        "key": "psalterVersion",
+        "options": [
+          {
+            "default": true,
+            "label": "El Salterio (1979)",
+            "value": "salterio1979"
+          }
+        ],
+        "label": "El Salterio"
+      },
+      "bibleVersion": {
+        "key": "bibleVersion",
+        "label": "Bible Translation",
+        "options": [
+          {
+            "value": "RVR1960",
+            "label": "Reina-Valera (1960)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "DHH",
+            "label": "Dios Habla Hoy (DHH)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "RV09",
+            "label": "Reina-Valera (1909)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "NRSV",
+            "label": "New Revised Standard Version (NRSV)",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "CEB",
+            "label": "Common English Bible (CEB)"
+          },
+          {
+            "default": false,
+            "value": "ESV",
+            "label": "English Standard Version (ESV)",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "value": "KJV",
+            "metadata": { "alternateYear": false },
+            "label": "King James Version (KJV)",
+            "default": false
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NRSVUE",
+            "label": "NRSV Updated Edition (NRSVue)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "RSV",
+            "label": "Revised Standard Version (RSV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NKJV",
+            "label": "New King James Version (NKJV)"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "NIV",
+            "label": "New International Version (NIV)"
+          }
+        ]
+      },
+      "readingA": {
+        "key": "readingA",
+        "label": "First Reading",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "value": "first_reading",
+            "label": "OT/First Reading",
+            "default": false
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "second_reading",
+            "label": "Epistle/Second Reading"
+          }
+        ]
+      },
+      "lectionary": {
+        "label": "Lectionary",
+        "options": [
+          {
+            "default": false,
+            "label": "RCL (Track 1)",
+            "metadata": { "alternateYear": false },
+            "value": "rclsundayTrack1"
+          },
+          {
+            "label": "RCL (Track 2)",
+            "value": "rclsunday",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "Daily Office",
+            "value": "bcp1979_daily_office",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "label": "Lesser Feasts & Fasts (2018)",
+            "value": "lff2018",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "key": "lectionary"
+      },
+      "renewal": {
+        "label": "Renewal of Baptismal Vows",
+        "options": [
+          {
+            "label": "No",
+            "value": "no",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "value": "yes",
+            "label": "Yes"
+          }
+        ],
+        "key": "renewal"
+      },
+      "readingB": {
+        "key": "readingB",
+        "label": "Second Reading",
+        "options": [
+          {
+            "value": "first_reading",
+            "label": "OT/First Reading",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "Epistle/Second Reading",
+            "default": true,
+            "value": "second_reading",
+            "metadata": { "alternateYear": false }
+          },
+          {
+            "label": "—",
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "none"
+          }
+        ]
+      }
+    },
+    "liturgyversions": ["loc", "LOC"],
+    "label": "eucharist",
+    "special_preferences": {
+      "footwashing": {
+        "options": [
+          {
+            "value": "false",
+            "label": "No",
+            "metadata": { "alternateYear": false },
+            "default": false
+          },
+          {
+            "value": "true",
+            "label": "Yes",
+            "default": false,
+            "metadata": { "alternateYear": false }
+          }
+        ],
+        "label": "footwashing",
+        "key": "footwashing"
+      },
+      "palms": {
+        "label": "Liturgy of the Palms",
+        "key": "palms",
+        "options": [
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "value": "false",
+            "label": "—"
+          },
+          {
+            "default": false,
+            "metadata": { "alternateYear": false },
+            "label": "Before the Service",
+            "value": "true"
+          }
+        ]
+      }
+    },
+    "evening": false,
+    "pronouns": [],
+    "supplement": false,
+    "slug": "eucharist"
+  },
+  "date_modified": { "seconds": 1678662708, "nanoseconds": 455000000 }
+}

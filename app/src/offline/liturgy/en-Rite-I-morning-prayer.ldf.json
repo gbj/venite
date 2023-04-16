@@ -478,29 +478,49 @@
       "style": "day"
     },
     {
-      "lookup": { "type": "slug" },
-      "hidden": false,
-      "slug": "the-angelus",
-      "language": "en",
       "condition": {
-        "mode": "and",
         "conditions": [
-          { "preference": { "key": "angelus", "value": "before", "is": true } }
-        ]
+          { "preference": { "key": "angelus", "is": true, "value": "before" } }
+        ],
+        "mode": "and"
       },
-      "type": "liturgy",
-      "label": "The Angelus",
-      "version": "Rite-I",
-      "source": { "citation": "", "api": "", "source": "" },
-      "lastRevision": 61,
-      "metadata": { "liturgyversions": [] },
-      "sharing": {
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "collaborators": [],
-        "organization": "venite",
-        "status": "published",
-        "privacy": "public"
-      }
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "slug": "palms",
@@ -2296,30 +2316,49 @@
       "category": []
     },
     {
-      "language": "en",
-      "sharing": {
-        "status": "published",
-        "organization": "venite",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "privacy": "public",
-        "collaborators": []
-      },
-      "lastRevision": 61,
-      "hidden": false,
-      "metadata": { "evening": false, "liturgyversions": [] },
-      "type": "liturgy",
-      "version": "Rite-I",
-      "lookup": { "rotate": false, "type": "slug" },
-      "slug": "the-angelus",
       "condition": {
         "conditions": [
-          { "preference": { "key": "angelus", "value": "after", "is": true } }
+          { "preference": { "key": "angelus", "is": true, "value": "after" } }
         ],
         "mode": "and"
       },
-      "category": [],
-      "label": "The Angelus",
-      "source": { "citation": "", "api": "", "source": "" }
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "version": "Rite-I",

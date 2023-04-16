@@ -23,34 +23,49 @@
       "value": [""]
     },
     {
-      "slug": "the-angelus",
-      "type": "liturgy",
-      "label": "The Angelus",
-      "lookup": { "type": "slug", "rotate": false },
-      "source": { "citation": "", "source": "", "api": "" },
-      "version": "Rite-I",
-      "sharing": {
-        "organization": "venite",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-        "privacy": "public",
-        "status": "published",
-        "collaborators": []
-      },
-      "category": [],
       "condition": {
-        "mode": "and",
         "conditions": [
           { "preference": { "key": "angelus", "is": true, "value": "before" } }
-        ]
+        ],
+        "mode": "and"
       },
-      "metadata": {
-        "evening": false,
-        "liturgyversions": [],
-        "supplement": false
-      },
-      "hidden": false,
-      "lastRevision": 61,
-      "language": "en"
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "sharing": {
@@ -1031,30 +1046,49 @@
       "type": "heading"
     },
     {
-      "slug": "the-angelus",
-      "version": "Rite-I",
-      "language": "en",
       "condition": {
-        "mode": "and",
         "conditions": [
-          { "preference": { "value": "after", "is": true, "key": "angelus" } }
-        ]
+          { "preference": { "key": "angelus", "is": true, "value": "after" } }
+        ],
+        "mode": "and"
       },
-      "metadata": { "liturgyversions": [], "evening": false },
-      "label": "The Angelus",
-      "lastRevision": 61,
-      "source": { "source": "", "api": "", "citation": "" },
-      "category": [],
-      "hidden": false,
-      "lookup": { "type": "slug", "rotate": false },
-      "sharing": {
-        "status": "published",
-        "collaborators": [],
-        "organization": "venite",
-        "privacy": "public",
-        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-      },
-      "type": "liturgy"
+      "type": "option",
+      "value": [
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "regina-coeli",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "condition": {
+            "conditions": [
+              {
+                "season": {
+                  "only": ["Easter", "Ascension", "Pentecost"]
+                }
+              }
+            ],
+            "mode": "and"
+          },
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "Regina Coeli"
+        },
+        {
+          "lookup": { "type": "slug" },
+          "metadata": { "liturgyversions": [] },
+          "slug": "the-angelus",
+          "hidden": false,
+          "source": { "source": "", "api": "", "citation": "" },
+          "language": "en",
+          "type": "liturgy",
+          "version": "Rite-I",
+          "lastRevision": 61,
+          "label": "The Angelus"
+        }
+      ]
     },
     {
       "metadata": {

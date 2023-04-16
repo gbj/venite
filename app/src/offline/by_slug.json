@@ -2665,6 +2665,388 @@
       "language": "en"
     }
   ],
+  "es-loc-proper_preface": [
+    {
+      "category": ["Trinity", "Proper Preface"],
+      "value": [
+        "Porque con tu Hijo y Espíritu Santo coeternos, eres un solo Dios, un solo Señor, en Trinidad de Personas y en Unidad de Naturaleza; y celebramos la única e igual gloria que tienes tú, oh Padre, con el Hijo y con el Espíritu Santo."
+      ],
+      "version_label": "Domingo de Trinidad",
+      "version": "loc",
+      "slug": "proper_preface",
+      "label": null,
+      "style": "text",
+      "citation": null,
+      "type": "text",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "hidden": false,
+      "language": "es"
+    },
+    {
+      "label": null,
+      "style": "text",
+      "citation": null,
+      "hidden": false,
+      "type": "text",
+      "version": "loc",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "category": ["Epiphany", "Proper Preface"],
+      "slug": "proper_preface",
+      "value": [
+        "Porque en el misterio del Verbo hecho carne, tú has hecho que una luz nueva brille en nuestros corazones, para darnos el conocimiento de tu gloria en la faz de tu Hijo, nuestro Señor Jesucristo."
+      ],
+      "language": "es",
+      "version_label": "Epifanía"
+    },
+    {
+      "value": [
+        "Porque por medio del agua y del Espíritu Santo nos has hecho un pueblo nuevo en nuestro Señor Jesucristo, para manifestar tu gloria en todo el mundo."
+      ],
+      "label": null,
+      "language": "es",
+      "style": "text",
+      "citation": null,
+      "slug": "proper_preface",
+      "hidden": false,
+      "version": "loc",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "type": "text",
+      "category": ["OrdinaryTime", "Proper Preface"],
+      "version_label": "De Dios Espíritu Santo"
+    },
+    {
+      "version_label": "Pentecostés",
+      "language": "es",
+      "style": "text",
+      "type": "text",
+      "value": [
+        "Por nuestro Señor Jesucristo. Cumpliendo su fiel promesa, el Espíritu Santo descendió [este día] del cielo, posando sobre los discípulos, para enseñarles y guiarles a toda verdad; uniendo a los pueblos de muchas lenguas en la confesión de una sola fe, y dándole a tu Iglesia la potestad de servirte como un real sacerdocio, y de predicar el Evangelio a todas las naciones."
+      ],
+      "hidden": false,
+      "citation": null,
+      "label": null,
+      "version": "loc",
+      "category": ["Pentecost", "Proper Preface"],
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "slug": "proper_preface"
+    },
+    {
+      "hidden": false,
+      "style": "text",
+      "category": ["Lent", "Proper Preface"],
+      "type": "text",
+      "label": null,
+      "language": "es",
+      "value": [
+        "Tú ordenaste a tu pueblo fiel purificar sus corazones y prepararse con gozo para la fiesta Pascual; para que, fervientes en la oración y en las obras de misericordia, y renovados por tu Palabra y Sacramentos, lleguen a la plenitud de la gracia que tú has preparado para los que te aman."
+      ],
+      "citation": null,
+      "slug": "proper_preface",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "version": "loc",
+      "version_label": "Cuaresma"
+    },
+    {
+      "style": "text",
+      "hidden": false,
+      "label": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "slug": "proper_preface",
+      "category": ["Lent", "Proper Preface"],
+      "language": "es",
+      "version_label": "Cuaresma",
+      "version": "loc",
+      "type": "text",
+      "citation": null,
+      "value": [
+        "Por nuestro Señor Jesucristo; quien en todo fue tentado como nosotros, mas nunca cometió pecado. Por su gracia podemos triunfar sobre todo mal y no vivir ya más para nosotros, sino para él, que murió y resucitó por nosotros."
+      ]
+    },
+    {
+      "slug": "proper_preface",
+      "type": "text",
+      "value": [
+        "Por nuestro Señor Jesucristo; quien se levantó victorioso de la muerte, y nos fortalece con la bendita esperanza de la vida eterna. Pues, para tu pueblo fiel, oh Señor, la vida cambia, mas no termina; y cuando nuestro cuerpo mortal yazca en muerte, haya preparada para nosotros una morada eterna en el cielo."
+      ],
+      "category": ["Funeral", "Proper Preface"],
+      "citation": null,
+      "language": "es",
+      "label": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version": "loc",
+      "version_label": "Conmemoración de los Fieles Difuntos",
+      "hidden": false,
+      "style": "text"
+    },
+    {
+      "value": [
+        "Porque en el amor de esposa y esposo, nos has dado una imagen de la Jerusalén celestial, ataviada como novia para su novio, tu Hijo nuestro Señor Jesucristo; quien la ama y se entregó por ella para hacer nueva la creación entera."
+      ],
+      "style": "text",
+      "language": "es",
+      "hidden": false,
+      "version_label": "Matrimonio",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "version": "loc",
+      "citation": null,
+      "label": null,
+      "type": "text",
+      "slug": "proper_preface",
+      "category": ["Marriage", "Proper Preface"]
+    },
+    {
+      "slug": "proper_preface",
+      "language": "es",
+      "type": "text",
+      "citation": null,
+      "version": "loc",
+      "label": null,
+      "category": ["Ascension", "Proper Preface"],
+      "version_label": "Ascención",
+      "value": [
+        "Por tu Hijo amado, nuestro Señor Jesucristo. Después de su gloriosa resurrección, se apareció abiertamente a sus discípulos, y ante sus ojos ascendió a los cielos, a fin de prepararnos un lugar; para que allí donde él se encuentra, estemos también nosotros, y reinemos con el en gloria."
+      ],
+      "hidden": false,
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "style": "text"
+    },
+    {
+      "value": [
+        "Porque enviaste a tu amado Hijo para redimirnos del pecado y de la muerte, y para hacernos en él herederos de la vida eterna; para que, cuando vuelva en poder y gran triunfo a juzgar al mundo, nos gocemos contemplando su manifestación, sin temor ni vergüenza."
+      ],
+      "slug": "proper_preface",
+      "category": ["Advent", "Proper Preface"],
+      "version": "loc",
+      "citation": null,
+      "language": "es",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "style": "text",
+      "label": null,
+      "version_label": "Adviento",
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "version_label": "Un Santo",
+      "citation": null,
+      "hidden": false,
+      "label": null,
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "version": "loc",
+      "category": ["Saints", "Proper Preface"],
+      "style": "text",
+      "slug": "proper_preface",
+      "type": "text",
+      "value": [
+        "Por la maravillosa gracia y virtud declaradas en todos tus santos, que han sido vasos escogidos de tu gracia, y luces del mundo en su propia generación."
+      ],
+      "language": "es"
+    },
+    {
+      "category": ["Baptism", "Proper Preface"],
+      "label": null,
+      "value": [
+        "Porque en nuestro Señor Jesucristo nos has recibido como hijos tuyos, nos has hecho ciudadanos de tu reino, y nos has dado el Espíritu Santo para conducirnos a toda verdad."
+      ],
+      "language": "es",
+      "hidden": false,
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "citation": null,
+      "version": "loc",
+      "slug": "proper_preface",
+      "version_label": "Bautismo",
+      "type": "text",
+      "style": "text"
+    },
+    {
+      "hidden": false,
+      "type": "text",
+      "version": "loc",
+      "language": "es",
+      "citation": null,
+      "style": "text",
+      "category": ["Easter", "Proper Preface"],
+      "label": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "slug": "proper_preface",
+      "value": [
+        "Pero principalmente tenemos que alabarte por la gloriosa resurrección de tu Hijo nuestro Señor Jesucristo; pues él es el verdadero Cordero Pascual, quien fue sacrificado por nosotros, y ha quitado los pecados del mundo. Por su muerte ha destruido la muerte, y por su resurrección a la vida, ha conquistado para nosotros la vida eterna."
+      ],
+      "version_label": null
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "type": "text",
+      "version_label": "Un Santo",
+      "version": "loc",
+      "citation": null,
+      "category": ["Saints", "Proper Preface"],
+      "label": null,
+      "slug": "proper_preface",
+      "style": "text",
+      "language": "es",
+      "value": [
+        "Porque en la obediencia de tus santos nos has dado un ejemplo de justicia, y en su gozo eterno una prenda gloriosa de la esperanza de nuestra vocación."
+      ]
+    },
+    {
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "language": "es",
+      "version": "loc",
+      "slug": "proper_preface",
+      "value": [
+        "Por nuestro Señor Jesucristo, quien el primer día de la semana venció a la muerte y al sepulcro, y por su gloriosa resurrección nos abrió el camino de la vida eterna."
+      ],
+      "citation": null,
+      "category": ["OrdinaryTime", "Proper Preface"],
+      "hidden": false,
+      "version_label": "De Dios Hijo",
+      "label": null,
+      "type": "text",
+      "style": "text"
+    },
+    {
+      "version_label": "Un Santo",
+      "slug": "proper_preface",
+      "type": "text",
+      "style": "text",
+      "label": null,
+      "version": "loc",
+      "language": "es",
+      "hidden": false,
+      "citation": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "category": ["Saints", "Proper Preface"],
+      "value": [
+        "Porque en tu grandeza eres glorificado en la asamblea de tus santos. Todas tus criaturas te alaban, y tus fieles siervos te bendicen, proclamando ante los gobernantes de este mundo el grandioso Nombre de tu Hijo unigénito."
+      ]
+    },
+    {
+      "version": "loc",
+      "citation": null,
+      "value": [
+        "Porque en la multitud de tus santos, nos has rodeado de una gran nube de testigos, para que nos regocijemos en su comunión, y corramos con perseverancia la carrera que nos es propuesta; y, junto con ellos, recibamos la corona de gloria que no se marchita."
+      ],
+      "hidden": false,
+      "slug": "proper_preface",
+      "category": ["Saints", "Proper Preface"],
+      "version_label": "Todos los Santos",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "language": "es",
+      "type": "text",
+      "label": null,
+      "style": "text"
+    },
+    {
+      "label": null,
+      "hidden": false,
+      "value": [
+        "Porque tú eres fuente de luz y vida; nos hiciste a tu imagen, y nos llamaste a nueva vida en nuestro Señor Jesucristo."
+      ],
+      "slug": "proper_preface",
+      "version": "loc",
+      "style": "text",
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "citation": null,
+      "category": ["OrdinaryTime", "Proper Preface"],
+      "version_label": "De Dios Padre",
+      "language": "es",
+      "type": "text"
+    },
+    {
+      "language": "es",
+      "citation": null,
+      "label": null,
+      "value": [
+        "Porque nos diste a Jesucristo, tu único Hijo, que se encarnó por nosotros; quien, por el gran poder del Espíritu Santo, fue hecho Hombre perfecto, nacido de la carne de la Virgen María su madre; para que, librados del yugo del pecado, recibamos la potestad de llegar a ser hijos tuyos."
+      ],
+      "type": "text",
+      "metadata": {
+        "omit_response": true,
+        "response": null
+      },
+      "slug": "proper_preface",
+      "version_label": "Encarnación",
+      "style": "text",
+      "hidden": false,
+      "category": ["Christmas", "Proper Preface"],
+      "version": "loc"
+    },
+    {
+      "version_label": "Semana Santa",
+      "label": null,
+      "type": "text",
+      "style": "text",
+      "value": [
+        "Por nuestro Señor Jesucristo. Por nuestros pecados fue levantado sobre la cruz, para que pudiera atraer hacia él a todo el mundo; y, por su sufrimiento y muerte, llegó a ser la fuente de salvación eterna para cuantos confían en él."
+      ],
+      "slug": "proper_preface",
+      "citation": null,
+      "metadata": {
+        "response": null,
+        "omit_response": true
+      },
+      "hidden": false,
+      "category": ["HolyWeek", "Proper Preface"],
+      "version": "loc",
+      "language": "es"
+    }
+  ],
   "en-bcp1979-alleluia": [
     {
       "type": "text",
@@ -28418,136 +28800,181 @@
   ],
   "en-Rite-I-the-angelus": [
     {
-      "label": "The Angelus",
-      "lastRevision": 77,
-      "hidden": false,
-      "type": "liturgy",
-      "category": [],
-      "slug": "the-angelus",
+      "type": "option",
       "value": [
         {
+          "lastRevision": 24,
+          "slug": "regina-coeli",
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "condition": {
+            "mode": "and",
+            "conditions": [
+              {
+                "season": {
+                  "except": [],
+                  "only": ["Easter", "Pentecost", "Ascension", "Ascension"]
+                },
+                "date": {
+                  "gte": "3/22"
+                }
+              }
+            ]
+          },
+          "label": "Regina Coeli",
+          "language": "en",
+          "version": "Rite-I",
+          "category": [],
+          "type": "liturgy",
           "hidden": false,
-          "value": ["The Angelus"],
-          "type": "heading",
+          "lookup": {
+            "type": "slug",
+            "rotate": false
+          },
           "metadata": {
-            "level": 1
+            "evening": false,
+            "supplement": false,
+            "liturgyversions": [],
+            "preferences": {},
+            "special_preferences": {}
           }
         },
         {
+          "label": "The Angelus",
+          "lastRevision": 77,
+          "hidden": false,
+          "type": "liturgy",
+          "category": [],
+          "slug": "the-angelus",
           "value": [
             {
-              "text": "The Angel of the Lord announced unto Mary,",
-              "response": "",
-              "label": "V."
+              "hidden": false,
+              "value": ["The Angelus"],
+              "type": "heading",
+              "metadata": {
+                "level": 1
+              }
             },
             {
-              "label": "R.",
-              "text": "And she conceived by the Holy Ghost."
+              "value": [
+                {
+                  "text": "The Angel of the Lord announced unto Mary,",
+                  "response": "",
+                  "label": "V."
+                },
+                {
+                  "label": "R.",
+                  "text": "And she conceived by the Holy Ghost."
+                }
+              ],
+              "hidden": false,
+              "style": "preces",
+              "type": "responsive"
+            },
+            {
+              "hidden": false,
+              "metadata": {},
+              "type": "text",
+              "style": "prayer",
+              "value": [
+                "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+              ]
+            },
+            {
+              "type": "responsive",
+              "hidden": false,
+              "value": [
+                {
+                  "response": "",
+                  "text": "Behold the handmaid of the Lord:",
+                  "label": "V."
+                },
+                {
+                  "text": "Be it unto me according to thy word.",
+                  "label": "R."
+                }
+              ],
+              "style": "preces"
+            },
+            {
+              "value": [
+                "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+              ],
+              "type": "text",
+              "style": "prayer",
+              "hidden": false
+            },
+            {
+              "type": "responsive",
+              "value": [
+                {
+                  "response": "",
+                  "text": "And the Word was made flesh.",
+                  "label": "V."
+                },
+                {
+                  "label": "R.",
+                  "text": "And dwelt among us."
+                }
+              ],
+              "style": "preces",
+              "hidden": false
+            },
+            {
+              "value": [
+                "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+              ],
+              "style": "prayer",
+              "type": "text",
+              "hidden": false
+            },
+            {
+              "type": "responsive",
+              "hidden": false,
+              "value": [
+                {
+                  "text": "Pray for us, O Holy Mother of God.",
+                  "response": "",
+                  "label": "V."
+                },
+                {
+                  "text": "That we may be made worthy of the promises of Christ.",
+                  "label": "R."
+                },
+                {
+                  "label": "",
+                  "text": "Let us pray."
+                }
+              ],
+              "style": "preces"
+            },
+            {
+              "value": [
+                "We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+              ],
+              "hidden": false,
+              "type": "text",
+              "style": "prayer"
             }
           ],
-          "hidden": false,
-          "style": "preces",
-          "type": "responsive"
-        },
-        {
-          "hidden": false,
-          "metadata": {},
-          "type": "text",
-          "style": "prayer",
-          "value": [
-            "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
-          ]
-        },
-        {
-          "type": "responsive",
-          "hidden": false,
-          "value": [
-            {
-              "response": "",
-              "text": "Behold the handmaid of the Lord:",
-              "label": "V."
-            },
-            {
-              "text": "Be it unto me according to thy word.",
-              "label": "R."
-            }
-          ],
-          "style": "preces"
-        },
-        {
-          "value": [
-            "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
-          ],
-          "type": "text",
-          "style": "prayer",
-          "hidden": false
-        },
-        {
-          "type": "responsive",
-          "value": [
-            {
-              "response": "",
-              "text": "And the Word was made flesh.",
-              "label": "V."
-            },
-            {
-              "label": "R.",
-              "text": "And dwelt among us."
-            }
-          ],
-          "style": "preces",
-          "hidden": false
-        },
-        {
-          "value": [
-            "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
-          ],
-          "style": "prayer",
-          "type": "text",
-          "hidden": false
-        },
-        {
-          "type": "responsive",
-          "hidden": false,
-          "value": [
-            {
-              "text": "Pray for us, O Holy Mother of God.",
-              "response": "",
-              "label": "V."
-            },
-            {
-              "text": "That we may be made worthy of the promises of Christ.",
-              "label": "R."
-            },
-            {
-              "label": "",
-              "text": "Let us pray."
-            }
-          ],
-          "style": "preces"
-        },
-        {
-          "value": [
-            "We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
-          ],
-          "hidden": false,
-          "type": "text",
-          "style": "prayer"
+          "version": "Rite-I",
+          "id": "F8th0Wu9qtjTL13cBbTr",
+          "source": {
+            "source": "",
+            "api": "",
+            "citation": ""
+          },
+          "language": "en",
+          "metadata": {
+            "supplement": false,
+            "liturgyversions": [],
+            "evening": false
+          }
         }
-      ],
-      "version": "Rite-I",
-      "id": "F8th0Wu9qtjTL13cBbTr",
-      "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
-      },
-      "language": "en",
-      "metadata": {
-        "supplement": false,
-        "liturgyversions": [],
-        "evening": false
-      }
+      ]
     }
   ],
   "en-bcp1979-ep_prayers_for_mission": [
