@@ -22,9 +22,11 @@ dependencies {
     implementation project(':capacitor-share')
     implementation project(':jofr-capacitor-media-session')
     implementation project(':capacitor-firebase-auth')
+    implementation project(':capacitor-media-session')
+    implementation project(':media-session')
     implementation "androidx.webkit:webkit:1.4.0"
 }
-apply from: "../../node_modules/cordova-plugin-ionic/src/android/cordovapluginionic.gradle"
+
 
 if (hasProperty('postBuildExtras')) {
   postBuildExtras()

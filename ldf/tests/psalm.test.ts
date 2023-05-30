@@ -597,6 +597,32 @@ describe('Psalm.filteredVerses()', () => {
     ]);
   });
 
+  it('should support -end in psalm citations', () => {
+    const psalm = new Psalm(PSALM_80);
+    psalm.citation = 'Psalm 80:2-end';
+    const verses = psalm.filteredVerses();
+
+    expect(verses).toEqual([
+      {
+        type: 'psalm-section' as 'psalm-section',
+        value: [
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '2',
+            verse: 'In the presence of Ephraim, Benjamin, and Manasseh, *',
+            halfverse: 'stir up your strength and come to help us.',
+          },
+          {
+            type: 'psalm-verse' as 'psalm-verse',
+            number: '3',
+            verse: 'Restore us, O God of hosts; *',
+            halfverse: 'show the light of your countenance, and we shall be saved.',
+          },
+        ],
+      },
+    ]);
+  });
+
   it("should not include antiphon if there's no antiphon", () => {
     const psalm = new Psalm(PSALM_80);
     expect(psalm.includeAntiphon()).toEqual(false);

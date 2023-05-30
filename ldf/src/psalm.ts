@@ -31,7 +31,8 @@ export class Psalm extends LiturgicalDocument {
     let filtered: PsalmSection[] = new Array();
 
     if (this.citation && (this.citation.match(/Ps[^\s]*\s*\d+/) || this.citation == '')) {
-      const versesInCitation: string[] = this.versesInCitation(this.citation);
+      const versesInCitation: string[] = this.versesInCitation(this.citation),
+        endsWithEnd = this.citation?.trim()?.endsWith('end');
 
       if (versesInCitation.length == 0) {
         /* if `versesInCitation` is empty, it's probably because
@@ -41,9 +42,10 @@ export class Psalm extends LiturgicalDocument {
         (this.value || []).forEach((section) => {
           const newSection = new Array();
 
-          // okay, this is O(4n)...
           (section.value || []).forEach((verse) => {
-            if (!verse.number || versesInCitation.includes(verse.number)) {
+            if (endsWithEnd) {
+              newSection.push(verse);
+            } else if (!verse.number || versesInCitation.includes(verse.number)) {
               newSection.push(verse);
             } else if (versesInCitation.includes(`[${verse.number}`)) {
               newSection.push({ ...verse, verse: '[' + verse.verse });

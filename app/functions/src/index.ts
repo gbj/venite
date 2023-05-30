@@ -140,12 +140,14 @@ export const youVersion = functions.https.onRequest(
       bibleVersion = request.query?.bibleVersion?.toString();
     if (bibleNumber && bookCode && chapter && bibleVersion) {
       try {
+        console.log("new version 0.1.13.");
         const reading = await getYouVersionBook(
           bibleNumber,
           bookCode,
           chapter,
           bibleVersion
         );
+        console.log("reading = ", reading);
         response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
         response.status(200).send(reading);
       } catch (e) {

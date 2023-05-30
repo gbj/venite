@@ -6,7 +6,7 @@ import {
   Liturgy,
   Option,
 } from "@venite/ldf";
-import { MediaSession } from "@jofr/capacitor-media-session";
+import { MediaSession2 } from "media-session";
 import { PlatformService } from "@venite/ng-platform";
 import { combineLatest, Observable, of, Subscription } from "rxjs";
 import { AudioService } from "../pray/audio.service";
@@ -46,9 +46,7 @@ export class MediaSessionService {
   ) {}
 
   isAvailable(): boolean {
-    return (
-      this.platform.is("capacitor") || Boolean((navigator as any).mediaSession)
-    );
+    return this.platform.is("capacitor") || Boolean(navigator.mediaSession);
   }
 
   async initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {
@@ -57,8 +55,14 @@ export class MediaSessionService {
       await this.audio.play();
 
       this.docLabel = doc.label || "";
+      await MediaSession2.init({
+        play: true,
+        pause: true,
+        nexttrack: true,
+        previoustrack: true,
+      });
 
-      await MediaSession.setMetadata({
+      await MediaSession2.setMetadata({
         artist: "Venite",
         album: this.docLabel || "",
         title: doc.label,
@@ -71,18 +75,20 @@ export class MediaSessionService {
         ],
       });
 
-      await MediaSession.setPlaybackState({ playbackState: "playing" });
-
-      MediaSession.setActionHandler({ action: "play" }, () => {
+      //@ts-ignore
+      MediaSession2.addListener("play", () => {
         this.zone.run(() => this.resumeSpeech(doc, settings));
       });
-      MediaSession.setActionHandler({ action: "pause" }, () => {
+      //@ts-ignore
+      MediaSession2.addListener("pause", () => {
         this.zone.run(() => this.pauseSpeech());
       });
-      MediaSession.setActionHandler({ action: "nexttrack" }, () => {
+      //@ts-ignore
+      MediaSession2.addListener("nexttrack", () => {
         this.zone.run(() => this.fastForward(doc, settings));
       });
-      MediaSession.setActionHandler({ action: "previoustrack" }, () => {
+      //@ts-ignore
+      MediaSession2.addListener("previoustrack", () => {
         this.zone.run(() => this.rewind(doc, settings));
       });
     }
@@ -94,7 +100,7 @@ export class MediaSessionService {
       this.speechService.pause();
       this.audio?.pause();
       if (this.isAvailable()) {
-        MediaSession.setPositionState({
+        MediaSession2.setPositionState({
           playbackRate: 0,
         });
       }
@@ -117,7 +123,7 @@ export class MediaSessionService {
     this.speechService.resume();
     this.audio?.play();
     if (this.isAvailable()) {
-      MediaSession.setPositionState({
+      MediaSession2.setPositionState({
         playbackRate: 1,
       });
     }
@@ -154,7 +160,7 @@ export class MediaSessionService {
         );
       }
       if (this.isAvailable()) {
-        MediaSession.setPositionState({
+        MediaSession2.setPositionState({
           playbackRate: 1,
         });
       }
@@ -180,7 +186,7 @@ export class MediaSessionService {
       );
     });
     if (this.isAvailable()) {
-      MediaSession.setPositionState({
+      MediaSession2.setPositionState({
         playbackRate: 1,
       });
     }
@@ -203,7 +209,7 @@ export class MediaSessionService {
     console.log("doc$ = ", doc$, "settings$ = ", settings$);
 
     if (this.isAvailable()) {
-      MediaSession.setPositionState({
+      MediaSession2.setPositionState({
         playbackRate: 1,
       });
     }
@@ -333,7 +339,7 @@ export class MediaSessionService {
 
           if (title && this.isAvailable()) {
             console.log("setting metadata to", title);
-            MediaSession.setMetadata({
+            MediaSession2.setMetadata({
               artist: "Venite",
               album: this.docLabel || "",
               title,
@@ -372,8 +378,8 @@ export class MediaSessionService {
     this.speechService.pause();
     this.audio.pause();
     this.audio.destroy();
-    /* if (this.isAvailable()) {
-      MediaSession.destroy();
-    } */
+    if (this.isAvailable()) {
+      MediaSession2.destroy();
+    }
   }
 }

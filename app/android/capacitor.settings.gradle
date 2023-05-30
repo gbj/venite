@@ -40,3 +40,9 @@ project(':jofr-capacitor-media-session').projectDir = new File('../node_modules/
 
 include ':capacitor-firebase-auth'
 project(':capacitor-firebase-auth').projectDir = new File('../node_modules/capacitor-firebase-auth/android')
+
+include ':capacitor-media-session'
+project(':capacitor-media-session').projectDir = new File('../node_modules/capacitor-media-session/android')
+
+include ':media-session'
+project(':media-session').projectDir = new File('../media-session/android')

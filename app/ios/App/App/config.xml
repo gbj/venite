@@ -7,8 +7,8 @@
     <param name="onload" value="true"/>
   </feature>
 
-  <feature name="IonicCordovaCommon">
-    <param name="ios-package" value="IonicCordovaCommon" onload="true"/>
+  <feature name="FileOpener2">
+    <param name="ios-package" value="FileOpener2"/>
   </feature>
 
   <feature name="Media">

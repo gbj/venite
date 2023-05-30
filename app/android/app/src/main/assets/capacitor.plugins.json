@@ -50,5 +50,13 @@
 	{
 		"pkg": "capacitor-firebase-auth",
 		"classpath": "com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth"
+	},
+	{
+		"pkg": "capacitor-media-session",
+		"classpath": "app.venite.mediasession.MediaSession"
+	},
+	{
+		"pkg": "media-session",
+		"classpath": "app.venite.mediasession.MediaSession2Plugin"
 	}
 ]

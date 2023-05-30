@@ -7,7 +7,7 @@ import {
   PreferencesServiceInterface,
   PREFERENCES_SERVICE,
 } from "@venite/ng-service-api";
-import { MediaSession } from "@jofr/capacitor-media-session";
+import { MediaSession2 } from "media-session";
 import { Observable, of } from "rxjs";
 import { distinct, map, switchMap, tap } from "rxjs/operators";
 import { AudioService } from "../pray/audio.service";
@@ -84,38 +84,43 @@ export class MeditatePage implements OnInit {
       const duration = await this.el.nativeElement.duration();
 
       if (ev.detail > 0) {
-        MediaSession.setPositionState({
+        MediaSession2.setPositionState({
           duration,
           position: duration - ev.detail,
           playbackRate: 1,
         });
       } else {
-        //MediaSession.destroy();
+        MediaSession2.destroy();
       }
     } else {
       switch (ev.detail) {
         case "start":
           await this.audio.create(audioFile, false);
           await this.audio.play();
-          MediaSession.setPlaybackState({ playbackState: "playing" });
-          MediaSession.setActionHandler({ action: "play" }, () => {
+          MediaSession2.init({
+            play: true,
+            pause: true,
+            stop: true,
+            previoustrack: true,
+          });
+          //@ts-ignore
+          MediaSession2.addListener("play", () => {
             this.el.nativeElement.resume();
             this.audio.play();
           });
-          MediaSession.setActionHandler({ action: "pause" }, () => {
+          //@ts-ignore
+          MediaSession2.addListener("pause", () => {
             this.el.nativeElement.pause();
             this.audio.pause();
           });
-          MediaSession.setActionHandler(
-            { action: "previoustrack" },
-            async () => {
-              this.el.nativeElement.rewind();
-              await this.audio.destroy();
-              await this.audio.create(audioFile, false);
-              await this.audio.play();
-            }
-          );
-          MediaSession.setMetadata({
+          //@ts-ignore
+          MediaSession2.addListener("previoustrack", async () => {
+            this.el.nativeElement.rewind();
+            await this.audio.destroy();
+            await this.audio.create(audioFile, false);
+            await this.audio.play();
+          });
+          MediaSession2.setMetadata({
             artist: "Venite",
             album: "Venite",
             title: this.translate.instant("menu.meditate"),
@@ -144,7 +149,7 @@ export class MeditatePage implements OnInit {
           await this.audio.destroy();
           await this.audio.create(audioFile, false);
           this.audio.play();
-          //MediaSession.destroy();
+          MediaSession2.destroy();
           break;
       }
     }

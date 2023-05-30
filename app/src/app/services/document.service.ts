@@ -196,6 +196,7 @@ export class DocumentService {
             loadLiturgy("es", "LOC", "evening-prayer"),
             loadLiturgy("es", "LOC", "compline"),
             loadLiturgy("es", "LOC", "the-angelus"),
+            loadLiturgy("es", "LOC", "eucharist"),
           ]
         : [
             loadLiturgy("en", "Rite-II", "morning-prayer"),
@@ -217,7 +218,7 @@ export class DocumentService {
     );
 
     return concat(offlineLiturgies$, onlineLiturgies$).pipe(
-      tap((docs) => console.log("docs = ", docs))
+      tap((docs) => console.log("options = ", docs))
     );
   }
 
@@ -230,7 +231,8 @@ export class DocumentService {
           .where("sharing.status", "==", "published")
           .where("sharing.privacy", "==", "public")
       )
-      .valueChanges();
+      .valueChanges()
+      .pipe(tap((options) => console.log("getAllLiturgyOptions", options)));
   }
 
   findOrganizationLiturgy(
