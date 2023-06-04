@@ -42,6 +42,7 @@ export class DayNameComponent {
     }
 
     this.obj = provisionalObj || new LiturgicalDay();
+    this.loadLocaleStrings();
   }
 
   // Lifecycle events
