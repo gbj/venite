@@ -88,7 +88,7 @@ export class TextComponent {
 
   truncate(s : string, last : boolean = false, words : number = 20) : string {
     const keepPieces = words * 2,
-      split = s.split(/([^\w])/g);
+      split = s.split(/([^\w\u00c0-\u017f])/g);
     if(!last) {
       return split.slice(0, keepPieces).concat('...').join("")
     } else {
@@ -136,7 +136,7 @@ export class TextComponent {
         ? (this.obj?.value || []).map(s => s.replace(/\s+/g, ' '))
         : (this.obj?.value || []);
       let compiledValue : string[][] = value.map(s => {
-        return s.split(/([\*\w\n\s,:;\.\-–—'“☩✠”‘’\!\?”\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]+([^\*\w\n\s,;:\.'“”☩✠‘’”\-–—\!\?\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]))/g);
+        return s.split(/([\*\w\u00c0-\u017f\n\s,:;\.\-–—'“☩✠”‘’\!\?”\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]+([^\*\w\u00c0-\u017f\n\s,;:\.'“”☩✠‘’”\-–—\!\?\[\]\%\(\)\/\u0041-\u024F\u1400-\u167f\u0e00-\u0e5b]))/g);
       })
       if(!this.editable && this.obj?.display_format === 'abbreviated') {
         const firstSection = compiledValue[0],

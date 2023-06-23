@@ -6,6 +6,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Genesis',
       long: 'The Book of Genesis',
     },
+    fr: {
+      short: 'Genèse',
+      long: 'Genèse',
+    },
     es: {
       short: 'Génesis',
       long: 'El Libro de Génesis',
@@ -15,6 +19,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Exodus',
       long: 'The Book of Exodus',
+    },
+    fr: {
+      short: 'Exode',
+      long: 'Exode',
     },
     es: {
       short: 'Éxodo',
@@ -26,6 +34,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Leviticus',
       long: 'The Book of Leviticus',
     },
+    fr: {
+      short: 'Lévitique',
+      long: 'Lévitique',
+    },
     es: {
       short: 'Levítico',
       long: 'El Libro de Levítico',
@@ -35,6 +47,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Numbers',
       long: 'The Book of Numbers',
+    },
+    fr: {
+      short: 'Nombres',
+      long: 'Nombres',
     },
     es: {
       short: 'Números',
@@ -46,6 +62,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Deuteronomy',
       long: 'The Book of Deuteronomy',
     },
+    fr: {
+      short: 'Deutéronome',
+      long: 'Deutéronome',
+    },
     es: {
       short: 'Deuteronomio',
       long: 'El Libro de Deuteronomio',
@@ -55,6 +75,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Joshua',
       long: 'The Book of Joshua',
+    },
+    fr: {
+      short: 'Josué',
+      long: 'Josué',
     },
     es: {
       short: 'Josué',
@@ -66,6 +90,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Judges',
       long: 'The Book of Judges',
     },
+    fr: {
+      short: 'Juges',
+      long: 'Juges',
+    },
     es: {
       short: 'Jueces',
       long: 'El Libro de Jueces',
@@ -75,6 +103,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Ruth',
       long: 'The Book of Ruth',
+    },
+    fr: {
+      short: 'Ruth',
+      long: 'Ruth',
     },
     es: {
       short: 'Rut',
@@ -86,6 +118,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Samuel',
       long: 'The First Book of Samuel',
     },
+    fr: {
+      short: '1 Samuel',
+      long: '1 Samuel',
+    },
     es: {
       short: '1 Samuel',
       long: 'El Libro de 1 Samuel',
@@ -95,6 +131,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Samuel',
       long: 'The Second Book of Samuel',
+    },
+    fr: {
+      short: '2 Samuel',
+      long: '2 Samuel',
     },
     es: {
       short: '2 Samuel',
@@ -106,6 +146,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Kings',
       long: 'The First Book of Kings',
     },
+    fr: {
+      short: '1 Rois',
+      long: '1 Rois',
+    },
     es: {
       short: '1 Reyes',
       long: 'El Libro de 1 Reyes',
@@ -115,6 +159,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Kings',
       long: 'The Second Book of Kings',
+    },
+    fr: {
+      short: '2 Rois',
+      long: '2 Rois',
     },
     es: {
       short: '2 Reyes',
@@ -126,6 +174,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Chronicles',
       long: 'The First Book of Chronicles',
     },
+    fr: {
+      short: '1 Chroniques',
+      long: '1 Chroniques',
+    },
     es: {
       short: '1 Crónicas',
       long: 'El Libro de 1 Crónicas',
@@ -135,6 +187,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Chronicles',
       long: 'The Second Book of Chronicles',
+    },
+    fr: {
+      short: '2 Chroniques',
+      long: '2 Chroniques',
     },
     es: {
       short: '2 Crónicas',
@@ -146,6 +202,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ezra',
       long: 'The Book of Ezra',
     },
+    fr: {
+      short: 'Esdras',
+      long: 'Esdras',
+    },
     es: {
       short: 'Esdras',
       long: 'El Libro de Esdras',
@@ -155,6 +215,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Nehemiah',
       long: 'The Book of Nehemiah',
+    },
+    fr: {
+      short: 'Néhémie',
+      long: 'Néhémie',
     },
     es: {
       short: 'Nehemías',
@@ -166,6 +230,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Esther',
       long: 'The Book of Esther',
     },
+    fr: {
+      short: 'Esther',
+      long: 'Esther',
+    },
     es: {
       short: 'Ester',
       long: 'El Libro de Ester',
@@ -175,6 +243,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Job',
       long: 'The Book of Job',
+    },
+    fr: {
+      short: 'Job',
+      long: 'Job',
     },
     es: {
       short: 'Job',
@@ -186,6 +258,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Psalms',
       long: 'The Psalms',
     },
+    fr: {
+      short: 'Psaumes',
+      long: 'Psaumes',
+    },
     es: {
       short: 'Salmos',
       long: 'El Libro de Salmos',
@@ -195,6 +271,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Proverbs',
       long: 'The Book of Proverbs',
+    },
+    fr: {
+      short: 'Proverbes',
+      long: 'Proverbes',
     },
     es: {
       short: 'Proverbios',
@@ -206,6 +286,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ecclesiastes',
       long: 'The Book of Ecclesiastes',
     },
+    fr: {
+      short: 'Ecclésiaste',
+      long: 'Ecclésiaste',
+    },
     es: {
       short: 'Eclesiastés',
       long: 'El Libro de Eclesiastés',
@@ -215,6 +299,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'The Song of Solomon',
       long: 'The Song of Solomon',
+    },
+    fr: {
+      short: 'Cantique des Cantiques',
+      long: 'Cantique des Cantiques',
     },
     es: {
       short: 'Cantares',
@@ -226,6 +314,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Isaiah',
       long: 'The Book of the Prophet Isaiah',
     },
+    fr: {
+      short: 'Esaïe',
+      long: 'Esaïe',
+    },
     es: {
       short: 'Isaías',
       long: 'El Libro de Isaías',
@@ -235,6 +327,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Jeremiah',
       long: 'The Book of the Prophet Jeremiah',
+    },
+    fr: {
+      short: 'Jérémie',
+      long: 'Jérémie',
     },
     es: {
       short: 'Jeremías',
@@ -246,6 +342,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Lamentations',
       long: 'The Book of Lamentations',
     },
+    fr: {
+      short: 'Lamentations',
+      long: 'Lamentations',
+    },
     es: {
       short: 'Lamentaciones',
       long: 'El Libro de Lamentaciones',
@@ -256,6 +356,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ezekiel',
       long: 'The Book of the Prophet Ezekiel',
     },
+    fr: {
+      short: 'Ezéchiel',
+      long: 'Ezéchiel',
+    },
     es: {
       short: 'Ezequiel',
       long: 'El Libro de Ezequiel',
@@ -265,6 +369,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Daniel',
       long: 'The Book of Daniel',
+    },
+    fr: {
+      short: 'Daniel',
+      long: 'Daniel',
     },
     es: {
       short: 'Daniel',
@@ -284,6 +392,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Hosea',
       long: 'The Book of the Prophet Hosea',
     },
+    fr: {
+      short: 'Osée',
+      long: 'Osée',
+    },
     es: {
       short: 'Oseas',
       long: 'El Libro de Oseas',
@@ -293,6 +405,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Joel',
       long: 'The Book of the Prophet Joel',
+    },
+    fr: {
+      short: 'Joël',
+      long: 'Joël',
     },
     es: {
       short: 'Joel',
@@ -304,6 +420,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Amos',
       long: 'The Book of the Prophet Amos',
     },
+    fr: {
+      short: 'Amos',
+      long: 'Amos',
+    },
     es: {
       short: 'Amós',
       long: 'El Libro de Amós',
@@ -313,6 +433,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Obadiah',
       long: 'The Book of the Prophet Obadiah',
+    },
+    fr: {
+      short: 'Abdias',
+      long: 'Abdias',
     },
     es: {
       short: 'Abdías',
@@ -324,6 +448,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jonah',
       long: 'The Book of the Prophet Jonah',
     },
+    fr: {
+      short: 'Jonas',
+      long: 'Jonas',
+    },
     es: {
       short: 'Jonás',
       long: 'El Libro de Jonás',
@@ -333,6 +461,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Micah',
       long: 'The Book of the Prophet Micah',
+    },
+    fr: {
+      short: 'Michée',
+      long: 'Michée',
     },
     es: {
       short: 'Miqueas',
@@ -344,6 +476,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Nahum',
       long: 'The Book of the Prophet Nahum',
     },
+    fr: {
+      short: 'Nahum',
+      long: 'Nahum',
+    },
     es: {
       short: 'Nahúm',
       long: 'El Libro de Nahúm',
@@ -353,6 +489,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Habakkuk',
       long: 'The Book of the Prophet Habakkuk',
+    },
+    fr: {
+      short: 'Habacuc',
+      long: 'Habacuc',
     },
     es: {
       short: 'Habacuc',
@@ -364,6 +504,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Zephaniah',
       long: 'The Book of the Prophet Zephaniah',
     },
+    fr: {
+      short: 'Sophonie',
+      long: 'Sophonie',
+    },
     es: {
       short: 'Sofonías',
       long: 'El Libro de Sofonías',
@@ -373,6 +517,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Haggai',
       long: 'The Book of the Prophet Haggai',
+    },
+    fr: {
+      short: 'Aggée',
+      long: 'Aggée',
     },
     es: {
       short: 'Hageo',
@@ -384,6 +532,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Zechariah',
       long: 'The Book of the Prophet Zechariah',
     },
+    fr: {
+      short: 'Zacharie',
+      long: 'Zacharie',
+    },
     es: {
       short: 'Zacarías',
       long: 'El Libro de Zacarías',
@@ -393,6 +545,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Malachi',
       long: 'The Book of the Prophet Malachi',
+    },
+    fr: {
+      short: 'Malachie',
+      long: 'Malachie',
     },
     es: {
       short: 'Malaquías',
@@ -404,6 +560,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Tobit',
       long: 'The Book of Tobit',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: 'Tobías',
       long: 'El Libro de Tobías',
@@ -414,15 +574,23 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'The Song of the Three Children',
       long: 'The Song of the Three Children',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
-      short: 'El Himno de los tres jóvenes ',
-      long: 'El Himno de los tres jóvenes ',
+      short: 'El Himno de los tres jóvenes',
+      long: 'El Himno de los tres jóvenes',
     },
   },
   Judith: {
     en: {
       short: 'Judith',
       long: 'The Book of Judith',
+    },
+    fr: {
+      short: '',
+      long: '',
     },
     es: {
       short: 'Judit',
@@ -434,6 +602,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Baruch',
       long: 'The Book of Baruch',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: 'Baruc',
       long: 'El Libro de Baruc',
@@ -443,6 +615,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '1 Maccabees',
       long: 'The First Book of Maccabees',
+    },
+    fr: {
+      short: '',
+      long: '',
     },
     es: {
       short: '1 Macabeos',
@@ -454,6 +630,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Maccabees',
       long: 'The Second Book of Maccabees',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: '2 Macabeos',
       long: 'El Libro 2 de los Macabeos',
@@ -464,6 +644,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Wisdom',
       long: 'The Wisdom of Solomon',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: 'Sabiduría',
       long: 'El Libro de la Sabiduría',
@@ -473,6 +657,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Sirach',
       long: 'The Wisdom of Ben Sira',
+    },
+    fr: {
+      short: '',
+      long: '',
     },
     es: {
       short: 'Eclesiástico',
@@ -492,6 +680,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Matthew',
       long: 'The Gospel According to Matthew',
     },
+    fr: {
+      short: 'Matthieu',
+      long: 'Matthieu',
+    },
     es: {
       short: 'Mateo',
       long: 'El Evangelio de San Mateo',
@@ -509,6 +701,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Mark',
       long: 'The Gospel According to Mark',
+    },
+    fr: {
+      short: 'Marc',
+      long: 'Marc',
     },
     es: {
       short: 'Marcos',
@@ -528,6 +724,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Luke',
       long: 'The Gospel According to Luke',
     },
+    fr: {
+      short: 'Luc',
+      long: 'Luc',
+    },
     es: {
       short: 'Lucas',
       long: 'El Evangelio de San Mateo',
@@ -545,6 +745,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'John',
       long: 'The Gospel According to John',
+    },
+    fr: {
+      short: 'Jean',
+      long: 'Jean',
     },
     es: {
       short: 'Juan',
@@ -564,6 +768,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Acts',
       long: 'The Acts of the Apostles',
     },
+    fr: {
+      short: 'Les Actes des Apôtres',
+      long: 'Les Actes des Apôtres',
+    },
     es: {
       short: 'Hechos',
       long: 'Los Hechos de los Apóstoles',
@@ -581,6 +789,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Romans',
       long: 'The Letter to the Romans',
+    },
+    fr: {
+      short: 'Romains',
+      long: 'Romains',
     },
     es: {
       short: 'Romanos',
@@ -600,6 +812,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Corinthians',
       long: 'The First Letter to the Corinthians',
     },
+    fr: {
+      short: '1 Corinthiens',
+      long: '1 Corinthiens',
+    },
     es: {
       short: '1 Corintios',
       long: 'La Primera Epístola a los Corintios',
@@ -617,6 +833,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Corinthians',
       long: 'The Second Letter to the Corinthians',
+    },
+    fr: {
+      short: '2 Corinthiens',
+      long: '2 Corinthiens',
     },
     es: {
       short: '2 Corintios',
@@ -636,6 +856,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Galatians',
       long: 'The Letter to the Galatians',
     },
+    fr: {
+      short: 'Galates',
+      long: 'Galates',
+    },
     es: {
       short: 'Gálatas',
       long: 'La Epístola a los Gálatas',
@@ -653,6 +877,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Ephesians',
       long: 'The Letter to the Ephesians',
+    },
+    fr: {
+      short: 'Ephésiens',
+      long: 'Ephésiens',
     },
     es: {
       short: 'Efesios',
@@ -672,6 +900,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Philippians',
       long: 'The Letter to the Philippians',
     },
+    fr: {
+      short: 'Philippiens',
+      long: 'Philippiens',
+    },
     es: {
       short: 'Filipenses',
       long: 'La Epístola a los Filipenses',
@@ -689,6 +921,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Colossians',
       long: 'The Letter to the Colossians',
+    },
+    fr: {
+      short: 'Colossiens',
+      long: 'Colossiens',
     },
     es: {
       short: 'Colosenses',
@@ -708,6 +944,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Thessalonians',
       long: 'The First Letter to the Thessalonians',
     },
+    fr: {
+      short: '1 Thessaloniciens',
+      long: '1 Thessaloniciens',
+    },
     es: {
       short: '1 Tesalonicenses',
       long: 'La Primera Epístola a los Tesalonicenses',
@@ -725,6 +965,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Thessalonians',
       long: 'The Second Letter to the Thessalonians',
+    },
+    fr: {
+      short: '2 Thessaloniciens',
+      long: '2 Thessaloniciens',
     },
     es: {
       short: '2 Tesalonicenses',
@@ -744,6 +988,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Timothy',
       long: 'The First Letter to Timothy',
     },
+    fr: {
+      short: '1 Timothée',
+      long: '1 Timothée',
+    },
     es: {
       short: '1 Timoteo',
       long: 'La Primera Epístola a Timoteo',
@@ -761,6 +1009,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Timothy',
       long: 'The Second Letter to Timothy',
+    },
+    fr: {
+      short: '2 Timothée',
+      long: '2 Timothée',
     },
     es: {
       short: '2 Timoteo',
@@ -780,6 +1032,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Titus',
       long: 'The Letter to Titus',
     },
+    fr: {
+      short: 'Tite',
+      long: 'Tite',
+    },
     es: {
       short: 'Tito',
       long: 'La Epístola a Tito',
@@ -797,6 +1053,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Philemon',
       long: 'The Letter to Philemon',
+    },
+    fr: {
+      short: 'Philémon',
+      long: 'Philémon',
     },
     es: {
       short: 'Filemón',
@@ -816,6 +1076,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Hebrews',
       long: 'The Book of Hebrews',
     },
+    fr: {
+      short: 'Hébreux',
+      long: 'Hébreux',
+    },
     es: {
       short: 'Hebrews',
       long: 'La Epístola a los Hebreos',
@@ -833,6 +1097,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'James',
       long: 'The Letter of James',
+    },
+    fr: {
+      short: 'Jacques',
+      long: 'Jacques',
     },
     es: {
       short: 'Santiago',
@@ -852,6 +1120,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Peter',
       long: 'The First Letter of Peter',
     },
+    fr: {
+      short: '1 Pierre',
+      long: '1 Pierre',
+    },
     es: {
       short: '1 Pedro',
       long: 'La Primera Epístola de Pedro',
@@ -869,6 +1141,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Peter',
       long: 'The Second Letter of Peter',
+    },
+    fr: {
+      short: '2 Pierre',
+      long: '2 Pierre',
     },
     es: {
       short: '2 Pedro',
@@ -888,6 +1164,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 John',
       long: 'The First Letter of John',
     },
+    fr: {
+      short: '1 Jean',
+      long: '1 Jean',
+    },
     es: {
       short: '1 Juan',
       long: 'La Primera Epístola de Juan',
@@ -905,6 +1185,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 John',
       long: 'The Second Letter of John',
+    },
+    fr: {
+      short: '2 Jean',
+      long: '2 Jean',
     },
     es: {
       short: '1 Juan',
@@ -924,6 +1208,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '3 John',
       long: 'The Third Letter of John',
     },
+    fr: {
+      short: '3 Jean',
+      long: '3 Jean',
+    },
     es: {
       short: '1 Juan',
       long: 'La Tercera Epístola de Juan',
@@ -941,6 +1229,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Jude',
       long: 'The Letter of Jude',
+    },
+    fr: {
+      short: 'Jude',
+      long: 'Jude',
     },
     es: {
       short: 'Judas',
@@ -960,6 +1252,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Revelation',
       long: 'The Book of Revelation',
     },
+    fr: {
+      short: 'Apocalypse',
+      long: 'Apocalypse',
+    },
     es: {
       short: 'Apocalipsis',
       long: 'El Apocalipsis de San Juan',
@@ -978,6 +1274,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Esdras',
       long: 'The Second Book of Esdras',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: '1 Esdras',
       long: '1 Esdras',
@@ -987,6 +1287,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: '2 Esdras',
       long: 'The Second Book of Esdras',
+    },
+    fr: {
+      short: '',
+      long: '',
     },
     es: {
       short: '2 Esdras',
@@ -998,6 +1302,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Bel',
       long: 'Bel and the Dragon',
     },
+    fr: {
+      short: '',
+      long: '',
+    },
     es: {
       short: 'Bel',
       long: 'La Historia de Bel y el Dragón',
@@ -1007,6 +1315,10 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
     en: {
       short: 'Letter of Jeremiah',
       long: 'The Letter of Jeremiah',
+    },
+    fr: {
+      short: '',
+      long: '',
     },
     es: {
       short: 'Letter of Jeremiah',
