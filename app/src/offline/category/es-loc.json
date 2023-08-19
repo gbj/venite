@@ -7261,7 +7261,7 @@
     "metadata": {
       "latinname": "Dignus es",
       "omit_antiphon": false,
-      "omit_gloria": false,
+      "omit_gloria": true,
       "localname": "Cántico al Cordero",
       "number": "11"
     },

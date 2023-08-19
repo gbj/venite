@@ -480,24 +480,6 @@
       "type": "option",
       "value": [
         {
-          "value": [
-            "Glory be to God on high,\n\tand on earth peace, good will towards men.",
-            "We praise thee, we bless thee,\n\twe worship thee,\n\twe glorify thee,\n\twe give thanks to thee for thy great glory,\nO Lord God, heavenly King, God the Father Almighty.",
-            "O Lord, the only-begotten Son, Jesus Christ;\nO Lord God, Lamb of God, Son of the Father,\n\tthat takest away the sins of the world,\n\thave mercy upon us.\n",
-            "Thou that takest away the sins of the world,\n\treceive our prayer.\nThou that sittest at the right hand of God the Father,\n\thave mercy upon us.",
-            "For thou only art holy;\nthou only art the Lord;\nthou only, O Christ,\n\twith the Holy Ghost,\n\tart most high in the glory of God the Father. Amen."
-          ],
-          "label": "Gloria in Excelsis",
-          "category": [],
-          "hidden": false,
-          "style": "text",
-          "display_format": "unison",
-          "version_label": "Gloria",
-          "source": { "citation": "", "api": "", "source": "" },
-          "metadata": { "omit_response": false },
-          "type": "text"
-        },
-        {
           "type": "responsive",
           "version_label": "Kyrie",
           "category": [],
@@ -539,6 +521,24 @@
         ]
       },
       "metadata": { "editor_selected": 0, "selected": 0 }
+    },
+    {
+      "value": [
+        "Glory be to God on high,\n\tand on earth peace, good will towards men.",
+        "We praise thee, we bless thee,\n\twe worship thee,\n\twe glorify thee,\n\twe give thanks to thee for thy great glory,\nO Lord God, heavenly King, God the Father Almighty.",
+        "O Lord, the only-begotten Son, Jesus Christ;\nO Lord God, Lamb of God, Son of the Father,\n\tthat takest away the sins of the world,\n\thave mercy upon us.\n",
+        "Thou that takest away the sins of the world,\n\treceive our prayer.\nThou that sittest at the right hand of God the Father,\n\thave mercy upon us.",
+        "For thou only art holy;\nthou only art the Lord;\nthou only, O Christ,\n\twith the Holy Ghost,\n\tart most high in the glory of God the Father. Amen."
+      ],
+      "label": "Gloria in Excelsis",
+      "category": [],
+      "hidden": false,
+      "style": "text",
+      "display_format": "unison",
+      "version_label": "Gloria",
+      "source": { "citation": "", "api": "", "source": "" },
+      "metadata": { "omit_response": false },
+      "type": "text"
     },
     {
       "value": ["The Collect of the Day"],

@@ -16435,7 +16435,7 @@
     "category": ["Canticle", "Canticle"],
     "slug": "canticle-18",
     "metadata": {
-      "omit_gloria": false,
+      "omit_gloria": true,
       "omit_antiphon": false,
       "localname": "A Song to the Lamb",
       "number": "18",
