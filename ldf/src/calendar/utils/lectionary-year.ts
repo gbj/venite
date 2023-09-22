@@ -8,8 +8,8 @@ export function dailyOfficeYear(date: Date, week: LiturgicalWeek) {
   // Year One is begun.)
   let D = [1, 2],
     year;
-  // if Advent or December, use this year
-  if (week.season === 'Advent' || date.getMonth() + 1 == 12) {
+  // if Advent or later in December, use this year
+  if (week.season === 'Advent' || (date.getMonth() + 1 == 12 && date.getDate() >= 7)) {
     year = date.getFullYear();
   } else {
     year = date.getFullYear() - 1;
