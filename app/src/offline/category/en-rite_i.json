@@ -1,6 +1,94 @@
 [
   {
     "value": [
+      "Holy One of love, thou didst call thy servant Simeon Bachos to study thy Word and led him to the waters of baptism, making him thy evangelist to Ethiopia: give to us the grace to follow where thou leadest, overcoming the barriers that divide and diminish thy people, that we may behold thee in all thy glory; through our Savior and Lord Jesus Christ, who with thee and the Holy Spirit liveth and reigneth for ever and ever."
+    ],
+    "language": "en",
+    "slug": "simeon-bachos",
+    "style": "prayer",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "type": "text",
+    "version": "rite_i",
+    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "sharing": {
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "status": "published",
+      "organization": "venite",
+      "collaborators": []
+    }
+  },
+  {
+    "version": "rite_i",
+    "sharing": {
+      "status": "published",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "value": [
+      "Almighty God, our sure defense: We give thee thanks for thy servant[s] Frederick Howden, [N.,] and all military chaplains who provided comfort and inspiration in time of battle; and, following the example of Jesus the Good Shepherd, laid down their lives in the service of others. Inspire and strengthen us, also, for the duties of life still before us, that we may be faithful to the end; through the same Jesus Christ, our Savior and Lord."
+    ],
+    "language": "en",
+    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "style": "prayer",
+    "slug": "frederick-howden",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "type": "text"
+  },
+  {
+    "version": "rite_i",
+    "sharing": {
+      "status": "published",
+      "privacy": "public",
+      "organization": "venite",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "value": [
+      "O God of love, we bless thee for calling and equipping the deaconesses of the Episcopal Church, who served thy people at risk or in need, at home and throughout the world. With grateful hearts we honor their hard work, perseverance, and leadership in following Jesus into places of suffering or hardship, injustice or un-championed hope. May we, like them, bear the light of Christ to all people with humility and grace; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever. "
+    ],
+    "language": "en",
+    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "style": "prayer",
+    "slug": "episcopal-deaconesses",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "type": "text"
+  },
+  {
+    "value": [
+      "God of the prophets, we give thee thanks for calling Barbara Clementine Harris to the office of bishop. Open our eyes to behold the wondrous works thou hast prepared for thy church in calling women to share in the ministry of the episcopate. May we, inspired by their example as faithful shepherds, wise teachers, courageous prophets, and guardians of the faith, proclaim the Good News and carry out the works of Jesus Christ in the world; who with thee and the Holy Ghost liveth and reigneth for ever and ever."
+    ],
+    "language": "en",
+    "slug": "barbara-harris",
+    "style": "prayer",
+    "metadata": {
+      "omit_response": false,
+      "response": "Amen."
+    },
+    "type": "text",
+    "version": "rite_i",
+    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "sharing": {
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+      "privacy": "public",
+      "status": "published",
+      "organization": "venite",
+      "collaborators": []
+    }
+  },
+  {
+    "value": [
       "Grant unto us, O God, that in all time of our testing we may know thy presence and obey thy will; that, following the example of thy servant John Mason Neale, we may with integrity and courage accomplish what thou givest us to do, and endure what thou givest us to bear; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever. "
     ],
     "version": "rite_i",

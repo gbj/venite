@@ -345,11 +345,18 @@ export class CalendarService implements CalendarServiceInterface {
     const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
       holyCrossDay = dateFromYMDString(`${year}-09-14`),
       holyCrossIsWednesday = holyCrossDay.getDay() == 3,
+      holyCrossIsThursOrFri =
+        holyCrossDay.getDay() == 4 || holyCrossDay.getDay() == 5,
+      skipAWeek = dateFromYMDString(`${year}-09-20`),
       stMatthewDay = dateFromYMDString(`${year}-09-21`),
       date = vigil
         ? addOneDay(dateFromYMDString(day?.date))
         : dateFromYMDString(day?.date),
-      baseDay = holyCrossIsWednesday ? stMatthewDay : holyCrossDay,
+      baseDay = holyCrossIsThursOrFri
+        ? skipAWeek
+        : holyCrossIsWednesday
+        ? stMatthewDay
+        : holyCrossDay,
       distanceInDays =
         (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
     if (distanceInDays <= 7 && distanceInDays >= 0) {
