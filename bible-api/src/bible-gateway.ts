@@ -58,7 +58,8 @@ export function parseBibleGatewayResponse(
               if (
                 !child.classNames.includes("chapternum") &&
                 !child.classNames.includes("versenum") &&
-                !child.classNames.includes("crossreference")
+                !child.classNames.includes("crossreference") &&
+                !child.classNames.includes("footnote")
               ) {
                 text += child.text;
               }
@@ -66,14 +67,16 @@ export function parseBibleGatewayResponse(
               child instanceof HTMLElement &&
               !child.classNames.includes("chapternum") &&
               !child.classNames.includes("versenum") &&
-              !child.classNames.includes("crossreference")
+              !child.classNames.includes("crossreference") &&
+              !child.classNames.includes("footnote")
             ) {
               for (const subchild of child.childNodes) {
                 if (subchild instanceof HTMLElement) {
                   if (
                     !subchild.classNames.includes("chapternum") &&
                     !subchild.classNames.includes("versenum") &&
-                    !subchild.classNames.includes("crossreference")
+                    !subchild.classNames.includes("crossreference") &&
+                    !subchild.classNames.includes("footnote")
                   ) {
                     text += subchild.text;
                   }

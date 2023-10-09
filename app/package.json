@@ -49,7 +49,7 @@
     "@rxweb/types": "^1.0.6",
     "@types/firebase": "^3.2.1",
     "@venite/angular": "^0.5.0",
-    "@venite/bible-api": "^0.1.8",
+    "@venite/bible-api": "^0.1.15",
     "@venite/components": "^0.16.42",
     "@venite/docx": "^0.2.3",
     "@venite/ldf": "^0.21.42",
