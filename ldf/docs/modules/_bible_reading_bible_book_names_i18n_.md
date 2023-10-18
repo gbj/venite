@@ -18,7 +18,7 @@
 
 Ƭ **BibleBookName**: *Record‹string, object›*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1)*
 
 ## Object literals
 
@@ -26,11 +26,11 @@
 
 ### ▪ **BIBLE_BOOK_NAMES**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:3](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L3)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:3](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L3)*
 
 ▪ **1 Chronicles**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:172](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L172)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:196](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L196)*
 
 * **en**: *object*
 
@@ -50,9 +50,21 @@
 
   * **short**: *string* = "1 Chroniques"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 इतिहास"
+
+  * **short**: *string* = "1 इतिहास"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 พงศาวดาร "
+
+  * **short**: *string* = "1 พงศาวดาร"
+
 ▪ **1 Corinthians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:810](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L810)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:900](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L900)*
 
 * **en**: *object*
 
@@ -84,9 +96,21 @@
 
   * **short**: *string* = "1 Corinthians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 कुरिन्थीहरूलाई पत्र"
+
+  * **short**: *string* = "1 कुरिन्थीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 โครินธ์ "
+
+  * **short**: *string* = "1 โครินธ์"
+
 ▪ **1 Esdras**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1272](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1272)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1404](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1404)*
 
 * **en**: *object*
 
@@ -108,7 +132,7 @@
 
 ▪ **1 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1162](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1162)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1284](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1284)*
 
 * **en**: *object*
 
@@ -140,9 +164,21 @@
 
   * **short**: *string* = "2 John"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 यूहन्ना"
+
+  * **short**: *string* = "1 यूहन्ना"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 ยอห์น "
+
+  * **short**: *string* = "1 ยอห์น"
+
 ▪ **1 Kings**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:144](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L144)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:164](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L164)*
 
 * **en**: *object*
 
@@ -162,9 +198,21 @@
 
   * **short**: *string* = "1 Rois"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 राजाहरू"
+
+  * **short**: *string* = "1 राजाहरू"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 พงศาวดาร "
+
+  * **short**: *string* = "1 พงศาวดาร"
+
 ▪ **1 Maccabees**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:614](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L614)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:692](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L692)*
 
 * **en**: *object*
 
@@ -186,7 +234,7 @@
 
 ▪ **1 Peter**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1118](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1118)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1236](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1236)*
 
 * **en**: *object*
 
@@ -218,9 +266,21 @@
 
   * **short**: *string* = "1 Peter"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 पत्रुसको पत्र"
+
+  * **short**: *string* = "1 पत्रुसको पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 ปีเตอร์ "
+
+  * **short**: *string* = "1 ปีเตอร์"
+
 ▪ **1 Samuel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:116](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L116)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:132](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L132)*
 
 * **en**: *object*
 
@@ -240,9 +300,21 @@
 
   * **short**: *string* = "1 Samuel"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 समूएल"
+
+  * **short**: *string* = "1 समूएल"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 ซามูเอล "
+
+  * **short**: *string* = "1 ซามูเอล"
+
 ▪ **1 Thessalonians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:942](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L942)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1044](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1044)*
 
 * **en**: *object*
 
@@ -274,9 +346,21 @@
 
   * **short**: *string* = "1 Thessalonians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 थिस्सलोनिकीहरूलाई पत्र"
+
+  * **short**: *string* = "1 थिस्सलोनिकीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 เธสะโลนิกา "
+
+  * **short**: *string* = "1 เธสะโลนิกา"
+
 ▪ **1 Timothy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:986](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L986)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1092](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1092)*
 
 * **en**: *object*
 
@@ -308,9 +392,21 @@
 
   * **short**: *string* = "1 Timothy"
 
+* **ne**: *object*
+
+  * **long**: *string* = "1 तीमीथीहरूलाई पत्र"
+
+  * **short**: *string* = "1 तीमीथीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "1 ทิโมธี "
+
+  * **short**: *string* = "1 ทิโมธี"
+
 ▪ **2 Chronicles**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:186](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L186)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:212](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L212)*
 
 * **en**: *object*
 
@@ -330,9 +426,21 @@
 
   * **short**: *string* = "2 Chroniques"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 इतिहास"
+
+  * **short**: *string* = "2 इतिहास"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 พงศาวดาร "
+
+  * **short**: *string* = "2 พงศาวดาร"
+
 ▪ **2 Corinthians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:832](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L832)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:924](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L924)*
 
 * **en**: *object*
 
@@ -364,9 +472,21 @@
 
   * **short**: *string* = "2 Corinthians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 कुरिन्थीहरूलाई पत्र"
+
+  * **short**: *string* = "2 कुरिन्थीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 โครินธ์ "
+
+  * **short**: *string* = "2 โครินธ์"
+
 ▪ **2 Esdras**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1286](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1286)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1418](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1418)*
 
 * **en**: *object*
 
@@ -388,7 +508,7 @@
 
 ▪ **2 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1184](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1184)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1308](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1308)*
 
 * **en**: *object*
 
@@ -420,9 +540,21 @@
 
   * **short**: *string* = "2 John"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 यूहन्ना"
+
+  * **short**: *string* = "2 यूहन्ना"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 ยอห์น"
+
+  * **short**: *string* = "2 ยอห์น"
+
 ▪ **2 Kings**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:158](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L158)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:180](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L180)*
 
 * **en**: *object*
 
@@ -442,9 +574,21 @@
 
   * **short**: *string* = "2 Rois"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 राजाहरू"
+
+  * **short**: *string* = "2 राजाहरू"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 พงศาวดาร "
+
+  * **short**: *string* = "2 พงศาวดาร"
+
 ▪ **2 Maccabees**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:628](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L628)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:706](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L706)*
 
 * **en**: *object*
 
@@ -466,7 +610,7 @@
 
 ▪ **2 Peter**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1140](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1140)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1260](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1260)*
 
 * **en**: *object*
 
@@ -498,9 +642,21 @@
 
   * **short**: *string* = "2 Peter"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 पत्रुसको पत्र"
+
+  * **short**: *string* = "2 पत्रुसको पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 ปีเตอร์ "
+
+  * **short**: *string* = "2 ปีเตอร์"
+
 ▪ **2 Samuel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:130](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L130)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:148](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L148)*
 
 * **en**: *object*
 
@@ -520,9 +676,21 @@
 
   * **short**: *string* = "2 Samuel"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 समूएल"
+
+  * **short**: *string* = "2 समूएल"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 ซามูเอล "
+
+  * **short**: *string* = "2 ซามูเอล"
+
 ▪ **2 Thessalonians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:964](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L964)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1068](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1068)*
 
 * **en**: *object*
 
@@ -554,9 +722,21 @@
 
   * **short**: *string* = "2 Thessalonians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 थिस्सलोनिकीहरूलाई पत्र"
+
+  * **short**: *string* = "2 थिस्सलोनिकीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 เธสะโลนิกา "
+
+  * **short**: *string* = "2 เธสะโลนิกา"
+
 ▪ **2 Timothy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1008](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1008)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1116](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1116)*
 
 * **en**: *object*
 
@@ -588,9 +768,21 @@
 
   * **short**: *string* = "2 Timothy"
 
+* **ne**: *object*
+
+  * **long**: *string* = "2 तीमीथीहरूलाई पत्र"
+
+  * **short**: *string* = "2 तीमीथीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "2 ทิโมธี "
+
+  * **short**: *string* = "2 ทิโมธี"
+
 ▪ **3 John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1206](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1206)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1332](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1332)*
 
 * **en**: *object*
 
@@ -622,9 +814,21 @@
 
   * **short**: *string* = "3 John"
 
+* **ne**: *object*
+
+  * **long**: *string* = "3 यूहन्ना"
+
+  * **short**: *string* = "3 यूहन्ना"
+
+* **th**: *object*
+
+  * **long**: *string* = "3 ยอห์น"
+
+  * **short**: *string* = "3 ยอห์น"
+
 ▪ **Acts**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:766](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L766)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:852](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L852)*
 
 * **en**: *object*
 
@@ -656,9 +860,21 @@
 
   * **short**: *string* = "Acts"
 
+* **ne**: *object*
+
+  * **long**: *string* = "प्रेरितहरूको काम"
+
+  * **short**: *string* = "प्रेरितहरूको काम"
+
+* **th**: *object*
+
+  * **long**: *string* = "กิจการอัปโศก"
+
+  * **short**: *string* = "กิจการอัปโศก"
+
 ▪ **Amos**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:418](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L418)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:476](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L476)*
 
 * **en**: *object*
 
@@ -678,9 +894,21 @@
 
   * **short**: *string* = "Amos"
 
+* **ne**: *object*
+
+  * **long**: *string* = "आमोस"
+
+  * **short**: *string* = "आमोस"
+
+* **th**: *object*
+
+  * **long**: *string* = "อาโมส "
+
+  * **short**: *string* = "อาโมส"
+
 ▪ **Azariah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:572](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L572)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:650](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L650)*
 
 * **en**: *object*
 
@@ -702,7 +930,7 @@
 
 ▪ **Baruch**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:600](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L600)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:678](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L678)*
 
 * **en**: *object*
 
@@ -724,7 +952,7 @@
 
 ▪ **Bel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1300](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1300)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1432](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1432)*
 
 * **en**: *object*
 
@@ -746,7 +974,7 @@
 
 ▪ **Colossians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:920](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L920)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1020](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1020)*
 
 * **en**: *object*
 
@@ -778,9 +1006,21 @@
 
   * **short**: *string* = "Colossians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "कलस्सीहरूलाई पत्र"
+
+  * **short**: *string* = "कलस्सीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "โคโลสี"
+
+  * **short**: *string* = "โคโลสี"
+
 ▪ **Daniel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:368](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L368)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:420](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L420)*
 
 * **en**: *object*
 
@@ -812,9 +1052,21 @@
 
   * **short**: *string* = "Daniel"
 
+* **ne**: *object*
+
+  * **long**: *string* = "दानियेल"
+
+  * **short**: *string* = "दानियेल"
+
+* **th**: *object*
+
+  * **long**: *string* = "ดาเนียล"
+
+  * **short**: *string* = "ดาเนียล"
+
 ▪ **Deuteronomy**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:60](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L60)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:68](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L68)*
 
 * **en**: *object*
 
@@ -834,9 +1086,21 @@
 
   * **short**: *string* = "Deutéronome"
 
+* **ne**: *object*
+
+  * **long**: *string* = "दुतावाक्य"
+
+  * **short**: *string* = "दुतावाक्य"
+
+* **th**: *object*
+
+  * **long**: *string* = "พระธรรมนิยมฉบับนำหน้า"
+
+  * **short**: *string* = "พระธรรมนิยมฉบับนำหน้า"
+
 ▪ **Ecclesiastes**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:284](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L284)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:324](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L324)*
 
 * **en**: *object*
 
@@ -856,9 +1120,21 @@
 
   * **short**: *string* = "Ecclésiaste"
 
+* **ne**: *object*
+
+  * **long**: *string* = "उपदेशक"
+
+  * **short**: *string* = "उपदेशक"
+
+* **th**: *object*
+
+  * **long**: *string* = "เอกเคเลเซียส"
+
+  * **short**: *string* = "เอกเคเลเซียส"
+
 ▪ **Ephesians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:876](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L876)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:972](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L972)*
 
 * **en**: *object*
 
@@ -890,9 +1166,21 @@
 
   * **short**: *string* = "Ephesians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "इफिसीहरूलाई पत्र"
+
+  * **short**: *string* = "इफिसीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "เอเฟซัส "
+
+  * **short**: *string* = "เอเฟซัส"
+
 ▪ **Esther**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:228](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L228)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:260](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L260)*
 
 * **en**: *object*
 
@@ -912,9 +1200,21 @@
 
   * **short**: *string* = "Esther"
 
+* **ne**: *object*
+
+  * **long**: *string* = "एस्थर"
+
+  * **short**: *string* = "एस्थर"
+
+* **th**: *object*
+
+  * **long**: *string* = "เอสเธอร์ "
+
+  * **short**: *string* = "เอสเธอร์"
+
 ▪ **Exodus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:18](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L18)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:20](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L20)*
 
 * **en**: *object*
 
@@ -934,9 +1234,21 @@
 
   * **short**: *string* = "Exode"
 
+* **ne**: *object*
+
+  * **long**: *string* = "निर्गमन"
+
+  * **short**: *string* = "निर्गमन"
+
+* **th**: *object*
+
+  * **long**: *string* = "พระธรรมนิยมประเทศอีสราเอล"
+
+  * **short**: *string* = "พระธรรมนิยมประเทศอีสราเอล"
+
 ▪ **Ezekiel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:354](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L354)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:404](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L404)*
 
 * **en**: *object*
 
@@ -956,9 +1268,21 @@
 
   * **short**: *string* = "Ezéchiel"
 
+* **ne**: *object*
+
+  * **long**: *string* = "यहेज्केल"
+
+  * **short**: *string* = "यहेज्केल"
+
+* **th**: *object*
+
+  * **long**: *string* = "ศาสนาบัญญัติ "
+
+  * **short**: *string* = "ศาสนาบัญญัติ"
+
 ▪ **Ezra**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:200](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L200)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:228](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L228)*
 
 * **en**: *object*
 
@@ -978,9 +1302,21 @@
 
   * **short**: *string* = "Esdras"
 
+* **ne**: *object*
+
+  * **long**: *string* = "एज्रा"
+
+  * **short**: *string* = "एज्रा"
+
+* **th**: *object*
+
+  * **long**: *string* = "เอสรา"
+
+  * **short**: *string* = "เอสรา"
+
 ▪ **Galatians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:854](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L854)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:948](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L948)*
 
 * **en**: *object*
 
@@ -1012,9 +1348,21 @@
 
   * **short**: *string* = "Galatians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "गलातियहरूलाई पत्र"
+
+  * **short**: *string* = "गलातियहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "กาลาเทีย "
+
+  * **short**: *string* = "กาลาเทีย"
+
 ▪ **Genesis**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:4](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L4)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:4](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L4)*
 
 * **en**: *object*
 
@@ -1034,9 +1382,21 @@
 
   * **short**: *string* = "Genèse"
 
+* **ne**: *object*
+
+  * **long**: *string* = "परमेश्वरको वचन"
+
+  * **short**: *string* = "परमेश्वरको वचन"
+
+* **th**: *object*
+
+  * **long**: *string* = "พระธรรมเนียมปฐมกาล"
+
+  * **short**: *string* = "พระธรรมเนียมปฐมกาล"
+
 ▪ **Habakkuk**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:488](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L488)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:556](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L556)*
 
 * **en**: *object*
 
@@ -1056,9 +1416,21 @@
 
   * **short**: *string* = "Habacuc"
 
+* **ne**: *object*
+
+  * **long**: *string* = "हबक्कूक"
+
+  * **short**: *string* = "हबक्कूक"
+
+* **th**: *object*
+
+  * **long**: *string* = "ฮาบากุก "
+
+  * **short**: *string* = "ฮาบากุก"
+
 ▪ **Haggai**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:516](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L516)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:588](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L588)*
 
 * **en**: *object*
 
@@ -1078,9 +1450,21 @@
 
   * **short**: *string* = "Aggée"
 
+* **ne**: *object*
+
+  * **long**: *string* = "हाग्गै"
+
+  * **short**: *string* = "हाग्गै"
+
+* **th**: *object*
+
+  * **long**: *string* = "ฮักกัย"
+
+  * **short**: *string* = "ฮักกัย"
+
 ▪ **Hebrews**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1074](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1074)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1188](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1188)*
 
 * **en**: *object*
 
@@ -1112,9 +1496,21 @@
 
   * **short**: *string* = "Hebrews"
 
+* **ne**: *object*
+
+  * **long**: *string* = "इब्रीहरूलाई पत्र"
+
+  * **short**: *string* = "इब्रीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ฮีบรู"
+
+  * **short**: *string* = "ฮีบรู"
+
 ▪ **Hosea**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:390](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L390)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:444](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L444)*
 
 * **en**: *object*
 
@@ -1134,9 +1530,21 @@
 
   * **short**: *string* = "Osée"
 
+* **ne**: *object*
+
+  * **long**: *string* = "होशे"
+
+  * **short**: *string* = "होशे"
+
+* **th**: *object*
+
+  * **long**: *string* = "โฮเชาย "
+
+  * **short**: *string* = "โฮเชาย"
+
 ▪ **Isaiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:312](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L312)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:356](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L356)*
 
 * **en**: *object*
 
@@ -1156,9 +1564,21 @@
 
   * **short**: *string* = "Esaïe"
 
+* **ne**: *object*
+
+  * **long**: *string* = "नबीहरूको ग्रन्थ"
+
+  * **short**: *string* = "नबीहरूको ग्रन्थ"
+
+* **th**: *object*
+
+  * **long**: *string* = "อิสยาห์ "
+
+  * **short**: *string* = "อิสยาห์"
+
 ▪ **James**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1096](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1096)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1212](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1212)*
 
 * **en**: *object*
 
@@ -1190,9 +1610,21 @@
 
   * **short**: *string* = "James"
 
+* **ne**: *object*
+
+  * **long**: *string* = "याकूबको पत्र"
+
+  * **short**: *string* = "याकूबको पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ยากอบ "
+
+  * **short**: *string* = "ยากอบ"
+
 ▪ **Jeremiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:326](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L326)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:372](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L372)*
 
 * **en**: *object*
 
@@ -1212,9 +1644,21 @@
 
   * **short**: *string* = "Jérémie"
 
+* **ne**: *object*
+
+  * **long**: *string* = "यिर्मिया"
+
+  * **short**: *string* = "यिर्मिया"
+
+* **th**: *object*
+
+  * **long**: *string* = "เยเรมีย์ "
+
+  * **short**: *string* = "เยเรมีย์"
+
 ▪ **Job**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:242](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L242)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:276](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L276)*
 
 * **en**: *object*
 
@@ -1234,9 +1678,21 @@
 
   * **short**: *string* = "Job"
 
+* **ne**: *object*
+
+  * **long**: *string* = "अय्यूब"
+
+  * **short**: *string* = "अय्यूब"
+
+* **th**: *object*
+
+  * **long**: *string* = "อายูบ "
+
+  * **short**: *string* = "อายูบ"
+
 ▪ **Joel**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:404](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L404)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:460](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L460)*
 
 * **en**: *object*
 
@@ -1256,9 +1712,21 @@
 
   * **short**: *string* = "Joël"
 
+* **ne**: *object*
+
+  * **long**: *string* = "योएल"
+
+  * **short**: *string* = "योएल"
+
+* **th**: *object*
+
+  * **long**: *string* = "โยเอล "
+
+  * **short**: *string* = "โยเอล"
+
 ▪ **John**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:744](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L744)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:828](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L828)*
 
 * **en**: *object*
 
@@ -1290,9 +1758,21 @@
 
   * **short**: *string* = "John"
 
+* **ne**: *object*
+
+  * **long**: *string* = "यूहन्ना"
+
+  * **short**: *string* = "यूहन्ना"
+
+* **th**: *object*
+
+  * **long**: *string* = "ยอห์น "
+
+  * **short**: *string* = "ยอห์น"
+
 ▪ **Jonah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:446](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L446)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:508](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L508)*
 
 * **en**: *object*
 
@@ -1312,9 +1792,21 @@
 
   * **short**: *string* = "Jonas"
 
+* **ne**: *object*
+
+  * **long**: *string* = "योना"
+
+  * **short**: *string* = "योना"
+
+* **th**: *object*
+
+  * **long**: *string* = "โยนาห์ "
+
+  * **short**: *string* = "โยนาห์"
+
 ▪ **Joshua**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:74](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L74)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:84](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L84)*
 
 * **en**: *object*
 
@@ -1334,9 +1826,21 @@
 
   * **short**: *string* = "Josué"
 
+* **ne**: *object*
+
+  * **long**: *string* = "योशू"
+
+  * **short**: *string* = "योशू"
+
+* **th**: *object*
+
+  * **long**: *string* = "นาคร้ายโยชูอา"
+
+  * **short**: *string* = "นาคร้ายโยชูอา"
+
 ▪ **Jude**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1228](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1228)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1356](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1356)*
 
 * **en**: *object*
 
@@ -1368,9 +1872,21 @@
 
   * **short**: *string* = "Jude"
 
+* **ne**: *object*
+
+  * **long**: *string* = "यहूदाको पत्र"
+
+  * **short**: *string* = "यहूदाको पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ยูดา "
+
+  * **short**: *string* = "ยูดา"
+
 ▪ **Judges**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:88](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L88)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:100](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L100)*
 
 * **en**: *object*
 
@@ -1390,9 +1906,21 @@
 
   * **short**: *string* = "Juges"
 
+* **ne**: *object*
+
+  * **long**: *string* = "न्यायीहरू"
+
+  * **short**: *string* = "न्यायीहरू"
+
+* **th**: *object*
+
+  * **long**: *string* = "ผู้วินิจฉัย"
+
+  * **short**: *string* = "ผู้วินิจฉัย"
+
 ▪ **Judith**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:586](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L586)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:664](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L664)*
 
 * **en**: *object*
 
@@ -1414,7 +1942,7 @@
 
 ▪ **Lamentations**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:340](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L340)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:388](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L388)*
 
 * **en**: *object*
 
@@ -1434,9 +1962,21 @@
 
   * **short**: *string* = "Lamentations"
 
+* **ne**: *object*
+
+  * **long**: *string* = "विलाप"
+
+  * **short**: *string* = "विलाप"
+
+* **th**: *object*
+
+  * **long**: *string* = "เพลงคร่ำครวญ "
+
+  * **short**: *string* = "เพลงคร่ำครวญ"
+
 ▪ **Letter of Jeremiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1314](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1314)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1446](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1446)*
 
 * **en**: *object*
 
@@ -1458,7 +1998,7 @@
 
 ▪ **Leviticus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:32](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L32)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:36](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L36)*
 
 * **en**: *object*
 
@@ -1478,9 +2018,21 @@
 
   * **short**: *string* = "Lévitique"
 
+* **ne**: *object*
+
+  * **long**: *string* = "लैव्य"
+
+  * **short**: *string* = "लैव्य"
+
+* **th**: *object*
+
+  * **long**: *string* = "พระธรรมนิยมเลวี"
+
+  * **short**: *string* = "พระธรรมนิยมเลวี"
+
 ▪ **Luke**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:722](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L722)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:804](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L804)*
 
 * **en**: *object*
 
@@ -1512,9 +2064,21 @@
 
   * **short**: *string* = "Luke"
 
+* **ne**: *object*
+
+  * **long**: *string* = "लूका"
+
+  * **short**: *string* = "लूका"
+
+* **th**: *object*
+
+  * **long**: *string* = "ลูกา "
+
+  * **short**: *string* = "ลูกา"
+
 ▪ **Malachi**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:544](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L544)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:620](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L620)*
 
 * **en**: *object*
 
@@ -1534,9 +2098,21 @@
 
   * **short**: *string* = "Malachie"
 
+* **ne**: *object*
+
+  * **long**: *string* = "मलाकी"
+
+  * **short**: *string* = "मलाकी"
+
+* **th**: *object*
+
+  * **long**: *string* = "มาลาคี"
+
+  * **short**: *string* = "มาลาคี"
+
 ▪ **Mark**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:700](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L700)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:780](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L780)*
 
 * **en**: *object*
 
@@ -1568,9 +2144,21 @@
 
   * **short**: *string* = "Mark"
 
+* **ne**: *object*
+
+  * **long**: *string* = "मर्कुस"
+
+  * **short**: *string* = "मर्कुस"
+
+* **th**: *object*
+
+  * **long**: *string* = "มาร์ค "
+
+  * **short**: *string* = "มาร์ค"
+
 ▪ **Matthew**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:678](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L678)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:756](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L756)*
 
 * **en**: *object*
 
@@ -1602,9 +2190,21 @@
 
   * **short**: *string* = "Matthew"
 
+* **ne**: *object*
+
+  * **long**: *string* = "मत्ती"
+
+  * **short**: *string* = "मत्ती"
+
+* **th**: *object*
+
+  * **long**: *string* = "มัทธิว"
+
+  * **short**: *string* = "มัทธิว"
+
 ▪ **Micah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:460](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L460)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:524](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L524)*
 
 * **en**: *object*
 
@@ -1624,9 +2224,21 @@
 
   * **short**: *string* = "Michée"
 
+* **ne**: *object*
+
+  * **long**: *string* = "मीका"
+
+  * **short**: *string* = "मीका"
+
+* **th**: *object*
+
+  * **long**: *string* = "มีคาห์ "
+
+  * **short**: *string* = "มีคาห์"
+
 ▪ **Nahum**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:474](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L474)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:540](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L540)*
 
 * **en**: *object*
 
@@ -1646,9 +2258,21 @@
 
   * **short**: *string* = "Nahum"
 
+* **ne**: *object*
+
+  * **long**: *string* = "नहूम"
+
+  * **short**: *string* = "नहूम"
+
+* **th**: *object*
+
+  * **long**: *string* = "นาฮูม "
+
+  * **short**: *string* = "นาฮูม"
+
 ▪ **Nehemiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:214](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L214)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:244](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L244)*
 
 * **en**: *object*
 
@@ -1668,9 +2292,21 @@
 
   * **short**: *string* = "Néhémie"
 
+* **ne**: *object*
+
+  * **long**: *string* = "नहेमाया"
+
+  * **short**: *string* = "नहेमाया"
+
+* **th**: *object*
+
+  * **long**: *string* = "เนหะมายา"
+
+  * **short**: *string* = "เนหะมายา"
+
 ▪ **Numbers**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:46](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L46)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:52](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L52)*
 
 * **en**: *object*
 
@@ -1690,9 +2326,21 @@
 
   * **short**: *string* = "Nombres"
 
+* **ne**: *object*
+
+  * **long**: *string* = "ग्रंथी"
+
+  * **short**: *string* = "ग्रंथी"
+
+* **th**: *object*
+
+  * **long**: *string* = "พระธรรมนิยมเบนไดกต์"
+
+  * **short**: *string* = "พระธรรมนิยมเบนไดกต์"
+
 ▪ **Obadiah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:432](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L432)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:492](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L492)*
 
 * **en**: *object*
 
@@ -1712,9 +2360,21 @@
 
   * **short**: *string* = "Abdias"
 
+* **ne**: *object*
+
+  * **long**: *string* = "ओबद्या"
+
+  * **short**: *string* = "ओबद्या"
+
+* **th**: *object*
+
+  * **long**: *string* = "โอบาดิห์ "
+
+  * **short**: *string* = "โอบาดิห์"
+
 ▪ **Philemon**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1052](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1052)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1164](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1164)*
 
 * **en**: *object*
 
@@ -1746,9 +2406,21 @@
 
   * **short**: *string* = "Philemon"
 
+* **ne**: *object*
+
+  * **long**: *string* = "फिलेमोनलाई पत्र"
+
+  * **short**: *string* = "फिलेमोनलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ฟีเลโมน"
+
+  * **short**: *string* = "ฟีเลโมน"
+
 ▪ **Philippians**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:898](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L898)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:996](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L996)*
 
 * **en**: *object*
 
@@ -1780,9 +2452,21 @@
 
   * **short**: *string* = "Philippians"
 
+* **ne**: *object*
+
+  * **long**: *string* = "फिलिप्पीहरूलाई पत्र"
+
+  * **short**: *string* = "फिलिप्पीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ฟีลิปปี "
+
+  * **short**: *string* = "ฟีลิปปี"
+
 ▪ **Proverbs**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:270](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L270)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:308](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L308)*
 
 * **en**: *object*
 
@@ -1802,9 +2486,21 @@
 
   * **short**: *string* = "Proverbes"
 
+* **ne**: *object*
+
+  * **long**: *string* = "उत्थान"
+
+  * **short**: *string* = "उत्थान"
+
+* **th**: *object*
+
+  * **long**: *string* = "ประธาน "
+
+  * **short**: *string* = "ประธาน"
+
 ▪ **Psalms**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:256](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L256)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:292](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L292)*
 
 * **en**: *object*
 
@@ -1824,9 +2520,21 @@
 
   * **short**: *string* = "Psaumes"
 
+* **ne**: *object*
+
+  * **long**: *string* = "प्रागज्ञ"
+
+  * **short**: *string* = "प्रागज्ञ"
+
+* **th**: *object*
+
+  * **long**: *string* = "สดุดี"
+
+  * **short**: *string* = "สดุดี"
+
 ▪ **Revelation**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1250](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1250)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1380](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1380)*
 
 * **en**: *object*
 
@@ -1858,9 +2566,21 @@
 
   * **short**: *string* = "Revelation"
 
+* **ne**: *object*
+
+  * **long**: *string* = "प्रकटीकरण"
+
+  * **short**: *string* = "प्रकटीकरण"
+
+* **th**: *object*
+
+  * **long**: *string* = "วิวรณ์"
+
+  * **short**: *string* = "วิวรณ์"
+
 ▪ **Romans**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:788](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L788)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:876](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L876)*
 
 * **en**: *object*
 
@@ -1892,9 +2612,21 @@
 
   * **short**: *string* = "Romans"
 
+* **ne**: *object*
+
+  * **long**: *string* = "रोमीहरूलाई पत्र"
+
+  * **short**: *string* = "रोमीहरूलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "โรม "
+
+  * **short**: *string* = "โรม"
+
 ▪ **Ruth**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:102](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L102)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:116](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L116)*
 
 * **en**: *object*
 
@@ -1914,9 +2646,21 @@
 
   * **short**: *string* = "Ruth"
 
+* **ne**: *object*
+
+  * **long**: *string* = "रुत"
+
+  * **short**: *string* = "रुत"
+
+* **th**: *object*
+
+  * **long**: *string* = "รูธ"
+
+  * **short**: *string* = "รูธ"
+
 ▪ **Sirach**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:656](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L656)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:734](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L734)*
 
 * **en**: *object*
 
@@ -1950,7 +2694,7 @@
 
 ▪ **The Song of Solomon**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:298](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L298)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:340](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L340)*
 
 * **en**: *object*
 
@@ -1970,9 +2714,21 @@
 
   * **short**: *string* = "Cantique des Cantiques"
 
+* **ne**: *object*
+
+  * **long**: *string* = "श्रेष्ठगीति"
+
+  * **short**: *string* = "श्रेष्ठगीति"
+
+* **th**: *object*
+
+  * **long**: *string* = "เพลงซอลโมน "
+
+  * **short**: *string* = "เพลงซอลโมน"
+
 ▪ **Titus**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:1030](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L1030)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:1140](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L1140)*
 
 * **en**: *object*
 
@@ -2004,9 +2760,21 @@
 
   * **short**: *string* = "Titus"
 
+* **ne**: *object*
+
+  * **long**: *string* = "तीतसलाई पत्र"
+
+  * **short**: *string* = "तीतसलाई पत्र"
+
+* **th**: *object*
+
+  * **long**: *string* = "ทิตัส "
+
+  * **short**: *string* = "ทิตัส"
+
 ▪ **Tobit**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:558](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L558)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:636](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L636)*
 
 * **en**: *object*
 
@@ -2028,7 +2796,7 @@
 
 ▪ **Wisdom**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:642](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L642)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:720](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L720)*
 
 * **en**: *object*
 
@@ -2050,7 +2818,7 @@
 
 ▪ **Zechariah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:530](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L530)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:604](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L604)*
 
 * **en**: *object*
 
@@ -2070,9 +2838,21 @@
 
   * **short**: *string* = "Zacharie"
 
+* **ne**: *object*
+
+  * **long**: *string* = "जकर्या"
+
+  * **short**: *string* = "जकर्या"
+
+* **th**: *object*
+
+  * **long**: *string* = "เครีย"
+
+  * **short**: *string* = "เครีย"
+
 ▪ **Zephaniah**: *object*
 
-*Defined in [bible-reading/bible-book-names.i18n.ts:502](https://github.com/gbj/venite/blob/f9131209/ldf/src/bible-reading/bible-book-names.i18n.ts#L502)*
+*Defined in [bible-reading/bible-book-names.i18n.ts:572](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/bible-reading/bible-book-names.i18n.ts#L572)*
 
 * **en**: *object*
 
@@ -2091,3 +2871,15 @@
   * **long**: *string* = "Sophonie"
 
   * **short**: *string* = "Sophonie"
+
+* **ne**: *object*
+
+  * **long**: *string* = "सपन्नाह"
+
+  * **short**: *string* = "सपन्नाह"
+
+* **th**: *object*
+
+  * **long**: *string* = "เศษนัย "
+
+  * **short**: *string* = "เศษนัย"

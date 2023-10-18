@@ -14,6 +14,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Génesis',
       long: 'El Libro de Génesis',
     },
+    ne: { short: 'परमेश्वरको वचन', long: 'परमेश्वरको वचन' },
+    th: { short: 'พระธรรมเนียมปฐมกาล', long: 'พระธรรมเนียมปฐมกาล' },
   },
   Exodus: {
     en: {
@@ -28,6 +30,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Éxodo',
       long: 'El Libro de Éxodo',
     },
+    ne: { short: 'निर्गमन', long: 'निर्गमन' },
+    th: { short: 'พระธรรมนิยมประเทศอีสราเอล', long: 'พระธรรมนิยมประเทศอีสราเอล' },
   },
   Leviticus: {
     en: {
@@ -42,6 +46,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Levítico',
       long: 'El Libro de Levítico',
     },
+    ne: { short: 'लैव्य', long: 'लैव्य' },
+    th: { short: 'พระธรรมนิยมเลวี', long: 'พระธรรมนิยมเลวี' },
   },
   Numbers: {
     en: {
@@ -56,6 +62,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Números',
       long: 'El Libro de Números',
     },
+    ne: { short: 'ग्रंथी', long: 'ग्रंथी' },
+    th: { short: 'พระธรรมนิยมเบนไดกต์', long: 'พระธรรมนิยมเบนไดกต์' },
   },
   Deuteronomy: {
     en: {
@@ -70,6 +78,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Deuteronomio',
       long: 'El Libro de Deuteronomio',
     },
+    ne: { short: 'दुतावाक्य', long: 'दुतावाक्य' },
+    th: { short: 'พระธรรมนิยมฉบับนำหน้า', long: 'พระธรรมนิยมฉบับนำหน้า' },
   },
   Joshua: {
     en: {
@@ -84,6 +94,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Josué',
       long: 'El Libro de Josué',
     },
+    ne: { short: 'योशू', long: 'योशू' },
+    th: { short: 'นาคร้ายโยชูอา', long: 'นาคร้ายโยชูอา' },
   },
   Judges: {
     en: {
@@ -98,6 +110,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jueces',
       long: 'El Libro de Jueces',
     },
+    ne: { short: 'न्यायीहरू', long: 'न्यायीहरू' },
+    th: { short: 'ผู้วินิจฉัย', long: 'ผู้วินิจฉัย' },
   },
   Ruth: {
     en: {
@@ -112,6 +126,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Rut',
       long: 'El Libro de Rut',
     },
+    ne: { short: 'रुत', long: 'रुत' },
+    th: { short: 'รูธ', long: 'รูธ' },
   },
   '1 Samuel': {
     en: {
@@ -126,6 +142,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Samuel',
       long: 'El Libro de 1 Samuel',
     },
+    ne: { short: '1 समूएल', long: '1 समूएल' },
+    th: { short: '1 ซามูเอล', long: '1 ซามูเอล ' },
   },
   '2 Samuel': {
     en: {
@@ -140,6 +158,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Samuel',
       long: 'El Libro de 2 Samuel',
     },
+    ne: { short: '2 समूएल', long: '2 समूएल' },
+    th: { short: '2 ซามูเอล', long: '2 ซามูเอล ' },
   },
   '1 Kings': {
     en: {
@@ -154,6 +174,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Reyes',
       long: 'El Libro de 1 Reyes',
     },
+    ne: { short: '1 राजाहरू', long: '1 राजाहरू' },
+    th: { short: '1 พงศาวดาร', long: '1 พงศาวดาร ' },
   },
   '2 Kings': {
     en: {
@@ -168,6 +190,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Reyes',
       long: 'El Libro de 2 Reyes',
     },
+    ne: { short: '2 राजाहरू', long: '2 राजाहरू' },
+    th: { short: '2 พงศาวดาร', long: '2 พงศาวดาร ' },
   },
   '1 Chronicles': {
     en: {
@@ -182,6 +206,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Crónicas',
       long: 'El Libro de 1 Crónicas',
     },
+    ne: { short: '1 इतिहास', long: '1 इतिहास' },
+    th: { short: '1 พงศาวดาร', long: '1 พงศาวดาร ' },
   },
   '2 Chronicles': {
     en: {
@@ -196,6 +222,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Crónicas',
       long: 'El Libro de 2 Crónicas',
     },
+    ne: { short: '2 इतिहास', long: '2 इतिहास' },
+    th: { short: '2 พงศาวดาร', long: '2 พงศาวดาร ' },
   },
   Ezra: {
     en: {
@@ -210,6 +238,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Esdras',
       long: 'El Libro de Esdras',
     },
+    ne: { short: 'एज्रा', long: 'एज्रा' },
+    th: { short: 'เอสรา', long: 'เอสรา' },
   },
   Nehemiah: {
     en: {
@@ -224,6 +254,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Nehemías',
       long: 'El Libro de Nehemías',
     },
+    ne: { short: 'नहेमाया', long: 'नहेमाया' },
+    th: { short: 'เนหะมายา', long: 'เนหะมายา' },
   },
   Esther: {
     en: {
@@ -238,6 +270,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ester',
       long: 'El Libro de Ester',
     },
+    ne: { short: 'एस्थर', long: 'एस्थर' },
+    th: { short: 'เอสเธอร์', long: 'เอสเธอร์ ' },
   },
   Job: {
     en: {
@@ -252,6 +286,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Job',
       long: 'El Libro de Job',
     },
+    ne: { short: 'अय्यूब', long: 'अय्यूब' },
+    th: { short: 'อายูบ', long: 'อายูบ ' },
   },
   Psalms: {
     en: {
@@ -266,6 +302,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Salmos',
       long: 'El Libro de Salmos',
     },
+    ne: { short: 'प्रागज्ञ', long: 'प्रागज्ञ' },
+    th: { short: 'สดุดี', long: 'สดุดี' },
   },
   Proverbs: {
     en: {
@@ -280,6 +318,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Proverbios',
       long: 'El Libro de Proverbios',
     },
+    ne: { short: 'उत्थान', long: 'उत्थान' },
+    th: { short: 'ประธาน', long: 'ประธาน ' },
   },
   Ecclesiastes: {
     en: {
@@ -294,6 +334,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Eclesiastés',
       long: 'El Libro de Eclesiastés',
     },
+    ne: { short: 'उपदेशक', long: 'उपदेशक' },
+    th: { short: 'เอกเคเลเซียส', long: 'เอกเคเลเซียส' },
   },
   'The Song of Solomon': {
     en: {
@@ -308,6 +350,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Cantares',
       long: 'El Libro de Cantares',
     },
+    ne: { short: 'श्रेष्ठगीति', long: 'श्रेष्ठगीति' },
+    th: { short: 'เพลงซอลโมน', long: 'เพลงซอลโมน ' },
   },
   Isaiah: {
     en: {
@@ -322,6 +366,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Isaías',
       long: 'El Libro de Isaías',
     },
+    ne: { short: 'नबीहरूको ग्रन्थ', long: 'नबीहरूको ग्रन्थ' },
+    th: { short: 'อิสยาห์', long: 'อิสยาห์ ' },
   },
   Jeremiah: {
     en: {
@@ -336,6 +382,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jeremías',
       long: 'El Libro de Jeremías',
     },
+    ne: { short: 'यिर्मिया', long: 'यिर्मिया' },
+    th: { short: 'เยเรมีย์', long: 'เยเรมีย์ ' },
   },
   Lamentations: {
     en: {
@@ -350,6 +398,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Lamentaciones',
       long: 'El Libro de Lamentaciones',
     },
+    ne: { short: 'विलाप', long: 'विलाप' },
+    th: { short: 'เพลงคร่ำครวญ', long: 'เพลงคร่ำครวญ ' },
   },
   Ezekiel: {
     en: {
@@ -364,6 +414,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ezequiel',
       long: 'El Libro de Ezequiel',
     },
+    ne: { short: 'यहेज्केल', long: 'यहेज्केल' },
+    th: { short: 'ศาสนาบัญญัติ', long: 'ศาสนาบัญญัติ ' },
   },
   Daniel: {
     en: {
@@ -386,6 +438,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Daniel',
       long: 'The Book of the Prophet Daniel',
     },
+    ne: { short: 'दानियेल', long: 'दानियेल' },
+    th: { short: 'ดาเนียล', long: 'ดาเนียล' },
   },
   Hosea: {
     en: {
@@ -400,6 +454,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Oseas',
       long: 'El Libro de Oseas',
     },
+    ne: { short: 'होशे', long: 'होशे' },
+    th: { short: 'โฮเชาย', long: 'โฮเชาย ' },
   },
   Joel: {
     en: {
@@ -414,6 +470,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Joel',
       long: 'El Libro de Joel',
     },
+    ne: { short: 'योएल', long: 'योएल' },
+    th: { short: 'โยเอล', long: 'โยเอล ' },
   },
   Amos: {
     en: {
@@ -428,6 +486,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Amós',
       long: 'El Libro de Amós',
     },
+    ne: { short: 'आमोस', long: 'आमोस' },
+    th: { short: 'อาโมส', long: 'อาโมส ' },
   },
   Obadiah: {
     en: {
@@ -442,6 +502,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Abdías',
       long: 'El Libro de Abdías',
     },
+    ne: { short: 'ओबद्या', long: 'ओबद्या' },
+    th: { short: 'โอบาดิห์', long: 'โอบาดิห์ ' },
   },
   Jonah: {
     en: {
@@ -456,6 +518,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jonás',
       long: 'El Libro de Jonás',
     },
+    ne: { short: 'योना', long: 'योना' },
+    th: { short: 'โยนาห์', long: 'โยนาห์ ' },
   },
   Micah: {
     en: {
@@ -470,6 +534,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Miqueas',
       long: 'El Libro de Miqueas',
     },
+    ne: { short: 'मीका', long: 'मीका' },
+    th: { short: 'มีคาห์', long: 'มีคาห์ ' },
   },
   Nahum: {
     en: {
@@ -484,6 +550,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Nahúm',
       long: 'El Libro de Nahúm',
     },
+    ne: { short: 'नहूम', long: 'नहूम' },
+    th: { short: 'นาฮูม', long: 'นาฮูม ' },
   },
   Habakkuk: {
     en: {
@@ -498,6 +566,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Habacuc',
       long: 'El Libro de Habacuc',
     },
+    ne: { short: 'हबक्कूक', long: 'हबक्कूक' },
+    th: { short: 'ฮาบากุก', long: 'ฮาบากุก ' },
   },
   Zephaniah: {
     en: {
@@ -512,6 +582,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Sofonías',
       long: 'El Libro de Sofonías',
     },
+    ne: { short: 'सपन्नाह', long: 'सपन्नाह' },
+    th: { short: 'เศษนัย', long: 'เศษนัย ' },
   },
   Haggai: {
     en: {
@@ -526,6 +598,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Hageo',
       long: 'El Libro de Hageo',
     },
+    ne: { short: 'हाग्गै', long: 'हाग्गै' },
+    th: { short: 'ฮักกัย', long: 'ฮักกัย' },
   },
   Zechariah: {
     en: {
@@ -540,6 +614,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Zacarías',
       long: 'El Libro de Zacarías',
     },
+    ne: { short: 'जकर्या', long: 'जकर्या' },
+    th: { short: 'เครีย', long: 'เครีย' },
   },
   Malachi: {
     en: {
@@ -554,6 +630,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Malaquías',
       long: 'El Libro de Malaquías',
     },
+    ne: { short: 'मलाकी', long: 'मलाकी' },
+    th: { short: 'มาลาคี', long: 'มาลาคี' },
   },
   Tobit: {
     en: {
@@ -696,6 +774,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Matthew',
       long: 'The Gospel According to St. Matthew',
     },
+    ne: { short: 'मत्ती', long: 'मत्ती' },
+    th: { short: 'มัทธิว', long: 'มัทธิว' },
   },
   Mark: {
     en: {
@@ -718,6 +798,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Mark',
       long: 'The Gospel According to St. Mark',
     },
+    ne: { short: 'मर्कुस', long: 'मर्कुस' },
+    th: { short: 'มาร์ค', long: 'มาร์ค ' },
   },
   Luke: {
     en: {
@@ -740,6 +822,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Luke',
       long: 'The Gospel According to St. Luke',
     },
+    ne: { short: 'लूका', long: 'लूका' },
+    th: { short: 'ลูกา', long: 'ลูกา ' },
   },
   John: {
     en: {
@@ -762,6 +846,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'John',
       long: 'The Gospel According to St. John',
     },
+    ne: { short: 'यूहन्ना', long: 'यूहन्ना' },
+    th: { short: 'ยอห์น', long: 'ยอห์น ' },
   },
   Acts: {
     en: {
@@ -784,6 +870,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Acts',
       long: 'The Book of the Acts of the Apostles',
     },
+    ne: { short: 'प्रेरितहरूको काम', long: 'प्रेरितहरूको काम' },
+    th: { short: 'กิจการอัปโศก', long: 'กิจการอัปโศก' },
   },
   Romans: {
     en: {
@@ -806,6 +894,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Romans',
       long: 'The Epistle of St. Paul the Apostle to the Romans',
     },
+    ne: { short: 'रोमीहरूलाई पत्र', long: 'रोमीहरूलाई पत्र' },
+    th: { short: 'โรม', long: 'โรม ' },
   },
   '1 Corinthians': {
     en: {
@@ -828,6 +918,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Corinthians',
       long: 'The First Epistle of St. Paul the Apostle to the Corinthians',
     },
+    ne: { short: '1 कुरिन्थीहरूलाई पत्र', long: '1 कुरिन्थीहरूलाई पत्र' },
+    th: { short: '1 โครินธ์', long: '1 โครินธ์ ' },
   },
   '2 Corinthians': {
     en: {
@@ -850,6 +942,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Corinthians',
       long: 'The Second Epistle of St. Paul the Apostle to the Corinthians',
     },
+    ne: { short: '2 कुरिन्थीहरूलाई पत्र', long: '2 कुरिन्थीहरूलाई पत्र' },
+    th: { short: '2 โครินธ์', long: '2 โครินธ์ ' },
   },
   Galatians: {
     en: {
@@ -872,6 +966,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Galatians',
       long: 'The Epistle of St. Paul the Apostle to the Galatians',
     },
+    ne: { short: 'गलातियहरूलाई पत्र', long: 'गलातियहरूलाई पत्र' },
+    th: { short: 'กาลาเทีย', long: 'กาลาเทีย ' },
   },
   Ephesians: {
     en: {
@@ -894,6 +990,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Ephesians',
       long: 'The Epistle of St. Paul the Apostle to the Ephesians',
     },
+    ne: { short: 'इफिसीहरूलाई पत्र', long: 'इफिसीहरूलाई पत्र' },
+    th: { short: 'เอเฟซัส', long: 'เอเฟซัส ' },
   },
   Philippians: {
     en: {
@@ -916,6 +1014,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Philippians',
       long: 'The Epistle of St. Paul the Apostle to the Philippians',
     },
+    ne: { short: 'फिलिप्पीहरूलाई पत्र', long: 'फिलिप्पीहरूलाई पत्र' },
+    th: { short: 'ฟีลิปปี', long: 'ฟีลิปปี ' },
   },
   Colossians: {
     en: {
@@ -938,6 +1038,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Colossians',
       long: 'The Epistle of St. Paul the Apostle to the Colossians',
     },
+    ne: { short: 'कलस्सीहरूलाई पत्र', long: 'कलस्सीहरूलाई पत्र' },
+    th: { short: 'โคโลสี', long: 'โคโลสี' },
   },
   '1 Thessalonians': {
     en: {
@@ -960,6 +1062,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Thessalonians',
       long: 'The First Epistle of St. Paul the Apostle to the Thessalonians',
     },
+    ne: { short: '1 थिस्सलोनिकीहरूलाई पत्र', long: '1 थिस्सलोनिकीहरूलाई पत्र' },
+    th: { short: '1 เธสะโลนิกา', long: '1 เธสะโลนิกา ' },
   },
   '2 Thessalonians': {
     en: {
@@ -982,6 +1086,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Thessalonians',
       long: 'The Second Epistle of St. Paul the Apostle to the Thessalonians',
     },
+    ne: { short: '2 थिस्सलोनिकीहरूलाई पत्र', long: '2 थिस्सलोनिकीहरूलाई पत्र' },
+    th: { short: '2 เธสะโลนิกา', long: '2 เธสะโลนิกา ' },
   },
   '1 Timothy': {
     en: {
@@ -1004,6 +1110,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Timothy',
       long: 'The First Epistle of St. Paul the Apostle to Timothy',
     },
+    ne: { short: '1 तीमीथीहरूलाई पत्र', long: '1 तीमीथीहरूलाई पत्र' },
+    th: { short: '1 ทิโมธี', long: '1 ทิโมธี ' },
   },
   '2 Timothy': {
     en: {
@@ -1026,6 +1134,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Timothy',
       long: 'The Second Epistle of St. Paul the Apostle to Timothy',
     },
+    ne: { short: '2 तीमीथीहरूलाई पत्र', long: '2 तीमीथीहरूलाई पत्र' },
+    th: { short: '2 ทิโมธี', long: '2 ทิโมธี ' },
   },
   Titus: {
     en: {
@@ -1048,6 +1158,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Titus',
       long: 'The Epistle of St. Paul the Apostle to Titus',
     },
+    ne: { short: 'तीतसलाई पत्र', long: 'तीतसलाई पत्र' },
+    th: { short: 'ทิตัส', long: 'ทิตัส ' },
   },
   Philemon: {
     en: {
@@ -1070,6 +1182,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Philemon',
       long: 'The Epistle of St. Paul the Apostle to Philemon',
     },
+    ne: { short: 'फिलेमोनलाई पत्र', long: 'फिलेमोनलाई पत्र' },
+    th: { short: 'ฟีเลโมน', long: 'ฟีเลโมน' },
   },
   Hebrews: {
     en: {
@@ -1092,6 +1206,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Hebrews',
       long: 'The Epistle to the Hebrews',
     },
+    ne: { short: 'इब्रीहरूलाई पत्र', long: 'इब्रीहरूलाई पत्र' },
+    th: { short: 'ฮีบรู', long: 'ฮีบรู' },
   },
   James: {
     en: {
@@ -1114,6 +1230,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'James',
       long: 'The Epistle General of St. James',
     },
+    ne: { short: 'याकूबको पत्र', long: 'याकूबको पत्र' },
+    th: { short: 'ยากอบ', long: 'ยากอบ ' },
   },
   '1 Peter': {
     en: {
@@ -1136,6 +1254,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '1 Peter',
       long: 'The First Epistle General of St. Peter',
     },
+    ne: { short: '1 पत्रुसको पत्र', long: '1 पत्रुसको पत्र' },
+    th: { short: '1 ปีเตอร์', long: '1 ปีเตอร์ ' },
   },
   '2 Peter': {
     en: {
@@ -1158,6 +1278,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 Peter',
       long: 'The Second Epistle General of St. Peter',
     },
+    ne: { short: '2 पत्रुसको पत्र', long: '2 पत्रुसको पत्र' },
+    th: { short: '2 ปีเตอร์', long: '2 ปีเตอร์ ' },
   },
   '1 John': {
     en: {
@@ -1180,6 +1302,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 John',
       long: 'The First Epistle General of St. John',
     },
+    ne: { short: '1 यूहन्ना', long: '1 यूहन्ना' },
+    th: { short: '1 ยอห์น', long: '1 ยอห์น ' },
   },
   '2 John': {
     en: {
@@ -1202,6 +1326,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '2 John',
       long: 'The Second Epistle General of St. John',
     },
+    ne: { short: '2 यूहन्ना', long: '2 यूहन्ना' },
+    th: { short: '2 ยอห์น', long: '2 ยอห์น' },
   },
   '3 John': {
     en: {
@@ -1224,6 +1350,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: '3 John',
       long: 'The Third Epistle General of St. John',
     },
+    ne: { short: '3 यूहन्ना', long: '3 यूहन्ना' },
+    th: { short: '3 ยอห์น', long: '3 ยอห์น' },
   },
   Jude: {
     en: {
@@ -1246,6 +1374,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Jude',
       long: 'The Epistle General of St. Jude',
     },
+    ne: { short: 'यहूदाको पत्र', long: 'यहूदाको पत्र' },
+    th: { short: 'ยูดา', long: 'ยูดา ' },
   },
   Revelation: {
     en: {
@@ -1268,6 +1398,8 @@ export const BIBLE_BOOK_NAMES: Record<string, BibleBookName> = {
       short: 'Revelation',
       long: 'The Revelation to St. John the Divine',
     },
+    ne: { short: 'प्रकटीकरण', long: 'प्रकटीकरण' },
+    th: { short: 'วิวรณ์', long: 'วิวรณ์' },
   },
   '1 Esdras': {
     en: {
