@@ -283,7 +283,7 @@
     {
       "style": "prayer",
       "type": "text",
-      "response": " ",
+      "metadata": { "omit_response": true, "response": " " },
       "display_format": "unison",
       "value": [
         "Padre nuestro que estás en el cielo,\n\tsantificado sea tu Nombre,\n\tvenga tu reino,\n\thágase tu voluntad,\n\t\ten la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\n\tcomo también nosotros perdonamos\n\t\ta los que nos ofenden.\nNo nos dejes caer en tentación \n\ty líbranos del mal."

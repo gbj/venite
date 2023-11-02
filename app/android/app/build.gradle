@@ -6,8 +6,8 @@ android {
         applicationId "app.venite"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 98
-        versionName "2.3.25"
+        versionCode 99
+        versionName "2.3.26"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -428,7 +428,7 @@
           ],
           "type": "text",
           "source": { "citation": "", "source": "", "api": "" },
-          "metadata": { "omit_response": false },
+          "metadata": { "omit_response": true, "response": " " },
           "style": "text"
         },
         {
@@ -440,7 +440,7 @@
           "type": "text",
           "source": { "citation": "", "api": "", "source": "" },
           "hidden": false,
-          "metadata": { "omit_response": false },
+          "metadata": { "omit_response": true, "response": " " },
           "category": []
         }
       ],

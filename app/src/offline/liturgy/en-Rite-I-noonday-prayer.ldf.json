@@ -345,7 +345,7 @@
           "value": [
             "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil."
           ],
-          "metadata": { "omit_response": true },
+          "metadata": { "omit_response": true, "response": " " },
           "display_format": "unison",
           "source": { "api": "", "source": "", "citation": "" },
           "hidden": false,

@@ -294,7 +294,7 @@
           "category": [],
           "style": "prayer",
           "type": "text",
-          "metadata": { "omit_response": true },
+          "metadata": { "omit_response": true, "response": " " },
           "version_label": "Traditional",
           "source": { "citation": "", "source": "", "api": "" },
           "value": [

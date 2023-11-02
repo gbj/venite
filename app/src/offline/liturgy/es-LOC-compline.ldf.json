@@ -566,7 +566,7 @@
         "\nPadre nuestro que estás en el cielo,\n\tsantificado sea tu Nombre,\n\tvenga tu reino,\n\thágase tu voluntad,\n\t\ten la tierra como en el cielo.\nDanos hoy nuestro pan de cada día.\nPerdona nuestras ofensas,\n\tcomo también nosotros perdonamos\n\t\ta los que nos ofenden.\nNo nos dejes caer en tentación\ny libranos del mal."
       ],
       "style": "prayer",
-      "metadata": { "response": " " },
+      "metadata": { "omit_response": true, "response": " " },
       "type": "text",
       "display_format": "unison"
     },
