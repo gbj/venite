@@ -12,4 +12,5 @@ export class DisplaySettingsConfig {
   ask_about_unison_texts?: undefined | boolean;
   psalm_pause: boolean;
   hide_rubrics?: undefined | boolean;
+  audio_recordings?: undefined | boolean;
 }

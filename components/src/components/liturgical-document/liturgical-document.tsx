@@ -250,6 +250,8 @@ export class LiturgicalDocumentComponent {
 
     return (
       node && <Host lang={this.obj?.language || 'en'}>
+        {this.obj?.audio ? <audio controls src={this.obj.audio}></audio> : null}
+        
         {/* Editable/Responsive Classes */}
         <div class={{
           container: true,

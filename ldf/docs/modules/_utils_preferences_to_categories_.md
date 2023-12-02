@@ -14,7 +14,7 @@
 
 ▸ **preferencesToCategories**(`preferences`: object): *string[]*
 
-*Defined in [utils/preferences-to-categories.ts:3](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/utils/preferences-to-categories.ts#L3)*
+*Defined in [utils/preferences-to-categories.ts:3](https://github.com/gbj/venite/blob/ef51565b/ldf/src/utils/preferences-to-categories.ts#L3)*
 
 **Parameters:**
 

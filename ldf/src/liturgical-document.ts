@@ -199,6 +199,9 @@ export class LiturgicalDocument {
   /** The content of the document. */
   value?: Value;
 
+  /** URL of an audio file associated with the document. */
+  audio?: string;
+
   /** Evaluates the full set of conditions attached to the document and returns a boolean of whether it should be included
    * given the day and assigned preferences  */
   include(day: LiturgicalDay, prefs: ClientPreferences = {}): boolean {

@@ -16,5 +16,6 @@ export class DisplaySettings {
     public bolded: 'both' | 'unison' | 'response' | 'none' = 'both',
     public psalmPause: number = 1000,
     public hideRubrics: boolean = false,
+    public audioRecordings: boolean = false,
   ) {}
 }

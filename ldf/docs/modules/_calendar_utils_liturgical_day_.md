@@ -19,7 +19,7 @@
 
 • **WEEKDAYS**: *string[]* = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-*Defined in [calendar/utils/liturgical-day.ts:7](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/calendar/utils/liturgical-day.ts#L7)*
+*Defined in [calendar/utils/liturgical-day.ts:7](https://github.com/gbj/venite/blob/ef51565b/ldf/src/calendar/utils/liturgical-day.ts#L7)*
 
 ## Functions
 
@@ -27,7 +27,7 @@
 
 ▸ **buildDaySlug**(`date`: Date, `slug`: string): *string*
 
-*Defined in [calendar/utils/liturgical-day.ts:37](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/calendar/utils/liturgical-day.ts#L37)*
+*Defined in [calendar/utils/liturgical-day.ts:37](https://github.com/gbj/venite/blob/ef51565b/ldf/src/calendar/utils/liturgical-day.ts#L37)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ ___
 
 ▸ **liturgicalDay**(`date`: Date, `kalendar`: string, `evening`: boolean, `week`: [LiturgicalWeek](../classes/_calendar_liturgical_week_.liturgicalweek.md)): *[LiturgicalDay](../classes/_calendar_liturgical_day_.liturgicalday.md)*
 
-*Defined in [calendar/utils/liturgical-day.ts:10](https://github.com/gbj/venite/blob/0214d3ea/ldf/src/calendar/utils/liturgical-day.ts#L10)*
+*Defined in [calendar/utils/liturgical-day.ts:10](https://github.com/gbj/venite/blob/ef51565b/ldf/src/calendar/utils/liturgical-day.ts#L10)*
 
 Returns the `LiturgicalDay` that a given `Date` falls on
 
