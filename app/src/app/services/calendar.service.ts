@@ -396,7 +396,10 @@ export class CalendarService implements CalendarServiceInterface {
       baseDay = december13isWednesday ? nextWeek : december13,
       distanceInDays =
         (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
-    if (distanceInDays <= 7 && distanceInDays >= 0) {
+    if (
+      (december13isWednesday && distanceInDays <= 6) ||
+      (!december13isWednesday && distanceInDays <= 7 && distanceInDays >= 0)
+    ) {
       const weekday = date.getDay();
       if (weekday == 3 || weekday == 5 || weekday == 6) {
         return {
