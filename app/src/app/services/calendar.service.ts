@@ -233,8 +233,13 @@ export class CalendarService implements CalendarServiceInterface {
     // Transferred feasts
     const allHolyDays = KALENDAR[kalendar]
         .filter((hd) => !hd?.type?.rank || hd?.type?.rank > 2)
-        // original holy days defaulted to rank 3, so if no rank present opt for 3
-        .map((hd) => (hd?.type?.rank ? hd : { ...hd, type: { rank: 3 } })),
+        // original holy days defaulted to rank 3, so if no rank present
+        // and no evening/morning opt for 3
+        .map((hd) =>
+          hd?.type?.rank
+            ? hd
+            : { ...hd, type: hd?.evening ? undefined : { rank: 3 } }
+        ),
       // add transferred feast days
       transferred$ = from(
         transferredFeast(
@@ -265,15 +270,15 @@ export class CalendarService implements CalendarServiceInterface {
       transferred$,
     ]).pipe(
       // OR together the feasts and specials
-      map(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) =>
-        (Array.isArray(feasts) ? feasts : [feasts])
+      map(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) => {
+        return (Array.isArray(feasts) ? feasts : [feasts])
           .concat(transferred ? [transferred] : [])
           .concat(specials)
           .concat(thanksgiving)
           .concat(septemberEmber ? [septemberEmber] : [])
           .concat(decemberEmber ? [decemberEmber] : [])
-          .concat(allSaintsSunday)
-      ),
+          .concat(allSaintsSunday);
+      }),
       // remove black-letter days that fall on a major feast or a Sunday
       map((holydays) => {
         const highestHolyDayRank = Math.max(
