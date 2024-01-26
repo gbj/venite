@@ -117,6 +117,8 @@ export class TextComponent {
       const splits = this.path.split('/'),
         index = Number(splits[splits.length - 1]),
         base = splits.slice(0, splits.length - 1).join('/');
+      const converter = new showdown.Converter();
+          //return (this.obj?.value || []).map(value => <div innerHTML={converter.makeHtml(value)}></div>);
 
       return <Host>
         <ldf-label-bar>
@@ -127,9 +129,9 @@ export class TextComponent {
         {this.intentions?.length > 0 ?? <strong class="prayer-list">{localeStrings['prayer-list']}</strong>}
         {Array.isArray(this.intentions)
           ? <ul class="prayer-list">
-              {this.intentions.map(intention => <li>{intention}</li>)}
-            </ul>
-          : <p class="prayer-list formatted">{this.intentions}</p>}
+            {this.intentions.map(intention => <li>{intention}</li>)}
+          </ul>
+          : <div class="prayer-list formatted" innerHTML={converter.makeHtml(this.intentions)}></div>}
       </Host>;
     } else {
         let value = this.obj?.metadata?.rollup
