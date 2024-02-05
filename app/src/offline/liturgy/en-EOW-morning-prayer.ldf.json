@@ -1616,26 +1616,98 @@
     {
       "condition": {
         "mode": "and",
-        "conditions": [
-          {
-            "weekday": {
-              "except": [],
-              "only": ["Monday", "Tuesday", "Wednesday", "Thursday"]
-            }
-          }
-        ]
+        "conditions": [{ "weekday": { "only": ["Monday"], "except": [] } }]
+      },
+      "version": "bcp1979",
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      },
+      "hidden": false,
+      "category": [],
+      "metadata": {},
+      "value": [
+        "O God, the King eternal, whose light divides the day from the night and turns the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep your law, and guide our feet into the way of peace; that, having done your will with cheerfulness during the day, we may, when night comes, rejoice to give you thanks; through Jesus Christ our Lord."
+      ],
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "label": " A Collect for the Renewal of Life ",
+      "lastRevision": 19,
+      "slug": "mp_daily_collect"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Tuesday"], "except": [] } }]
+      },
+      "category": [],
+      "lastRevision": 24,
+      "metadata": {},
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "O God, the author of peace and lover of concord, to know you is eternal life and to serve you is perfect freedom: Defend us, your humble servants, in all assaults of our enemies; that we, surely trusting in your defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord. "
+      ],
+      "version": "bcp1979",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
       },
       "language": "en",
       "slug": "mp_daily_collect",
-      "lookup": { "filter": "—", "rotate": true, "type": "slug" },
-      "version": "bcp1979",
-      "value": [""],
+      "label": "A Collect for Peace",
+      "type": "text"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Wednesday"], "except": [] } }]
+      },
       "category": [],
       "hidden": false,
+      "slug": "mp_daily_collect",
+      "version": "bcp1979",
       "type": "text",
-      "source": { "source": "", "api": "", "citation": "" },
+      "metadata": {},
+      "language": "en",
+      "lastRevision": 24,
       "style": "prayer",
-      "metadata": { "omit_response": false }
+      "value": [
+        "Lord God, almighty and everlasting Father, you have brought us in safety to this new day: Preserve us with your mighty power, that we may not fall into sin, nor be overcome by adversity; and in all we do, direct us to the fulfilling of your purpose; through Jesus Christ our Lord."
+      ],
+      "source": {
+        "citation": "",
+        "source": "",
+        "api": ""
+      },
+      "label": "A Collect for Grace"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Thursday"], "except": [] } }]
+      },
+      "version": "bcp1979",
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      },
+      "hidden": false,
+      "category": [],
+      "metadata": {},
+      "value": [
+        "O God, the King eternal, whose light divides the day from the night and turns the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep your law, and guide our feet into the way of peace; that, having done your will with cheerfulness during the day, we may, when night comes, rejoice to give you thanks; through Jesus Christ our Lord."
+      ],
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "label": " A Collect for the Renewal of Life ",
+      "lastRevision": 19,
+      "slug": "mp_daily_collect"
     },
     {
       "hidden": false,

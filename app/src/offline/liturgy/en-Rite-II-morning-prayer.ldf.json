@@ -2107,28 +2107,100 @@
       "type": "text"
     },
     {
-      "style": "prayer",
-      "language": "en",
-      "source": { "citation": "", "source": "", "api": "" },
-      "hidden": false,
-      "slug": "mp_daily_collect",
-      "type": "text",
-      "lookup": { "filter": "—", "type": "slug", "rotate": true },
-      "category": [],
-      "value": [""],
       "condition": {
-        "conditions": [
-          {
-            "weekday": {
-              "only": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-              "except": []
-            }
-          }
-        ],
-        "mode": "and"
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Monday"], "except": [] } }]
       },
       "version": "bcp1979",
-      "metadata": { "omit_response": false }
+      "source": {
+        "citation": "",
+        "api": "",
+        "source": ""
+      },
+      "hidden": false,
+      "category": [],
+      "metadata": {},
+      "value": [
+        "O God, the King eternal, whose light divides the day from the night and turns the shadow of death into the morning: Drive far from us all wrong desires, incline our hearts to keep your law, and guide our feet into the way of peace; that, having done your will with cheerfulness during the day, we may, when night comes, rejoice to give you thanks; through Jesus Christ our Lord."
+      ],
+      "language": "en",
+      "type": "text",
+      "style": "prayer",
+      "label": " A Collect for the Renewal of Life ",
+      "lastRevision": 19,
+      "slug": "mp_daily_collect"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Tuesday"], "except": [] } }]
+      },
+      "category": [],
+      "lastRevision": 24,
+      "metadata": {},
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "O God, the author of peace and lover of concord, to know you is eternal life and to serve you is perfect freedom: Defend us, your humble servants, in all assaults of our enemies; that we, surely trusting in your defense, may not fear the power of any adversaries; through the might of Jesus Christ our Lord. "
+      ],
+      "version": "bcp1979",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      },
+      "language": "en",
+      "slug": "mp_daily_collect",
+      "label": "A Collect for Peace",
+      "type": "text"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Wednesday"], "except": [] } }]
+      },
+      "category": [],
+      "hidden": false,
+      "slug": "mp_daily_collect",
+      "version": "bcp1979",
+      "type": "text",
+      "metadata": {},
+      "language": "en",
+      "lastRevision": 24,
+      "style": "prayer",
+      "value": [
+        "Lord God, almighty and everlasting Father, you have brought us in safety to this new day: Preserve us with your mighty power, that we may not fall into sin, nor be overcome by adversity; and in all we do, direct us to the fulfilling of your purpose; through Jesus Christ our Lord."
+      ],
+      "source": {
+        "citation": "",
+        "source": "",
+        "api": ""
+      },
+      "label": "A Collect for Grace"
+    },
+    {
+      "condition": {
+        "mode": "and",
+        "conditions": [{ "weekday": { "only": ["Thursday"], "except": [] } }]
+      },
+      "label": "A Collect for Guidance",
+      "category": [],
+      "lastRevision": 24,
+      "slug": "mp_daily_collect",
+      "hidden": false,
+      "metadata": {},
+      "language": "en",
+      "type": "text",
+      "version": "bcp1979",
+      "source": {
+        "source": "",
+        "citation": "",
+        "api": ""
+      },
+      "style": "prayer",
+      "value": [
+        "Heavenly Father, in you we live and move and have our being: We humbly pray you so to guide and govern us by your Holy Spirit, that in all the cares and occupations of our life we may not forget you, but may remember that we are ever walking in your sight; through Jesus Christ our Lord. "
+      ]
     },
     {
       "metadata": {},
