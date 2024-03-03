@@ -10,10 +10,13 @@ export function filterCanticleTableEntries(
   fallbackTable: string | undefined = undefined,
   defaultCanticles: { [time: string]: string[] } | undefined = undefined,
 ): CanticleTableEntry[] {
-  const isFeast: boolean = day instanceof LiturgicalDay ? day.isFeast() : new LiturgicalDay(day).isFeast(),
-    isEvening: boolean = day.evening,
+  const isEvening: boolean = day.evening,
     date = dateFromYMDString(day.date),
+    dayRank = day?.holy_day_observed?.type?.rank || 2,
     dayOfWeek = date.getDay(),
+    isSunday = dayOfWeek == 0,
+    isFeast: boolean =
+      (day instanceof LiturgicalDay ? day.isFeast() : new LiturgicalDay(day).isFeast()) && (!isSunday || dayRank > 4),
     days: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     weekday: string = isFeast ? 'FeastDay' : days[dayOfWeek];
 
