@@ -74,7 +74,7 @@ export class ReminderService {
           return {
             title: reminder.title,
             body: await this.getMessage(parseInt(hour)),
-            id: new Date().getTime(),
+            id: Math.floor(Math.random() * 2 ** 32) - 2 ** 31,
             extra: this.config.url,
             schedule: {
               on: {

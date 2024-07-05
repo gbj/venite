@@ -27,7 +27,7 @@
   <ion-list>
     <ion-item *ngFor="let reminder of reminders; let reminderIndex = index">
       <div class="time">
-        <input type="time" [placeholder]="'reminders.time' | translate" [(ngModel)]="reminder.time" (ionChange)="schedule()"/>
+        <input type="time" [placeholder]="'reminders.time' | translate" [(ngModel)]="reminder.time" (change)="schedule()"/>
         <ion-input [placeholder]="'reminders.reminder-title' | translate" [(ngModel)]="reminder.title" (ionChange)="schedule()" debounce="500"></ion-input>
         <ion-toggle slot="end" [(ngModel)]="reminder.active" (ionChange)="schedule()"></ion-toggle>
         <ion-button slot="end" (click)="remove(reminderIndex)" fill="clear">
