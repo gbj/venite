@@ -5775,6 +5775,15 @@
     "lectionary": "bcp1979_daily_office"
   },
   {
+    "day": "saturday-pentecost",
+    "id": "8911",
+    "citation": "Eph. 3:14-21",
+    "when": "2",
+    "type": "holy_day_evening_2",
+    "whentype": "year",
+    "lectionary": "bcp1979_daily_office"
+  },
+  {
     "id": "10805",
     "day": "wednesday-proper-21",
     "type": "first_reading",
@@ -18293,6 +18302,15 @@
     "id": "8908"
   },
   {
+    "citation": "Eph. 3:14-21",
+    "type": "holy_day_evening_2",
+    "day": "saturday-pentecost",
+    "whentype": "year",
+    "when": "1",
+    "lectionary": "bcp1979_daily_office",
+    "id": "8908"
+  },
+  {
     "whentype": "year",
     "when": "1",
     "lectionary": "bcp1979_daily_office",
@@ -22387,6 +22405,15 @@
     "when": "1"
   },
   {
+    "id": "8907",
+    "day": "saturday-pentecost",
+    "type": "holy_day_evening_1",
+    "citation": "Ecclus. 42:15-25",
+    "lectionary": "bcp1979_daily_office",
+    "whentype": "year",
+    "when": "1"
+  },
+  {
     "day": "wednesday-third-advent",
     "whentype": "year",
     "citation": "Matt. 24:45-51",
@@ -22941,6 +22968,15 @@
     "citation": "Ecclus. 42:15-25",
     "type": "first_reading",
     "day": "eve-trinity-sunday",
+    "id": "8910",
+    "when": "2"
+  },
+  {
+    "lectionary": "bcp1979_daily_office",
+    "whentype": "year",
+    "citation": "Ecclus. 42:15-25",
+    "type": "holy_day_evening_1",
+    "day": "saturday-pentecost",
     "id": "8910",
     "when": "2"
   },

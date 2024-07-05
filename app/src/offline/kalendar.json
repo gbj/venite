@@ -2571,13 +2571,11 @@
     {
       "name": "[KATERI TEKAKWITHA, Prophetic Witness, 1680]",
       "bio": [
-        "I\tAlmighty and everliving God, who didst open the heart of Kateri Tekakwitha to receive the Good News of Jesus Christ and to devote her life to thy service: Grant us the same zeal of devotion to persevere in faith through the trials and tribulations of our lives, through Jesus Christ our Lord. Amen.",
-        "II\tAlmighty and everliving God, who opened the heart of Kateri Tekakwitha to receive the Good News of Jesus Christ and to devote her life to your service: Grant us the same zeal of devotion to persevere in faith through the trials and tribulations of our lives, through Jesus Christ our Lord. Amen.",
-        "Lessons and Psalm",
-        "1 Kings 19:19–21",
-        "Psalm 6",
-        "Matthew 8:18–22",
-        "Preface of a Saint (3)"
+        "Tekakwitha, “She who bumps into things,” was born in the Mohawk village of Ossernon in upstate New York around 1656. Her childhood and adolescence were marked by hardship. A smallpox epidemic, which claimed the lives of her parents and younger brother, also scarred her face and severely impaired her vision. Her aunt and uncle, as adoptive parents, attempted to pressure her to marry beginning at age 11, but she resisted every attempt.",
+        "Moved by the preaching of Jesuit missionaries, Tekakwitha followed in the path of her late mother and converted to Christianity. She was baptized on Easter Sunday, 1676, at 19 years of age. As part of her conversion, she took the name Kateri, in honor of Catherine of Siena. Kateri Tekakwitha devoted her life to chastity, pledging to marry only Jesus Christ, and asking the Virgin Mary to accept her as a daughter.",
+        "Her piety was mocked and derided by her fellow villagers, some of whom threatened her life. She fled to a village south of Montreal, where with her friend Marie-Therese, she attempted to begin a monastic community of indigenous women. They were dissuaded by the local priests, who believed they did not have enough experience to begin such a community. Kateri therefore accepted an “ordinary” life of vowed singleness and good works among the people, especially the elderly and sick.",
+        "At age 24, she succumbed to a serious illness. Tradition accords her final words as being “Jesus, I love you,” as she entered eternal life on the Wednesday of Holy Week, 1680. Following her death, it was reported that her body softened and her face took on the appearance of a child, even including a smile. The pockmarks of her childhood smallpox faded, and her skin became smooth. Pilgrimages were made to her grave as early as 1684.",
+        "Kateri Tekakwitha is known as the Lily of the Mohawks, and was the first Native American to be canonized in the Roman Catholic Church, where she is considered the patron of ecology and the environment, as well as of persons in exile."
       ],
       "slug": "kateri-tekakwitha",
       "kalendar": "lff2018",
@@ -3268,7 +3266,7 @@
       "name": "PERPETUA AND FELICITY, Martyrs, 202"
     },
     {
-      "name": "PETER WILLIAMS CASSEY, Deacon, 1917",
+      "name": "PETER WILLIAMS CASSEY, Deacon, 1917 and ANNIE BESANT CASSEY, 1875",
       "type": {
         "rank": 2,
         "name": "Black Letter"
@@ -3276,7 +3274,6 @@
       "mmdd": "4/16",
       "slug": "peter-williams-cassey",
       "bio": [
-        "AND ANNIE BESANT CASSEY 1875]",
         "Peter Williams Cassey was ordained as a deacon in 1866, the first person of color ordained in the Episcopal Church west of the Mississippi River. He was a fourth generation freed African American. His great grandfather bought his freedom and founded the first black church in New York, the African Methodist Episcopal Zion Church. His grandfather was the first African American Episcopal priest in New York and founder of St. Philip’s in Manhattan. His parents, Joseph and Amy Cassey were prominent abolitionists in Philadelphia. ",
         "Peter received the best classical education available at the time, speaking and fluently reading Greek, Hebrew, and Latin. He arrived in San Francisco in 1853 and worked as a barber. He helped organize a community association to protect African Americans and other people of color. In the late 1850’s he moved to San José, California where he formed an abolitionist group to help free slaves. ",
         "Peter married Annie Besant, who came from another prominent African American family. They were among the founding members of Trinity Parish, San Jose, California in 1862. At the same time, they rented the former Bascom School for Girls and established St. Philips Mission for Colored People and opened St. Philip’s Academy. The school was not only for African American, but also for Mexican and Chinese students because no children of color could attend public schools. ",
@@ -6653,7 +6650,7 @@
       },
       "morning": {
         "slug": "wednesday-6th-easter",
-        "name": "Wednesay after the Sixth Sunday of Easter: Rogation Day",
+        "name": "Wednesday after the Sixth Sunday of Easter: Rogation Day",
         "kalendar": "bcp1979",
         "type": {
           "rank": 3,

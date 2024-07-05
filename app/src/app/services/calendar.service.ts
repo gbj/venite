@@ -19,6 +19,7 @@ import {
   liturgicalDay,
   transferredFeast,
   dateFromYMDString,
+  easterInYear
 } from "@venite/ldf";
 import { CalendarServiceInterface } from "@venite/ng-service-api";
 
@@ -261,6 +262,7 @@ export class CalendarService implements CalendarServiceInterface {
           date
         )
       ).pipe(startWith(null));
+      const specialTransferred$ = this.findTransferredFeast(kalendar, day);
 
     return combineLatest([
       feasts$,
@@ -268,15 +270,17 @@ export class CalendarService implements CalendarServiceInterface {
       thanksgiving$,
       allSaintsSunday$,
       transferred$,
+      specialTransferred$
     ]).pipe(
       // OR together the feasts and specials
-      map(([feasts, specials, thanksgiving, allSaintsSunday, transferred]) => {
+      map(([feasts, specials, thanksgiving, allSaintsSunday, transferred, specialTransferred]) => {
         return (Array.isArray(feasts) ? feasts : [feasts])
           .concat(transferred ? [transferred] : [])
           .concat(specials)
           .concat(thanksgiving)
           .concat(septemberEmber ? [septemberEmber] : [])
           .concat(decemberEmber ? [decemberEmber] : [])
+	  .concat(specialTransferred ? [specialTransferred] : [])
           .concat(allSaintsSunday);
       }),
       // remove black-letter days that fall on a major feast or a Sunday
@@ -340,6 +344,45 @@ export class CalendarService implements CalendarServiceInterface {
       })
     );
   }
+
+  findTransferredFeast(
+    kalendar: string,
+    day: LiturgicalDay
+    ) {
+    const date = dateFromYMDString(day.date),
+      weekday = date.getDay();
+    // basically this could be Annunciation (3/25) or St. Mark (4/25) and never both
+    if (weekday == 1 && day.slug == "monday-2nd-easter") {
+      const easter = easterInYear(date.getFullYear()),
+        palmSunday = new Date(easter.getTime() - 7 * 24 * 60 * 60 * 1000),
+        easter1 = new Date(easter.getTime() + 7 * 24 * 60 * 60 * 1000),
+        annunciation = dateFromYMD(date.getFullYear().toString(), "3", "25"),
+        stMark = dateFromYMD(date.getFullYear().toString(), "4", "25");
+      if (annunciation >= palmSunday && annunciation <= easter1) {
+        return this.findFeastDays(day.kalendar, `3/25`).pipe(
+          map(
+            (days) =>
+              (days || []).sort((a, b) =>
+                a?.type?.rank > b?.type?.rank ? -1 : 1
+              )[0]
+          )
+        );
+      } else if (stMark >= palmSunday && stMark <= easter1) {
+        return this.findFeastDays(day.kalendar, `4/25`).pipe(
+          map(
+            (days) =>
+              (days || []).sort((a, b) =>
+                a?.type?.rank > b?.type?.rank ? -1 : 1
+              )[0]
+          )
+        );
+      } else {
+	      return of(undefined);
+      }
+    } else {
+	      return of(undefined);
+      }
+    }
 
   /* September Ember Days are defined as the Wednesday, Friday, and Saturday
    * after the Feast of the Holy Cross  */

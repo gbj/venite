@@ -765,9 +765,10 @@ export class PrayService {
     const psalms$ = this.findReadings(doc, day, prefs, originalPrefs).pipe(
       tap((psalms) => console.log("lookupPsalter entries = ", psalms)),
       map((entries) =>
-        (entries || []).map(
-          (entry) =>
-            new LiturgicalDocument({
+        (entries || []).map((entry) => {
+          const citation = entry.citation.toLowerCase();
+          if (citation.includes("ps")) {
+            return new LiturgicalDocument({
               ...doc,
               style: "psalm",
               slug: entry.citation,
@@ -778,8 +779,20 @@ export class PrayService {
               citation: entry?.citation?.startsWith("Psalm ")
                 ? entry.citation
                 : undefined,
-            })
-        )
+            });
+          } else {
+            return new LiturgicalDocument({
+              ...doc,
+              type: "bible-reading",
+              style: "long",
+              slug: entry.citation,
+              version,
+              language: doc.language || "en",
+              metadata: { ...doc.metadata, liturgyversions },
+              citation: entry.citation,
+            });
+          }
+        })
       ),
       // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
       // in which case multiple entries means multiples options, as in the RCL

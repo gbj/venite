@@ -5724,6 +5724,15 @@
     "when": "2"
   },
   {
+    "lectionary": "bcp1979_daily_psalms",
+    "day": "saturday-pentecost",
+    "id": "8912",
+    "type": "evening_psalms",
+    "whentype": "year",
+    "citation": "psalm_104",
+    "when": "2"
+  },
+  {
     "type": "evening_psalms",
     "day": "sunday-proper-3",
     "citation": "psalm_114",
@@ -14927,6 +14936,15 @@
     "type": "evening_psalms",
     "citation": "psalm_104",
     "day": "eve-trinity-sunday",
+    "lectionary": "bcp1979_daily_psalms",
+    "id": "8909"
+  },
+  {
+    "whentype": "year",
+    "when": "1",
+    "type": "evening_psalms",
+    "citation": "psalm_104",
+    "day": "saturday-pentecost",
     "lectionary": "bcp1979_daily_psalms",
     "id": "8909"
   },

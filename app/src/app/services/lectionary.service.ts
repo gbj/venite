@@ -1,7 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { LectionaryEntry, LiturgicalDay, dateFromYMDString } from "@venite/ldf";
+import {
+  LectionaryEntry,
+  LiturgicalDay,
+  dateFromYMDString,
+  dateToYMD,
+} from "@venite/ldf";
 import { ReplaySubject, Observable, from, of } from "rxjs";
 import { map, switchMap, tap } from "rxjs/operators";
 import firebase from "firebase/app";
@@ -96,8 +101,53 @@ export class LectionaryService {
       propersOptions.push("trinity-sunday");
     }
 
+    if (lectionaryName == "bcp1662") {
+      const [y, m, d] = day.date.split("-");
+      return this.http
+        .get<
+          Record<string, { mp1: string; mp2: string; ep1: string; ep2: string }>
+        >(`/offline/lectionary/bcp1662.json`)
+        .pipe(
+          map((entries) => {
+            const readings = entries[`${m}/${d}`];
+            if (day.evening) {
+              if (!readingType) {
+                return [
+                  { type: "first_reading_alt", citation: readings.ep1 },
+                  { type: "first_reading", citation: readings.ep1 },
+                  { type: "second_reading", citation: readings.ep2 },
+                  { type: "gospel", citation: readings.ep2 },
+                ];
+              } else if (
+                readingType == "first_reading" ||
+                readingType == "first_reading_alt"
+              ) {
+                return [{ citation: readings.ep1 }];
+              } else {
+                return [{ citation: readings.ep2 }];
+              }
+            } else {
+              if (!readingType) {
+                return [
+                  { type: "first_reading_alt", citation: readings.mp1 },
+                  { type: "first_reading", citation: readings.mp1 },
+                  { type: "second_reading", citation: readings.mp2 },
+                  { type: "gospel", citation: readings.mp2 },
+                ];
+              } else if (
+                readingType == "first_reading" ||
+                readingType == "first_reading_alt"
+              ) {
+                return [{ citation: readings.mp1 }];
+              } else {
+                return [{ citation: readings.mp2 }];
+              }
+            }
+          })
+        );
+    }
     // if possible, look for it in the JSON lectionary files
-    if (
+    else if (
       !disableOffline &&
       [
         "bcp1979_30day_psalter",

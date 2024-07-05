@@ -315,6 +315,7 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
+    console.log("BY SLUG", slug, language);
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
       versions: string[]

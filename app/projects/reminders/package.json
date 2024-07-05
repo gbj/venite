@@ -1,15 +1,15 @@
 {
   "name": "@venite/ng-reminders",
-  "version": "0.2.7",
+  "version": "0.3.1",
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^9.1.7",
-    "@angular/core": "^9.1.7",
-    "@capacitor/core": "^3.0.0",
-    "@capacitor/local-notifications": "^0.6.0",
-    "@ionic/angular": "^5.0.0",
+    "@angular/common": "~12.2.7",
+    "@angular/core": "~12.2.7",
+    "@capacitor/core": "^4.0.0",
+    "@capacitor/local-notifications": "^4.0.0",
+    "@ionic/angular": "^6.2.5",
     "@venite/ldf": "~0.7.0",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0"

@@ -1245,6 +1245,12 @@
             "default": false
           },
           {
+            "value": "bcp1662",
+            "default": false,
+            "label": "1662 BCP Daily Office Lectionary",
+            "metadata": { "alternateYear": false }
+          },
+          {
             "label": "RCL Track 1",
             "metadata": { "alternateYear": false },
             "default": false,
