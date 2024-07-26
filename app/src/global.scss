@@ -204,6 +204,8 @@ body * {
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .alert-radio-group::-webkit-scrollbar {
