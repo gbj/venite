@@ -71,6 +71,10 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove"/>
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <!-- Notifications -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
