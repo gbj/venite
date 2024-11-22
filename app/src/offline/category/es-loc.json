@@ -2127,12 +2127,12 @@
     "slug": "st-mary-magdalene",
     "metadata": { "response": "Amén." },
     "value": [
-      "Dios bondadoso, recordamos hoy en tu presencia a tu siervo y apóstol Santiago, el primero entre los Doce en padecer martirio por el Nombre de Jesucristo; y te suplicamos que derrames sobre los dirigentes de tu Iglesia ese espíritu de servicio abnegado por el cual sólo pueden tener verdadera autoridad entre tu pueblo; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Dios omnipotente, cuyo bendito Hijo restauró a María Magdalena a la salud de cuerpo y mente, y la llamó a ser testigo de su resurrección: Concede, en tu misericordia, que por tu gracia seamos sanados de todas nuestras enfermedades y te conozcamos en el poder de la vida perdurable de Cristo; que contigo y el Espíritu Santo vive y reina, un solo Dios, ahora y por siempre."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "Santiago"
+    "label": "Santa María Magdalena"
   },
   {
     "type": "text",
@@ -2202,7 +2202,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-james-of-jerusalem",
+    "slug": "saint-simon-and-saint-jude",
     "metadata": { "response": "Amén." },
     "value": [
       "Te damos gracias, oh Señor, por la gloriosa compañía de los apóstoles, y especialmente en este día por Simón y Judas; y te rogamos que, así como ellos fueron fieles y celosos en su misión, asimismo, con ardiente devoción, demos a conocer el amor y la misericordia de nuestro Señor y Salvador Jesucristo; que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
@@ -2449,7 +2449,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-mary-the-virgin",
+    "slug": "st-bartholomew",
     "metadata": { "response": "Amén." },
     "value": [
       "Dios todopoderoso y eterno, que diste gracia a tu apóstol Bartolomé para creer verdaderamente y predicar tu Palabra: Concede que tu Iglesia ame lo que él creyó y predique lo que él enseñó; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
@@ -2540,7 +2540,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "holy-cross",
+    "slug": "st-matthew",
     "metadata": { "response": "Amén." },
     "value": [
       "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
@@ -2683,7 +2683,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-luke",
+    "slug": "saint-james-of-jerusalem",
     "metadata": { "response": "Amén." },
     "value": [
       "Concede, oh Dios, que tu Iglesia, siguiendo el ejemplo de tu siervo Santiago el Justo, hermano de nuestro Señor, se dedique continuamente a la oración y la reconciliación de todos los que están en desacuerdo y enemistad; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
@@ -2881,12 +2881,12 @@
     "slug": "st-stephen",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que por la guía de una estrella manifestaste tu único Hijo a los pueblos de la tierra: Guía a tu presencia a los que ahora te conocemos por fe, para que veamos tu gloria cara a cara; mediante Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Te damos gracias, oh Señor de la gloria, por el ejemplo del protomártir Esteban, quien, mirando hacia el cielo, intercedió por sus perseguidores ante tu Hijo Jesucristo, que está a tu diestra; donde vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria eterna."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
     "version": "loc",
-    "label": "La Epifanía"
+    "label": "San Esteban"
   },
   {
     "type": "text",
@@ -2995,7 +2995,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "eve-of-the-transfiguration",
+    "slug": "st-mary-the-virgin",
     "metadata": { "response": "Amén." },
     "value": [
       "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
@@ -3021,7 +3021,20 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-matthew",
+    "slug": "saint-matthew",
+    "metadata": { "response": "Amén." },
+    "value": [
+      "Te damos gracias, Padre celestial, por el testimonio que tu apóstol y evangelista Mateo dio a las Buenas Nuevas de tu Hijo nuestro Salvador; y rogamos que, siguiendo su ejemplo, obedezcamos con voluntades y corazones dispuestos el llamado de nuestro Señor a seguirle; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "San Mateo"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "st-michael",
     "metadata": { "response": "Amén." },
     "value": [
       "Oh Dios eterno, que has establecido y constituido en orden maravilloso los ministerios de los ángeles y los mortales: Concede, en tu misericordia, que así como tus santos ángeles continuamente te sirven y adoran en el cielo, asimismo, por tu mandato, nos socorran y defiendan en la tierra; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, por los siglos de los siglos."
@@ -3151,7 +3164,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "ss-simon-and-jude",
+    "slug": "all-saints-day",
     "metadata": { "response": "Amén." },
     "value": [
       "Dios todopoderoso tú has entrelazado a tus elegidos en una sola comunión y hermandad en el cuerpo místico de tu Hijo Cristo nuestro Señor: Danos gracia para que de tal modo sigamos a tus benditos santos en toda virtuosa y santa vida que alcancemos los gozos inefables que tú has preparado para los que te aman sinceramente; por Jesucristo nuestro Señor, que contigo y el Espíritu Santo vive y reina, un solo Dios, en gloria sempiterna."
@@ -3190,7 +3203,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-bartholomew",
+    "slug": "holy-cross",
     "metadata": { "response": "Amén." },
     "value": [
       "Dios omnipotente, cuyo Hijo nuestro Salvador fue levantado en lo alto de la cruz, a fin de atraer hacia él a todo el mundo: Concede, en tu misericordia, a quienes nos gloriamos en el misterio de nuestra redención, que recibamos tu gracia para tomar nuestra cruz y seguirle; quien vive y reina contigo y el Espíritu Santo, un solo Dios, en gloria sempiterna."
@@ -3362,7 +3375,7 @@
     "slug": "the-transfiguration",
     "metadata": { "response": "Amén." },
     "value": [
-      "Oh Dios, que tomaste para ti a la bienaventurada Virgen María, madre de tu Hijo encarnado: Concede que, redimidos por la sangre de Cristo, compartamos con ella la gloria de tu reino eterno; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
+      "Oh Dios, que en el santo monte revelaste ante testigos escogidos a tu muy amado Hijo, maravillosamente transfigurado, con vestiduras blancas y resplandecientes: Concede, en tu misericordia, que, librados de la inquietud de este mundo, contemplemos por fe al Rey en toda su hermosura; quien contigo, oh Padre, y contigo, oh Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos."
     ],
     "category": ["Collect of the Day"],
     "language": "es",
@@ -3505,6 +3518,19 @@
     "slug": "st-james",
     "metadata": { "response": "Amén." },
     "value": [
+      "Dios bondadoso, recordamos hoy en tu presencia a tu siervo y apóstol Santiago, el primero entre los Doce en padecer martirio por el Nombre de Jesucristo; y te suplicamos que derrames sobre los dirigentes de tu Iglesia ese espíritu de servicio abnegado por el cual sólo pueden tener verdadera autoridad entre tu pueblo; por Jesucristo nuestro Señor, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre."
+    ],
+    "category": ["Collect of the Day"],
+    "language": "es",
+    "version": "loc",
+    "label": "Santiago"
+  },
+  {
+    "type": "text",
+    "style": "prayer",
+    "slug": "the-transfiguration",
+    "metadata": { "response": "Amén." },
+    "value": [
       "Oh Dios, que en el santo monte revelaste ante testigos escogidos a tu muy amado Hijo, maravillosamente transfigurado, con vestiduras blancas y resplandecientes: Concede, en tu misericordia, que, librados de la inquietud de este mundo, contemplemos por fe al Rey en toda su hermosura; quien contigo, oh Padre, y contigo, oh Espíritu Santo, vive y reina, un solo Dios, por los siglos de los siglos."
     ],
     "category": ["Collect of the Day"],
@@ -3567,7 +3593,7 @@
   {
     "type": "text",
     "style": "prayer",
-    "slug": "st-michael",
+    "slug": "st-luke",
     "metadata": { "response": "Amén." },
     "value": [
       "Dios omnipotente, que inspiraste a tu siervo Lucas el médico a manifestar en el Evangelio el amor y poder sanativo de tu Hijo: Continúa en tu Iglesia, por tu gracia, el mismo amor y poder de sanidad, para alabanza y gloria de tu Nombre; por Jesucristo nuestro Señor, que vive y reina contigo, en la unidad del Espíritu Santo, un solo Dios, ahora y por siempre."
