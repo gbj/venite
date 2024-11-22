@@ -114,7 +114,7 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
 
     this.settingsClasses$ = this.state$.pipe(
       map((state) => state?.localManager?.document?.display_settings),
-      filter((settings) => Boolean(settings)),
+      filter((settings) => settings != null && settings != undefined),
       map((settings) =>
         [
           "ldf-wrapper",
@@ -123,14 +123,14 @@ export class LdfEditorComponent implements OnInit, OnDestroy {
           settings.repeatAntiphon
             ? `repeat-antiphon-${settings.repeatAntiphon}`
             : "",
-          `fontscale-${settings.fontscale.toString() || "m"}`,
+          `fontscale-${(settings.fontscale || "m").toString()}`,
           settings.font ? `font-${settings.font}` : "",
           `psalmverses-${settings.psalmVerses}`,
           `bibleverses-${settings.bibleVerses}`,
           settings.bolded ? `bolded-${settings.bolded}` : "",
         ].join(" ")
       ),
-      startWith("ldf-wrapper")
+      startWith("ldf-wrapper"),
     );
 
     this.setupOnlineListener();

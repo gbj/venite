@@ -7,13 +7,14 @@ configurations.all {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    namespace "app.venite"
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "app.venite"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 113
-        versionName "2.3.39"
+        versionCode 118
+        versionName "2.4.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -4697,6 +4697,16 @@
   ],
   "bcp1979": [
     {
+      "type": {
+        "name": "Black Letter",
+        "rank": 2
+      },
+      "mmdd": "10/11",
+      "name": "Philip, Deacon and Evangelist",
+      "kalendar": "bcp1979",
+      "slug": "philip"
+    },
+    {
       "mmdd": "12/31",
       "evening": {
         "type": {

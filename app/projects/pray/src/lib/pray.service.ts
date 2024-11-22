@@ -17,7 +17,7 @@ import {
 } from "@venite/ldf";
 
 import { Observable, of, combineLatest } from "rxjs";
-import { filter, map, startWith, switchMap } from "rxjs/operators";
+import { filter, map, startWith, switchMap, tap } from "rxjs/operators";
 import {
   DOCUMENT_SERVICE,
   DocumentServiceInterface,
@@ -689,20 +689,31 @@ export class PrayService {
 
     return this.findReadings(doc, day, prefs, originalPrefs).pipe(
       map((entries) =>
-        (entries || []).map(
-          (entry) =>
-            new LiturgicalDocument({
+        (entries || []).map((entry) => {
+          const citation = entry?.citation ?? "";
+          if (!citation.startsWith("Psalm ")) {
+            return new LiturgicalDocument({
+              ...doc,
+              condition: undefined,
+              type: "bible-reading",
+              style: "long",
+              citation,
+              language: doc.language || "en",
+            });
+          } else {
+            return new LiturgicalDocument({
               ...doc,
               style: "psalm",
-              slug: entry.citation,
+              slug: citation,
               version,
               language: doc.language || "en",
               lookup: { type: "slug" },
               citation: entry?.citation?.startsWith("Psalm ")
-                ? entry.citation
+                ? citation
                 : undefined,
-            })
-        )
+            });
+          }
+        })
       ),
       // pack these into a `Liturgy` object, unless `allow_multiple` is `false` (e.g., for Eucharist)
       // in which case multiple entries means multiples options, as in the RCL

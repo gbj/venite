@@ -242,6 +242,7 @@ export class PrayPage implements OnInit, OnDestroy {
       });
 
       // When you reopen app, check if it's on previous day's liturgy
+      //@ts-ignore
       this.todaysLiturgyListener = App.addListener(
         "appStateChange",
         async ({ isActive }) => {

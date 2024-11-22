@@ -749,8 +749,6 @@ export class PrayService {
     originalPrefs: Record<string, Preference> | undefined,
     liturgyversions: string[]
   ): Observable<LiturgicalDocument> {
-    console.log("lookupPsalter ", doc, day, liturgyversions);
-
     // Psalm Translation: defaults to a) whatever's passed in, then b) a hardcoded preference called `psalterVersion`, then c) BCP 1979
     const version: string =
       typeof doc.version === "object"
@@ -763,7 +761,6 @@ export class PrayService {
     );
 
     const psalms$ = this.findReadings(doc, day, prefs, originalPrefs).pipe(
-      tap((psalms) => console.log("lookupPsalter entries = ", psalms)),
       map((entries) =>
         (entries || []).map((entry) => {
           const citation = entry.citation.toLowerCase();
@@ -780,17 +777,34 @@ export class PrayService {
                 ? entry.citation
                 : undefined,
             });
-          } else {
+          } else if (citation.startsWith("canticle-")) {
+            const [cant, num] = citation.split("canticle-");
+            const v = Number(num) ? version : "eow";
             return new LiturgicalDocument({
+              ...doc,
+              style: "canticle",
+              slug: entry.citation,
+              version: v,
+              language: doc.language || "en",
+              lookup: { type: "slug" },
+              metadata: { ...doc.metadata, liturgyversions },
+              citation: entry?.citation?.startsWith("Psalm ")
+                ? entry.citation
+                : undefined,
+            });
+          } else {
+            const doc2 = new LiturgicalDocument({
               ...doc,
               type: "bible-reading",
               style: "long",
-              slug: entry.citation,
-              version,
-              language: doc.language || "en",
+              slug: undefined,
+              lookup: undefined,
+              version: "NRSV",
+              condition: undefined,
               metadata: { ...doc.metadata, liturgyversions },
               citation: entry.citation,
             });
+            return doc2;
           }
         })
       ),
@@ -806,6 +820,7 @@ export class PrayService {
             lookup: undefined,
           })
       ),
+
       // compile that `Liturgy` object, which will look up each of its `value` children
       // (i.e., each psalm) by its slug
 
@@ -830,6 +845,7 @@ export class PrayService {
             ),
           })
       ),
+
       // add Hebrew + LXX psalms if necessary
       switchMap((liturgy) => {
         if (prefs["originalLanguages"] == "true" && liturgy.value) {
@@ -879,26 +895,30 @@ export class PrayService {
     );
 
     return combineLatest([gloriaQuery$, psalms$]).pipe(
-      map(([gloria, psalms]) =>
-        psalms.type === "psalm" || psalms.type === "option"
-          ? new LiturgicalDocument({
-              ...psalms,
-              metadata: { ...psalms.metadata, gloria: docsToOption(gloria) },
-            })
-          : new LiturgicalDocument({
-              type: "liturgy",
-              value: (psalms as Liturgy).value.map(
-                (psalm) =>
-                  new LiturgicalDocument({
-                    ...psalm,
-                    metadata: {
-                      ...psalm.metadata,
-                      gloria: docsToOption(gloria),
-                    },
-                  })
-              ),
-            })
-      )
+      map(([gloria, psalms]) => {
+        if (psalms.type == "bible-reading") {
+          return psalms;
+        } else {
+          return psalms.type === "psalm" || psalms.type === "option"
+            ? new LiturgicalDocument({
+                ...psalms,
+                metadata: { ...psalms.metadata, gloria: docsToOption(gloria) },
+              })
+            : new LiturgicalDocument({
+                type: "liturgy",
+                value: (psalms as Liturgy).value.map(
+                  (psalm) =>
+                    new LiturgicalDocument({
+                      ...psalm,
+                      metadata: {
+                        ...psalm.metadata,
+                        gloria: docsToOption(gloria),
+                      },
+                    })
+                ),
+              });
+        }
+      })
     );
   }
 
@@ -968,7 +988,6 @@ export class PrayService {
             DEFAULT_CANTICLES
           )
         ),
-        tap((entries) => console.log("canticle table entries C", entries)),
         map((entries) =>
           entries.map(
             (entry) =>
@@ -1015,7 +1034,6 @@ export class PrayService {
       const original$ = from(
         this.osisBibleService.getOriginalText(doc.citation)
       ).pipe(
-        tap((r) => console.log("original language reading", r)),
         catchError((e) => {
           console.warn("includeOriginal error: ", e, doc.citation);
           return of(null);

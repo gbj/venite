@@ -55,8 +55,6 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>To take a photo to use as a user avatar.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Always allow Geolocation?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow Geolocation?</string>
 	<key>NSMicrophoneUsageDescription</key>

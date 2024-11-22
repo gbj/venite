@@ -2,8 +2,8 @@
 
 android {
   compileOptions {
-      sourceCompatibility JavaVersion.VERSION_11
-      targetCompatibility JavaVersion.VERSION_11
+      sourceCompatibility JavaVersion.VERSION_17
+      targetCompatibility JavaVersion.VERSION_17
   }
 }
 
@@ -22,8 +22,6 @@ dependencies {
     implementation project(':capacitor-share')
     implementation project(':jofr-capacitor-media-session')
     implementation project(':capacitor-firebase-auth')
-    implementation project(':capacitor-media-session')
-    implementation project(':media-session')
     implementation "androidx.webkit:webkit:1.4.0"
 }
 

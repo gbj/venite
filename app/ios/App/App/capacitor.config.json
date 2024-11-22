@@ -18,5 +18,20 @@
 			"nativeAuth": false
 		}
 	},
-	"cordova": {}
+	"cordova": {},
+	"packageClassList": [
+		"FirebaseAnalytics",
+		"TextToSpeechPlugin",
+		"AppPlugin",
+		"ClipboardPlugin",
+		"DevicePlugin",
+		"FilesystemPlugin",
+		"HapticsPlugin",
+		"KeyboardPlugin",
+		"LocalNotificationsPlugin",
+		"PreferencesPlugin",
+		"SharePlugin",
+		"CapacitorFirebaseAuth",
+		"CDVPlugin"
+	]
 }

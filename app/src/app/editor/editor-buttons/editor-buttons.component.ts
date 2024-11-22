@@ -228,7 +228,6 @@ export class EditorButtonsComponent implements OnInit {
           })
         );
       } else {
-        console.log("setting displaysetting", data.key, "to", data.value);
         this.editorService.processChange(
           manager,
           new Change({

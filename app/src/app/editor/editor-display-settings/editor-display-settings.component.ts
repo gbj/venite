@@ -45,13 +45,12 @@ export class EditorDisplaySettingsComponent implements OnInit {
   }
 
   updateSetting(settingName: string, ev: CustomEvent) {
-    if (this.settings[settingName] !== ev.detail.value) {
+	  const value = ev.detail.hasOwnProperty("checked")
+          ? Boolean(ev.detail.checked)
+          : ev.detail.value;
       this.prefUpdated.emit({
         key: settingName,
-        value: ev.detail.hasOwnProperty("checked")
-          ? Boolean(ev.detail.checked)
-          : ev.detail.value,
+	value
       });
-    }
   }
 }
