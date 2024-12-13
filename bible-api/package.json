@@ -1,6 +1,6 @@
 {
   "name": "@venite/bible-api",
-  "version": "0.1.16",
+  "version": "0.1.18",
   "description": "Utility functions for scraping Bible texts from public APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

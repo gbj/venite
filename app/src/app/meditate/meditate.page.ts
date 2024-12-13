@@ -97,42 +97,46 @@ export class MeditatePage implements OnInit {
         case "start":
           await this.audio.create(audioFile, false);
           await this.audio.play();
-          MediaSession2.init({
-            play: true,
-            pause: true,
-            stop: true,
-            previoustrack: true,
-          });
-          //@ts-ignore
-          MediaSession2.addListener("play", () => {
-            this.el.nativeElement.resume();
-            this.audio.play();
-          });
-          //@ts-ignore
-          MediaSession2.addListener("pause", () => {
-            this.el.nativeElement.pause();
-            this.audio.pause();
-          });
-          //@ts-ignore
-          MediaSession2.addListener("previoustrack", async () => {
-            this.el.nativeElement.rewind();
-            await this.audio.destroy();
-            await this.audio.create(audioFile, false);
-            await this.audio.play();
-          });
-          MediaSession2.setMetadata({
-            artist: "Venite",
-            album: "Venite",
-            title: this.translate.instant("menu.meditate"),
-            artwork: [
-              {
-                src: "/assets/icon/icon-512x512.png",
-                sizes: "512x512",
-                type: "image/png",
-              },
-            ],
-          });
-          this.isPlaying = true;
+          try {
+            MediaSession2.init({
+              play: true,
+              pause: true,
+              stop: true,
+              previoustrack: true,
+            });
+            //@ts-ignore
+            MediaSession2.addListener("play", () => {
+              this.el.nativeElement.resume();
+              this.audio.play();
+            });
+            //@ts-ignore
+            MediaSession2.addListener("pause", () => {
+              this.el.nativeElement.pause();
+              this.audio.pause();
+            });
+            //@ts-ignore
+            MediaSession2.addListener("previoustrack", async () => {
+              this.el.nativeElement.rewind();
+              await this.audio.destroy();
+              await this.audio.create(audioFile, false);
+              await this.audio.play();
+            });
+            MediaSession2.setMetadata({
+              artist: "Venite",
+              album: "Venite",
+              title: this.translate.instant("menu.meditate"),
+              artwork: [
+                {
+                  src: "/assets/icon/icon-512x512.png",
+                  sizes: "512x512",
+                  type: "image/png",
+                },
+              ],
+            });
+            this.isPlaying = true;
+          } catch (e) {
+            console.warn("MediaSession2 not supported on Android.");
+          }
           break;
         case "pause":
           await this.audio.pause();
@@ -149,7 +153,11 @@ export class MeditatePage implements OnInit {
           await this.audio.destroy();
           await this.audio.create(audioFile, false);
           this.audio.play();
-          MediaSession2.destroy();
+          try {
+            MediaSession2.destroy();
+          } catch (e) {
+            console.warn("MediaSession2 not supported on Android.");
+          }
           break;
       }
     }
