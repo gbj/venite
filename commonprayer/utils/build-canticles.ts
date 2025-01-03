@@ -867,7 +867,8 @@ const R2 = [
           },
           {
             halfverse: "and this is known in all the world.",
-            verse: "Sing praises of the Lord, for he has done great things, *",
+            verse:
+              "Sing the praises of the Lord, for he has done great things, *",
             type: "psalm-verse",
           },
           {

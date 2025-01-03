@@ -1513,6 +1513,17 @@
       "day": null
     },
     {
+      "evening": false,
+      "id": "138",
+      "week": null,
+      "weekday": "Sunday",
+      "season": "Advent",
+      "table": "rite_i",
+      "nth": 1,
+      "slug": "canticle-11",
+      "day": null
+    },
+    {
       "nth": 1,
       "evening": false,
       "day": null,
@@ -1544,8 +1555,42 @@
       "season": null,
       "nth": 1,
       "weekday": "FeastDay"
+    },
+    {
+      "week": null,
+      "id": "141",
+      "table": "rite_i",
+      "nth": 1,
+      "season": "Lent",
+      "slug": "canticle-14",
+      "weekday": "Sunday",
+      "day": null,
+      "evening": false
+    },
+    {
+      "week": null,
+      "id": "141",
+      "table": "rite_i",
+      "nth": 1,
+      "season": "HolyWeek",
+      "slug": "canticle-14",
+      "weekday": "Sunday",
+      "day": null,
+      "evening": false
+    },
+    {
+      "week": null,
+      "id": "141",
+      "table": "rite_i",
+      "nth": 1,
+      "season": "Easter",
+      "slug": "canticle-14",
+      "weekday": "Sunday",
+      "day": null,
+      "evening": false
     }
   ],
+
   "tdb-2": [
     {
       "week": null,

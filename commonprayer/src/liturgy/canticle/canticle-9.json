@@ -1,1 +1,91 @@
-{"index":900,"data":[{"citation":"Isaiah 12:2-6","slug":"canticle-9","label":"Canticle 9: The First Song of Isaiah","type":"psalm","language":"en","hidden":false,"style":"canticle","source":{"citation":"","api":"","source":""},"version":"Rite-II","category":["Canticle"],"version_label":null,"value":[{"value":[{"halfverse":"I will trust in him and not be afraid.","type":"psalm-verse","verse":"Surely, it is God who saves me; *"},{"type":"psalm-verse","verse":"For the Lord is my stronghold and my sure defense, *","halfverse":"and he will be my Savior."},{"halfverse":"from the springs of salvation.","verse":"Therefore you shall draw water with rejoicing *","type":"psalm-verse"},{"halfverse":"Give thanks to the Lord and call upon his Name;","verse":"And on that day you shall say, *","type":"psalm-verse"},{"verse":"Make his deeds known among the peoples; *","halfverse":"see that they remember that his Name is exalted.","type":"psalm-verse"},{"halfverse":"and this is known in all the world.","verse":"Sing praises of the Lord, for he has done great things, *","type":"psalm-verse"},{"verse":"Cry aloud, inhabitants of Zion, ring out your joy, *","type":"psalm-verse","halfverse":"for the great one in the midst of you is the Holy One of Israel."}],"type":"psalm-section"}],"metadata":{"gloria":{"sharing":{"status":"published","organization":"venite","privacy":"public","collaborators":[],"owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2"},"citation":null,"type":"refrain","language":"en","hidden":false,"version_label":"Rite II","version":"bcp1979","slug":"gloria-patri","category":[null],"style":"gloria","label":null,"value":["Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*","as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."]},"latinname":"Ecce, Deus","number":"9","omit_antiphon":false,"localname":"The First Song of Isaiah","omit_gloria":false},"lastRevision":2}]}
+{
+  "index": 900,
+  "data": [
+    {
+      "citation": "Isaiah 12:2-6",
+      "slug": "canticle-9",
+      "label": "Canticle 9: The First Song of Isaiah",
+      "type": "psalm",
+      "language": "en",
+      "hidden": false,
+      "style": "canticle",
+      "source": { "citation": "", "api": "", "source": "" },
+      "version": "Rite-II",
+      "category": ["Canticle"],
+      "version_label": null,
+      "value": [
+        {
+          "value": [
+            {
+              "halfverse": "I will trust in him and not be afraid.",
+              "type": "psalm-verse",
+              "verse": "Surely, it is God who saves me; *"
+            },
+            {
+              "type": "psalm-verse",
+              "verse": "For the Lord is my stronghold and my sure defense, *",
+              "halfverse": "and he will be my Savior."
+            },
+            {
+              "halfverse": "from the springs of salvation.",
+              "verse": "Therefore you shall draw water with rejoicing *",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "Give thanks to the Lord and call upon his Name;",
+              "verse": "And on that day you shall say, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Make his deeds known among the peoples; *",
+              "halfverse": "see that they remember that his Name is exalted.",
+              "type": "psalm-verse"
+            },
+            {
+              "halfverse": "and this is known in all the world.",
+              "verse": "Sing the praises of the Lord, for he has done great things, *",
+              "type": "psalm-verse"
+            },
+            {
+              "verse": "Cry aloud, inhabitants of Zion, ring out your joy, *",
+              "type": "psalm-verse",
+              "halfverse": "for the great one in the midst of you is the Holy One of Israel."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "metadata": {
+        "gloria": {
+          "sharing": {
+            "status": "published",
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "citation": null,
+          "type": "refrain",
+          "language": "en",
+          "hidden": false,
+          "version_label": "Rite II",
+          "version": "bcp1979",
+          "slug": "gloria-patri",
+          "category": [null],
+          "style": "gloria",
+          "label": null,
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ]
+        },
+        "latinname": "Ecce, Deus",
+        "number": "9",
+        "omit_antiphon": false,
+        "localname": "The First Song of Isaiah",
+        "omit_gloria": false
+      },
+      "lastRevision": 2
+    }
+  ]
+}
