@@ -119,6 +119,7 @@ export class CalendarService implements CalendarServiceInterface {
                   day.mmdd === mmdd &&
                   ((day.evening && day.morning) || day?.type?.rank >= 2.5)
               )
+              //@ts-ignore
               .concat(KALENDAR["lff2018"].filter((day) => day.mmdd === mmdd))
               .map((day) =>
                 day.color
@@ -149,6 +150,7 @@ export class CalendarService implements CalendarServiceInterface {
       kalendar === "lff2018"
         ? KALENDAR["bcp1979"]
             .filter((day) => day.slug === slug && day?.type?.rank >= 2.5)
+            //@ts-ignore
             .concat(KALENDAR["lff2018"].filter((day) => day.slug === slug))
         : KALENDAR[kalendar].filter(
             (day) => day.slug == slug || day.day == slug

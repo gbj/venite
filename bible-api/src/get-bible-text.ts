@@ -12,10 +12,10 @@ export async function getBibleText(
   switch (version) {
     case "NRSV":
     case "nrsv":
-      return getBibleGateway(citation, "NRSVA");
+      return getNRSV(citation);
     case "NRSVAE":
     case "nrsvae":
-      return getBibleGateway(citation, "NRSVA");
+      return getNRSVAE(citation);
     case "ESV":
     case "esv":
       return getESV(citation);

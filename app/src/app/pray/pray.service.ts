@@ -368,6 +368,7 @@ export class PrayService {
                   JSON.stringify(collects[0].value) !==
                     JSON.stringify(["Loading..."]))
             ),
+            tap((c) => console.log("collects = ", c)),
             // filter collects to find the appropriate one
             map((collects) =>
               findCollect(

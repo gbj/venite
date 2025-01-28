@@ -12,7 +12,7 @@
     },
     "type": "text",
     "version": "rite_i",
-    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "sharing": {
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
       "privacy": "public",
@@ -34,7 +34,7 @@
       "Almighty God, our sure defense: We give thee thanks for thy servant[s] Frederick Howden, [N.,] and all military chaplains who provided comfort and inspiration in time of battle; and, following the example of Jesus the Good Shepherd, laid down their lives in the service of others. Inspire and strengthen us, also, for the duties of life still before us, that we may be faithful to the end; through the same Jesus Christ, our Savior and Lord."
     ],
     "language": "en",
-    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "style": "prayer",
     "slug": "frederick-howden",
     "metadata": {
@@ -56,7 +56,7 @@
       "O God of love, we bless thee for calling and equipping the deaconesses of the Episcopal Church, who served thy people at risk or in need, at home and throughout the world. With grateful hearts we honor their hard work, perseverance, and leadership in following Jesus into places of suffering or hardship, injustice or un-championed hope. May we, like them, bear the light of Christ to all people with humility and grace; through Jesus Christ our Lord, who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever. "
     ],
     "language": "en",
-    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "style": "prayer",
     "slug": "episcopal-deaconesses",
     "metadata": {
@@ -78,7 +78,7 @@
     },
     "type": "text",
     "version": "rite_i",
-    "category": ["Collect", "Collect of the Day", "LFF 2022"],
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
     "sharing": {
       "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
       "privacy": "public",
@@ -4858,6 +4858,28 @@
     ],
     "style": "prayer",
     "type": "text"
+  },
+  {
+    "type": "text",
+    "value": [
+      "Merciful God, who didst raise up thy servant Frances Joseph Gaudet to be a champion of the oppressed: Grant that we, encouraged by her example, may advocate for all who are denied the fullness of life to which thou hast called all thy children; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
+    "style": "prayer",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "sharing": {
+      "organization": "venite",
+      "privacy": "public",
+      "status": "published",
+      "collaborators": [],
+      "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+    },
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "slug": "frances-gaudet",
+    "language": "en",
+    "version": "rite_i"
   },
   {
     "type": "text",
@@ -13545,5 +13567,110 @@
       "Almighty and everlasting God, by whose Spirit the whole body of thy faithful people is governed and sanctified: Receive our supplications and prayers, which we offer before thee for all members of thy holy Church, that in their vocation and ministry they may truly and devoutly serve thee; through our Lord and Savior Jesus Christ, who liveth and reigneth with thee, in the unity of the same Spirit, one God, now and for ever."
     ],
     "category": ["Collect", "Collect of the Day"]
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "Almighty God, who called thy daughter Lili‘uokalani to an earthly throne that she might advance thy heavenly kingdom, and endowed her with gift of song and love for her people: Grant that we may imitate her perseverance in adversity, her commitment to peace, and her capacity for forgiveness. All this we ask in the name of thy Son Jesus Christ, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
+    "style": "prayer",
+    "slug": "liliuokalani"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "O God, whose Spirit guideth us into all truth and maketh us free: Strengthen and sustain us as thou didst thy servant Harriet Ross Tubman. Give us vision and courage to stand against oppression and injustice and all that worketh against the glorious liberty to which thou dost call all thy children; through Jesus Christ our Savior, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
+    "style": "prayer",
+    "slug": "harriet-ross-tubman"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "Almighty God, who didst commission thy holy martyr George to bear before the rulers of this world the banner of the cross: Strengthen us in our battles against the great serpent of sin and evil, that we too may attain the crown of eternal life; through Jesus Christ our Redeemer, who liveth and reigneth with thee and the Holy Spirit, one God, for ever and ever"
+    ],
+    "style": "prayer",
+    "slug": "george-of-lydda"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "Almighty and everliving God, who through the Book of Common Prayer didst restore the language of the people in the prayers of thy church: Make us always thankful for this heritage; and help us so to pray in the Spirit and with understanding, that we may worthily magnify thy holy Name; through Jesus Christ our Lord, who liveth and reigneth with thee and the Holy Ghost, one God, for ever and ever."
+    ],
+    "style": "prayer",
+    "slug": "first-bcp"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "O God of Persistent Grace, who didst call the Philadelphia Eleven to the priesthood and didst grant them courage and boldness to respond, thereby opening the eyes of thy church to the giftedness and equality of all: grant us so to hear, trust, and follow thy Holy Spirit wheresoever she may lead, that the gifts of all thy people may flourish throughout the earth, through Christ our Savior."
+    ],
+    "style": "prayer",
+    "slug": "philadelphia-eleven"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "Blessed God, whose Son Jesus calmed the waves and knelt to serve his disciples: We give thee honor for the witness of the Huguenot Élie Naud, remembered as Mystic of the Galleys and Servant of Slaves; praying that, with him, we may proclaim Christ in suffering and joy alike, and call others to join us in ministry to those littlest and least, following Jesus who came not to be ministered to but to minister; who liveth and reigneth with thee and the Holy Spirit, one God, to whom be honor and glory for ever and ever."
+    ],
+    "style": "prayer",
+    "slug": "elie-naud"
+  },
+  {
+    "category": ["Collect", "Collect of the Day", "LFF 2018"],
+    "language": "en",
+    "version": "rite_i",
+    "type": "text",
+    "metadata": {
+      "response": "Amen.",
+      "omit_response": false
+    },
+    "value": [
+      "Merciful God, who didst endow Adeline and her companions with faith and courage, wisdom and humility, and called them to serve thee as deaconesses, ministering to the sick, the oppressed, and the poor: by thy grace, grant that we, following their example, may live to serve thee as they did, revealing thy steadfast love to the world, though our Lord Jesus Christ."
+    ],
+    "style": "prayer",
+    "slug": "adeline-tyler"
   }
 ]
