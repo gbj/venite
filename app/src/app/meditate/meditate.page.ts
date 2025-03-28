@@ -7,7 +7,9 @@ import {
   PreferencesServiceInterface,
   PREFERENCES_SERVICE,
 } from "@venite/ng-service-api";
-import { MediaSession2 } from "media-session";
+import { KeepAwake } from '@capacitor-community/keep-awake';
+//import { MediaSession } from "media-session";
+import { MediaSession } from "@jofr/capacitor-media-session";
 import { Observable, of } from "rxjs";
 import { distinct, map, switchMap, tap } from "rxjs/operators";
 import { AudioService } from "../pray/audio.service";
@@ -37,7 +39,7 @@ export class MeditatePage implements OnInit {
     private documents: DocumentService,
     private zone: NgZone
   ) {}
-
+gg
   ngOnInit() {
     this.preferences;
 
@@ -84,44 +86,54 @@ export class MeditatePage implements OnInit {
       const duration = await this.el.nativeElement.duration();
 
       if (ev.detail > 0) {
-        MediaSession2.setPositionState({
+	console.log("setPositionState", duration - ev.detail);
+        MediaSession.setPositionState({
           duration,
           position: duration - ev.detail,
           playbackRate: 1,
         });
+    	MediaSession.setPlaybackState({ playbackState: "playing" });
       } else {
-        MediaSession2.destroy();
+	MediaSession.setPlaybackState({ playbackState: "paused" });
+        //MediaSession.destroy();
       }
     } else {
       switch (ev.detail) {
         case "start":
           await this.audio.create(audioFile, false);
           await this.audio.play();
+	  if(!await KeepAwake.isSupported()) {
+		  console.log("KeepAwake not supported.");
+	  } else {
+	  	await KeepAwake.keepAwake();
+	  }
+
           try {
-            MediaSession2.init({
+		  /*
+            MediaSession.init({
               play: true,
               pause: true,
               stop: true,
               previoustrack: true,
             });
-            //@ts-ignore
-            MediaSession2.addListener("play", () => {
+	    */
+
+            MediaSession.setActionHandler({ action: "play"}, () => {
               this.el.nativeElement.resume();
               this.audio.play();
             });
-            //@ts-ignore
-            MediaSession2.addListener("pause", () => {
+            MediaSession.setActionHandler({ action: "pause"}, () => {
               this.el.nativeElement.pause();
               this.audio.pause();
             });
-            //@ts-ignore
-            MediaSession2.addListener("previoustrack", async () => {
+            MediaSession.setActionHandler({ action: "previoustrack" }, async () => {
               this.el.nativeElement.rewind();
               await this.audio.destroy();
               await this.audio.create(audioFile, false);
               await this.audio.play();
             });
-            MediaSession2.setMetadata({
+
+            MediaSession.setMetadata({
               artist: "Venite",
               album: "Venite",
               title: this.translate.instant("menu.meditate"),
@@ -133,16 +145,29 @@ export class MeditatePage implements OnInit {
                 },
               ],
             });
+	    MediaSession.setPlaybackState({ playbackState: "playing" });
             this.isPlaying = true;
           } catch (e) {
-            console.warn("MediaSession2 not supported on Android.");
+            console.warn("MediaSession not supported on Android.");
           }
           break;
         case "pause":
           await this.audio.pause();
+		MediaSession.setPlaybackState({ playbackState: "paused" });
+	  if(!await KeepAwake.isSupported()) {
+		  console.log("KeepAwake not supported.");
+	  } else {
+	  	await KeepAwake.allowSleep();
+	  }
           break;
         case "resume":
           await this.audio.play();
+		MediaSession.setPlaybackState({ playbackState: "playing" });
+	  if(!await KeepAwake.isSupported()) {
+		  console.log("KeepAwake not supported.");
+	  } else {
+	 	await KeepAwake.keepAwake();
+	  }
           break;
         case "rewind":
           await this.audio.destroy();
@@ -153,10 +178,15 @@ export class MeditatePage implements OnInit {
           await this.audio.destroy();
           await this.audio.create(audioFile, false);
           this.audio.play();
+	  if(!await KeepAwake.isSupported()) {
+		  console.log("KeepAwake not supported.");
+	  } else {
+	  	await KeepAwake.allowSleep();
+	  }
           try {
-            MediaSession2.destroy();
+            //MediaSession.destroy();
           } catch (e) {
-            console.warn("MediaSession2 not supported on Android.");
+            console.warn("MediaSession not supported on Android.");
           }
           break;
       }

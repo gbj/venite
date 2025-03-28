@@ -23,6 +23,7 @@
     "@angular/router": "~12.2.17",
     "@angular/service-worker": "~12.2.17",
     "@capacitor-community/firebase-analytics": "^6.0.0",
+    "@capacitor-community/keep-awake": "^5.0.1",
     "@capacitor-community/text-to-speech": "^4.1.0",
     "@capacitor/android": "^6.0.0",
     "@capacitor/app": "^6.0.0",

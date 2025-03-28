@@ -6,7 +6,8 @@ import {
   Liturgy,
   Option,
 } from "@venite/ldf";
-import { MediaSession2 } from "media-session";
+//import { MediaSession } from "media-session";
+import { MediaSession } from "@jofr/capacitor-media-session";
 import { PlatformService } from "@venite/ng-platform";
 import { combineLatest, Observable, of, Subscription } from "rxjs";
 import { AudioService } from "../pray/audio.service";
@@ -46,6 +47,7 @@ export class MediaSessionService {
   ) {}
 
   isAvailable(): boolean {
+    //@ts-ignore
     return this.platform.is("capacitor") || Boolean(navigator.mediaSession);
   }
 
@@ -55,14 +57,16 @@ export class MediaSessionService {
       await this.audio.play();
 
       this.docLabel = doc.label || "";
-      await MediaSession2.init({
+      /*
+      await MediaSession.init({
         play: true,
         pause: true,
         nexttrack: true,
         previoustrack: true,
       });
+      */
 
-      await MediaSession2.setMetadata({
+      await MediaSession.setMetadata({
         artist: "Venite",
         album: this.docLabel || "",
         title: doc.label,
@@ -74,21 +78,18 @@ export class MediaSessionService {
           },
         ],
       });
+      await MediaSession.setPlaybackState({ playbackState: "playing" });
 
-      //@ts-ignore
-      MediaSession2.addListener("play", () => {
+      MediaSession.setActionHandler({ action: "play" }, () => {
         this.zone.run(() => this.resumeSpeech(doc, settings));
       });
-      //@ts-ignore
-      MediaSession2.addListener("pause", () => {
+      MediaSession.setActionHandler({ action: "pause" }, () => {
         this.zone.run(() => this.pauseSpeech());
       });
-      //@ts-ignore
-      MediaSession2.addListener("nexttrack", () => {
+      MediaSession.setActionHandler({ action: "nexttrack" }, () => {
         this.zone.run(() => this.fastForward(doc, settings));
       });
-      //@ts-ignore
-      MediaSession2.addListener("previoustrack", () => {
+      MediaSession.setActionHandler({ action: "previoustrack" }, () => {
         this.zone.run(() => this.rewind(doc, settings));
       });
     }
@@ -100,7 +101,7 @@ export class MediaSessionService {
       this.speechService.pause();
       this.audio?.pause();
       if (this.isAvailable()) {
-        MediaSession2.setPositionState({
+        MediaSession.setPositionState({
           playbackRate: 0,
         });
       }
@@ -123,7 +124,7 @@ export class MediaSessionService {
     this.speechService.resume();
     this.audio?.play();
     if (this.isAvailable()) {
-      MediaSession2.setPositionState({
+      MediaSession.setPositionState({
         playbackRate: 1,
       });
     }
@@ -160,7 +161,7 @@ export class MediaSessionService {
         );
       }
       if (this.isAvailable()) {
-        MediaSession2.setPositionState({
+        MediaSession.setPositionState({
           playbackRate: 1,
         });
       }
@@ -186,7 +187,7 @@ export class MediaSessionService {
       );
     });
     if (this.isAvailable()) {
-      MediaSession2.setPositionState({
+      MediaSession.setPositionState({
         playbackRate: 1,
       });
     }
@@ -209,7 +210,7 @@ export class MediaSessionService {
     console.log("doc$ = ", doc$, "settings$ = ", settings$);
 
     if (this.isAvailable()) {
-      MediaSession2.setPositionState({
+      MediaSession.setPositionState({
         playbackRate: 1,
       });
     }
@@ -339,7 +340,8 @@ export class MediaSessionService {
 
           if (title && this.isAvailable()) {
             console.log("setting metadata to", title);
-            MediaSession2.setMetadata({
+            MediaSession.setPlaybackState({ playbackState: "playing" });
+            MediaSession.setMetadata({
               artist: "Venite",
               album: this.docLabel || "",
               title,
@@ -379,7 +381,7 @@ export class MediaSessionService {
     this.audio.pause();
     this.audio.destroy();
     if (this.isAvailable()) {
-      MediaSession2.destroy();
+      MediaSession.setPlaybackState({ playbackState: "paused" });
     }
   }
 }

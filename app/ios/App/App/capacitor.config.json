@@ -21,6 +21,7 @@
 	"cordova": {},
 	"packageClassList": [
 		"FirebaseAnalytics",
+		"KeepAwakePlugin",
 		"TextToSpeechPlugin",
 		"AppPlugin",
 		"ClipboardPlugin",
