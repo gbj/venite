@@ -3503,6 +3503,10 @@
   ],
   "en-bcp1979-canticle-20": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 94"
+      },
       "category": ["Canticle"],
       "hidden": false,
       "metadata": {
@@ -3552,12 +3556,7 @@
       ],
       "lastRevision": 31,
       "version": "bcp1979",
-      "language": "en",
-      "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
-      }
+      "language": "en"
     }
   ],
   "en-bcp1979-psalm_110": [
@@ -4712,6 +4711,10 @@
     {
       "style": "canticle",
       "label": "Canticle 15: The Song of Mary",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 91/119"
+      },
       "category": ["Canticle"],
       "metadata": {
         "omit_antiphon": false,
@@ -4803,12 +4806,7 @@
       "language": "en",
       "version": "bcp1979",
       "lastRevision": 33,
-      "citation": "Luke 1:46-55",
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      }
+      "citation": "Luke 1:46-55"
     }
   ],
   "en-bcp1979-psalm_112": [
@@ -5489,6 +5487,10 @@
   "en-bcp1979-canticle-9": [
     {
       "lastRevision": 2,
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 86"
+      },
       "metadata": {
         "gloria": {
           "category": [null],
@@ -5563,11 +5565,6 @@
       "type": "psalm",
       "version_label": null,
       "label": "Canticle 9: The First Song of Isaiah",
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
       "style": "canticle"
     }
   ],
@@ -9081,6 +9078,10 @@
   ],
   "en-bcp1979-canticle-19": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 94"
+      },
       "metadata": {
         "latinname": "Magna et mirabilia",
         "omit_antiphon": false,
@@ -9105,11 +9106,6 @@
         "omit_gloria": false
       },
       "lastRevision": 2,
-      "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
-      },
       "slug": "canticle-19",
       "hidden": false,
       "value": [
@@ -9228,6 +9224,10 @@
     {
       "slug": "canticle-10",
       "label": "Canticle 10: The Second Song of Isaiah",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 86"
+      },
       "metadata": {
         "gloria": {
           "type": "refrain",
@@ -9255,11 +9255,6 @@
       "type": "psalm",
       "citation": "Isaiah 55:6-11",
       "style": "canticle",
-      "source": {
-        "source": "",
-        "citation": "",
-        "api": ""
-      },
       "version": "bcp1979",
       "value": [
         {
@@ -10720,6 +10715,10 @@
   ],
   "en-bcp1979-canticle-21": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 95"
+      },
       "hidden": false,
       "type": "psalm",
       "citation": null,
@@ -15587,6 +15586,10 @@
   ],
   "en-bcp1979-canticle-18": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 93"
+      },
       "metadata": {
         "latinname": "Dignus es",
         "omit_antiphon": false,
@@ -20407,6 +20410,10 @@
   ],
   "en-bcp1979-canticle-12": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 88"
+      },
       "hidden": false,
       "version_label": null,
       "slug": "canticle-12",
@@ -21026,6 +21033,10 @@
       "category": ["Canticle"],
       "label": "Canticle 14: A Song of Penitence",
       "type": "psalm",
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 90"
+      },
       "value": [
         {
           "type": "psalm-section",
@@ -21901,9 +21912,8 @@
   "en-bcp1979-canticle-13": [
     {
       "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
+        "source": "bcp1979",
+        "citation": "p. 90"
       },
       "version_label": null,
       "label": "Canticle 13: A Song of Praise",
@@ -23071,6 +23081,10 @@
   ],
   "en-bcp1979-canticle-16": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 92"
+      },
       "label": "Canticle 16: The Song of Zechariah",
       "citation": "Luke 1: 68-79",
       "slug": "canticle-16",
@@ -23545,6 +23559,10 @@
   ],
   "en-bcp1979-canticle-17": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 93/120"
+      },
       "metadata": {
         "latinname": "Nunc Dimittis",
         "omit_gloria": false,
@@ -24449,6 +24467,10 @@
   ],
   "en-bcp1979-canticle-11": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 87"
+      },
       "label": "Canticle 11: The Third Song of Isaiah",
       "version": "bcp1979",
       "category": ["Canticle"],
@@ -25560,9 +25582,8 @@
       "style": "canticle",
       "lastRevision": 2,
       "source": {
-        "citation": "",
-        "api": "",
-        "source": ""
+        "source": "bcp1979",
+        "citation": "p. 85"
       },
       "version": "bcp1979",
       "slug": "canticle-8",
@@ -57787,6 +57808,10 @@
         "omit_gloria": true,
         "number": "1"
       },
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 47"
+      },
       "label": "Canticle 1: A Song of Creation",
       "slug": "canticle-1",
       "style": "canticle",
@@ -57940,12 +57965,7 @@
           "label": "IV\t\tThe People of God"
         }
       ],
-      "citation": "Song of the Three Young Men, 35-65",
-      "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
-      }
+      "citation": "Song of the Three Young Men, 35-65"
     }
   ],
   "en-rite_i-canticle-2": [
@@ -57954,6 +57974,10 @@
       "label": "Canticle 2: A Song of Praise",
       "slug": "canticle-2",
       "category": ["Canticle", "Canticle"],
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 49"
+      },
       "sharing": {
         "organization": "venite",
         "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
@@ -58023,9 +58047,8 @@
       "version": "rite_i",
       "slug": "canticle-3",
       "source": {
-        "source": "",
-        "api": "",
-        "citation": ""
+        "source": "bcp1979",
+        "citation": "p. 50/65"
       },
       "category": ["Canticle", "Canticle"],
       "hidden": false,
@@ -58131,9 +58154,8 @@
     {
       "hidden": false,
       "source": {
-        "api": "",
-        "source": "",
-        "citation": ""
+        "source": "bcp1979",
+        "citation": "p. 50"
       },
       "sharing": {
         "privacy": "public",
@@ -58253,6 +58275,10 @@
   ],
   "en-rite_i-canticle-5": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 51/66"
+      },
       "sharing": {
         "status": "published",
         "organization": "venite",
@@ -58303,15 +58329,14 @@
   ],
   "en-rite_i-canticle-6": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 52"
+      },
       "label": "Canticle 6: Glory be to God",
       "hidden": false,
       "version_label": null,
       "category": ["Canticle", "Canticle"],
-      "source": {
-        "api": "",
-        "citation": "",
-        "source": ""
-      },
       "type": "psalm",
       "value": [
         {
@@ -58356,6 +58381,10 @@
   ],
   "en-rite_i-canticle-7": [
     {
+      "source": {
+        "source": "bcp1979",
+        "citation": "p. 52"
+      },
       "date_modified": {
         "_seconds": 1611597903,
         "_nanoseconds": 854000000
