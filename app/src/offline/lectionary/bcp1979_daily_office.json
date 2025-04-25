@@ -13966,8 +13966,8 @@
   {
     "whentype": "year",
     "day": "sunday-easter",
-    "lectionary": "holy_day_evening_1",
-    "type": "second_reading",
+    "lectionary": "bcp1979_daily_office",
+    "type": "holy_day_evening_1",
     "citation": "Isa. 51:9-11",
     "when": "1",
     "id": "8252"
