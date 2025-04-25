@@ -1308,6 +1308,12 @@
             "metadata": { "alternateYear": false },
             "label": "1979 Book of Common Prayer",
             "value": "bcp1979"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Common Worship",
+            "value": "common_worship"
           }
         ]
       },

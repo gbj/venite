@@ -847,8 +847,8 @@ export class PrayService {
           })
       ),
 
-      // add Hebrew + LXX psalms if necessary
       switchMap((liturgy) => {
+        // add Hebrew + LXX psalms if necessary
         if (prefs["originalLanguages"] == "true" && liturgy.value) {
           if (liturgy.type == "liturgy") {
             return combineLatest(

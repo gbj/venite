@@ -205,6 +205,12 @@
             "value": "bcp1979",
             "default": false,
             "label": "1979 Book of Common Prayer"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Common Worship",
+            "value": "common_worship"
           }
         ],
         "label": "Psalter Version",

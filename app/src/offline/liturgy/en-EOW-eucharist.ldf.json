@@ -129,6 +129,12 @@
             "default": false,
             "value": "coverdale",
             "label": "Coverdale (1662 BCP)"
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Common Worship",
+            "value": "common_worship"
           }
         ],
         "label": "Psalter Version"

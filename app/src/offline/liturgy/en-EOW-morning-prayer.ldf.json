@@ -346,6 +346,12 @@
             "metadata": { "alternateYear": false },
             "value": "coverdale",
             "default": false
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Common Worship",
+            "value": "common_worship"
           }
         ],
         "label": "Psalter Version",

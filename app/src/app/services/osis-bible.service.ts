@@ -21,6 +21,7 @@ type LxxPsalms = Record<string, LxxPsalmVerse[]>;
 export class OsisBibleService {
   private _hebrewPsalms: Promise<LiturgicalDocument[]>;
   private _lxxPsalms: Promise<LxxPsalms>;
+  private _cwPsalms: Promise<LxxPsalms>;
 
   constructor() {}
 
@@ -96,6 +97,41 @@ export class OsisBibleService {
             ...verse,
             verse: lxxVerse(psalms, number, Number(verse.number), "a"),
             halfverse: lxxVerse(psalms, number, Number(verse.number), "b"),
+          })),
+        })),
+      });
+    } else {
+      return doc;
+    }
+  }
+
+  async getCWPsalm(
+    doc: LiturgicalDocument
+  ): Promise<LiturgicalDocument | undefined> {
+    // body
+    if (!this._cwPsalms) {
+      this._cwPsalms = fetch(`/offline/psalter/common_worship.json`).then(
+        (res) => res.json()
+      );
+    }
+    const psalms = await this._cwPsalms;
+    if (doc.type == "psalm") {
+      const number = (doc as Psalm).metadata?.number;
+      return new LiturgicalDocument({
+        ...doc,
+        language: "en",
+        version: "CW",
+        version_label: "CW",
+        value: ((doc as Psalm).value || []).map((section) => ({
+          ...section,
+          value: (section.value || []).map((verse) => ({
+            ...verse,
+            verse: (psalms[number].find(
+              (v) => v.number == Number(verse.number)
+            ) || {})["a"],
+            halfverse: (psalms[number].find(
+              (v) => v.number == Number(verse.number)
+            ) || {})["b"],
           })),
         })),
       });

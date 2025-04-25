@@ -68,6 +68,12 @@
             "label": "Inclusive Psalter",
             "value": "ip",
             "metadata": { "alternateYear": false }
+          },
+          {
+            "metadata": { "alternateYear": false },
+            "default": false,
+            "label": "Common Worship",
+            "value": "common_worship"
           }
         ]
       }

@@ -32,6 +32,7 @@ import COLORS from "../../offline/colors.json";
 import VERSIONS from "../../offline/versions.json";
 import { HttpClient } from "@angular/common/http";
 import { isOnline } from "../editor/ldf-editor/is-online";
+import { OsisBibleService } from "./osis-bible.service";
 
 // Include document ID and data
 export interface IdAndDoc {
@@ -64,7 +65,8 @@ export class DocumentService {
     private readonly afs: AngularFirestore,
     private auth: AuthService,
     private organizationService: OrganizationService,
-    private http: HttpClient
+    private http: HttpClient,
+    private osis: OsisBibleService
   ) {}
 
   handleError(error: any) {
@@ -383,7 +385,19 @@ export class DocumentService {
           ? ["rite_i", "bcp1979"]
           : baseVersions;
 
-    console.log("findDocumentsBySlug", slug, versions);
+    if (versions.includes("common_worship")) {
+      return this.findDocumentsBySlug(
+        slug,
+        language,
+        ["bcp1979"],
+        disableOffline,
+        bulletinMode
+      ).pipe(
+        switchMap((docs) =>
+          combineLatest(docs.map((doc) => this.osis.getCWPsalm(doc)))
+        )
+      );
+    }
 
     // first, try JSON database
     if (!disableOffline) {
