@@ -44,6 +44,9 @@ export function parseCEBResponse(
               node.tagName === "br" ||
               node.classNames.includes("indent-1") ||
               node.classNames.includes("indent-2") ||
+              node.classNames.includes("indent-3") ||
+              node.classNames.includes("indent-4") ||
+              node.classNames.includes("indent-5") ||
               node.rawAttributes?.class?.includes("chapter-")))
       )
       .forEach((node) => {
@@ -61,7 +64,21 @@ export function parseCEBResponse(
           node instanceof HTMLElement &&
           node.rawAttributes?.class?.includes("indent-2")
         ) {
-          text += "\t";
+          text += "\n\t";
+          node = node.querySelector(".text");
+        }
+        if (
+          node instanceof HTMLElement &&
+          node.rawAttributes?.class?.includes("indent-3")
+        ) {
+          text += "\n\t\t";
+          node = node.querySelector(".text");
+        }
+        if (
+          node instanceof HTMLElement &&
+          node.rawAttributes?.class?.includes("indent-4")
+        ) {
+          text += "\n\t\t\t";
           node = node.querySelector(".text");
         }
 
