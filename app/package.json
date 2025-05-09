@@ -70,7 +70,7 @@
     "cordova-plugin-media": "^5.0.3",
     "firebase": "^8.3.1",
     "install": "^0.13.0",
-    "json-pointer": "^0.6.0",
+    "json-pointer": "^0.6.2",
     "ngx-pinch-zoom": "^2.5.5",
     "npm": "^7.6.3",
     "ot-json1": "^1.0.2",
