@@ -1,1 +1,293 @@
-{"date_modified":{"seconds":1620212785,"nanoseconds":248000000},"type":"liturgy","id":"CdNGc0Da8tTzQgNf1Apb","source":{"source":"","api":"","citation":""},"value":[{"value":["At the Close of Day"],"hidden":false,"type":"heading","style":"text","metadata":{"level":1}},{"label":"Psalm 134","version":"bcp1979","language":"en","value":[{"value":[{"type":"psalm-verse","number":"1","halfverse":"you that stand by night in the house of the LORD.","verse":"Behold now, bless the LORD, all you servants of the LORD, *"},{"verse":"Lift up your hands in the holy place and bless the LORD; *","number":"2","type":"psalm-verse","halfverse":"the LORD who made heaven and earth bless you out of Zion."}],"type":"psalm-section"}],"sharing":{"collaborators":[],"privacy":"public","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","organization":"venite","status":"published"},"source":{"source":"","api":"https://www.venite.app/api","citation":""},"metadata":{"localname":"Psalm 134","latinname":"","number":"134","omit_gloria":false,"omit_antiphon":false},"hidden":false,"type":"psalm","version_label":null,"slug":"psalm_134","citation":null,"category":["Psalm"],"style":"psalm"},{"value":[{"book":"Jeremiah","text":"Lord, you are in the midst of us and we are called by your Name: Do not forsake us, ","chapter":"14","verse":"9"},{"verse":"22","book":"Jeremiah","text":"O Lord our God.","chapter":"14"}],"language":"en","version":"","metadata":{"response":" "},"hidden":false,"category":[],"label":"","style":"short","type":"bible-reading","citation":"Jeremiah 14:9,22","source":{"source":"","api":"","citation":""}},{"hidden":false,"value":["The following may be said."],"type":"rubric"},{"version_label":null,"language":"en","type":"psalm","metadata":{"localname":"The Song of Simeon","omit_gloria":false,"number":"17","latinname":"Nunc Dimittis","gloria":{"hidden":false,"language":"en","value":["Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*","as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."],"version_label":"Rite II","citation":null,"type":"refrain","style":"gloria","label":null,"category":[null],"version":"bcp1979","sharing":{"organization":"venite","privacy":"public","collaborators":[],"status":"published","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2"},"slug":"gloria-patri"},"omit_antiphon":false},"category":["Canticle","Canticle"],"date_modified":{"_nanoseconds":26000000,"_seconds":1614796258},"slug":"canticle-17","lookup":{"type":"slug"},"source":{"api":"","source":"","citation":""},"version":"bcp1979","sharing":{"organization":"venite","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","status":"published","collaborators":[],"privacy":"public"},"citation":"Luke 2:29-32","hidden":false,"label":"Canticle 17: The Song of Simeon","style":"canticle","lastRevision":2},{"value":["Prayers for ourselves and others may follow. It is appropriate that prayers of thanksgiving for the blessings of the day, and penitence for our sins, be included."],"hidden":false,"type":"rubric"},{"hidden":false,"style":"authorized-prayers","type":"text"},{"hidden":false,"metadata":{"delay":0,"length":300},"type":"meditation"},{"metadata":{"editor_selected":0,"selected":0},"hidden":false,"type":"option","value":[{"label":"The Lord’s Prayer","type":"text","version_label":"Traditional","value":["Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."],"category":[],"display_format":"unison","style":"prayer","hidden":false,"source":{"source":"","citation":"","api":""}},{"type":"text","value":["Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."],"category":[],"display_format":"unison","version_label":"Contemporary","label":"The Lord’s Prayer","style":"prayer","hidden":false}]},{"lookup":{"type":"collect"},"type":"text","style":"prayer","hidden":false},{"value":["Visit this place, O Lord, and drive far from it all snares of the enemy; let your holy angels dwell with us to preserve us in peace; and let your blessing be upon us always; through Jesus Christ our Lord."],"hidden":false,"style":"prayer","type":"text"},{"value":["The almighty and merciful Lord, Father, Son, and Holy Spirit, bless us and keep us."],"style":"prayer","hidden":false,"type":"text"}],"slug":"compline","metadata":{"liturgyversions":["bcp1979"],"supplement":false,"preferences":{},"special_preferences":{}},"date_created":{"nanoseconds":782000000,"seconds":1620212543},"language":"en","label":"Night","version":"Daily-Devotions","hidden":false,"category":[],"lastRevision":37,"sharing":{"collaborators":[],"organization":"venite","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","status":"published","privacy":"organization"}}
+{
+  "date_modified": {
+    "seconds": 1620212785,
+    "nanoseconds": 248000000
+  },
+  "type": "liturgy",
+  "id": "CdNGc0Da8tTzQgNf1Apb",
+  "source": {
+    "source": "",
+    "api": "",
+    "citation": ""
+  },
+  "value": [
+    {
+      "value": [
+        "At the Close of Day"
+      ],
+      "hidden": false,
+      "type": "heading",
+      "style": "text",
+      "metadata": {
+        "level": 1
+      }
+    },
+    {
+      "label": "Psalm 134",
+      "version": "bcp1979",
+      "language": "en",
+      "value": [
+        {
+          "value": [
+            {
+              "type": "psalm-verse",
+              "number": "1",
+              "halfverse": "you that stand by night in the house of the LORD.",
+              "verse": "Behold now, bless the LORD, all you servants of the LORD, *"
+            },
+            {
+              "verse": "Lift up your hands in the holy place and bless the LORD; *",
+              "number": "2",
+              "type": "psalm-verse",
+              "halfverse": "the LORD who made heaven and earth bless you out of Zion."
+            }
+          ],
+          "type": "psalm-section"
+        }
+      ],
+      "sharing": {
+        "collaborators": [],
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "organization": "venite",
+        "status": "published"
+      },
+      "source": {
+        "source": "",
+        "api": "https://www.venite.app/api",
+        "citation": ""
+      },
+      "metadata": {
+        "localname": "Psalm 134",
+        "latinname": "",
+        "number": "134",
+        "omit_gloria": false,
+        "omit_antiphon": false
+      },
+      "hidden": false,
+      "type": "psalm",
+      "version_label": null,
+      "slug": "psalm_134",
+      "citation": null,
+      "category": [
+        "Psalm"
+      ],
+      "style": "psalm"
+    },
+    {
+      "value": [
+        {
+          "book": "Jeremiah",
+          "text": "Lord, you are in the midst of us and we are called by your Name: Do not forsake us, ",
+          "chapter": "14",
+          "verse": "9"
+        },
+        {
+          "verse": "22",
+          "book": "Jeremiah",
+          "text": "O Lord our God.",
+          "chapter": "14"
+        }
+      ],
+      "language": "en",
+      "version": "",
+      "metadata": {
+        "response": " "
+      },
+      "hidden": false,
+      "category": [],
+      "label": "",
+      "style": "short",
+      "type": "bible-reading",
+      "citation": "Jeremiah 14:9,22",
+      "source": {
+        "source": "",
+        "api": "",
+        "citation": ""
+      }
+    },
+    {
+      "hidden": false,
+      "value": [
+        "The following may be said."
+      ],
+      "type": "rubric"
+    },
+    {
+      "version_label": null,
+      "language": "en",
+      "type": "psalm",
+      "metadata": {
+        "localname": "The Song of Simeon",
+        "omit_gloria": false,
+        "number": "17",
+        "latinname": "Nunc Dimittis",
+        "gloria": {
+          "hidden": false,
+          "language": "en",
+          "value": [
+            "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+            "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
+          ],
+          "version_label": "Rite II",
+          "citation": null,
+          "type": "refrain",
+          "style": "gloria",
+          "label": null,
+          "category": [
+            null
+          ],
+          "version": "bcp1979",
+          "sharing": {
+            "organization": "venite",
+            "privacy": "public",
+            "collaborators": [],
+            "status": "published",
+            "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+          },
+          "slug": "gloria-patri"
+        },
+        "omit_antiphon": false
+      },
+      "category": [
+        "Canticle",
+        "Canticle"
+      ],
+      "date_modified": {
+        "_nanoseconds": 26000000,
+        "_seconds": 1614796258
+      },
+      "slug": "canticle-17",
+      "lookup": {
+        "type": "slug"
+      },
+      "source": {
+        "api": "",
+        "source": "",
+        "citation": ""
+      },
+      "version": "bcp1979",
+      "sharing": {
+        "organization": "venite",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "status": "published",
+        "collaborators": [],
+        "privacy": "public"
+      },
+      "citation": "Luke 2:29-32",
+      "hidden": false,
+      "label": "Canticle 17: The Song of Simeon",
+      "style": "canticle",
+      "lastRevision": 2
+    },
+    {
+      "value": [
+        "Prayers for ourselves and others may follow. It is appropriate that prayers of thanksgiving for the blessings of the day, and penitence for our sins, be included."
+      ],
+      "hidden": false,
+      "type": "rubric"
+    },
+    {
+      "hidden": false,
+      "style": "authorized-prayers",
+      "type": "text"
+    },
+    {
+      "hidden": false,
+      "metadata": {
+        "delay": 0,
+        "length": 300
+      },
+      "type": "meditation"
+    },
+    {
+      "metadata": {
+        "editor_selected": 0,
+        "selected": 0
+      },
+      "hidden": false,
+      "type": "option",
+      "value": [
+        {
+          "label": "The Lord’s Prayer",
+          "type": "text",
+          "version_label": "Traditional",
+          "value": [
+            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+          ],
+          "category": [],
+          "display_format": "unison",
+          "style": "prayer",
+          "hidden": false,
+          "source": {
+            "source": "",
+            "citation": "",
+            "api": ""
+          }
+        },
+        {
+          "type": "text",
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "category": [],
+          "display_format": "unison",
+          "version_label": "Contemporary",
+          "label": "The Lord’s Prayer",
+          "style": "prayer",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "lookup": {
+        "type": "collect"
+      },
+      "type": "text",
+      "style": "prayer",
+      "hidden": false
+    },
+    {
+      "value": [
+        "Visit this place, O Lord, and drive far from it all snares of the enemy; let your holy angels dwell with us to preserve us in peace; and let your blessing be upon us always; through Jesus Christ our Lord."
+      ],
+      "hidden": false,
+      "style": "prayer",
+      "type": "text"
+    },
+    {
+      "value": [
+        "The almighty and merciful Lord, Father, Son, and Holy Spirit, bless us and keep us."
+      ],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text"
+    }
+  ],
+  "slug": "compline",
+  "metadata": {
+    "liturgyversions": [
+      "bcp1979"
+    ],
+    "supplement": false,
+    "preferences": {},
+    "special_preferences": {}
+  },
+  "date_created": {
+    "nanoseconds": 782000000,
+    "seconds": 1620212543
+  },
+  "language": "en",
+  "label": "Night",
+  "version": "Daily-Devotions",
+  "hidden": false,
+  "category": [],
+  "lastRevision": 37,
+  "sharing": {
+    "collaborators": [],
+    "organization": "venite",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "status": "published",
+    "privacy": "organization"
+  }
+}
