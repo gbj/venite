@@ -42,6 +42,7 @@ export function parseCEBResponse(
             (node.classNames.includes("text") ||
               node.classNames.includes("line") ||
               node.tagName === "br" ||
+              node.classNames.includes("versenum") ||
               node.classNames.includes("indent-1") ||
               node.classNames.includes("indent-2") ||
               node.classNames.includes("indent-3") ||
@@ -125,14 +126,14 @@ export function parseCEBResponse(
           text = paragraph.text;
         }
 
-        console.log({ book, chapter, verse, text });
-
-        verses.push({
-          book,
-          chapter,
-          verse,
-          text: text.replace(/^\d+\s*/, " "),
-        });
+        if (text.trim() !== "") {
+          verses.push({
+            book,
+            chapter,
+            verse,
+            text: `${text.replace(/^\d+\s*/, " ")} `.replace(/[ ]{2,}$/, " "),
+          });
+        }
       });
 
     // merge duplicate verses
