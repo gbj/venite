@@ -224,4 +224,25 @@ describe('parseReference', () => {
       end: { book: Book.Nehemiah, chapter: 20, verse: 4 },
     },
   ]);
+
+  expect(parseReference('Acts 13:13-43')).toEqual([
+    {
+      start: { book: Book.Acts, chapter: 13, verse: 13 },
+      end: { book: Book.Acts, chapter: 13, verse: 43 },
+    },
+  ]);
+
+  expect(parseReference('Acts 13. 13-43')).toEqual([
+    {
+      start: { book: Book.Acts, chapter: 13, verse: 13 },
+      end: { book: Book.Acts, chapter: 13, verse: 43 },
+    },
+  ]);
+
+  expect(parseReference('Azariah and the Three Jews 29-37')).toEqual([
+    {
+      start: { book: Book.PrayerOfAzariah, chapter: 1, verse: 29 },
+      end: { book: Book.PrayerOfAzariah, chapter: 1, verse: 37 },
+    },
+  ]);
 });

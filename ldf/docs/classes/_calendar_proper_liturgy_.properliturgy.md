@@ -25,7 +25,7 @@ e.g., Ash Wednesday,
 
 • **label**: *string*
 
-*Defined in [calendar/proper-liturgy.ts:16](https://github.com/gbj/venite/blob/80526ac2/ldf/src/calendar/proper-liturgy.ts#L16)*
+*Defined in [calendar/proper-liturgy.ts:16](https://github.com/gbj/venite/blob/eff0555c/ldf/src/calendar/proper-liturgy.ts#L16)*
 
 A human-readable name; either the name of the whole liturgy, or a label for a piece.
 
@@ -38,7 +38,7 @@ ___
 
 • **language**: *string*
 
-*Defined in [calendar/proper-liturgy.ts:21](https://github.com/gbj/venite/blob/80526ac2/ldf/src/calendar/proper-liturgy.ts#L21)*
+*Defined in [calendar/proper-liturgy.ts:21](https://github.com/gbj/venite/blob/eff0555c/ldf/src/calendar/proper-liturgy.ts#L21)*
 
 Language code (typically an ISO 639-1 two-letter code)
 
@@ -51,7 +51,7 @@ ___
 
 • **liturgy**: *string*
 
-*Defined in [calendar/proper-liturgy.ts:11](https://github.com/gbj/venite/blob/80526ac2/ldf/src/calendar/proper-liturgy.ts#L11)*
+*Defined in [calendar/proper-liturgy.ts:11](https://github.com/gbj/venite/blob/eff0555c/ldf/src/calendar/proper-liturgy.ts#L11)*
 
 Chooses a particular liturgy
 
@@ -61,7 +61,7 @@ ___
 
 • **preference**: *string*
 
-*Defined in [calendar/proper-liturgy.ts:8](https://github.com/gbj/venite/blob/80526ac2/ldf/src/calendar/proper-liturgy.ts#L8)*
+*Defined in [calendar/proper-liturgy.ts:8](https://github.com/gbj/venite/blob/eff0555c/ldf/src/calendar/proper-liturgy.ts#L8)*
 
 Set a particular preference to the value `true` when loading liturgy
 
@@ -71,6 +71,6 @@ ___
 
 • **slug**: *string*
 
-*Defined in [calendar/proper-liturgy.ts:5](https://github.com/gbj/venite/blob/80526ac2/ldf/src/calendar/proper-liturgy.ts#L5)*
+*Defined in [calendar/proper-liturgy.ts:5](https://github.com/gbj/venite/blob/eff0555c/ldf/src/calendar/proper-liturgy.ts#L5)*
 
 Matches to slug of a LiturgicalDay

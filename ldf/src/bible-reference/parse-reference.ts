@@ -75,7 +75,7 @@ function parseSingleReference(
   const BLANK_REF = { book: null, chapter: null, verse: null };
 
   const start = first_half
-    ? queryFromRe(first_half, /([\d\s]*[\w\.]+[a-zA-Z\s]*)\s*(\d+)?:?(\d+)?/, start_partial_structure, null) ?? {
+    ? queryFromRe(first_half, /([\d\s]*[\w\.]+[a-zA-Z\s]*)\s*(\d+)?[:\.]?\s?(\d+)?/, start_partial_structure, null) ?? {
         ...BLANK_REF,
       }
     : { ...BLANK_REF };
@@ -86,7 +86,9 @@ function parseSingleReference(
 
   const augmented_start = fillOut(start, previous_end);
 
-  const end = second_half ? queryFromRe(second_half, /([\d\s]*[\w\.]+)\s*(\d+)?:?(\d+)?/, true, augmented_start) : null;
+  const end = second_half
+    ? queryFromRe(second_half, /([\d\s]*[\w\.]+)\s*(\d+)?[:\.]?\s?(\d+)?/, true, augmented_start)
+    : null;
 
   return {
     start: augmented_start || start,
@@ -125,11 +127,20 @@ function queryFromRe(
     }
   } else {
     const matches = reference.trim().match(re) || [];
-    query = {
-      book: book_name_to_book(matches[1]),
-      chapter: parseInt(matches[2]),
-      verse: parseInt(matches[3]),
-    };
+    const book = book_name_to_book(matches[1]);
+    if (book && is_single_chapter(book)) {
+      query = {
+        book,
+        chapter: 1,
+        verse: parseInt(matches[2]),
+      };
+    } else {
+      query = {
+        book,
+        chapter: parseInt(matches[2]),
+        verse: parseInt(matches[3]),
+      };
+    }
   }
 
   return fillOut(query, template);
@@ -151,4 +162,18 @@ export function book_name_to_book(book_name: string): Book | null {
   );
   const book = BOOKS.find(([abbrev]) => abbrev === bestMatch.target);
   return book ? book[1] : null;
+}
+
+function is_single_chapter(book: Book): boolean {
+  switch (book) {
+    case Book.Obadiah:
+    case Book.Jude:
+    case Book.Philemon:
+    case Book.SecondJohn:
+    case Book.ThirdJohn:
+    case Book.PrayerOfAzariah:
+      return true;
+    default:
+      return false;
+  }
 }

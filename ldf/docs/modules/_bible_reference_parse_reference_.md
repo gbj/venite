@@ -13,6 +13,7 @@
 
 * [book_name_to_book](_bible_reference_parse_reference_.md#book_name_to_book)
 * [fillOut](_bible_reference_parse_reference_.md#fillout)
+* [is_single_chapter](_bible_reference_parse_reference_.md#is_single_chapter)
 * [parseReference](_bible_reference_parse_reference_.md#parsereference)
 * [parseSingleReference](_bible_reference_parse_reference_.md#parsesinglereference)
 * [queryFromRe](_bible_reference_parse_reference_.md#queryfromre)
@@ -23,7 +24,7 @@
 
 Ƭ **BibleReferenceQuery**: *object*
 
-*Defined in [bible-reference/parse-reference.ts:5](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L5)*
+*Defined in [bible-reference/parse-reference.ts:5](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L5)*
 
 #### Type declaration:
 
@@ -39,7 +40,7 @@ ___
 
 Ƭ **BibleReferenceRange**: *object*
 
-*Defined in [bible-reference/parse-reference.ts:11](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L11)*
+*Defined in [bible-reference/parse-reference.ts:11](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L11)*
 
 #### Type declaration:
 
@@ -55,7 +56,7 @@ ___
 
 ▸ **book_name_to_book**(`book_name`: string): *[Book](../enums/_bible_reference_book_.book.md) | null*
 
-*Defined in [bible-reference/parse-reference.ts:147](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L147)*
+*Defined in [bible-reference/parse-reference.ts:158](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L158)*
 
 **Parameters:**
 
@@ -71,7 +72,7 @@ ___
 
 ▸ **fillOut**(`query`: [BibleReferenceQuery](_bible_reference_parse_reference_.md#biblereferencequery) | null, `template`: [BibleReferenceQuery](_bible_reference_parse_reference_.md#biblereferencequery) | null): *[BibleReferenceQuery](_bible_reference_parse_reference_.md#biblereferencequery) | null*
 
-*Defined in [bible-reference/parse-reference.ts:138](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L138)*
+*Defined in [bible-reference/parse-reference.ts:149](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L149)*
 
 **Parameters:**
 
@@ -84,11 +85,27 @@ Name | Type |
 
 ___
 
+###  is_single_chapter
+
+▸ **is_single_chapter**(`book`: [Book](../enums/_bible_reference_book_.book.md)): *boolean*
+
+*Defined in [bible-reference/parse-reference.ts:167](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L167)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`book` | [Book](../enums/_bible_reference_book_.book.md) |
+
+**Returns:** *boolean*
+
+___
+
 ###  parseReference
 
 ▸ **parseReference**(`reference`: string): *[BibleReferenceRange](_bible_reference_parse_reference_.md#biblereferencerange)[]*
 
-*Defined in [bible-reference/parse-reference.ts:17](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L17)*
+*Defined in [bible-reference/parse-reference.ts:17](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L17)*
 
 **Parameters:**
 
@@ -104,7 +121,7 @@ ___
 
 ▸ **parseSingleReference**(`reference`: string, `previous`: [BibleReferenceRange](_bible_reference_parse_reference_.md#biblereferencerange) | null, `bracketed`: boolean): *[BibleReferenceRange](_bible_reference_parse_reference_.md#biblereferencerange)*
 
-*Defined in [bible-reference/parse-reference.ts:64](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L64)*
+*Defined in [bible-reference/parse-reference.ts:64](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L64)*
 
 **Parameters:**
 
@@ -122,7 +139,7 @@ ___
 
 ▸ **queryFromRe**(`reference`: string, `re`: RegExp, `partial_structure`: boolean, `template`: [BibleReferenceQuery](_bible_reference_parse_reference_.md#biblereferencequery) | null): *[BibleReferenceQuery](_bible_reference_parse_reference_.md#biblereferencequery) | null*
 
-*Defined in [bible-reference/parse-reference.ts:98](https://github.com/gbj/venite/blob/80526ac2/ldf/src/bible-reference/parse-reference.ts#L98)*
+*Defined in [bible-reference/parse-reference.ts:100](https://github.com/gbj/venite/blob/eff0555c/ldf/src/bible-reference/parse-reference.ts#L100)*
 
 **Parameters:**
 
