@@ -1,1 +1,193 @@
-{"value":[{"metadata":{"level":1},"type":"heading","style":"text","hidden":false,"value":["At Noon"]},{"hidden":false,"citation":null,"language":"en","metadata":{"latinname":"Laudate, pueri","omit_antiphon":false,"number":"113","localname":"Psalm 113","omit_gloria":false},"label":"From Psalm 113","category":["Psalm"],"type":"psalm","sharing":{"privacy":"public","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","collaborators":[],"organization":"venite","status":"published"},"version_label":null,"version":"bcp1979","style":"psalm","value":[{"type":"psalm-section","value":[{"number":"1","type":"psalm-verse","halfverse":"praise the Name of the LORD.","verse":"Give praise, you servants of the LORD; *"},{"verse":"Let the Name of the LORD be blessed, *","halfverse":"from this time forth for evermore.","number":"2","type":"psalm-verse"},{"number":"3","verse":"From the rising of the sun to its going down *","halfverse":"let the Name of the LORD be praised.","type":"psalm-verse"},{"type":"psalm-verse","number":"4","halfverse":"and his glory above the heavens.","verse":"The LORD is high above all nations, *"}]}],"slug":"psalm_113_bracket_abbrev"},{"citation":"Isaiah 26:3; 30:15","hidden":false,"version":"","language":"en","category":[],"value":[{"text":"O God, you will keep in perfect peace those whose minds are fixed on you; ","chapter":"26","book":"Isaiah","verse":"3"},{"text":"for in returning and rest we shall be saved; in quietness and trust shall be our strength.","book":"Isaiah","chapter":"26","verse":"15"}],"label":"","type":"bible-reading","source":{"api":"","source":"","citation":""},"metadata":{"response":" "},"style":"short"},{"hidden":false,"type":"rubric","value":[" Prayers may be offered for ourselves and others."]},{"style":"authorized-prayers","type":"text","hidden":false},{"hidden":false,"type":"meditation","metadata":{"length":300,"delay":0}},{"type":"option","value":[{"type":"text","style":"prayer","category":[],"display_format":"unison","hidden":false,"value":["Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."],"version_label":"Traditional","source":{"api":"","source":"","citation":""},"label":"The Lord’s Prayer"},{"display_format":"unison","type":"text","category":[],"style":"prayer","version_label":"Contemporary","value":["Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."],"label":"The Lord’s Prayer","hidden":false}],"metadata":{"selected":0,"editor_selected":0},"hidden":false},{"type":"text","lookup":{"type":"collect"},"style":"prayer","hidden":false},{"type":"option","metadata":{"editor_selected":0,"selected":0},"value":[{"style":"prayer","type":"text","value":["Blessed Savior, at this hour you hung upon the cross, stretching out your loving arms: Grant that all the peoples of the earth may look to you and be saved; for your mercies’ sake."],"hidden":false},{"type":"text","value":["Lord Jesus Christ, you said to your apostles, “Peace I give to you; my own peace I leave with you:” Regard not our sins, but the faith of your Church, and give to us the peace and unity of that heavenly City, where with the Father and the Holy Spirit you live and reign, now and for ever."],"hidden":false,"style":"prayer"}],"hidden":false}],"label":"Noon","version":"Daily-Devotions","metadata":{"special_preferences":{},"evening":false,"liturgyversions":["bcp1979"],"preferences":{},"supplement":false},"category":[],"hidden":false,"id":"6gRYpSkEYTIHN8nEJkTB","date_modified":{"seconds":1620212322,"nanoseconds":377000000},"date_created":{"nanoseconds":348000000,"seconds":1620212020},"slug":"noonday-prayer","type":"liturgy","sharing":{"collaborators":[],"privacy":"public","status":"published","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","organization":"venite"},"language":"en","source":{"api":"","citation":"","source":""},"lastRevision":84}
+{
+  "order": 110,
+  "value": [
+    {
+      "metadata": { "level": 1 },
+      "type": "heading",
+      "style": "text",
+      "hidden": false,
+      "value": ["At Noon"]
+    },
+    {
+      "hidden": false,
+      "citation": null,
+      "language": "en",
+      "metadata": {
+        "latinname": "Laudate, pueri",
+        "omit_antiphon": false,
+        "number": "113",
+        "localname": "Psalm 113",
+        "omit_gloria": false
+      },
+      "label": "From Psalm 113",
+      "category": ["Psalm"],
+      "type": "psalm",
+      "sharing": {
+        "privacy": "public",
+        "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+        "collaborators": [],
+        "organization": "venite",
+        "status": "published"
+      },
+      "version_label": null,
+      "version": "bcp1979",
+      "style": "psalm",
+      "value": [
+        {
+          "type": "psalm-section",
+          "value": [
+            {
+              "number": "1",
+              "type": "psalm-verse",
+              "halfverse": "praise the Name of the LORD.",
+              "verse": "Give praise, you servants of the LORD; *"
+            },
+            {
+              "verse": "Let the Name of the LORD be blessed, *",
+              "halfverse": "from this time forth for evermore.",
+              "number": "2",
+              "type": "psalm-verse"
+            },
+            {
+              "number": "3",
+              "verse": "From the rising of the sun to its going down *",
+              "halfverse": "let the Name of the LORD be praised.",
+              "type": "psalm-verse"
+            },
+            {
+              "type": "psalm-verse",
+              "number": "4",
+              "halfverse": "and his glory above the heavens.",
+              "verse": "The LORD is high above all nations, *"
+            }
+          ]
+        }
+      ],
+      "slug": "psalm_113_bracket_abbrev"
+    },
+    {
+      "citation": "Isaiah 26:3; 30:15",
+      "hidden": false,
+      "version": "",
+      "language": "en",
+      "category": [],
+      "value": [
+        {
+          "text": "O God, you will keep in perfect peace those whose minds are fixed on you; ",
+          "chapter": "26",
+          "book": "Isaiah",
+          "verse": "3"
+        },
+        {
+          "text": "for in returning and rest we shall be saved; in quietness and trust shall be our strength.",
+          "book": "Isaiah",
+          "chapter": "26",
+          "verse": "15"
+        }
+      ],
+      "label": "",
+      "type": "bible-reading",
+      "source": { "api": "", "source": "", "citation": "" },
+      "metadata": { "response": " " },
+      "style": "short"
+    },
+    {
+      "hidden": false,
+      "type": "rubric",
+      "value": [" Prayers may be offered for ourselves and others."]
+    },
+    { "style": "authorized-prayers", "type": "text", "hidden": false },
+    {
+      "hidden": false,
+      "type": "meditation",
+      "metadata": { "length": 300, "delay": 0 }
+    },
+    {
+      "type": "option",
+      "value": [
+        {
+          "type": "text",
+          "style": "prayer",
+          "category": [],
+          "display_format": "unison",
+          "hidden": false,
+          "value": [
+            "Our Father, who art in heaven,\n\thallowed be thy Name,\n\tthy kingdom come,\n\tthy will be done,\n\ton earth as it is in heaven.\nGive us this day our daily bread.\nAnd forgive us our trespasses,\n\tas we forgive those\n\twho trespass against us.\nAnd lead us not into temptation,\n\tbut deliver us from evil.\nFor thine is the kingdom,\n\tand the power, and the glory,\n\tfor ever and ever."
+          ],
+          "version_label": "Traditional",
+          "source": { "api": "", "source": "", "citation": "" },
+          "label": "The Lord’s Prayer"
+        },
+        {
+          "display_format": "unison",
+          "type": "text",
+          "category": [],
+          "style": "prayer",
+          "version_label": "Contemporary",
+          "value": [
+            "Our Father in heaven,\n\thallowed be your Name,\n\tyour kingdom come,\n\tyour will be done,\n\ton earth as in heaven.\nGive us today our daily bread.\nForgive us our sins,\n\tas we forgive those\n\twho sin against us.\nSave us from the time of trial,\n\tand deliver us from evil.\nFor the kingdom, the power,\n\tand the glory are yours,\n\tnow and for ever."
+          ],
+          "label": "The Lord’s Prayer",
+          "hidden": false
+        }
+      ],
+      "metadata": { "selected": 0, "editor_selected": 0 },
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "lookup": { "type": "collect" },
+      "style": "prayer",
+      "hidden": false
+    },
+    {
+      "type": "option",
+      "metadata": { "editor_selected": 0, "selected": 0 },
+      "value": [
+        {
+          "style": "prayer",
+          "type": "text",
+          "value": [
+            "Blessed Savior, at this hour you hung upon the cross, stretching out your loving arms: Grant that all the peoples of the earth may look to you and be saved; for your mercies’ sake."
+          ],
+          "hidden": false
+        },
+        {
+          "type": "text",
+          "value": [
+            "Lord Jesus Christ, you said to your apostles, “Peace I give to you; my own peace I leave with you:” Regard not our sins, but the faith of your Church, and give to us the peace and unity of that heavenly City, where with the Father and the Holy Spirit you live and reign, now and for ever."
+          ],
+          "hidden": false,
+          "style": "prayer"
+        }
+      ],
+      "hidden": false
+    }
+  ],
+  "label": "Noon",
+  "version": "Daily-Devotions",
+  "metadata": {
+    "special_preferences": {},
+    "evening": false,
+    "liturgyversions": ["bcp1979"],
+    "preferences": {},
+    "supplement": false
+  },
+  "category": [],
+  "hidden": false,
+  "id": "6gRYpSkEYTIHN8nEJkTB",
+  "date_modified": { "seconds": 1620212322, "nanoseconds": 377000000 },
+  "date_created": { "nanoseconds": 348000000, "seconds": 1620212020 },
+  "slug": "noonday-prayer",
+  "type": "liturgy",
+  "sharing": {
+    "collaborators": [],
+    "privacy": "public",
+    "status": "published",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "organization": "venite"
+  },
+  "language": "en",
+  "source": { "api": "", "citation": "", "source": "" },
+  "lastRevision": 84
+}

@@ -1,0 +1,189 @@
+  <!-- Header: Name of Liturgical Day-->
+  <ng-container *ngIf="dayName$ | async as day else blankHeader">
+    <ion-card-header>
+      <ion-card-title>
+        <h1><ldf-day-name [day]="day"></ldf-day-name></h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <ul class="feasts" *ngIf="day.holy_days?.length > 0 || day.week?.proper">
+          <ng-container *ngFor="let holy_day of day.holy_days"><li *ngIf="holy_day.type?.rank <= 2">{{ holy_day.name }}</li></ng-container>
+          <li *ngIf="day.week?.proper && !day.holy_day_observed">({{ 'Proper' | translate }} {{ day.week.proper }})</li>
+        </ul>
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ng-container>
+  <!-- Header if liturgical day has not loaded -->
+  <ng-template #blankHeader>
+    <ion-card-header>
+      <ion-card-title><ion-skeleton-text></ion-skeleton-text></ion-card-title>
+      <ion-card-subtitle><ion-skeleton-text></ion-skeleton-text></ion-card-subtitle>
+    </ion-card-header>
+  </ng-template>
+
+  <!-- Language, Version, Kalendar -->
+  <form [formGroup]="form">
+    <ng-container *ngIf="versionOptions$ | async as versionOptions">
+      <ion-segment class="version-segment" *ngIf="versionOptions.length > 1 && config?.segmentButtonForVersions" [mode]="segmentMode" formControlName="version" ngDefaultControl (ionChange)="setVersion($event.detail.value)">
+        <ion-segment-button *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-segment-button>
+      </ion-segment>
+    </ng-container>
+    <ion-item *ngIf="languageOptions.length > 1">
+      <ion-label position="stacked">{{ 'lang' | translate }}</ion-label>
+      <ion-select name="language" formControlName="language" ngDefaultControl (ionChange)="setLanguage($event.detail.value)">
+        <ion-select-option *ngFor="let opt of languageOptions" [value]="opt.value">{{ opt.label }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ng-container *ngIf="versionOptions$ | async as versionOptions">
+      <ion-item *ngIf="versionOptions.length >= 1 && !config?.segmentButtonForVersions">
+        <ion-label position="stacked">{{ 'version' | translate }}</ion-label>
+        <ion-select name="version" formControlName="version" ngDefaultControl (ionChange)="form.controls.version.setValue($event.detail.value)">
+          <ion-select-option *ngFor="let opt of versionOptions" [value]="opt.value">{{ opt.label }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ng-container>
+    <ng-container *ngIf="kalendarOptions$ | async as options">
+      <ion-item *ngIf="options.length > 1">
+        <ion-label position="stacked">{{ 'kalendar' | translate }}</ion-label>
+        <ion-select ngDefaultControl formControlName="kalendar" (ionChange)="form.controls.kalendar.setValue($event.detail.value)">
+          <ion-select-option *ngFor="let opt of options" [value]="opt.slug">{{ opt.name }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ng-container>
+
+  <!-- Date -->
+  <div formGroupName="date">
+    <ion-item>
+      <ion-label position="stacked">{{ 'month' | translate }}</ion-label>
+      <ion-select formControlName="month" ngDefaultControl (ionChange)="setMonth($event.detail.value)">
+        <ion-select-option value="1">{{ 'January' | translate }}</ion-select-option>
+        <ion-select-option value="2">{{ 'February' | translate }}</ion-select-option>
+        <ion-select-option value="3">{{ 'March' | translate }}</ion-select-option>
+        <ion-select-option value="4">{{ 'April' | translate }}</ion-select-option>
+        <ion-select-option value="5">{{ 'May' | translate }}</ion-select-option>
+        <ion-select-option value="6">{{ 'June' | translate }}</ion-select-option>
+        <ion-select-option value="7">{{ 'July' | translate }}</ion-select-option>
+        <ion-select-option value="8">{{ 'August' | translate }}</ion-select-option>
+        <ion-select-option value="9">{{ 'September' | translate }}</ion-select-option>
+        <ion-select-option value="10">{{ 'October' | translate }}</ion-select-option>
+        <ion-select-option value="11">{{ 'November' | translate }}</ion-select-option>
+        <ion-select-option value="12">{{ 'December' | translate }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ 'day' | translate }}</ion-label>
+      <ion-select formControlName="day" ngDefaultControl  (ionChange)="setDate($event.detail.value)">
+        <ion-select-option *ngFor="let d of daysInMonth$ | async" [value]="d.toString()">{{ d }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">{{ 'year' | translate }}</ion-label>
+      <ion-input formControlName="year" ngDefaultControl type="number"></ion-input>
+    </ion-item>
+  </div>
+
+    <!-- Liturgy -->
+    <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
+      <ion-item *ngIf="options?.length > 1">
+        <ion-label position="stacked">{{ 'liturgy' | translate }}</ion-label>
+        <ng-container *ngIf="liturgyOptions$ | async as options else skeleton">
+          <ion-select
+            formControlName="liturgy"
+            ngDefaultControl
+            (ionChange)="form.controls.liturgy.setValue($event.detail.value)"
+          >
+          <ion-select-option *ngFor="let liturgy of options" [value]="liturgy.slug">{{ liturgy.label }}</ion-select-option>
+        </ion-select>
+      </ng-container>
+      </ion-item>
+    </ng-container>
+
+    <!-- Vigil -->
+    <ion-item *ngIf="showVigil">
+      <ion-label>{{ 'vigil' | translate }}</ion-label>
+      <ion-checkbox name="isVigil" formControlName="vigil" ngDefaultControl></ion-checkbox>
+    </ion-item>
+
+    <!-- Which Day to Observe -->
+    <ng-container *ngIf="observanceChoices$ | async as options">
+      <ion-radio-group *ngIf="options.length > 1" formControlName="observance" ngDefaultControl (ionChange)="form.controls.observance.setValue($event.detail.value)">
+        <ion-item *ngFor="let opt of options">
+          <ion-label>{{ opt.name }}</ion-label>
+          <ion-radio slot="end" [value]="opt.slug"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ng-container>
+
+    <ng-container *ngIf="dayName$ | async as day else blankHeader">
+      <ng-container *ngIf="day.alternate">
+        <ion-radio-group formControlName="alternate" ngDefaultControl (ionChange)="form.controls.observance.setValue($event.detail.value)">
+          <ion-item>
+            <ion-label><ldf-day-name [day]="day"></ldf-day-name></ion-label>
+            <ion-radio slot="end" [value]="day.propers || day.slug"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label><ldf-day-name [day]="day.alternate"></ldf-day-name></ion-label>
+            <ion-radio slot="end" [value]="day.alternate.propers || day.alternate.slug"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ng-container>
+    </ng-container>
+
+    <!-- Proper Liturgies -->
+    <ng-container *ngIf="availableProperLiturgies$ | async as liturgies">
+      <ion-item *ngFor="let liturgy of liturgies">
+        <ion-label>{{ liturgy.label }}</ion-label>
+        <ion-toggle (ionChange)="setProperLiturgy(liturgy, $event)"></ion-toggle>
+      </ion-item>
+    </ng-container>
+  </form>
+
+<!-- Pray Button -->
+<div class="pray-buttons">
+  <ng-container *ngIf="prayButton">
+    <ng-container *ngIf="prayData$ | async as data else notLoaded">
+      <!--<ng-container *ngIf="preferencesLoaded$ | async else notLoaded">-->
+        <ion-button (click)="pray(data)" [disabled]="isNavigating">
+          <ion-label>{{ 'Pray' | translate }}</ion-label>
+        </ion-button>
+      <!--</ng-container>-->
+    </ng-container>
+    <ng-template #notLoaded>
+      <ion-button disabled="true">
+        <ion-label>{{ 'Pray' | translate }}</ion-label>
+      </ion-button>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="bulletinNotice">
+    <p class="note">Create bulletins using the new <a routerLink="/bulletins">Bulletins</a> page.</p>
+  </ng-container>
+  <ng-container *ngIf="config?.hasBulletinMode || bulletinButton">
+    <ion-button *ngIf="prayData$ | async as data" (click)="pray(data, true)" [disabled]="isNavigating">
+      <ion-label>{{ 'Create a Bulletin' | translate }}</ion-label>
+    </ion-button>
+  </ng-container>
+  <ng-container *ngIf="config?.prayersAndThanksgivings?.preset">
+    <ion-button (click)="prayersAndThanksgivings()" fill="clear">
+      <ion-label>{{ 'Choose Prayers and Thanksgivings' | translate }}</ion-label>
+    </ion-button>
+  </ng-container>
+</div>
+
+<!-- Preferences -->
+
+<venite-liturgy-preference-menu
+  [liturgy]="liturgy$ | async"
+  [onlyAdvancedSettings]="showOnlyAdvancedSettings"
+  (clientPreferencesChange)="menuPreferences$.next($event)"
+  (preferencesLoaded)="preferencesLoaded$.next($event)"
+></venite-liturgy-preference-menu>
+
+<ng-container *ngIf="config?.blackLetterCollectsOptional">
+  <ion-item>
+    <ion-label>{{ 'use-black-letter-collects' | translate }}</ion-label>
+    <ion-checkbox name="useBlackLetterCollect" [formControl]="useBlackLetterCollect" ngDefaultControl></ion-checkbox>
+  </ion-item>
+</ng-container>
+
+<ng-template #skeleton>
+  <ion-skeleton-text class="select"></ion-skeleton-text>
+</ng-template>

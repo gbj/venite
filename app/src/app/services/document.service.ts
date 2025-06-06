@@ -217,7 +217,7 @@ export class DocumentService {
             loadLiturgy("en", "Rite-I", "eucharist"),
             loadLiturgy("en", "EOW", "eucharist"),
           ]
-    );
+    ).pipe(map((liturgies) => liturgies.filter((l) => l.version == version)));
 
     return concat(offlineLiturgies$, onlineLiturgies$).pipe(
       tap((docs) => console.log("options = ", docs))

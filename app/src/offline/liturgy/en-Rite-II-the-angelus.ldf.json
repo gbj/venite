@@ -1,1 +1,116 @@
-{"language":"en","lastRevision":62,"sharing":{"privacy":"public","collaborators":[],"status":"published","organization":"venite","owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2"},"metadata":{"special_preferences":{},"preferences":{}},"label":"The Angelus","date_modified":{"seconds":1632273854,"nanoseconds":583000000},"hidden":false,"value":[{"type":"heading","metadata":{"level":1},"hidden":false,"value":["The Angelus"]},{"value":[{"text":"The Angel of the Lord announced unto Mary,","response":"","label":"V."},{"text":"And she conceived of the Holy Spirit.","label":"R."}],"style":"preces","type":"responsive","hidden":false},{"type":"text","metadata":{},"style":"prayer","hidden":false,"value":["Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."]},{"hidden":false,"value":[{"response":"","label":"V.","text":"Behold the handmaid of the Lord,"},{"label":"R.","text":"Be it done unto me according to your Word."}],"style":"preces","type":"responsive"},{"style":"prayer","value":["Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."],"hidden":false,"type":"text"},{"style":"preces","value":[{"text":"And the Word was made flesh.","response":"","label":"V."},{"text":"And dwelt among us.","label":"R."}],"type":"responsive","hidden":false},{"value":["Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."],"hidden":false,"style":"prayer","type":"text"},{"hidden":false,"type":"responsive","value":[{"text":"Pray for us, O Holy Mother of God.","response":"","label":"V."},{"label":"R.","text":"That we may be made worthy of the promises of Christ."},{"text":"Let us pray.","label":""}],"style":"preces"},{"style":"prayer","hidden":false,"type":"text","value":["Pour your grace into our hearts, O Lord, that we who have known the incarnation of your Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought to the glory of his resurrection; who lives and reigns with you, in the unity of the Holy Spirit, one God, now and for ever."]}],"version":"Rite-II","type":"liturgy","slug":"the-angelus"}
+{
+  "order": 500,
+  "language": "en",
+  "lastRevision": 62,
+  "sharing": {
+    "privacy": "public",
+    "collaborators": [],
+    "status": "published",
+    "organization": "venite",
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
+  },
+  "metadata": { "special_preferences": {}, "preferences": {} },
+  "label": "The Angelus",
+  "date_modified": { "seconds": 1632273854, "nanoseconds": 583000000 },
+  "hidden": false,
+  "value": [
+    {
+      "type": "heading",
+      "metadata": { "level": 1 },
+      "hidden": false,
+      "value": ["The Angelus"]
+    },
+    {
+      "value": [
+        {
+          "text": "The Angel of the Lord announced unto Mary,",
+          "response": "",
+          "label": "V."
+        },
+        { "text": "And she conceived of the Holy Spirit.", "label": "R." }
+      ],
+      "style": "preces",
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "type": "text",
+      "metadata": {},
+      "style": "prayer",
+      "hidden": false,
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ]
+    },
+    {
+      "hidden": false,
+      "value": [
+        {
+          "response": "",
+          "label": "V.",
+          "text": "Behold the handmaid of the Lord,"
+        },
+        { "label": "R.", "text": "Be it done unto me according to your Word." }
+      ],
+      "style": "preces",
+      "type": "responsive"
+    },
+    {
+      "style": "prayer",
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "style": "preces",
+      "value": [
+        {
+          "text": "And the Word was made flesh.",
+          "response": "",
+          "label": "V."
+        },
+        { "text": "And dwelt among us.", "label": "R." }
+      ],
+      "type": "responsive",
+      "hidden": false
+    },
+    {
+      "value": [
+        "Hail Mary, full of grace, the Lord is with you;\n   blessed are you among women and blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "hidden": false,
+      "style": "prayer",
+      "type": "text"
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "text": "Pray for us, O Holy Mother of God.",
+          "response": "",
+          "label": "V."
+        },
+        {
+          "label": "R.",
+          "text": "That we may be made worthy of the promises of Christ."
+        },
+        { "text": "Let us pray.", "label": "" }
+      ],
+      "style": "preces"
+    },
+    {
+      "style": "prayer",
+      "hidden": false,
+      "type": "text",
+      "value": [
+        "Pour your grace into our hearts, O Lord, that we who have known the incarnation of your Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought to the glory of his resurrection; who lives and reigns with you, in the unity of the Holy Spirit, one God, now and for ever."
+      ]
+    }
+  ],
+  "version": "Rite-II",
+  "type": "liturgy",
+  "slug": "the-angelus"
+}

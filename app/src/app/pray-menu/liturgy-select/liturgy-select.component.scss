@@ -1,0 +1,39 @@
+.form {
+  text-align: center;
+}
+
+ul.feasts {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: block;
+    margin: auto;
+  }
+}
+
+.pray-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
+}
+
+ion-skeleton-text.select {
+  line-height: 16px;
+}
+
+p.note {
+  font-size: 80%;
+  font-style: italic;
+}
+
+.version-segment {
+  margin-bottom: 0.5em;
+}

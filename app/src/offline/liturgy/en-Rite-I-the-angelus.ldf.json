@@ -1,1 +1,132 @@
-{"slug":"the-angelus","label":"The Angelus","value":[{"hidden":false,"value":["The Angelus"],"type":"heading","metadata":{"level":1}},{"style":"preces","type":"responsive","value":[{"text":"The Angel of the Lord announced unto Mary,","response":"","label":"V."},{"label":"R.","text":"And she conceived by the Holy Ghost."}],"hidden":false},{"hidden":false,"style":"prayer","metadata":{},"value":["Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."],"type":"text"},{"style":"preces","hidden":false,"type":"responsive","value":[{"text":"Behold the handmaid of the Lord:","label":"V.","response":""},{"label":"R.","text":"Be it unto me according to thy word."}]},{"style":"prayer","value":["Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."],"hidden":false,"type":"text"},{"hidden":false,"type":"responsive","value":[{"response":"","label":"V.","text":"And the Word was made flesh."},{"text":"And dwelt among us.","label":"R."}],"style":"preces"},{"value":["Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."],"style":"prayer","hidden":false,"type":"text"},{"hidden":false,"type":"responsive","value":[{"response":"","text":"Pray for us, O Holy Mother of God.","label":"V."},{"text":"That we may be made worthy of the promises of Christ.","label":"R."},{"text":"Let us pray.","label":""}],"style":"preces"},{"style":"prayer","type":"text","hidden":false,"value":["We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."]}],"date_created":{"nanoseconds":367000000,"seconds":1610557049},"category":[],"id":"F8th0Wu9qtjTL13cBbTr","source":{"api":"","citation":"","source":""},"language":"en","type":"liturgy","hidden":false,"metadata":{"liturgyversions":[],"evening":false,"supplement":false,"preferences":{"noPreferences":{"key":"noPreferences","options":[{}],"label":"No Preferences"}},"special_preferences":{}},"lastRevision":81,"date_modified":{"seconds":1636997061,"nanoseconds":5000000},"sharing":{"owner":"ikvC2kTwM0MhmiqfMOi2fFZynJr2","privacy":"public","status":"published","collaborators":[],"organization":"venite"},"version":"Rite-I"}
+{
+  "order": 500,
+  "slug": "the-angelus",
+  "label": "The Angelus",
+  "value": [
+    {
+      "hidden": false,
+      "value": ["The Angelus"],
+      "type": "heading",
+      "metadata": { "level": 1 }
+    },
+    {
+      "style": "preces",
+      "type": "responsive",
+      "value": [
+        {
+          "text": "The Angel of the Lord announced unto Mary,",
+          "response": "",
+          "label": "V."
+        },
+        { "label": "R.", "text": "And she conceived by the Holy Ghost." }
+      ],
+      "hidden": false
+    },
+    {
+      "hidden": false,
+      "style": "prayer",
+      "metadata": {},
+      "value": [
+        "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "type": "text"
+    },
+    {
+      "style": "preces",
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "text": "Behold the handmaid of the Lord:",
+          "label": "V.",
+          "response": ""
+        },
+        { "label": "R.", "text": "Be it unto me according to thy word." }
+      ]
+    },
+    {
+      "style": "prayer",
+      "value": [
+        "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "response": "",
+          "label": "V.",
+          "text": "And the Word was made flesh."
+        },
+        { "text": "And dwelt among us.", "label": "R." }
+      ],
+      "style": "preces"
+    },
+    {
+      "value": [
+        "Hail Mary, full of grace, the Lord is with thee;\n   blessed art thou among women and blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God, pray for us sinners,\n    now and at the hour of our death."
+      ],
+      "style": "prayer",
+      "hidden": false,
+      "type": "text"
+    },
+    {
+      "hidden": false,
+      "type": "responsive",
+      "value": [
+        {
+          "response": "",
+          "text": "Pray for us, O Holy Mother of God.",
+          "label": "V."
+        },
+        {
+          "text": "That we may be made worthy of the promises of Christ.",
+          "label": "R."
+        },
+        { "text": "Let us pray.", "label": "" }
+      ],
+      "style": "preces"
+    },
+    {
+      "style": "prayer",
+      "type": "text",
+      "hidden": false,
+      "value": [
+        "We beseech thee, O Lord, pour thy grace into our hearts, that we who have known the incarnation of thy Son Jesus Christ, announced by an angel to the Virgin Mary, may by his cross and passion be brought unto the glory of his resurrection; who liveth and reigneth with thee, in the unity of the Holy Spirit, one God, now and for ever."
+      ]
+    }
+  ],
+  "date_created": { "nanoseconds": 367000000, "seconds": 1610557049 },
+  "category": [],
+  "id": "F8th0Wu9qtjTL13cBbTr",
+  "source": { "api": "", "citation": "", "source": "" },
+  "language": "en",
+  "type": "liturgy",
+  "hidden": false,
+  "metadata": {
+    "liturgyversions": [],
+    "evening": false,
+    "supplement": false,
+    "preferences": {
+      "noPreferences": {
+        "key": "noPreferences",
+        "options": [{}],
+        "label": "No Preferences"
+      }
+    },
+    "special_preferences": {}
+  },
+  "lastRevision": 81,
+  "date_modified": { "seconds": 1636997061, "nanoseconds": 5000000 },
+  "sharing": {
+    "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
+    "privacy": "public",
+    "status": "published",
+    "collaborators": [],
+    "organization": "venite"
+  },
+  "version": "Rite-I"
+}

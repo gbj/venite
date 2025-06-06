@@ -10,11 +10,11 @@ import { BulletinsPage } from "./bulletins.page";
 import { TranslateModule } from "@ngx-translate/core";
 import { AuthModule } from "../auth/auth.module";
 import { CreateDocumentButtonComponent } from "./create-document-button/create-document-button.component";
-import { PrayMenuModule } from "@venite/ng-pray-menu";
 import { CreateBulletinModalComponent } from "./create-bulletin-modal/create-bulletin-modal.component";
 import { BulletinSlugModalComponent } from "../bulletin-slug-modal/bulletin-slug-modal.component";
 import { SharedModule } from "../shared/shared.module";
 import { OrganizationPageModule } from "../organization/organization.module";
+import { PrayMenuModule } from "../pray-menu/pray-menu.module";
 
 @NgModule({
   imports: [

@@ -63,7 +63,7 @@ import { CanticleTableService } from "./services/canticle-table.service";
 import { PrayPageModule } from "./pray/pray.module";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { FileOpener } from "@ionic-native/file-opener/ngx";
-import { PrayMenuModule } from "@venite/ng-pray-menu";
+import { PrayMenuModule } from "./pray-menu/pray-menu.module";
 //import { PrayPageModule } from '@venite/ng-pray';
 
 @NgModule({

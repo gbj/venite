@@ -11,7 +11,7 @@ import { TranslateModule } from "@ngx-translate/core";
 // Venite Modules
 import { AuthModule } from "../auth/auth.module";
 import { SharedModule } from "../shared/shared.module";
-import { PrayMenuModule } from "@venite/ng-pray-menu";
+import { PrayMenuModule } from "../pray-menu/pray-menu.module";
 
 @NgModule({
   imports: [

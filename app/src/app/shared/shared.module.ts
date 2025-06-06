@@ -5,11 +5,11 @@ import { RouterModule } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
 
 import { MenuComponent } from "./menu/menu.component";
-import { PrayMenuModule } from "@venite/ng-pray-menu";
 import { SponsorComponent } from "./sponsor/sponsor.component";
 import { AuthMenuButtonComponent } from "./auth-menu-button/auth-menu-button.component";
 import { IssueComponent } from "./issue/issue.component";
 import { FormsModule } from "@angular/forms";
+import { PrayMenuModule } from "../pray-menu/pray-menu.module";
 
 @NgModule({
   declarations: [
