@@ -1,6 +1,6 @@
 {
   "name": "@venite/ng-pray-menu",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "dependencies": {
     "tslib": "^2.0.0"
   },

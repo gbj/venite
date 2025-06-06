@@ -159,8 +159,10 @@ export class LiturgyPreferenceMenuComponent implements OnInit, OnChanges {
       // sort categories from shortest to longest
       map(({ preferences, categories, preference_tree }) => ({
         preferences: Object.entries(preferences),
-        categories: categories.sort(
-          (a, b) => preference_tree[a].length - preference_tree[b].length
+        categories: categories.sort((a, b) =>
+          a === "Advanced Settings"
+            ? 1
+            : preference_tree[a].length - preference_tree[b].length
         ),
         preference_tree,
       }))
