@@ -6,6 +6,7 @@ import showdown from 'showdown';
 import EN from './text.i18n.en.json';
 import ES from './text.i18n.es.json';
 import { modalController } from '@ionic/core';
+import { useDropcap } from '../../utils/dropcaps';
 
 const LOCALE = {
   'en': EN,
@@ -227,7 +228,7 @@ export class TextComponent {
                         <span id={`${this.obj.uid || this.obj.slug}-${prayerIndex}-${chunkIndex}`}>
                           <ldf-string text={chunk}
                             citation={{label: this.obj.label}}
-                            dropcap={this.obj?.display_format == "force_dropcap" && prayerIndex === 0 && chunkIndex === 0 ? "force" : (prayerIndex === 0 && chunkIndex <= 1 ? "enabled" : "disabled")}
+                            dropcap={useDropcap(this.obj.language, this.obj.display_format, prayerIndex + chunkIndex)}
                             index={prayerIndex + chunkIndex}
                             fragment={this.path}
                           >

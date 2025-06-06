@@ -65,7 +65,7 @@ export type ValuePiece =
   | PsalmSection
   | string;
 
-const DISPLAY_FORMATS = ['default', 'omit', 'unison', 'abbreviated', 'force_dropcap'];
+const DISPLAY_FORMATS = ['default', 'omit', 'unison', 'abbreviated', 'force_dropcap', 'disable_dropcap'];
 type DisplayFormatTuple = typeof DISPLAY_FORMATS;
 export type DisplayFormat = DisplayFormatTuple[number];
 

@@ -6,6 +6,7 @@ import { getComponentClosestLanguage } from '../../utils/locale';
 import EN from './bible-reading.i18n.en.json';
 import ES from './bible-reading.i18n.es.json';
 import { fetchReading } from './fetch-reading';
+import { useDropcap } from '../../utils/dropcaps';
 const LOCALE = {
   'en': EN,
   'es': ES
@@ -309,7 +310,7 @@ export class BibleReadingComponent {
                       id={this.obj.uid}
                       text={(verse as BibleReadingVerse).text}
                       fragment={this.path}
-                      dropcap={this.obj?.display_format == "force_dropcap" && verseIndex === 0 ? "force" : "disabled"}
+                      dropcap={useDropcap(this.obj?.language, this.obj?.display_format, verseIndex)}
                   >
                   </ldf-string>
                 )}
@@ -342,7 +343,7 @@ export class BibleReadingComponent {
                   <sup>{(verse as BibleReadingVerse).verse}</sup>,
                   <ldf-string
                     citation={verse}
-                    dropcap={paragraphIndex == 0 && verseIndex == 0 && this.obj?.language !== 'iu' ? 'force' : 'disabled'}
+                    dropcap={useDropcap(this.obj?.language, this.obj?.display_format, paragraphIndex + verseIndex)}
                     id={`${(verse as BibleReadingVerse).chapter}-${(verse as BibleReadingVerse).book}-${(verse as BibleReadingVerse).verse}`}
                     text={(verse as BibleReadingVerse).text}
                     index={verseIndex}

@@ -5,6 +5,7 @@ import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './psalm.i18n.en.json';
 import ES from './psalm.i18n.es.json';
+import { useDropcap } from '../../utils/dropcaps';
 const LOCALE = {
   'en': EN,
   'es': ES
@@ -318,7 +319,7 @@ export class PsalmComponent {
                   </ldf-editable-text> :
                   <ldf-string text={verse.verse}
                     citation={{label: this.obj?.label, book: this.obj?.style === 'psalm' ? 'Psalm' : undefined, chapter: this.obj?.metadata?.number, verse: verse.number}}
-                    dropcap={(verseIndex == 0 && this.obj?.language !== "he" && this.obj?.language !== "iu") ? 'force' : 'disabled'}
+                    dropcap={useDropcap(this.obj?.language, this.obj?.display_format, verseIndex)}
                     index={verseIndex}
                     fragment={this.path}
                   >

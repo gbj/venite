@@ -1,8 +1,9 @@
 import { Component, Prop, Watch, State, Element, Host, JSX, h } from '@stencil/core';
-import { ResponsivePrayer, ResponsivePrayerLine, Heading } from '@venite/ldf';
+import { ResponsivePrayer, ResponsivePrayerLine, Heading, LiturgicalDocument } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './responsive-prayer.i18n.en.json';
+import { useDropcap } from '../../utils/dropcaps';
 const LOCALE = {
   'en': EN,
 };
@@ -78,13 +79,13 @@ export class ResponsivePrayerComponent {
   }
 
   /** renders a `ResponsivePrayerLine` as an `ldf-string` */
-  stringNode(line : ResponsivePrayerLine, index : number, part : 'label' | 'text' | 'response') : JSX.Element {
+  stringNode(doc: LiturgicalDocument, line : ResponsivePrayerLine, index : number, part : 'label' | 'text' | 'response') : JSX.Element {
     return (
       <ldf-string
         citation={{label: this.obj.label}}
         id={`${this.obj.uid}-${index}-${part}`}
         text={line[part]}
-        dropcap={index == 0 ? "enabled" : "disabled"}
+        dropcap={useDropcap(doc.language, doc.display_format, index)}
         fragment={this.path}
       >
       </ldf-string>
@@ -168,10 +169,10 @@ export class ResponsivePrayerComponent {
             {this.obj.value.map((line, index) =>
               <tr class="row">
                 <td class="cell">
-                  {this.editable ? this.editableNode(line, index, 'label', template, templateMaker) : this.stringNode(line, index, 'label')}
+                  {this.editable ? this.editableNode(line, index, 'label', template, templateMaker) : this.stringNode(this.obj, line, index, 'label')}
                 </td>
                 <td class={index % 2 == 0 ? 'cell' : 'cell response'}>
-                  {this.editable ? this.editableNode(line, index, 'text', template, templateMaker) : this.stringNode(line, index, 'text')}
+                  {this.editable ? this.editableNode(line, index, 'text', template, templateMaker) : this.stringNode(this.obj, line, index, 'text')}
                 </td>
               </tr>
             )}
@@ -212,7 +213,7 @@ export class ResponsivePrayerComponent {
               {/* render the text of the main line*/}
               {this.editable 
                 ? this.editableNode(line, index, 'text', template, templateMaker)
-                : this.stringNode(line, index, 'text')}
+                : this.stringNode(this.obj, line, index, 'text')}
 
               {/* if the `ResponsivePrayerLine` has a `response` property, render it*/}
               {line.response && (
@@ -261,10 +262,10 @@ export class ResponsivePrayerComponent {
               [
                 this.editable ?
                   <div>{this.editableNode(line, index, 'text', template, templateMaker)}</div> :
-                  <div>{this.stringNode(line, index, 'text')}</div>,
+                  <div>{this.stringNode(this.obj, line, index, 'text')}</div>,
                 this.editable ?
                   <div class='response'>{this.editableNode(line, index, 'response', template, templateMaker)}</div> :
-                  <div class='response'>{this.stringNode(line, index, 'response')}</div>
+                  <div class='response'>{this.stringNode(this.obj, line, index, 'response')}</div>
               ]
             )}
           </p>
