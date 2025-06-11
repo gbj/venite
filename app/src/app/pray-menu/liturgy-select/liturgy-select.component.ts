@@ -214,10 +214,15 @@ export class LiturgySelectComponent implements OnInit {
         this.documents.getLiturgyOptions(language, version)
       ),
       map((options) => {
-        console.log("sorting options", options);
-        options.sort((a: any, b: any) =>
-          a.order && b.order && a.order < b.order ? -1 : 1
-        );
+        options.sort((a: any, b: any) => {
+          if (!a.order) {
+            return 1;
+          }
+          if (!b.order) {
+            return -1;
+          }
+          return a.order < b.order ? -1 : 1;
+        });
         return options;
       }),
       shareReplay()
