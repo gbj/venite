@@ -73,6 +73,7 @@ graph TD;
   ldf-liturgical-document --> ldf-image
   ldf-liturgical-document --> ldf-meditation
   ldf-liturgical-document --> ldf-option
+  ldf-liturgical-document --> ldf-parallel
   ldf-liturgical-document --> ldf-refrain
   ldf-liturgical-document --> ldf-rubric
   ldf-liturgical-document --> ldf-text
@@ -141,6 +142,7 @@ graph TD;
   ion-action-sheet --> ion-ripple-effect
   ion-alert --> ion-ripple-effect
   ion-alert --> ion-backdrop
+  ldf-parallel --> ldf-liturgical-document
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar

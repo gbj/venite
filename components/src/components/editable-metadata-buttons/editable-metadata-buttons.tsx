@@ -59,7 +59,7 @@ export class EditableMetadataButtonsComponent {
   }
 
   /** Type of the parent `LiturgicalDocument`, if any */
-  @Prop() parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null;
+  @Prop() parentType : 'liturgy' | 'cycle' | 'heading' | 'option' | 'parallel' | 'refrain' | 'rubric' | 'text' | 'responsive' | 'bible-reading' | 'psalm' | 'meditation' | null;
 
   /** Documents in `preview` mode will display as if they're not editable, unless the user explicitly chooses to edit them */
   @Prop() preview : boolean = false;

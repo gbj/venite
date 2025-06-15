@@ -125,6 +125,7 @@ graph TD;
   ldf-meditation --> ion-icon
   ldf-meditation --> ion-label
   ldf-meditation --> ldf-editable-text
+  ldf-parallel --> ldf-liturgical-document
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar

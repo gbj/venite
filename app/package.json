@@ -52,7 +52,7 @@
     "@types/wicg-mediasession": "^1.1.8",
     "@venite/angular": "^0.5.0",
     "@venite/bible-api": "^0.2.6",
-    "@venite/components": "^0.16.47",
+    "@venite/components": "^0.16.51",
     "@venite/docx": "^0.2.3",
     "@venite/ldf": "^0.21.46",
     "@venite/ng-darkmode": "0.0.13",

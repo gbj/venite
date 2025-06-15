@@ -3,10 +3,10 @@ import { Router } from "@angular/router";
 import { AlertController, LoadingController } from "@ionic/angular";
 import { TranslateService } from "@ngx-translate/core";
 import { LiturgicalDay, LiturgicalDocument } from "@venite/ldf";
-import { BulletinCommands } from "@venite/ng-pray-menu";
 import { switchMap, take } from "rxjs/operators";
 import { AuthService } from "src/app/auth/auth.service";
 import { OrganizationService } from "src/app/organization/organization.module";
+import { BulletinCommands } from "src/app/pray-menu/bulletin-commands";
 import { DocumentService } from "src/app/services/document.service";
 
 @Component({

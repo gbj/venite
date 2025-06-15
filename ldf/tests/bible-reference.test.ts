@@ -76,9 +76,7 @@ describe('parseReference', () => {
     expect(parseReference('1 Tim 2:3')).toEqual([
       { start: { book: Book.FirstTimothy, chapter: 2, verse: 3 }, end: null },
     ]);
-    expect(parseReference('Phlm 12')).toEqual([
-      { start: { book: Book.Philemon, chapter: 12, verse: null }, end: null },
-    ]);
+    expect(parseReference('Phlm 12')).toEqual([{ start: { book: Book.Philemon, chapter: 1, verse: 12 }, end: null }]);
     expect(parseReference('Heb 1')).toEqual([{ start: { book: Book.Hebrews, chapter: 1, verse: null }, end: null }]);
     expect(parseReference('Phil 1')).toEqual([
       { start: { book: Book.Philippians, chapter: 1, verse: null }, end: null },
@@ -243,6 +241,20 @@ describe('parseReference', () => {
     {
       start: { book: Book.PrayerOfAzariah, chapter: 1, verse: 29 },
       end: { book: Book.PrayerOfAzariah, chapter: 1, verse: 37 },
+    },
+  ]);
+
+  expect(parseReference('Exod. 35:30 - 36:1')).toEqual([
+    {
+      start: { book: Book.Exodus, chapter: 35, verse: 30 },
+      end: { book: Book.Exodus, chapter: 36, verse: 1 },
+    },
+  ]);
+
+  expect(parseReference('Exod. 35.30 - 36.1')).toEqual([
+    {
+      start: { book: Book.Exodus, chapter: 35, verse: 30 },
+      end: { book: Book.Exodus, chapter: 36, verse: 1 },
     },
   ]);
 });

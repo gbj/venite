@@ -120,6 +120,7 @@ graph TD;
   ion-action-sheet --> ion-ripple-effect
   ion-alert --> ion-ripple-effect
   ion-alert --> ion-backdrop
+  ldf-parallel --> ldf-liturgical-document
   ldf-rubric --> ldf-label-bar
   ldf-rubric --> ldf-editable-text
   ldf-responsive-prayer --> ldf-editable-text

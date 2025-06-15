@@ -732,3 +732,9 @@ ldf-psalm[lang=el] .verse, ldf-psalm[lang=el] .halfverse {
   --ldf-drop-font-family: var(--ldf-font-face);
   --ldf-drop-float: none;
 }
+
+.sc-ldf-parallel {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

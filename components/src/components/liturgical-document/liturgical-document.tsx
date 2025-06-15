@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, State, Host, Listen, Event, EventEmitter, JSX, Element, h } from '@stencil/core';
-import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor, SelectableCitation, Responsive } from '@venite/ldf';
+import { LiturgicalDocument, Liturgy, Meditation, BibleReading, Heading, Option, Psalm, Refrain, ResponsivePrayer, Rubric, Text, Image, LiturgicalColor, SelectableCitation, Responsive, Parallel } from '@venite/ldf';
 import { getComponentClosestLanguage } from '../../utils/locale';
 
 import EN from './liturgical-document.i18n.en.json';
@@ -212,6 +212,9 @@ export class LiturgicalDocumentComponent {
         break;
       case 'option':
         node = <ldf-option path={this.path} editable={editable} preview={this.preview} doc={doc as Option}></ldf-option>;
+        break;
+      case 'parallel':
+        node = <ldf-parallel path={this.path} editable={editable} preview={this.preview} doc={doc as Parallel}></ldf-parallel>;
         break;
       case 'refrain':
         node = <ldf-refrain path={this.path} editable={editable} doc={doc as Refrain}></ldf-refrain>;

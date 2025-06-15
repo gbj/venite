@@ -2862,6 +2862,35 @@ export class LdfOption {
   }
 }
 
+import { ParallelComponent as IParallelComponent } from '@venite/components/dist/types/components/parallel/parallel';
+export declare interface LdfParallel extends Components.LdfParallel {}
+@ProxyCmp({
+  inputs: ['doc', 'editable', 'path', 'preview']
+})
+@Component({
+  selector: 'ldf-parallel',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['doc', 'editable', 'path', 'preview'],
+  outputs: ['ldfAddOptionToDoc', 'ldfDocShouldChange', 'ldfOptionAskForStoredSelection', 'ldfOptionMakeSelection']
+})
+export class LdfParallel {
+  /**  */
+  ldfAddOptionToDoc!: IParallelComponent['ldfAddOptionToDoc'];
+  /**  */
+  ldfDocShouldChange!: IParallelComponent['ldfDocShouldChange'];
+  /**  */
+  ldfOptionAskForStoredSelection!: IParallelComponent['ldfOptionAskForStoredSelection'];
+  /**  */
+  ldfOptionMakeSelection!: IParallelComponent['ldfOptionMakeSelection'];
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['ldfAddOptionToDoc', 'ldfDocShouldChange', 'ldfOptionAskForStoredSelection', 'ldfOptionMakeSelection']);
+  }
+}
+
 import { PrayersAndThanksgivingsComponent as IPrayersAndThanksgivingsComponent } from '@venite/components/dist/types/components/prayers-and-thanksgivings/prayers-and-thanksgivings';
 export declare interface LdfPrayersAndThanksgivings extends Components.LdfPrayersAndThanksgivings {}
 @ProxyCmp({

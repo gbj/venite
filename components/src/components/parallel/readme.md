@@ -1,4 +1,4 @@
-# ldf-bible-reading
+# ldf-parallel
 
 
 
@@ -7,31 +7,22 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                            | Type                     | Default     |
-| ---------- | ---------- | ------------------------------------------------------ | ------------------------ | ----------- |
-| `doc`      | `doc`      | An LDF BibleReading object.                            | `BibleReading \| string` | `undefined` |
-| `editable` | `editable` | Whether the object is editable                         | `boolean`                | `undefined` |
-| `path`     | `path`     | A JSON Pointer that points to the Collect being edited | `string`                 | `undefined` |
+| Property   | Attribute  | Description                                           | Type                 | Default     |
+| ---------- | ---------- | ----------------------------------------------------- | -------------------- | ----------- |
+| `doc`      | `doc`      | An LDF Option object.                                 | `Parallel \| string` | `undefined` |
+| `editable` | `editable` | Whether the object is editable                        | `boolean`            | `undefined` |
+| `path`     | `path`     | A JSON Pointer that points to the Option being edited | `string`             | `undefined` |
+| `preview`  | `preview`  | Whether the object is in preview mode                 | `boolean`            | `undefined` |
 
 
 ## Events
 
-| Event                | Description | Type                  |
-| -------------------- | ----------- | --------------------- |
-| `ldfDocShouldChange` |             | `CustomEvent<Change>` |
-
-
-## Methods
-
-### `changeReading() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Event                            | Description | Type                                            |
+| -------------------------------- | ----------- | ----------------------------------------------- |
+| `ldfAddOptionToDoc`              |             | `CustomEvent<AddOptionToDoc>`                   |
+| `ldfDocShouldChange`             |             | `CustomEvent<Change>`                           |
+| `ldfOptionAskForStoredSelection` |             | `CustomEvent<{ el: HTMLElement; }>`             |
+| `ldfOptionMakeSelection`         |             | `CustomEvent<{ slug: string; index: number; }>` |
 
 
 ## Dependencies
@@ -42,41 +33,25 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [ldf-label-bar](../label-bar)
-- ion-buttons
-- ion-button
-- ion-icon
-- ion-label
-- [ldf-editable-text](../editable-text)
 - [ldf-liturgical-document](../liturgical-document)
-- [ldf-heading](../heading)
-- [ldf-string](../string)
 
 ### Graph
 ```mermaid
 graph TD;
-  ldf-bible-reading --> ldf-label-bar
-  ldf-bible-reading --> ion-buttons
-  ldf-bible-reading --> ion-button
-  ldf-bible-reading --> ion-icon
-  ldf-bible-reading --> ion-label
-  ldf-bible-reading --> ldf-editable-text
-  ldf-bible-reading --> ldf-liturgical-document
-  ldf-bible-reading --> ldf-heading
-  ldf-bible-reading --> ldf-string
-  ion-button --> ion-ripple-effect
-  ldf-editable-text --> ion-input
-  ldf-liturgical-document --> ldf-bible-reading
+  ldf-parallel --> ldf-liturgical-document
+  ldf-liturgical-document --> ldf-parallel
   ldf-liturgy --> ldf-editable-add-block
   ldf-liturgy --> ldf-liturgical-document
   ldf-editable-add-block --> ion-button
   ldf-editable-add-block --> ion-icon
   ldf-editable-add-block --> ion-label
+  ion-button --> ion-ripple-effect
   ldf-heading --> ldf-string
   ldf-heading --> ldf-editable-text
   ldf-heading --> ldf-label-bar
   ldf-heading --> ldf-day-name
   ldf-heading --> ldf-text
+  ldf-editable-text --> ion-input
   ldf-day-name --> ldf-text
   ldf-text --> ldf-label-bar
   ldf-text --> ion-button
@@ -128,7 +103,6 @@ graph TD;
   ion-action-sheet --> ion-ripple-effect
   ion-alert --> ion-ripple-effect
   ion-alert --> ion-backdrop
-  ldf-parallel --> ldf-liturgical-document
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar
@@ -139,6 +113,15 @@ graph TD;
   ldf-responsive-prayer --> ldf-heading
   ldf-responsive-prayer --> ldf-editable-boolean
   ldf-editable-boolean --> ion-checkbox
+  ldf-bible-reading --> ldf-label-bar
+  ldf-bible-reading --> ion-buttons
+  ldf-bible-reading --> ion-button
+  ldf-bible-reading --> ion-icon
+  ldf-bible-reading --> ion-label
+  ldf-bible-reading --> ldf-editable-text
+  ldf-bible-reading --> ldf-liturgical-document
+  ldf-bible-reading --> ldf-heading
+  ldf-bible-reading --> ldf-string
   ldf-psalm --> ldf-refrain
   ldf-psalm --> ldf-liturgical-document
   ldf-psalm --> ldf-label-bar
@@ -161,7 +144,7 @@ graph TD;
   ldf-editable-delete --> ion-button
   ldf-editable-delete --> ion-icon
   ion-chip --> ion-ripple-effect
-  style ldf-bible-reading fill:#f9f,stroke:#333,stroke-width:4px
+  style ldf-parallel fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

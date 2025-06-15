@@ -93,6 +93,7 @@ graph TD;
   ion-action-sheet --> ion-ripple-effect
   ion-alert --> ion-ripple-effect
   ion-alert --> ion-backdrop
+  ldf-parallel --> ldf-liturgical-document
   ldf-refrain --> ldf-label-bar
   ldf-refrain --> ldf-editable-text
   ldf-rubric --> ldf-label-bar

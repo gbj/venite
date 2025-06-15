@@ -120,7 +120,12 @@ function queryFromRe(
       }
       // verse only
       else if (parseInt(parts[1]) && !parts[2] && !parts[3]) {
-        query = { book: null, chapter: null, verse: parseInt(parts[1]) };
+        if (parts[1].includes('.')) {
+          let [chapter, verse] = parts[1].split('.');
+          query = { book: null, chapter: parseInt(chapter), verse: parseInt(verse) };
+        } else {
+          query = { book: null, chapter: null, verse: parseInt(parts[1]) };
+        }
       }
     } else {
       query = null;
