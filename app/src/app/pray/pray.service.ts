@@ -537,6 +537,11 @@ export class PrayService {
                     doc?.metadata?.omit_label || docBase?.metadata?.omit_label,
                   changeable:
                     doc?.metadata?.changeable || docBase?.metadata?.changeable,
+                  antiphon:
+                    doc?.metadata?.antiphon || docBase?.metadata?.antiphon,
+                  insert_seasonal_antiphon:
+                    doc?.metadata?.insert_seasonal_antiphon ||
+                    docBase?.metadata?.insert_seasonal_antiphon,
                 },
                 citation:
                   doc?.citation ||

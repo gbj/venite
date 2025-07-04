@@ -1193,7 +1193,7 @@
             "changeable": false,
             "number": "95",
             "latinname": "Venite, exultemus",
-            "insert_seasonal_antiphon": false
+            "insert_seasonal_antiphon": true
           },
           "category": ["Psalm"],
           "citation": null,
@@ -1595,7 +1595,8 @@
             "omit_gloria": false,
             "number": "95",
             "localname": "Psalm 95",
-            "latinname": "Venite, exultemus"
+            "latinname": "Venite, exultemus",
+            "insert_seasonal_antiphon": true
           }
         }
       ],
