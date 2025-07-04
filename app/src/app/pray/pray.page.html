@@ -68,7 +68,7 @@
                     [doc]="doc"
                     [editable]="false"
                     (ldfDocShouldChange)="changeDoc(doc, $event)"
-                    (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0])"
+                    (ldfAskForCanticleOptions)="sendCanticleOptions($event, data[0], data[3])"
                     (ldfAskForPrayersAndThanksgivings)="sendPAndTs($event, data[1])"
                     (window:ldfOptionAskForStoredSelection)="optionSendStoredSelection($event)"
                     (window:ldfOptionMakeSelection)="optionSaveSelection($event)"

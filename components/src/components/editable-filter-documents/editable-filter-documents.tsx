@@ -68,12 +68,18 @@ export class EditableFilterDocumentsComponent {
     this.versions = { ... versions };
   }
 
+  /** Sets the selected version. */
+  @Method()
+  setVersion(version: string) {
+    this.version = version;
+    this.filter(this.search);
+  }
+
   /** Set the list of liturgy versions */
   @Method()
   async setOptions(options : LiturgicalDocument[]): Promise<void> {
     this.options = options;
     this.optionsChange();
-    console.log("component setOptions", options);
   }
 
   // Lifecycle events

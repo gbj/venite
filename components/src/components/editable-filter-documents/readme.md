@@ -35,6 +35,16 @@ Type: `Promise<void>`
 
 
 
+### `setVersion(version: string) => Promise<void>`
+
+Sets the selected version.
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `setVersions(versions: Record<string, string>) => Promise<void>`
 
 Set the list of liturgy versions

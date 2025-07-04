@@ -2378,7 +2378,7 @@ import { EditableFilterDocumentsComponent as IEditableFilterDocumentsComponent }
 export declare interface LdfEditableFilterDocuments extends Components.LdfEditableFilterDocuments {}
 @ProxyCmp({
   inputs: ['changeCallback', 'modal', 'options', 'type', 'versions'],
-  methods: ['setVersions', 'setOptions']
+  methods: ['setVersions', 'setVersion', 'setOptions']
 })
 @Component({
   selector: 'ldf-editable-filter-documents',

@@ -164,7 +164,7 @@ export class PrayPage implements OnInit, OnDestroy {
   contentEl: IonContent;
 
   // Canticle Swap/Prayers & Thanksgivings
-  swapData$: Observable<[CanticleData, PAndTData, string]>;
+  swapData$: Observable<[CanticleData, PAndTData, string, LiturgicalDocument]>;
 
   // Bulletin editor
   bulletinMode: boolean = false;
@@ -747,6 +747,7 @@ export class PrayPage implements OnInit, OnDestroy {
     );
 
     this.swapData$ = combineLatest([
+      this.doc$,
       liturgyVersions$,
       canticleOptions$,
       pAndTs$,
@@ -755,13 +756,14 @@ export class PrayPage implements OnInit, OnDestroy {
         map((val) => (val === "silence" ? "silence-short" : "singing-bowl"))
       ),
     ]).pipe(
-      map(([liturgyVersions, canticleOptions, pAndTs, bell]) => [
+      map(([doc, liturgyVersions, canticleOptions, pAndTs, bell]) => [
         {
           liturgyVersions,
           canticleOptions,
         },
         pAndTs,
         bell,
+        doc,
       ])
     );
   }
@@ -1314,7 +1316,11 @@ export class PrayPage implements OnInit, OnDestroy {
   }
 
   // Canticle swap
-  sendCanticleOptions(ev: any, data: CanticleData): void {
+  sendCanticleOptions(
+    ev: any,
+    data: CanticleData,
+    doc: LiturgicalDocument
+  ): void {
     const target = querySelectorDeep("ldf-editable-filter-documents");
     if (target) {
       target.setVersions(data.liturgyVersions);
@@ -1332,6 +1338,20 @@ export class PrayPage implements OnInit, OnDestroy {
             }
           })
       );
+
+      let version = Object.keys(data.liturgyVersions)[0];
+      switch (doc.version) {
+        case "Rite-I":
+          version = "rite_i";
+          break;
+        case "Rite-II":
+          version = "bcp1979";
+          break;
+        case "EOW":
+          version = "eow";
+          break;
+      }
+      target.setVersion(version);
     }
   }
 
