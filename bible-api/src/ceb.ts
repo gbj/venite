@@ -63,6 +63,14 @@ export function parseCEBResponse(
 
         if (
           node instanceof HTMLElement &&
+          node.rawAttributes?.class?.includes("indent-1")
+        ) {
+          text += "\n";
+          node = node.querySelector(".text");
+        }
+
+        if (
+          node instanceof HTMLElement &&
           node.rawAttributes?.class?.includes("indent-2")
         ) {
           text += "\n\t";
