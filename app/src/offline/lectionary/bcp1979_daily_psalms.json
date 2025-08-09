@@ -6648,7 +6648,7 @@
     "day": "independence-day",
     "lectionary": "bcp1979_daily_psalms",
     "id": "6053",
-    "citation": "psalm_107:1-32"
+    "citation": "psalm_107_i"
   },
   {
     "id": "10240",
@@ -16427,7 +16427,7 @@
   {
     "id": "6048",
     "day": "independence-day",
-    "citation": "psalm_107:1-32",
+    "citation": "psalm_107_i",
     "lectionary": "bcp1979_daily_psalms",
     "type": "evening_psalms",
     "whentype": "year",
