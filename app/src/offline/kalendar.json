@@ -173,7 +173,6 @@
       "kalendar": "bcp1979"
     },
     {
-      "image": "http://www.bridgebuilding.com/images/nmgab-l.jpg",
       "mmdd": "3/25",
       "season": "Saints",
       "type": {
@@ -434,7 +433,6 @@
       "slug": "columba-of-iona"
     },
     {
-      "image": "http://www.spreadjesus.org/img/APOSTLES-PETER.jpg",
       "slug": "confession-of-st-peter",
       "color": "White",
       "type": {
@@ -458,7 +456,6 @@
     },
     {
       "season": "Saints",
-      "image": "http://www.stewardshipadvocates.org/wp-content/uploads/conversion-of-st-paul-300x295.jpg",
       "mmdd": "1/25",
       "slug": "conversion-of-st-paul",
       "color": "White",
@@ -666,14 +663,12 @@
       "eve": true,
       "name": "Eve of the Nativity of St. John the Baptist",
       "slug": "eve-of-st-john-the-baptist",
-      "image": "http://trinitylewisham.files.wordpress.com/2012/06/johntheb.jpg",
       "color": "White"
     },
     {
       "slug": "eve-of-the-annunciation",
       "mmdd": "3/24",
       "season": "Saints",
-      "image": "http://www.bridgebuilding.com/images/nmgab-l.jpg",
       "eve": true,
       "color": "Blue",
       "name": "Eve of the Annunciation of Our Lord Jesus Christ to the Blessed Virgin Mary",
@@ -713,7 +708,6 @@
         "rank": 3
       },
       "eve": true,
-      "image": "http://www.madonnahouse.org/features/kowalchyk/Kowalchyk-The_Visitation.jpg",
       "name": "Eve of the Visitation of the Blessed Virgin Mary",
       "kalendar": "bcp1979",
       "color": "Blue",
@@ -1334,8 +1328,7 @@
       },
       "mmdd": "6/24",
       "kalendar": "bcp1979",
-      "season": "Saints",
-      "image": "http://trinitylewisham.files.wordpress.com/2012/06/johntheb.jpg"
+      "season": "Saints"
     },
     {
       "name": "Nicholas, Bishop of Myra, c. 342",
@@ -1623,7 +1616,6 @@
       "mmdd": "10/23"
     },
     {
-      "image": "http://c590298.r98.cf2.rackcdn.com/XAM6_134.JPG",
       "slug": "st-john",
       "season": "Saints",
       "name": "Feast of St. John",
@@ -1678,7 +1670,6 @@
         "rank": 3,
         "name": "Holy Days"
       },
-      "image": "http://www.monasteryicons.com/graphics/products/large/728.jpg",
       "name": "St. Mary Magdalene",
       "kalendar": "bcp1979",
       "slug": "st-mary-magdalene"
@@ -1686,7 +1677,6 @@
     {
       "mmdd": "8/15",
       "season": "Saints",
-      "image": "http://www.bridgebuilding.com/images/mi574x.jpg",
       "kalendar": "bcp1979",
       "color": "Blue",
       "type": {
@@ -1722,7 +1712,6 @@
     },
     {
       "season": "Saints",
-      "image": "http://www.bridgebuilding.com/images/mi583x.jpg",
       "name": "St. Michael and All Angels",
       "slug": "st-michael",
       "type": {
@@ -1741,7 +1730,6 @@
       "kalendar": "bcp1979",
       "slug": "st-stephen",
       "color": "Red",
-      "image": "https://i.pinimg.com/originals/5b/4a/d3/5b4ad33a0d48d7e5a59467d0afa73562.jpg",
       "mmdd": "12/26",
       "season": "Saints"
     },
@@ -1860,13 +1848,11 @@
         "rank": 5,
         "name": "Holy Days"
       },
-      "kalendar": "bcp1979",
-      "image": "http://www.stjamesdenver.org/wp-content/uploads/2013/02/transfiguration.jpg"
+      "kalendar": "bcp1979"
     },
     {
       "color": "Blue",
       "slug": "the-visitation",
-      "image": "http://www.madonnahouse.org/features/kowalchyk/Kowalchyk-The_Visitation.jpg",
       "type": {
         "name": "Holy Days",
         "rank": 3
