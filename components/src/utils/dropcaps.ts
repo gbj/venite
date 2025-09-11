@@ -12,7 +12,7 @@ export function useDropcap(
   }
 
   if (display_format === "force_dropcap") {
-    return "enabled";
+    return "force";
   }
 
   if (display_format === "disable_dropcap") {
