@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Capacitor } from "@capacitor/core";
 import { PlatformService } from "@venite/ng-platform";
 
 @Component({
@@ -17,7 +18,7 @@ export class AboutPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.canDonate = !this.platform.is("capacitor");
+    this.canDonate = true; //!Capacitor.isNativePlatform();
 
     this.route.fragment.subscribe((fragment: string) => {
       if (["about", "support", "privacy", "2"].includes(fragment)) {

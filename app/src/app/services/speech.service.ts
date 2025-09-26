@@ -39,6 +39,7 @@ import {
 } from "rxjs/operators";
 import { TextToSpeech } from "@capacitor-community/text-to-speech";
 import { TranslateService } from "@ngx-translate/core";
+import { Capacitor } from "@capacitor/core";
 
 export type SpeechServiceTracking = {
   subdoc: number;
@@ -425,7 +426,7 @@ export class SpeechService {
     voices: SpeechSynthesisVoice[]
   ): Observable<any> {
     // use TextToSpeech plugin for Android -- browser SpeechSynthesis works better for web/iOS
-    if (this.platform.is("android") && this.platform.is("capacitor")) {
+    if (Capacitor.getPlatform() === "android" && Capacitor.isNativePlatform()) {
       const voice$ = new Observable((observer) => {
         const end$ = from(
           TextToSpeech.speak({
@@ -488,7 +489,7 @@ export class SpeechService {
         : voices.find((voice) => voice.name === settings.voiceChoice);
 
     const u: SpeechSynthesisUtterance =
-      this.platform.is("capacitor") && this.platform.is("android")
+      Capacitor.isNativePlatform() && Capacitor.getPlatform() === "android"
         ? ({ text } as SpeechSynthesisUtterance)
         : new SpeechSynthesisUtterance(text || " ");
     if (chosenVoice && chosenVoice.voiceURI) {
@@ -499,7 +500,7 @@ export class SpeechService {
     u.rate = this.isOriginalLanguage(lang) ? 0.2 : settings.voiceRate ?? 0.75;
     // iOS needs to sloooooow down if using Capacitor TextToSpeech
     // in this case I've just reverted to using the Web Speech Synthesis API on iOS because it's actually better
-    // * (this.platform.is("ios") && this.platform.is("capacitor") ? 0.6 : 1);
+    // * (Capacitor.getPlatform() === "ios" && Capacitor.isNativePlatform() ? 0.6 : 1);
     u.volume = settings.voiceBackgroundVolume ?? 1;
 
     if (lang == "he") {
@@ -512,7 +513,10 @@ export class SpeechService {
   async getVoices(): Promise<SpeechSynthesisVoice[]> {
     // load voices as Promise once (only calls native API once)
     if (!this._voices) {
-      if (this.platform.is("capacitor") && this.platform.is("android")) {
+      if (
+        Capacitor.isNativePlatform() &&
+        Capacitor.getPlatform() === "android"
+      ) {
         const { languages } = await TextToSpeech.getSupportedLanguages();
         this._voices = Promise.resolve({
           voices: languages

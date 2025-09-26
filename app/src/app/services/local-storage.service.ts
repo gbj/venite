@@ -17,14 +17,12 @@ export class LocalStorageService implements LocalStorageServiceInterface {
   }
 
   async set(key: string, data: any): Promise<void> {
-    console.log("Storage.set()");
     if (!this.platform.is("server")) {
       return Preferences.set({ key, value: JSON.stringify(data) });
     }
   }
 
   async get(key: string): Promise<any> {
-    console.log("Storage.get()");
     if (!this.platform.is("server")) {
       try {
         return JSON.parse((await Preferences.get({ key }))?.value);
@@ -36,21 +34,18 @@ export class LocalStorageService implements LocalStorageServiceInterface {
   }
 
   async remove(key: string): Promise<void> {
-    console.log("Storage.remove()");
     if (!this.platform.is("server")) {
       return Preferences.remove({ key });
     }
   }
 
   async clear(): Promise<void> {
-    console.log("Storage.clear()");
     if (!this.platform.is("server")) {
       return Preferences.clear();
     }
   }
 
   async keys(): Promise<string[]> {
-    console.log("Storage.keys()");
     if (!this.platform.is("server")) {
       const { keys } = await Preferences.keys();
       return keys;

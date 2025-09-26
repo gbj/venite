@@ -8,6 +8,7 @@ import { cfaSignIn, cfaSignOut } from "capacitor-firebase-auth/alternative";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { map, catchError, first, filter } from "rxjs/operators";
+import { Capacitor } from "@capacitor/core";
 
 @Injectable({
   providedIn: "root",
@@ -31,7 +32,7 @@ export class AuthService {
   async login(provider: string): Promise<firebase.auth.UserCredential | null> {
     let result: firebase.auth.UserCredential;
 
-    if (this.platform.is("capacitor")) {
+    if (Capacitor.isNativePlatform()) {
       let target;
       switch (provider) {
         case "Google":
@@ -118,7 +119,7 @@ export class AuthService {
   }
 
   async logout() {
-    if (this.platform.is("capacitor")) {
+    if (Capacitor.isNativePlatform()) {
       cfaSignOut().subscribe();
     } else {
       return await firebase.auth().signOut();

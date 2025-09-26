@@ -48,7 +48,7 @@ export class MediaSessionService {
 
   isAvailable(): boolean {
     //@ts-ignore
-    return this.platform.is("capacitor") || Boolean(navigator.mediaSession);
+    return Capacitor.isNativePlatform() || Boolean(navigator.mediaSession);
   }
 
   async initMediaSession(doc: LiturgicalDocument, settings: DisplaySettings) {

@@ -8,6 +8,7 @@ import { LocalDocumentManager } from "../ldf-editor/document-manager";
 import { EditorService } from "../ldf-editor/editor.service";
 import { querySelectorDeep } from "query-selector-shadow-dom";
 import { PlatformService } from "@venite/ng-platform";
+import { Capacitor } from "@capacitor/core";
 
 @Component({
   selector: "venite-color-picker",
@@ -39,7 +40,7 @@ export class ColorPickerComponent implements OnInit {
         }))
       )
     );
-    if (this.platform.is("ios")) {
+    if (Capacitor.getPlatform() === "ios") {
       this.colorPickerClass = "";
     }
   }

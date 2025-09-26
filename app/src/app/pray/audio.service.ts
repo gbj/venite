@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Capacitor } from "@capacitor/core";
 import { Media, MediaObject, MEDIA_STATUS } from "@ionic-native/media/ngx";
 import { PlatformService } from "@venite/ng-platform";
 import { Subscription } from "rxjs";
@@ -15,7 +16,7 @@ export class AudioService {
   constructor(private platform: PlatformService, private media: Media) {}
 
   exists(): boolean {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       return Boolean(this._nativePlayer);
     } else {
       return Boolean(this._webPlayer);
@@ -23,7 +24,7 @@ export class AudioService {
   }
 
   async create(file: string, loop: boolean = true) {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativePlayer = this.media.create(file);
       // loop audio
       if (loop) {
@@ -63,7 +64,7 @@ export class AudioService {
   }
 
   async play() {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       console.log("PLAYING AUDIO FROM CAPACITOR");
       this._nativePlayer?.play();
     } else {
@@ -72,7 +73,7 @@ export class AudioService {
   }
 
   async pause() {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativePlayer?.pause();
     } else {
       this._webPlayer?.pause();
@@ -81,7 +82,7 @@ export class AudioService {
 
   /** Returns duration time in seconds */
   async duration(): Promise<number> {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       return this._nativePlayer.getDuration();
     } else {
       return this._webPlayer.duration;
@@ -90,7 +91,7 @@ export class AudioService {
 
   /** Returns current time in seconds */
   async currentTime(): Promise<number> {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       return this._nativePlayer.getCurrentPosition();
     } else {
       return this._webPlayer.currentTime;
@@ -98,7 +99,7 @@ export class AudioService {
   }
 
   async seekTo(seekToInSeconds: number) {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativePlayer.seekTo(seekToInSeconds * 1000);
     } else {
       this._webPlayer.currentTime = seekToInSeconds;
@@ -106,7 +107,7 @@ export class AudioService {
   }
 
   onended(cb: () => void) {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativeSubscriptions.push(
         this._nativePlayer.onStatusUpdate
           .pipe(filter((status) => status === MEDIA_STATUS.STOPPED))
@@ -118,7 +119,7 @@ export class AudioService {
   }
 
   onpause(cb: () => void) {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativeSubscriptions.push(
         this._nativePlayer.onStatusUpdate
           .pipe(filter((status) => status === MEDIA_STATUS.PAUSED))
@@ -130,7 +131,7 @@ export class AudioService {
   }
 
   onplay(cb: () => void) {
-    if (this.platform.is("capacitor") && !this.platform.is("android")) {
+    if (Capacitor.isNativePlatform() && Capacitor.getPlatform() !== "android") {
       this._nativeSubscriptions.push(
         this._nativePlayer.onStatusUpdate
           .pipe(

@@ -26,6 +26,7 @@ import { environment } from "../environments/environment";
 import { IssueComponent } from "./shared/issue/issue.component";
 import { IssueService } from "./issues/issue.service";
 import { LocalStorageService } from "./services/local-storage.service";
+import { Capacitor } from "@capacitor/core";
 
 @Component({
   selector: "venite-root",
@@ -58,7 +59,7 @@ export class AppComponent {
   }
 
   async initializeApp() {
-    this.canDonate = !this.platform.is("capacitor");
+    this.canDonate = !Capacitor.isNativePlatform();
 
     this.platform.ready().then(() => {
       // deep links
@@ -72,7 +73,7 @@ export class AppComponent {
       });
 
       // reminders page
-      this.remindersEnabled = this.platform.is("capacitor");
+      this.remindersEnabled = Capacitor.isNativePlatform();
 
       // organizations for auth menu
       this.organizations$ = this.auth.user.pipe(
@@ -102,7 +103,7 @@ export class AppComponent {
       });
 
       // iOS text accessibility/font scaling
-      if (this.platform.is("ios")) {
+      if (Capacitor.getPlatform() === "ios") {
         this.preferences.get("font_accessibility").subscribe((pref) => {
           if (pref?.value === "true") {
             document.body.classList.add("dynamic-text");
@@ -113,7 +114,7 @@ export class AppComponent {
       }
     });
 
-    if (this.platform.is("capacitor")) {
+    if (Capacitor.isNativePlatform()) {
       FirebaseAnalytics.initializeFirebase(environment.firebase);
       FirebaseAnalytics.setCollectionEnabled({
         enabled: true,

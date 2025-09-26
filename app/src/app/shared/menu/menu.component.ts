@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Capacitor } from "@capacitor/core";
 import { PlatformService } from "@venite/ng-platform";
 
 @Component({
@@ -12,6 +13,6 @@ export class MenuComponent {
   constructor(private platform: PlatformService) {}
 
   async ngOnInit() {
-    this.remindersEnabled = this.platform.is("capacitor");
+    this.remindersEnabled = Capacitor.isNativePlatform();
   }
 }

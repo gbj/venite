@@ -104,7 +104,7 @@ import { LoginComponent } from "../auth/login/login.component";
 import { MediaSessionService } from "../services/media-session.service";
 
 import { App } from "@capacitor/app";
-import { PluginListenerHandle } from "@capacitor/core";
+import { Capacitor, PluginListenerHandle } from "@capacitor/core";
 import { PrayerListService } from "../prayer-list/prayer-list.service";
 
 interface PrayState {
@@ -313,7 +313,7 @@ export class PrayPage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.canShare =
-      Boolean((navigator as any).share) || this.platform.is("capacitor");
+      Boolean((navigator as any).share) || Capacitor.isNativePlatform();
 
     // if we accessed this page through the route /bulletin/... instead of /pray/..., set it in
     // bulletin mode (i.e., include all possibilities as options)
@@ -1115,11 +1115,14 @@ export class PrayPage implements OnInit, OnDestroy {
           let loading;
           console.log(
             "startSpeech platform",
-            !this.platform.is("capacitor") && this.platform.is("ios"),
-            this.platform.is("capacitor"),
-            this.platform.is("ios")
+            !Capacitor.isNativePlatform() && Capacitor.getPlatform() === "ios",
+            Capacitor.isNativePlatform(),
+            Capacitor.getPlatform() === "ios"
           );
-          if (!this.platform.is("capacitor") && this.platform.is("ios")) {
+          if (
+            !Capacitor.isNativePlatform() &&
+            Capacitor.getPlatform() === "ios"
+          ) {
             console.log("Starting some iOS speech.");
             const u = new SpeechSynthesisUtterance("Loading speech synthesis.");
             speechSynthesis.speak(u);

@@ -63,6 +63,7 @@ import {
 } from "rxjs/operators";
 import { LiturgyTimeRanges } from "@venite/ng-service-api";
 import { h } from "@venite/components/dist/types/stencil-public-runtime";
+import { Capacitor } from "@capacitor/core";
 
 type DateValues = {
   year: string;
@@ -318,8 +319,8 @@ export class LiturgySelectComponent implements OnInit {
 
   ngOnInit() {
     this.segmentMode =
-      this.platform.is("ios") ||
-      (this.platform.is("android") && window?.innerWidth < 450)
+      Capacitor.getPlatform() === "ios" ||
+      (Capacitor.getPlatform() === "android" && window?.innerWidth < 450)
         ? "ios"
         : "md";
 

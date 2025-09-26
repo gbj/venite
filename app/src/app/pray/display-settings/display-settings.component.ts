@@ -11,6 +11,7 @@ import {
 } from "@venite/ng-service-api";
 import { TranslateService } from "@ngx-translate/core";
 import { DisplaySettingsConfig } from "./display-settings-config";
+import { Capacitor } from "@capacitor/core";
 
 @Component({
   selector: "venite-display-settings",
@@ -82,7 +83,7 @@ export class DisplaySettingsComponent implements OnInit {
       .pipe(map((pref) => Boolean(pref?.value)));
 
     this.showAccessibility =
-      this.platform.is("ios") && this.config.font_accessibility;
+      Capacitor.getPlatform() === "ios" && this.config.font_accessibility;
   }
 
   dismiss() {

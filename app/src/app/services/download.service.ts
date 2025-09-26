@@ -4,6 +4,7 @@ import { PlatformService } from "@venite/ng-platform";
 
 import { FileOpener } from "@ionic-native/file-opener/ngx";
 import { Filesystem, FilesystemDirectory } from "@capacitor/filesystem";
+import { Capacitor } from "@capacitor/core";
 
 @Injectable({
   providedIn: "root",
@@ -43,7 +44,7 @@ export class DownloadService {
     filename: string,
     filetype: string = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   ) {
-    if (this.platform.is("capacitor")) {
+    if (Capacitor.isNativePlatform()) {
       console.log("trying to download file in Capacitor");
       try {
         let binaryString = await this.readAsBinaryString(blob);
@@ -51,9 +52,10 @@ export class DownloadService {
 
         console.log("reading binary string");
 
-        const directory = this.platform.is("ios")
-          ? FilesystemDirectory.Documents
-          : FilesystemDirectory.Data;
+        const directory =
+          Capacitor.getPlatform() === "ios"
+            ? FilesystemDirectory.Documents
+            : FilesystemDirectory.Data;
 
         const writeFileResult = await Filesystem.writeFile({
           path: filename,
