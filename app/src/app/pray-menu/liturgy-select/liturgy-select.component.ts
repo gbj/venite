@@ -149,6 +149,7 @@ export class LiturgySelectComponent implements OnInit {
 
   // Choice of day to observe
   observanceChoices$: Observable<{ slug: string; name: string }[]>;
+  showAlternates$: Observable<boolean>;
 
   /* Records the last time we entered the page; will only reset the menu if
    * it's been longer than REMEMBER_TIME */
@@ -580,6 +581,16 @@ export class LiturgySelectComponent implements OnInit {
     this.observanceChoices$
       .pipe(first())
       .subscribe((oc) => this.form.controls.observance.setValue(oc[0]?.slug));
+
+    this.showAlternates$ = combineLatest([
+      this.dayName$,
+      this.observanceChoices$,
+    ]).pipe(
+      map(
+        ([dayName, observanceChoices]) =>
+          Boolean(dayName?.alternate) && !(observanceChoices.length > 0)
+      )
+    );
 
     this.prayData$ = combineLatest([
       this.auth.user,

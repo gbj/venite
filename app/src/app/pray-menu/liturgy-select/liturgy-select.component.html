@@ -114,7 +114,7 @@
     </ng-container>
 
     <ng-container *ngIf="dayName$ | async as day else blankHeader">
-      <ng-container *ngIf="day.alternate">
+      <ng-container *ngIf="showAlternates$ | async">
         <ion-radio-group formControlName="alternate" ngDefaultControl (ionChange)="form.controls.observance.setValue($event.detail.value)">
           <ion-item>
             <ion-label><ldf-day-name [day]="day"></ldf-day-name></ion-label>
