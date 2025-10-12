@@ -52,7 +52,7 @@ export class AuthService {
         await loading.present();
         const user = await cfaSignIn(target).toPromise();
         loading.dismiss();
-        return user.userCredential;
+        result = user.userCredential;
       }
     } else {
       const loading = await this.loading.create({ backdropDismiss: true });
