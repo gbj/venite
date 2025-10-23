@@ -530,20 +530,23 @@ export class SpeechService {
             })),
         });
       } else {
+        this._voices = new Promise((resolve) =>
+          resolve({ voices: speechSynthesis.getVoices() })
+        );
         // wait on voices to be loaded before fetching list
-        this._voices = new Promise((resolve) => {
-          const handler = function () {
-            const voices = window.speechSynthesis.getVoices();
-            if (voices.length > 0) {
-              resolve({ voices });
-              window.speechSynthesis.removeEventListener(
-                "voiceschanged",
-                handler
-              );
-            }
-          };
-          window.speechSynthesis.addEventListener("voiceschanged", handler);
-        });
+        const handler = function () {
+          const voices = window.speechSynthesis.getVoices();
+          if (voices.length > 0) {
+            this._voices = new Promise((resolve) =>
+              resolve({ voices: voices })
+            );
+            window.speechSynthesis.removeEventListener(
+              "voiceschanged",
+              handler
+            );
+          }
+        };
+        window.speechSynthesis.addEventListener("voiceschanged", handler);
       }
     }
 
