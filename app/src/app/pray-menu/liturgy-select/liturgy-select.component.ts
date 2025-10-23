@@ -584,7 +584,7 @@ export class LiturgySelectComponent implements OnInit {
 
     this.showAlternates$ = combineLatest([
       this.dayName$,
-      this.observanceChoices$,
+      this.observanceChoices$.pipe(startWith([])),
     ]).pipe(
       map(
         ([dayName, observanceChoices]) =>
