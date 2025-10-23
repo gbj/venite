@@ -678,7 +678,8 @@ export class DocumentService {
     return this.afs
       .collection<LiturgicalDocument>("Document", (ref) => {
         let q;
-        if (uid !== "ikvC2kTwM0MhmiqfMOi2fFZynJr2") {
+        // this was hiding Prayer templates from non-me users -- FIXME in a better way :-)
+        if (false && uid !== "ikvC2kTwM0MhmiqfMOi2fFZynJr2") {
           q = ref
             .where("sharing.owner", "==", uid)
             .where("type", "==", "liturgy");
