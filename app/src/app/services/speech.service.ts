@@ -530,11 +530,26 @@ export class SpeechService {
             })),
         });
       } else {
-        this._voices = new Promise((resolve) =>
-          resolve({ voices: speechSynthesis.getVoices() })
-        );
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length > 0) {
+          this._voices = new Promise((resolve) => resolve({ voices }));
+        } else {
+          this._voices = new Promise((resolve) => {
+            const handler = function () {
+              const voices = window.speechSynthesis.getVoices();
+              if (voices.length > 0) {
+                resolve({ voices: voices });
+                window.speechSynthesis.removeEventListener(
+                  "voiceschanged",
+                  handler
+                );
+              }
+            };
+            window.speechSynthesis.addEventListener("voiceschanged", handler);
+          });
+        }
         // wait on voices to be loaded before fetching list
-        const handler = function () {
+        /* const handler = function () {
           const voices = window.speechSynthesis.getVoices();
           if (voices.length > 0) {
             this._voices = new Promise((resolve) =>
@@ -546,12 +561,14 @@ export class SpeechService {
             );
           }
         };
-        window.speechSynthesis.addEventListener("voiceschanged", handler);
+        window.speechSynthesis.addEventListener("voiceschanged", handler); */
       }
     }
 
     // and wait for that Promise to resolve on any call
     const { voices } = await this._voices;
+
+    console.log("voices = ", voices);
 
     return voices;
   }
