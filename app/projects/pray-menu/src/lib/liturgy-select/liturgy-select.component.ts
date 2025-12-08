@@ -63,6 +63,7 @@ import {
 } from "rxjs/operators";
 import { LiturgyTimeRanges } from "@venite/ng-service-api";
 import { h } from "@venite/components/dist/types/stencil-public-runtime";
+import { Capacitor } from "@capacitor/core";
 
 type DateValues = {
   year: string;
@@ -108,7 +109,7 @@ export class LiturgySelectComponent implements OnInit {
   // Liturgies
   liturgyOptions$: Observable<LiturgicalDocument[]>;
   properLiturgy$: BehaviorSubject<ProperLiturgy | null> = new BehaviorSubject(
-    null
+    null,
   );
   availableProperLiturgies$: BehaviorSubject<ProperLiturgy[]> =
     new BehaviorSubject([]);
@@ -134,7 +135,7 @@ export class LiturgySelectComponent implements OnInit {
   // Preferences
   clientPreferences$: Observable<ClientPreferences>;
   menuPreferences$: BehaviorSubject<ClientPreferences> = new BehaviorSubject(
-    {}
+    {},
   );
   properLiturgyPreference$: BehaviorSubject<ClientPreferences> =
     new BehaviorSubject({});
@@ -170,7 +171,7 @@ export class LiturgySelectComponent implements OnInit {
     private preferencesService: PreferencesServiceInterface,
     @Inject(LECTIONARY_SERVICE) private lectionary: LectionaryServiceInterface,
     @Inject(DOCUMENT_SERVICE) private documents: DocumentServiceInterface,
-    @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface
+    @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface,
   ) {
     const today = new Date();
     this.form = new FormGroup({
@@ -194,16 +195,16 @@ export class LiturgySelectComponent implements OnInit {
       .pipe(first())
       .subscribe((ranges) => {
         this.form.controls.liturgy.setValue(
-          liturgyOfTheMoment(new Date(), ranges)
+          liturgyOfTheMoment(new Date(), ranges),
         );
       });
 
     // Liturgy options
     this.language$ = this.form.controls.language.valueChanges.pipe(
-      startWith(this.form.controls.language.value)
+      startWith(this.form.controls.language.value),
     );
     this.version$ = this.form.controls.version.valueChanges.pipe(
-      startWith(this.form.controls.version.value)
+      startWith(this.form.controls.version.value),
     );
 
     const allLiturgies$ = combineLatest([
@@ -211,9 +212,9 @@ export class LiturgySelectComponent implements OnInit {
       this.version$.pipe(startWith(this.config.defaultVersion)),
     ]).pipe(
       switchMap(([language, version]) =>
-        this.documents.getLiturgyOptions(language, version)
+        this.documents.getLiturgyOptions(language, version),
       ),
-      shareReplay()
+      shareReplay(),
     );
 
     this.clientPreferences$ = combineLatest([
@@ -221,7 +222,7 @@ export class LiturgySelectComponent implements OnInit {
       this.properLiturgyPreference$,
     ]).pipe(
       map(([menu, proper]) => ({ ...menu, ...proper })),
-      shareReplay()
+      shareReplay(),
     );
 
     const availableProperLiturgiesLiturgies$: Observable<
@@ -235,12 +236,12 @@ export class LiturgySelectComponent implements OnInit {
               this.documents.findDocumentsBySlug(
                 proper?.liturgy,
                 this.form.controls.language.value,
-                undefined
-              )
-            )
+                undefined,
+              ),
+            ),
         ).pipe(
           startWith([]),
-          map((l) => l.flat())
+          map((l) => l.flat()),
         );
       }),
       // transform from array of all documents with slug to first document found with correct language and version
@@ -250,24 +251,24 @@ export class LiturgySelectComponent implements OnInit {
           language = this.form.controls.language.value,
           version = this.form.controls.version.value;
         const matchesLanguageAndVersion = documents.filter(
-          (doc) => doc.language == language && doc.version == version
+          (doc) => doc.language == language && doc.version == version,
         );
         if (!matchesLanguageAndVersion) {
           const matchesLanguage = documents.filter(
-            (doc) => doc.language == language
+            (doc) => doc.language == language,
           );
           return matchesLanguage?.length > 0 ? matchesLanguage : docs;
         } else {
           return matchesLanguageAndVersion;
         }
-      })
+      }),
     );
 
     this.liturgyOptions$ = combineLatest(
       allLiturgies$,
       availableProperLiturgiesLiturgies$,
       this.language$,
-      this.version$
+      this.version$,
     ).pipe(
       map(([liturgies, availableProperLiturgies, language, version]) => {
         return availableProperLiturgies
@@ -276,17 +277,17 @@ export class LiturgySelectComponent implements OnInit {
               : [availableProperLiturgies]
             ).concat(
               liturgies.filter(
-                (liturgy) => !Boolean(liturgy?.metadata?.supplement)
-              )
+                (liturgy) => !Boolean(liturgy?.metadata?.supplement),
+              ),
             )
           : liturgies.filter(
               (liturgy) =>
                 !Boolean(liturgy?.metadata?.supplement) &&
                 (!language || liturgy.language === language) &&
-                (!version || liturgy.version === version)
+                (!version || liturgy.version === version),
             );
       }),
-      shareReplay()
+      shareReplay(),
     );
 
     // Language, version, kalendar
@@ -294,39 +295,39 @@ export class LiturgySelectComponent implements OnInit {
     this.versionOptions$ = this.language$.pipe(
       tap((l) => console.log("versionOptions language = ", l)),
       map((language) => this.config.versionOptions[language]),
-      tap((l) => console.log("versionOptions versions = ", l))
+      tap((l) => console.log("versionOptions versions = ", l)),
     );
 
     // Date observables
     this.daysInMonth$ = this.form.controls.date.valueChanges.pipe(
       map((values: DateValues) => daysInMonth(values.year, values.month)),
-      startWith(daysInMonth(today.getFullYear(), today.getMonth() + 1))
+      startWith(daysInMonth(today.getFullYear(), today.getMonth() + 1)),
     );
   }
 
   ngOnInit() {
     this.segmentMode =
-      this.platform.is("ios") ||
-      (this.platform.is("android") && window?.innerWidth < 450)
+      Capacitor.getPlatform() === "ios" ||
+      (Capacitor.getPlatform() === "android" && window?.innerWidth < 450)
         ? "ios"
         : "md";
 
     this.kalendar$ = this.form.controls.kalendar.valueChanges.pipe(
-      startWith(this.form.controls.kalendar.value)
+      startWith(this.form.controls.kalendar.value),
     );
     this.vigil$ = this.form.controls.vigil.valueChanges.pipe(
-      startWith(this.form.controls.vigil.value)
+      startWith(this.form.controls.vigil.value),
     );
     this.liturgy$ = combineLatest([
       this.form.controls.liturgy.valueChanges.pipe(
-        startWith(this.form.controls.liturgy.value)
+        startWith(this.form.controls.liturgy.value),
       ),
       this.liturgyOptions$,
     ]).pipe(
       map(
         ([slug, liturgies]) =>
-          liturgies.find((liturgy) => liturgy.slug == slug) || liturgies[0]
-      )
+          liturgies.find((liturgy) => liturgy.slug == slug) || liturgies[0],
+      ),
     );
 
     // load kalendar options
@@ -335,27 +336,27 @@ export class LiturgySelectComponent implements OnInit {
     // Date when we re-enter the view
     this.startingDate$.subscribe((today) => {
       (this.form.controls.date as FormGroup).controls.year.setValue(
-        today.getFullYear().toString()
+        today.getFullYear().toString(),
       );
       (this.form.controls.date as FormGroup).controls.month.setValue(
-        (today.getMonth() + 1).toString()
+        (today.getMonth() + 1).toString(),
       );
       (this.form.controls.date as FormGroup).controls.day.setValue(
-        today.getDate().toString()
+        today.getDate().toString(),
       );
     });
 
     // Date from form
     this.date$ = this.form.controls.date.valueChanges.pipe(
       map((values: DateValues) =>
-        dateFromYMDString(`${values.year}-${values.month}-${values.day}`)
+        dateFromYMDString(`${values.year}-${values.month}-${values.day}`),
       ),
       startWith(
         dateFromYMDString(
-          `${this.form.controls.date.value.year}-${this.form.controls.date.value.month}-${this.form.controls.date.value.day}`
-        )
+          `${this.form.controls.date.value.year}-${this.form.controls.date.value.month}-${this.form.controls.date.value.day}`,
+        ),
       ),
-      shareReplay()
+      shareReplay(),
     );
 
     // whether to use black-letter collects
@@ -373,7 +374,7 @@ export class LiturgySelectComponent implements OnInit {
         this.preferencesService.set(
           "use-black-letter-collects",
           value ? "true" : "false",
-          this.auth.currentUser()?.uid
+          this.auth.currentUser()?.uid,
         );
       });
     }
@@ -384,11 +385,11 @@ export class LiturgySelectComponent implements OnInit {
       this.week$ = this.calendarService.buildWeek(
         this.date$,
         this.form.controls.kalendar.valueChanges.pipe(
-          startWith(this.form.controls.kalendar.value)
+          startWith(this.form.controls.kalendar.value),
         ),
         this.form.controls.vigil.valueChanges.pipe(
-          startWith(this.form.controls.vigil.value)
-        )
+          startWith(this.form.controls.vigil.value),
+        ),
       );
 
       // main liturgical day observable
@@ -398,7 +399,7 @@ export class LiturgySelectComponent implements OnInit {
           this.kalendar$,
           this.liturgy$,
           this.week$,
-          this.vigil$
+          this.vigil$,
         )
         .pipe(shareReplay());
     } else {
@@ -408,7 +409,7 @@ export class LiturgySelectComponent implements OnInit {
           this.kalendar$,
           this.liturgy$,
           of([]),
-          this.vigil$
+          this.vigil$,
         )
         .pipe(shareReplay());
     }
@@ -425,9 +426,9 @@ export class LiturgySelectComponent implements OnInit {
         switchMap((day) =>
           this.calendarService.findProperLiturgies(
             day,
-            this.form.controls.language.value
-          )
-        )
+            this.form.controls.language.value,
+          ),
+        ),
       )
       .subscribe((liturgies) => {
         // clear proper liturgy preferences
@@ -440,7 +441,7 @@ export class LiturgySelectComponent implements OnInit {
           console.log(
             "sending more proper liturgies",
             JSON.stringify(liturgies),
-            JSON.stringify(this.availableProperLiturgies$.getValue())
+            JSON.stringify(this.availableProperLiturgies$.getValue()),
           );
           this.availableProperLiturgies$.next(liturgies);
         }
@@ -448,12 +449,12 @@ export class LiturgySelectComponent implements OnInit {
 
     this.availableReadings$ = combineLatest(
       this.day$,
-      this.clientPreferences$
+      this.clientPreferences$,
     ).pipe(
       switchMap(([day, prefs]) =>
-        this.lectionary.getReadings(day, prefs["lectionary"], undefined, false)
+        this.lectionary.getReadings(day, prefs["lectionary"], undefined, false),
       ),
-      map((entries) => entries.map((entry) => entry.type))
+      map((entries) => entries.map((entry) => entry.type)),
     );
 
     // Choices of which day to observe
@@ -470,7 +471,7 @@ export class LiturgySelectComponent implements OnInit {
         // the black-letter day would ordinarily be observed
         const decideWhetherToObserveBlackLetter =
           this.config?.blackLetterObservanceDays?.includes(
-            day?.holy_day_observed?.slug
+            day?.holy_day_observed?.slug,
           ) &&
           (!day.holy_day_observed ||
             (day.holy_day_observed &&
@@ -483,7 +484,7 @@ export class LiturgySelectComponent implements OnInit {
         const decideWhetherToTransfer =
           (day?.holy_days || []).filter(
             (hd) =>
-              hd.type?.rank >= 3 && hd.slug !== day.holy_day_observed?.slug
+              hd.type?.rank >= 3 && hd.slug !== day.holy_day_observed?.slug,
           ).length > 0;
 
         // or
@@ -506,7 +507,7 @@ export class LiturgySelectComponent implements OnInit {
 
         // 12/29 if transferred
         const specialDate = (day.holy_days || []).find(
-          (hd) => hd.type?.rank > 2 && hd.type?.rank < 3
+          (hd) => hd.type?.rank > 2 && hd.type?.rank < 3,
         );
         if (specialDate) {
           baseDaySlug = specialDate.slug;
@@ -530,7 +531,7 @@ export class LiturgySelectComponent implements OnInit {
                   hd.slug == day.holy_day_observed?.slug
                     ? `${hd.name} (Default)`
                     : hd.name,
-              }))
+              })),
             )
             .filter((day) => day);
         } else if (liturgyOk && decideWhetherToTransfer) {
@@ -542,7 +543,7 @@ export class LiturgySelectComponent implements OnInit {
                   hd.slug == day.holy_day_observed?.slug
                     ? `${hd.name} (Default)`
                     : hd.name,
-              }))
+              })),
             )
             .filter((day) => day);
         } else if (liturgyOk && isTransferred) {
@@ -559,9 +560,9 @@ export class LiturgySelectComponent implements OnInit {
       }),
       debounceTime(50),
       distinctUntilChanged(
-        (prev, curr) => JSON.stringify(prev) === JSON.stringify(curr)
+        (prev, curr) => JSON.stringify(prev) === JSON.stringify(curr),
       ),
-      tap((oc) => console.log("observanceChoices$", oc))
+      tap((oc) => console.log("observanceChoices$", oc)),
     );
 
     this.observanceChoices$
@@ -597,12 +598,12 @@ export class LiturgySelectComponent implements OnInit {
           clientPreferences: clientPreferences as ClientPreferences,
           availableReadings: availableReadings as string[],
           vigil: vigil as boolean,
-        })
+        }),
       ),
       shareReplay(),
       // any time any of the data changes, set isNavigating to false;
       // so, for example, if we change date or liturgy the button is no longer disabled
-      tap(() => (this.isNavigating = false))
+      tap(() => (this.isNavigating = false)),
     );
 
     // Load language/version/kalendar from preferences
@@ -610,7 +611,7 @@ export class LiturgySelectComponent implements OnInit {
       .get("language")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        take(1)
+        take(1),
       )
       .subscribe((pref) => {
         this.form.controls.language.setValue(pref.value);
@@ -619,7 +620,7 @@ export class LiturgySelectComponent implements OnInit {
       .get("version")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        take(1)
+        take(1),
       )
       .subscribe((pref) => {
         this.form.controls.version.setValue(pref.value);
@@ -628,7 +629,7 @@ export class LiturgySelectComponent implements OnInit {
       .get("kalendar")
       .pipe(
         filter((pref) => Boolean(pref?.value)),
-        take(1)
+        take(1),
       )
       .subscribe((pref) => this.form.controls.kalendar.setValue(pref.value));
 
@@ -672,7 +673,7 @@ export class LiturgySelectComponent implements OnInit {
       // if it had a liturgy, reset to the default for this time
       if (properLiturgy.liturgy) {
         this.form.controls.liturgy.setValue(
-          liturgyOfTheMoment(new Date(), this.ranges)
+          liturgyOfTheMoment(new Date(), this.ranges),
         );
       }
       // if it had a preference, clear it
@@ -713,7 +714,7 @@ export class LiturgySelectComponent implements OnInit {
         liturgy,
         this.form.controls.language.value,
         this.form.controls.version.value,
-        this.form.controls.kalendar.value
+        this.form.controls.kalendar.value,
       );
 
       // if proper liturgy is selected, use its preference value
@@ -726,7 +727,7 @@ export class LiturgySelectComponent implements OnInit {
       const allReadingsAvailable = this.areReadingsAvailable(
         new Liturgy(liturgy),
         clientPreferences,
-        availableReadings
+        availableReadings,
       );
       if (!allReadingsAvailable) {
         this.isNavigating = false;
@@ -736,7 +737,7 @@ export class LiturgySelectComponent implements OnInit {
           vigil,
           clientPreferences,
           availableReadings,
-          bulletinMode
+          bulletinMode,
         );
       } else {
         const clientPrefs = this.config?.blackLetterCollectsOptional
@@ -755,7 +756,7 @@ export class LiturgySelectComponent implements OnInit {
             liturgicalDay,
             vigil,
             clientPrefs,
-            true
+            true,
           );
         } else {
           this.navigate(
@@ -764,7 +765,7 @@ export class LiturgySelectComponent implements OnInit {
             date,
             liturgicalDay,
             vigil,
-            clientPrefs
+            clientPrefs,
           );
         }
         this.isNavigating = false;
@@ -775,10 +776,10 @@ export class LiturgySelectComponent implements OnInit {
   areReadingsAvailable(
     liturgy: Liturgy,
     prefs: ClientPreferences,
-    availableReadings: string[]
+    availableReadings: string[],
   ): boolean {
     const readingPrefKeys = Object.keys(
-      liturgy?.metadata?.preferences || {}
+      liturgy?.metadata?.preferences || {},
     ).filter((p) => ["readingA", "readingB", "readingC"].includes(p));
     let allReadingsAvailable: boolean = true;
     if (readingPrefKeys && readingPrefKeys.length > 0) {
@@ -813,10 +814,10 @@ export class LiturgySelectComponent implements OnInit {
     vigil: boolean,
     prefs: ClientPreferences,
     availableReadings: string[],
-    bulletinMode: boolean
+    bulletinMode: boolean,
   ) {
     const holy_day_readings = availableReadings.filter((reading) =>
-        reading.match(/holy_day/)
+        reading.match(/holy_day/),
       ),
       date = dateFromYMDString(day?.date);
 
@@ -862,7 +863,7 @@ export class LiturgySelectComponent implements OnInit {
                     day,
                     vigil,
                     modifiedPrefs,
-                    true
+                    true,
                   );
                 } else {
                   this.navigate(
@@ -871,7 +872,7 @@ export class LiturgySelectComponent implements OnInit {
                     date,
                     day,
                     vigil,
-                    modifiedPrefs
+                    modifiedPrefs,
                   );
                 }
               },
@@ -883,7 +884,7 @@ export class LiturgySelectComponent implements OnInit {
       } else {
         const a: string[] = availableReadings.filter((r) => r && r !== ""),
           availableList: string = `${a.slice(0, -1).join(",")} or ${a.slice(
-            -1
+            -1,
           )}`;
 
         if (
@@ -895,7 +896,7 @@ export class LiturgySelectComponent implements OnInit {
             header: this.translate.instant("home.missing_reading_alert.title"),
             message: this.translate.instant(
               "home.missing_reading_alert.message",
-              { availableList }
+              { availableList },
             ),
             buttons: [
               {
@@ -913,7 +914,7 @@ export class LiturgySelectComponent implements OnInit {
                       day,
                       vigil,
                       prefs,
-                      true
+                      true,
                     );
                   } else {
                     this.navigate("/pray", liturgy, date, day, vigil, prefs);
@@ -941,17 +942,17 @@ export class LiturgySelectComponent implements OnInit {
     liturgy: LiturgicalDocument,
     language: string,
     version: string,
-    kalendar: string
+    kalendar: string,
   ) {
     Object.entries(prefs)
       // take only those properties that are listed in the liturgy's `preferences` metadata field
       // e.g., Evening Prayer will list `bibleVersion` but not `footwashing`—so don't save `footwashing`
       .filter(([key, value]) =>
-        liturgy?.metadata?.preferences?.hasOwnProperty(key)
+        liturgy?.metadata?.preferences?.hasOwnProperty(key),
       )
       // store each key individually in the database
       .forEach(([key, value]) =>
-        this.preferencesService.set(key, value, uid, liturgy)
+        this.preferencesService.set(key, value, uid, liturgy),
       );
 
     this.preferencesService.set("language", language, uid);
@@ -966,7 +967,7 @@ export class LiturgySelectComponent implements OnInit {
     day: LiturgicalDay,
     vigil: boolean,
     prefs: ClientPreferences,
-    bulletinMode: boolean = false
+    bulletinMode: boolean = false,
   ) {
     const y = date.getFullYear().toString(),
       m = (date.getMonth() + 1).toString(),
@@ -987,7 +988,7 @@ export class LiturgySelectComponent implements OnInit {
       observanceDay = observance ? { ...day } : null;
     if (observance) {
       observanceDay.holy_day_observed = day.holy_days.find(
-        (hd) => hd.slug == observance
+        (hd) => hd.slug == observance,
       );
       observanceDay.slug = observance;
       observanceDay.propers = observance;
@@ -1029,7 +1030,7 @@ export class LiturgySelectComponent implements OnInit {
         "WHS navigating with day  = ",
         new LiturgicalDay(observanceDay) || day,
         "\n\nobservanceDay = ",
-        observanceDay
+        observanceDay,
       );
       this.router.navigate(commands, {
         state: {
@@ -1043,17 +1044,17 @@ export class LiturgySelectComponent implements OnInit {
 
   nonDefaultPrefs(
     liturgy: Liturgy,
-    prefs: ClientPreferences
+    prefs: ClientPreferences,
   ): ClientPreferences {
     const uniquePrefKeys: string[] = Object.keys(
-      liturgy.metadata?.preferences || {}
+      liturgy.metadata?.preferences || {},
     )
       .concat(Object.keys(liturgy.metadata?.special_preferences || {}))
       .concat(Object.keys(prefs || {}))
       .reduce(
         (uniques, item) =>
           uniques.includes(item) ? uniques : [...uniques, item],
-        []
+        [],
       );
 
     const nonDefaultPrefs = {};
@@ -1082,7 +1083,7 @@ export class LiturgySelectComponent implements OnInit {
     this.form.controls.language.setValue(lang);
     if (this.config.versionOptions) {
       this.form.controls.version.setValue(
-        this.config.versionOptions[lang][0].value
+        this.config.versionOptions[lang][0].value,
       );
     }
     this.preferencesService.set("language", lang, this.auth.currentUser()?.uid);

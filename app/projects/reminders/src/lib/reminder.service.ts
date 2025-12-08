@@ -17,6 +17,7 @@ import {
   PendingResult,
 } from "@capacitor/local-notifications";
 import { Router } from "@angular/router";
+import { Capacitor } from "@capacitor/core";
 
 @Injectable({
   providedIn: "root",
@@ -28,9 +29,9 @@ export class ReminderService {
     @Inject("reminder-config") private config: RemindersConfig,
     @Inject(BIBLE_SERVICE) private bible: BibleServiceInterface,
     @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface,
-    private router: Router
+    private router: Router,
   ) {
-    if (!this.platform.is("server") && this.platform.is("capacitor")) {
+    if (!this.platform.is("server") && Capacitor.isNativePlatform()) {
       this.loadPending();
       LocalNotifications.addListener(
         "localNotificationActionPerformed",
@@ -40,7 +41,7 @@ export class ReminderService {
           if (url) {
             this.router.navigateByUrl(url);
           }
-        }
+        },
       );
     }
   }
@@ -54,7 +55,7 @@ export class ReminderService {
 
     console.log(
       "ReminderService.clear() — pending notifications = ",
-      this.pending
+      this.pending,
     );
 
     if (this.pending?.notifications?.length > 0) {
@@ -83,7 +84,7 @@ export class ReminderService {
               },
             },
           };
-        })
+        }),
     );
 
     console.log(`scheduling notifications: ${JSON.stringify(notifications)}`);
@@ -113,7 +114,7 @@ export class ReminderService {
           ?.flat()
           .map(
             (verse) =>
-              verse.hasOwnProperty("text") && (verse as BibleReadingVerse).text
+              verse.hasOwnProperty("text") && (verse as BibleReadingVerse).text,
           )
           .join("")
           .replace("(ESV)", "")
@@ -123,7 +124,7 @@ export class ReminderService {
         throw new Error(
           `Bible API returned an empty text for ${randomVerse} (${
             this.config?.bibleVersion || "ESV"
-          })`
+          })`,
         );
       }
       return `“${bibleText}” – ${randomVerse}`;

@@ -12,6 +12,7 @@ import {
   LOCAL_STORAGE,
   LocalStorageServiceInterface,
 } from "@venite/ng-service-api";
+import { Capacitor } from "@capacitor/core";
 
 @Injectable({
   providedIn: "root",
@@ -29,7 +30,7 @@ export class DarkmodeService {
     private alert: AlertController,
     @Inject(PLATFORM_SERVICE) private platform: PlatformServiceInterface,
     private translate: TranslateService,
-    @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface
+    @Inject(LOCAL_STORAGE) private storage: LocalStorageServiceInterface,
   ) {
     if (!this.platform.is("server")) {
       this.darkmodePreference$ = this.preferences
@@ -39,18 +40,18 @@ export class DarkmodeService {
       const query = window.matchMedia("(prefers-color-scheme: dark)");
       const mediaQuery$ = fromEventPattern<MediaQueryListEvent>(
         query.addListener.bind(query),
-        query.removeListener.bind(query)
+        query.removeListener.bind(query),
       );
 
       this.prefersDark = combineLatest(
         this.darkmodePreference$.pipe(
           map((storedPreference) =>
-            storedPreference ? storedPreference.value : "auto"
-          )
+            storedPreference ? storedPreference.value : "auto",
+          ),
         ),
         mediaQuery$.pipe(
-          startWith(window.matchMedia("(prefers-color-scheme: dark)"))
-        )
+          startWith(window.matchMedia("(prefers-color-scheme: dark)")),
+        ),
       ).pipe(
         // give an explanatory alert if we're not going to change the setting
         tap(([preference, mediaQuery]) => {
@@ -81,15 +82,15 @@ export class DarkmodeService {
             // Android fix for enabling dark mode, see native implementation in MainActivity.java
             let forceDarkMode = false;
             if (
-              this.platform.is("android") &&
-              this.platform.is("capacitor") &&
+              Capacitor.isNativePlatform() &&
+              Capacitor.getPlatform() === "android" &&
               window.navigator.userAgent.includes("AndroidDarkMode")
             ) {
               forceDarkMode = true;
             }
             return forceDarkMode || !!mediaQuery?.matches; // undefined => false, not true
           }
-        })
+        }),
       );
     }
   }
@@ -97,10 +98,10 @@ export class DarkmodeService {
   async notifyAlert(deviceDark: boolean) {
     combineLatest(
       this.translate.get("darkmode.darkmode"),
-      this.translate.get("darkmode.needsAuto")
+      this.translate.get("darkmode.needsAuto"),
     ).subscribe(async ([header, message]) => {
       const hasNotified: boolean = await this.storage.get(
-        "hasNotifiedAboutDarkMode"
+        "hasNotifiedAboutDarkMode",
       );
 
       if (!hasNotified) {

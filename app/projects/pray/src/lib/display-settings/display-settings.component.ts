@@ -11,6 +11,7 @@ import {
 } from "@venite/ng-service-api";
 import { TranslateService } from "@ngx-translate/core";
 import { DisplaySettingsConfig } from "./display-settings-config";
+import { Capacitor } from "@capacitor/core";
 
 @Component({
   selector: "venite-display-settings",
@@ -43,7 +44,7 @@ export class DisplaySettingsComponent implements OnInit {
     private preferencesService: PreferencesServiceInterface,
     @Inject(AUTH_SERVICE) private auth: AuthServiceInterface,
     private translate: TranslateService,
-    @Inject(PLATFORM_SERVICE) private platform
+    @Inject(PLATFORM_SERVICE) private platform,
   ) {}
 
   ngOnInit() {
@@ -74,7 +75,7 @@ export class DisplaySettingsComponent implements OnInit {
       startWith(undefined),
       map((user) => user?.uid),
       // *ngIf syntax won't work if value is `undefined`, so create a fake ID and handle it in `updateSetting` below
-      map((uid) => (uid == undefined ? "LOGGED-OUT" : uid))
+      map((uid) => (uid == undefined ? "LOGGED-OUT" : uid)),
     );
 
     this.fontAccessibility$ = this.preferencesService
@@ -82,7 +83,7 @@ export class DisplaySettingsComponent implements OnInit {
       .pipe(map((pref) => Boolean(pref?.value)));
 
     this.showAccessibility =
-      this.platform.is("ios") && this.config.font_accessibility;
+      Capacitor.getPlatform() === "ios" && this.config.font_accessibility;
   }
 
   dismiss() {
@@ -96,7 +97,7 @@ export class DisplaySettingsComponent implements OnInit {
       ev.detail.hasOwnProperty("checked")
         ? Boolean(ev.detail.checked)
         : ev.detail.value,
-      realUID
+      realUID,
     );
   }
 
@@ -105,7 +106,7 @@ export class DisplaySettingsComponent implements OnInit {
     this.preferencesService.set(
       "font_accessibility",
       ev.detail.checked.toString(),
-      this.auth.currentUser()?.uid
+      this.auth.currentUser()?.uid,
     );
   }
 }
