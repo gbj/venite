@@ -8512,7 +8512,7 @@
   },
   {
     "day": "sunday-first-advent",
-    "citation": "Amos 1:1-5,13-2:8",
+    "citation": "Amos 1:1-5, 1:13-2:8",
     "type": "first_reading",
     "when": "2",
     "id": "6248",
@@ -17691,7 +17691,7 @@
   },
   {
     "when": "2",
-    "citation": "1 Thess. 5:1-11",
+    "citation": "2 Thess. 1:5-12",
     "id": "6387",
     "whentype": "year",
     "day": "sunday-second-advent",
