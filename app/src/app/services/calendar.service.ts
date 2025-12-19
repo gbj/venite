@@ -74,14 +74,14 @@ export class CalendarService implements CalendarServiceInterface {
   /** Find Proper Liturgies for certain special days */
   findProperLiturgies(
     day: LiturgicalDay,
-    language: string
+    language: string,
   ): Observable<ProperLiturgy[]> {
     if (day) {
       return this.afs
         .collection<ProperLiturgy>("ProperLiturgy", (ref) =>
           ref
             .where("slug", "==", day.slug)
-            .where("language", "==", language ?? "en")
+            .where("language", "==", language ?? "en"),
         )
         .valueChanges();
     } else {
@@ -92,7 +92,7 @@ export class CalendarService implements CalendarServiceInterface {
   /** Get the appropriate `LiturgicalWeek` for a calculated week index */
   findWeek(
     kalendar: string,
-    query: LiturgicalWeekIndex
+    query: LiturgicalWeekIndex,
   ): Observable<LiturgicalWeek[]> {
     return of(
       WEEKS[kalendar]
@@ -104,8 +104,8 @@ export class CalendarService implements CalendarServiceInterface {
                 proper: query.proper,
                 propers: `proper-${query.proper}`,
               })
-            : week
-        )
+            : week,
+        ),
     );
   }
 
@@ -117,7 +117,7 @@ export class CalendarService implements CalendarServiceInterface {
               .filter(
                 (day) =>
                   day.mmdd === mmdd &&
-                  ((day.evening && day.morning) || day?.type?.rank >= 2.5)
+                  ((day.evening && day.morning) || day?.type?.rank >= 2.5),
               )
               //@ts-ignore
               .concat(KALENDAR["lff2018"].filter((day) => day.mmdd === mmdd))
@@ -129,9 +129,9 @@ export class CalendarService implements CalendarServiceInterface {
                       color: KALENDAR["bcp1979"].find((d) => d.mmdd == day.mmdd)
                         ?.color,
                       season: KALENDAR["bcp1979"].find(
-                        (d) => d.mmdd == day.mmdd
+                        (d) => d.mmdd == day.mmdd,
                       )?.season,
-                    }
+                    },
               )
           : KALENDAR[kalendar].filter((day) => day.mmdd == mmdd),
       eveToday =
@@ -153,8 +153,8 @@ export class CalendarService implements CalendarServiceInterface {
             //@ts-ignore
             .concat(KALENDAR["lff2018"].filter((day) => day.slug === slug))
         : KALENDAR[kalendar].filter(
-            (day) => day.slug == slug || day.day == slug
-          )
+            (day) => day.slug == slug || day.day == slug,
+          ),
     );
   }
 
@@ -241,7 +241,7 @@ export class CalendarService implements CalendarServiceInterface {
         .map((hd) =>
           hd?.type?.rank
             ? hd
-            : { ...hd, type: hd?.evening ? undefined : { rank: 3 } }
+            : { ...hd, type: hd?.evening ? undefined : { rank: 3 } },
         ),
       // add transferred feast days
       transferred$ = from(
@@ -249,7 +249,7 @@ export class CalendarService implements CalendarServiceInterface {
           async (dfd: Date) => {
             const week = await this.findWeek(
               "bcp1979",
-              liturgicalWeek(dfd)
+              liturgicalWeek(dfd),
             ).toPromise();
             return liturgicalDay(dfd, kalendar, false, week[0]);
           },
@@ -258,11 +258,11 @@ export class CalendarService implements CalendarServiceInterface {
           (dfd: Date) =>
             Promise.resolve(
               allHolyDays.find(
-                (dd) => dd.mmdd === `${dfd.getMonth() + 1}/${dfd.getDate()}`
-              )
+                (dd) => dd.mmdd === `${dfd.getMonth() + 1}/${dfd.getDate()}`,
+              ),
             ),
-          date
-        )
+          date,
+        ),
       ).pipe(startWith(null));
     const specialTransferred$ = this.findTransferredFeast(kalendar, day);
 
@@ -292,33 +292,33 @@ export class CalendarService implements CalendarServiceInterface {
             .concat(decemberEmber ? [decemberEmber] : [])
             .concat(specialTransferred ? [specialTransferred] : [])
             .concat(allSaintsSunday);
-        }
+        },
       ),
       // remove black-letter days that fall on a major feast or a Sunday
       map((holydays) => {
         const highestHolyDayRank = Math.max(
-          ...holydays.map((holyday) => holyday.type?.rank ?? 3)
+          ...holydays.map((holyday) => holyday.type?.rank ?? 3),
         );
         if (highestHolyDayRank >= 4) {
           holydays = holydays.filter(
             (holyday) =>
               holyday.octave ||
               !holyday.type?.rank ||
-              holyday.type?.rank >= highestHolyDayRank
+              holyday.type?.rank >= highestHolyDayRank,
           );
         }
         // filter out red-letter days on Sundays outside ordinary time
         else if (isSunday && day.season !== "OrdinaryTime") {
           holydays = holydays.filter(
             (holyday) =>
-              holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4
+              holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 4,
           );
         }
         // filter out black-letter days on Sundays in ordinary time
         else if (isSunday && day.season === "OrdinaryTime") {
           holydays = holydays.filter(
             (holyday) =>
-              holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 3
+              holyday.octave || !holyday.type?.rank || holyday.type?.rank >= 3,
           );
         }
 
@@ -330,14 +330,14 @@ export class CalendarService implements CalendarServiceInterface {
           holydays = holydays.filter(
             (holyday) =>
               holyday.kalendar === kalendar ||
-              !preferredCalendarSlugs.includes(holyday.slug)
+              !preferredCalendarSlugs.includes(holyday.slug),
           );
         }
 
         // incorporate them into the `LiturgicalDay`
         const dayWithHolyDays = day.addHolyDays(
           uniqueBy(holydays, "slug"),
-          true
+          true,
         );
         // make sure season is Lent if we're in Lent
         if (originalSeason == "Lent" || originalSeason == "HolyWeek") {
@@ -352,7 +352,7 @@ export class CalendarService implements CalendarServiceInterface {
           dayWithHolyDays.season = "Lent";
         }
         return dayWithHolyDays;
-      })
+      }),
     );
   }
 
@@ -371,18 +371,18 @@ export class CalendarService implements CalendarServiceInterface {
           map(
             (days) =>
               (days || []).sort((a, b) =>
-                a?.type?.rank > b?.type?.rank ? -1 : 1
-              )[0]
-          )
+                a?.type?.rank > b?.type?.rank ? -1 : 1,
+              )[0],
+          ),
         );
       } else if (stMark >= palmSunday && stMark <= easter1) {
         return this.findFeastDays(day.kalendar, `4/25`).pipe(
           map(
             (days) =>
               (days || []).sort((a, b) =>
-                a?.type?.rank > b?.type?.rank ? -1 : 1
-              )[0]
-          )
+                a?.type?.rank > b?.type?.rank ? -1 : 1,
+              )[0],
+          ),
         );
       } else {
         return of(undefined);
@@ -396,7 +396,7 @@ export class CalendarService implements CalendarServiceInterface {
    * after the Feast of the Holy Cross  */
   septemberEmberDays(
     day: LiturgicalDay,
-    vigil: boolean = false
+    vigil: boolean = false,
   ): HolyDay | null {
     const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
       holyCrossDay = dateFromYMDString(`${year}-09-14`),
@@ -411,8 +411,8 @@ export class CalendarService implements CalendarServiceInterface {
       baseDay = holyCrossIsThursOrFri
         ? skipAWeek
         : holyCrossIsWednesday
-        ? stMatthewDay
-        : holyCrossDay,
+          ? stMatthewDay
+          : holyCrossDay,
       distanceInDays =
         (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
     if (
@@ -443,7 +443,7 @@ export class CalendarService implements CalendarServiceInterface {
    * after December 13  */
   decemberEmberDays(
     day: LiturgicalDay,
-    vigil: boolean = false
+    vigil: boolean = false,
   ): HolyDay | null {
     const [year] = day.date ? day.date.split("-") : [new Date().getFullYear()],
       december13 = dateFromYMDString(`${year}-12-13`),
@@ -457,7 +457,9 @@ export class CalendarService implements CalendarServiceInterface {
         (date.getTime() - baseDay.getTime()) / (24 * 60 * 60 * 1000);
     if (
       (december13isWednesday && distanceInDays <= 6) ||
-      (!december13isWednesday && distanceInDays <= 7 && distanceInDays >= 0)
+      (!december13isWednesday &&
+        distanceInDays <= 7 &&
+        (distanceInDays > 0 || (distanceInDays === 0 && date.getDay() === 3)))
     ) {
       const weekday = date.getDay();
       if (weekday == 3 || weekday == 5 || weekday == 6) {
@@ -482,12 +484,15 @@ export class CalendarService implements CalendarServiceInterface {
   buildWeek(
     date: Observable<Date>,
     kalendar: Observable<string>,
-    vigil: Observable<boolean>
+    vigil: Observable<boolean>,
   ): Observable<LiturgicalWeek[]> {
     return combineLatest(date, kalendar, vigil).pipe(
       switchMap(([date, kalendar, vigil]) =>
-        this.findWeek("bcp1979", liturgicalWeek(vigil ? addOneDay(date) : date))
-      )
+        this.findWeek(
+          "bcp1979",
+          liturgicalWeek(vigil ? addOneDay(date) : date),
+        ),
+      ),
     );
   }
 
@@ -496,7 +501,7 @@ export class CalendarService implements CalendarServiceInterface {
     kalendar: Observable<string>,
     liturgy: Observable<Liturgy | LiturgicalDocument>,
     week: Observable<LiturgicalWeek[]>,
-    vigil: Observable<boolean>
+    vigil: Observable<boolean>,
   ) {
     return combineLatest(date, kalendar, liturgy, week, vigil).pipe(
       filter(([date, kalendar, liturgy, week, vigil]) => week?.length > 0),
@@ -506,7 +511,7 @@ export class CalendarService implements CalendarServiceInterface {
           vigil ? addOneDay(date) : date,
           kalendar,
           liturgy?.metadata?.evening,
-          week[0]
+          week[0],
         ),
         date,
         vigil,
@@ -517,7 +522,7 @@ export class CalendarService implements CalendarServiceInterface {
         vigil,
       })),
       // add holy days to that liturgical day
-      switchMap(({ day, vigil }) => this.addHolyDays(day, vigil))
+      switchMap(({ day, vigil }) => this.addHolyDays(day, vigil)),
     );
   }
 
