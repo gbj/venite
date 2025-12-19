@@ -114,7 +114,7 @@
       "color": "White",
       "kalendar": "bcp1979",
       "slug": "1st-sunday-after-christmas",
-      "name": "First Sunday after Christmas",
+      "name": "First Sunday after Christmas Day",
       "cycle": "Christmas"
     },
     {
@@ -227,7 +227,7 @@
     },
     {
       "cycle": "Christmas",
-      "name": "Second Sunday after Christmas",
+      "name": "Second Sunday after Christmas Day",
       "slug": "2nd-sunday-after-christmas",
       "color": "White",
       "kalendar": "bcp1979",
