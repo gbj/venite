@@ -235,7 +235,7 @@ export class CalendarService implements CalendarServiceInterface {
         : of([] as HolyDay[]);
     // Transferred feasts
     const allHolyDays = KALENDAR[kalendar]
-        .filter((hd) => !hd?.type?.rank || hd?.type?.rank > 2)
+        .filter((hd) => !hd?.type?.rank || hd?.type?.rank >= 3)
         // original holy days defaulted to rank 3, so if no rank present
         // and no evening/morning opt for 3
         .map((hd) =>
@@ -284,6 +284,12 @@ export class CalendarService implements CalendarServiceInterface {
           transferred,
           specialTransferred,
         ]) => {
+          console.log(
+            "transferred = ",
+            transferred,
+            "specialTransferred = ",
+            specialTransferred,
+          );
           return (Array.isArray(feasts) ? feasts : [feasts])
             .concat(transferred ? [transferred] : [])
             .concat(specials)

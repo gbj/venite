@@ -15,7 +15,7 @@ export async function transferredFeast(
 ): Promise<HolyDay | undefined> {
   const today = await liturgicalDayFinder(todayDate);
   // Christmas season check
-  if (todayDate.getMonth() === 11 && todayDate.getDate() > 25 && todayDate.getDate() <= 29) {
+  if (todayDate.getMonth() === 11 && todayDate.getDate() > 25) {
     const christmasDate = dateFromYMD(todayDate.getFullYear().toString(), '12', '25'),
       christmasWeekday = christmasDate.getDay();
     const THURS = 4,
