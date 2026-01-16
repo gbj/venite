@@ -26,7 +26,7 @@ export async function getBibleText(
     case "kjv":
     case "AV":
     case "av":
-      return getBibleGateway(citation, "KJV");
+      return getKJV(citation); //, "KJV");
     default:
       return getBibleGateway(citation, version);
     //throw `${version} is not a supported Bible version. Try 'NRSV', 'ESV', 'KJV', or 'CEB.'`;
