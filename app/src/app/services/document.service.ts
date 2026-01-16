@@ -284,6 +284,22 @@ export class DocumentService {
               "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
             ],
           }),
+          new LiturgicalDocument({
+            version_label: "",
+            type: "refrain",
+            language: "en",
+            hidden: false,
+            slug: "gloria-patri",
+            category: [null],
+            label: null,
+            version: "coverdale",
+            style: "gloria",
+            citation: null,
+            value: [
+              "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+              "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
+            ],
+          }),
         ]);
       } else {
         return of([
@@ -317,7 +333,6 @@ export class DocumentService {
     disableOffline: boolean = false,
     bulletinMode: boolean = false
   ): Observable<LiturgicalDocument[]> {
-    console.log("BY SLUG", slug, language);
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
       versions: string[]
@@ -328,26 +343,7 @@ export class DocumentService {
           ? this.findGloria(language, versions) //this.findDocumentsBySlug("gloria-patri", language, versions)
           : of([]);
       return combineLatest([docs$, gloriaQuery$]).pipe(
-        map(([docs, gloria]) =>
-          docs.map((doc) =>
-            doc.type !== "psalm"
-              ? doc
-              : new LiturgicalDocument({
-                  ...doc,
-                  metadata: {
-                    ...doc.metadata,
-                    gloria: doc?.version
-                      ? docsToOption(
-                          gloria.filter(
-                            (option) =>
-                              !option.version || option.version === doc.version
-                          )
-                        )
-                      : docsToOption(gloria),
-                  },
-                })
-          )
-        ),
+        map(([docs, gloria]) => docs.map((doc) => addGloriaToDoc(doc, gloria))),
         // order by version
         map((docs) =>
           docs.sort((a, b) => {
@@ -427,7 +423,7 @@ export class DocumentService {
             )
             .toPromise();
         }
-        return from(this._cache[key]);
+        return processDocs(from(this._cache[key]), versions);
       } else {
         const attempt = versions
           .map((version) => BY_SLUG[`${language}-${version}-${slug}`])
@@ -640,7 +636,6 @@ export class DocumentService {
         .pipe(
           // filtered separately because Firestore doesn't allow mixing `array-contains-any` and `in` queries
           map((docs) => {
-            console.log("findDocumentsByCategory", category, docs);
             if (versions?.length > 0) {
               return docs.filter((doc) =>
                 versions.includes(versionToString(doc.version))
@@ -927,5 +922,42 @@ export class DocumentService {
 
   getColors(): Observable<LiturgicalColor[]> {
     return this.afs.collection<LiturgicalColor>("Color").valueChanges();
+  }
+}
+
+function addGloriaToDoc(doc, gloria) {
+  if (doc.type === "psalm") {
+    const d = new LiturgicalDocument({
+      ...doc,
+      metadata: {
+        ...doc.metadata,
+        gloria: doc?.version
+          ? docsToOption(
+              gloria.filter(
+                (option) => !option.version || option.version === doc.version
+              )
+            )
+          : docsToOption(gloria),
+      },
+    });
+    console.log(
+      "addGloriaToDoc",
+      doc.slug,
+      doc,
+      doc.version,
+      docsToOption(
+        gloria.filter(
+          (option) => !option.version || option.version === doc.version
+        )
+      )
+    );
+    return d;
+  } else if (doc.type === "option" || doc.type === "liturgy") {
+    return {
+      ...doc,
+      value: (doc.value || []).map((doc) => addGloriaToDoc(doc, gloria)),
+    };
+  } else {
+    return doc;
   }
 }
