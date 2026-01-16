@@ -13,7 +13,7 @@ PODS:
   - CapacitorCommunityFirebaseAnalytics (6.0.0):
     - Capacitor
     - FirebaseAnalytics
-  - CapacitorCommunityKeepAwake (5.0.1):
+  - CapacitorCommunityKeepAwake (7.1.0):
     - Capacitor
   - CapacitorCommunityTextToSpeech (4.1.0):
     - Capacitor
@@ -212,7 +212,7 @@ SPEC CHECKSUMS:
   CapacitorApp: 26587c2ce485d88ddb39adb21cac64f8e481afe3
   CapacitorClipboard: 7e227702976d4435a5a40df54f65e154d0dfc1f3
   CapacitorCommunityFirebaseAnalytics: 4d041384ba78907803c9783dd6d65cb15a1e6f05
-  CapacitorCommunityKeepAwake: 6ca8e4c8db46f0cf99e33f1ca1162fbc97c8611e
+  CapacitorCommunityKeepAwake: 05c75aab989f60e621870cf03b24a144a5544c30
   CapacitorCommunityTextToSpeech: a8bd9b2cb2b6c4941e1d6acf1250ef82ef942ce1
   CapacitorCordova: 435121e81a2df4d0034f0fb11fcefab5104cfdb5
   CapacitorDevice: 81ae78d5d1942707caad79276badd458bf6ec603
