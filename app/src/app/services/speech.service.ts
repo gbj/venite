@@ -517,51 +517,45 @@ export class SpeechService {
         Capacitor.isNativePlatform() &&
         Capacitor.getPlatform() === "android"
       ) {
-        const { languages } = await TextToSpeech.getSupportedLanguages();
-        this._voices = Promise.resolve({
-          voices: languages
-            .filter((lang) => lang.startsWith("en"))
-            .map((lang) => ({
-              lang,
-              name: this.translate.instant(`speech.${lang}`),
-              default: false,
-              localService: true,
-              voiceURI: lang,
-            })),
-        });
-      } else {
-        const voices = window.speechSynthesis.getVoices();
-        if (voices.length > 0) {
-          this._voices = new Promise((resolve) => resolve({ voices }));
-        } else {
-          this._voices = new Promise((resolve) => {
-            const handler = function () {
-              const voices = window.speechSynthesis.getVoices();
-              if (voices.length > 0) {
-                resolve({ voices: voices });
-                window.speechSynthesis.removeEventListener(
-                  "voiceschanged",
-                  handler
-                );
-              }
-            };
-            window.speechSynthesis.addEventListener("voiceschanged", handler);
+        try {
+          const { languages } = await TextToSpeech.getSupportedLanguages();
+          this._voices = Promise.resolve({
+            voices: languages
+              .filter((lang) => lang.startsWith("en"))
+              .map((lang) => ({
+                lang,
+                name: this.translate.instant(`speech.${lang}`),
+                default: false,
+                localService: true,
+                voiceURI: lang,
+              })),
           });
+        } catch (e) {
+          console.error("Error loading voices", e);
         }
-        // wait on voices to be loaded before fetching list
-        /* const handler = function () {
-          const voices = window.speechSynthesis.getVoices();
+      } else {
+        try {
+          const voices = window.speechSynthesis.getVoices() ?? [];
           if (voices.length > 0) {
-            this._voices = new Promise((resolve) =>
-              resolve({ voices: voices })
-            );
-            window.speechSynthesis.removeEventListener(
-              "voiceschanged",
-              handler
-            );
+            this._voices = new Promise((resolve) => resolve({ voices }));
+          } else {
+            this._voices = new Promise((resolve) => {
+              const handler = function () {
+                const voices = window.speechSynthesis.getVoices();
+                if (voices.length > 0) {
+                  resolve({ voices: voices });
+                  window.speechSynthesis.removeEventListener(
+                    "voiceschanged",
+                    handler
+                  );
+                }
+              };
+              window.speechSynthesis.addEventListener("voiceschanged", handler);
+            });
           }
-        };
-        window.speechSynthesis.addEventListener("voiceschanged", handler); */
+        } catch (e) {
+          console.error("Error loading voices", e);
+        }
       }
     }
 
