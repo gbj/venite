@@ -8,7 +8,7 @@ type OremusVersion = "AV" | "NRSV" | "NRSVAE" | "BCP" | "CW" | "LP";
 
 export async function getOremus(
   citation: string,
-  version: OremusVersion
+  version: OremusVersion,
 ): Promise<BibleReading> {
   const url = buildOremusURL(citation, version),
     page = await requestHTML(url),
@@ -32,7 +32,7 @@ export async function getOremus(
 
 export function buildOremusURL(
   citation: string,
-  version: OremusVersion
+  version: OremusVersion,
 ): string {
   const params = new URLSearchParams();
   params.append("passage", citation);
@@ -47,7 +47,7 @@ export function buildOremusURL(
 export function parseOremusResponse(
   citation: string,
   textEl: HTMLElement,
-  version: OremusVersion
+  version: OremusVersion,
 ): (BibleReadingVerse | Heading)[] | null {
   const nodes = textEl?.childNodes,
     verses: BibleReadingVerse[][] = new Array();
@@ -58,6 +58,7 @@ export function parseOremusResponse(
       ? parsedCitation
       : { book: undefined, chapter: undefined, verse: undefined },
     chapterIncremented: boolean = false;
+  let startsWithBracket = false;
 
   if (nodes?.length > 0) {
     nodes?.forEach((paragraph, sectionIndex) => {
@@ -115,23 +116,34 @@ export function parseOremusResponse(
           child.classNames.includes("sc")
         ) {
           verseTexts.push(
-            child.text.replace(/\n$/, " ").replace(/\s+/g, " ").toUpperCase()
+            child.text.replace(/\n$/, " ").replace(/\s+/g, " ").toUpperCase(),
           );
         } else if (child.text?.length < 20 && child.text?.endsWith("-->")) {
         } else {
-          verseTexts.push(child.text.replace(/\n$/, " "));
+          let text = child.text.replace(/\n$/, " ");
+          if (startsWithBracket) {
+            text = `[${text}`;
+            startsWithBracket = false;
+          }
+          verseTexts.push(text);
         }
       });
-      verses[sectionIndex].push({
-        book,
-        chapter,
-        verse,
-        text: verseTexts.join("").replace(/&nbsp;/g, " "),
-      });
-      verseTexts = new Array();
-      verses[sectionIndex] = verses[sectionIndex].filter(
-        (v) => !v.text.match(/^\s*$/)
-      );
+
+      const text = verseTexts.join("").replace(/&nbsp;/g, " ");
+      if (text.trim().startsWith("[")) {
+        startsWithBracket = true;
+      } else {
+        verses[sectionIndex].push({
+          book,
+          chapter,
+          verse,
+          text: verseTexts.join("").replace(/&nbsp;/g, " "),
+        });
+        verseTexts = new Array();
+        verses[sectionIndex] = verses[sectionIndex].filter(
+          (v) => !v.text.match(/^\s*$/),
+        );
+      }
     });
   } else {
     return null;
@@ -141,7 +153,7 @@ export function parseOremusResponse(
     verses
       .filter(
         (section) =>
-          section && section.length > 0 && !section[0].text.match(/^\s*$/)
+          section && section.length > 0 && !section[0].text.match(/^\s*$/),
       )
       .map((section) =>
         section.map((verse) =>
@@ -150,8 +162,8 @@ export function parseOremusResponse(
                 ...verse,
                 text: verse?.text?.replace(/\s*\n\s*$/, " "),
               }
-            : verse
-        )
-      )
+            : verse,
+        ),
+      ),
   );
 }
