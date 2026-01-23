@@ -148,8 +148,6 @@ export class TextComponent {
           lastChunk = this.truncate(lastSection[lastSection.length - 1], true);
         compiledValue = [[firstChunk], [lastChunk]];
       }
-
-      console.log("compiledValue = ", compiledValue);
       
       if(this.editable) {
         return (
