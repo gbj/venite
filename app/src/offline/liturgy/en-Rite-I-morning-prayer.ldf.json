@@ -755,6 +755,7 @@
       "hidden": false,
       "source": { "source": "", "api": "", "citation": "" },
       "category": [],
+      "version": "rite_i",
       "condition": {
         "mode": "and",
         "conditions": [
@@ -840,7 +841,7 @@
           ],
           "version_label": null,
           "category": ["Invitatory"],
-          "version": "",
+          "version": "rite_i",
           "condition": {
             "mode": "and",
             "conditions": [
@@ -891,29 +892,6 @@
             "collaborators": []
           },
           "metadata": {
-            "gloria": {
-              "language": "en",
-              "citation": null,
-              "label": null,
-              "version_label": "Rite II",
-              "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "slug": "gloria-patri",
-              "version": "bcp1979",
-              "category": [null],
-              "sharing": {
-                "organization": "venite",
-                "collaborators": [],
-                "privacy": "public",
-                "status": "published",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2"
-              },
-              "type": "refrain",
-              "style": "gloria",
-              "hidden": false
-            },
             "number": null,
             "latinname": null,
             "localname": "Venite",
@@ -933,7 +911,7 @@
           "citation": "Psalm 95:1-7",
           "label": "Venite",
           "version_label": "Venite",
-          "version": "",
+          "version": "rite_i",
           "value": [
             {
               "type": "psalm-section",
@@ -1004,7 +982,7 @@
           "category": ["Invitatory"],
           "label": "Jubilate",
           "type": "psalm",
-          "version": "",
+          "version": "rite_i",
           "value": [
             {
               "type": "psalm-section",
@@ -1069,27 +1047,20 @@
             "changeable": false,
             "insert_seasonal_antiphon": true,
             "gloria": {
-              "slug": "gloria-patri",
-              "hidden": false,
-              "language": "en",
-              "version_label": "Rite II",
-              "label": null,
-              "citation": null,
-              "version": "bcp1979",
-              "sharing": {
-                "organization": "venite",
-                "status": "published",
-                "owner": "ikvC2kTwM0MhmiqfMOi2fFZynJr2",
-                "privacy": "public",
-                "collaborators": []
-              },
+              "version_label": "",
               "type": "refrain",
+              "language": "en",
+              "hidden": false,
+              "slug": "gloria-patri",
               "category": [null],
+              "label": null,
+              "version": "rite_i",
+              "style": "gloria",
+              "citation": null,
               "value": [
-                "Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-                "as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen."
-              ],
-              "style": "gloria"
+                "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+                "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen."
+              ]
             },
             "number": null,
             "omit_antiphon": false,
@@ -1179,7 +1150,7 @@
               ]
             }
           ],
-          "version": "",
+          "version": "coverdale",
           "type": "psalm",
           "label": "Psalm 95",
           "style": "psalm",
