@@ -66,7 +66,7 @@ export class DocumentService {
     private auth: AuthService,
     private organizationService: OrganizationService,
     private http: HttpClient,
-    private osis: OsisBibleService
+    private osis: OsisBibleService,
   ) {}
 
   handleError(error: any) {
@@ -97,7 +97,7 @@ export class DocumentService {
 
   getVersions(
     language: string,
-    type: string
+    type: string,
   ): Observable<{ [key: string]: string }> {
     return of(VERSIONS[`${language}-${type}`]?.versions);
     // removed to enable offline mode and cut down on reads
@@ -117,7 +117,7 @@ export class DocumentService {
           .where("version", "==", version)
           .where("sharing.organization", "==", "venite")
           .where("sharing.status", "==", "published")
-          .where("sharing.privacy", "==", "public")
+          .where("sharing.privacy", "==", "public"),
       )
       .valueChanges();
 
@@ -132,10 +132,10 @@ export class DocumentService {
               (doc) =>
                 doc.type === "liturgy" &&
                 !Boolean(doc.day) &&
-                doc.version === version
-            ) as Liturgy[]
+                doc.version === version,
+            ) as Liturgy[],
       ),
-      startWith([] as Liturgy[])
+      startWith([] as Liturgy[]),
     );
 
     const myOrganizationLiturgies$ = this.auth.user.pipe(
@@ -144,7 +144,7 @@ export class DocumentService {
         combineLatest([
           this.organizationService.organizationsWithEditor(user?.uid),
           this.organizationService.organizationsWithOwner(user?.uid),
-        ])
+        ]),
       ),
       map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
       switchMap((orgs) => this.myOrganizationDocuments(orgs)),
@@ -153,10 +153,10 @@ export class DocumentService {
           idsAndDocs
             .map((idAndDoc) => new Liturgy(idAndDoc.data))
             .filter(
-              (doc) => doc.type === "liturgy" && !Boolean(doc.day)
-            ) as Liturgy[]
+              (doc) => doc.type === "liturgy" && !Boolean(doc.day),
+            ) as Liturgy[],
       ),
-      startWith([] as Liturgy[])
+      startWith([] as Liturgy[]),
     );
 
     const onlineLiturgies$ = combineLatest([
@@ -170,25 +170,25 @@ export class DocumentService {
           ? mine
               .concat(
                 organization.filter((doc) =>
-                  doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true
-                )
+                  doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true,
+                ),
               )
               .concat(
                 // filter out anything I own
                 venite.filter((doc) =>
-                  doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true
-                )
+                  doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true,
+                ),
               )
-          : mine.concat(venite)
+          : mine.concat(venite),
       ),
       map((docs) => docs.map((doc) => new Liturgy({ ...doc, id: undefined }))),
-      filter((docs) => docs?.length > 0)
+      filter((docs) => docs?.length > 0),
     );
 
     // load from JSON for quicker load + offline access (but won't include your/org liturgies)
     const loadLiturgy = (language: string, version: string, slug: string) =>
       this.http.get<Liturgy>(
-        `/offline/liturgy/${language}-${version}-${slug}.ldf.json`
+        `/offline/liturgy/${language}-${version}-${slug}.ldf.json`,
       );
     const offlineLiturgies$ = combineLatest(
       language == "es"
@@ -216,11 +216,11 @@ export class DocumentService {
             loadLiturgy("en", "Rite-II", "eucharist"),
             loadLiturgy("en", "Rite-I", "eucharist"),
             loadLiturgy("en", "EOW", "eucharist"),
-          ]
+          ],
     ).pipe(map((liturgies) => liturgies.filter((l) => l.version == version)));
 
     return concat(offlineLiturgies$, onlineLiturgies$).pipe(
-      tap((docs) => console.log("options = ", docs))
+      tap((docs) => console.log("options = ", docs)),
     );
   }
 
@@ -231,7 +231,7 @@ export class DocumentService {
           .where("type", "==", "liturgy")
           .where("sharing.organization", "==", "venite")
           .where("sharing.status", "==", "published")
-          .where("sharing.privacy", "==", "public")
+          .where("sharing.privacy", "==", "public"),
       )
       .valueChanges()
       .pipe(tap((options) => console.log("getAllLiturgyOptions", options)));
@@ -239,7 +239,7 @@ export class DocumentService {
 
   findOrganizationLiturgy(
     orgId: string,
-    slug: string | undefined = undefined
+    slug: string | undefined = undefined,
   ): Observable<LiturgicalDocument[]> {
     return this.afs
       .collection<Liturgy>("Document", (ref) => {
@@ -263,10 +263,14 @@ export class DocumentService {
   // made more efficient by not searching DB for every Gloria Patri
   findGloria(
     language: string,
-    versions: string[]
+    versions: string[],
   ): Observable<LiturgicalDocument[]> {
     if (language === "en") {
-      if (versions.includes("rite_i") || versions.includes("coverdale")) {
+      if (
+        versions.includes("rite_i") ||
+        versions.includes("coverdale") ||
+        versions.includes("Rite-I")
+      ) {
         return of([
           new LiturgicalDocument({
             version_label: "",
@@ -277,22 +281,6 @@ export class DocumentService {
             category: [null],
             label: null,
             version: "rite_i",
-            style: "gloria",
-            citation: null,
-            value: [
-              "Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-              "As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
-            ],
-          }),
-          new LiturgicalDocument({
-            version_label: "",
-            type: "refrain",
-            language: "en",
-            hidden: false,
-            slug: "gloria-patri",
-            category: [null],
-            label: null,
-            version: "coverdale",
             style: "gloria",
             citation: null,
             value: [
@@ -331,11 +319,11 @@ export class DocumentService {
     language: string = "en",
     rawVersions: string[] = undefined,
     disableOffline: boolean = false,
-    bulletinMode: boolean = false
+    bulletinMode: boolean = false,
   ): Observable<LiturgicalDocument[]> {
     const processDocs = (
       docs$: Observable<LiturgicalDocument[]>,
-      versions: string[]
+      versions: string[],
     ) => {
       // add Gloria to psalms, canticles, invitatories, if they don't have
       const gloriaQuery$: Observable<LiturgicalDocument[]> =
@@ -350,25 +338,25 @@ export class DocumentService {
             const aIndex = (versions || []).indexOf(versionToString(a.version));
             const bIndex = (versions || []).indexOf(versionToString(b.version));
             return aIndex < bIndex ? -1 : 1;
-          })
+          }),
         ),
         switchMap((docs) =>
           docs.length === 0 && !versions.includes("bcp1979")
             ? this.findDocumentsBySlug(
                 slug,
                 language,
-                versions.concat("bcp1979")
+                versions.concat("bcp1979"),
               )
-            : of(docs)
+            : of(docs),
         ),
         startWith([LOADING]),
-        catchError((error) => this.handleError(error))
+        catchError((error) => this.handleError(error)),
       );
     };
 
     // deduplicate versions -- max of 10 (for Firebase query)
     const uniqueVersions = Array.from(
-        new Set(rawVersions?.length == 0 ? ["bcp1979"] : rawVersions)
+        new Set(rawVersions?.length == 0 ? ["bcp1979"] : rawVersions),
       ),
       baseVersions =
         uniqueVersions?.length <= 10
@@ -387,11 +375,11 @@ export class DocumentService {
         language,
         ["bcp1979"],
         disableOffline,
-        bulletinMode
+        bulletinMode,
       ).pipe(
         switchMap((docs) =>
-          combineLatest(docs.map((doc) => this.osis.getCWPsalm(doc)))
-        )
+          combineLatest(docs.map((doc) => this.osis.getCWPsalm(doc))),
+        ),
       );
     }
 
@@ -418,8 +406,8 @@ export class DocumentService {
             .pipe(
               map((doc) => [doc]),
               catchError(() =>
-                this.findDocumentsBySlug(slug, language, rawVersions, true)
-              )
+                this.findDocumentsBySlug(slug, language, rawVersions, true),
+              ),
             )
             .toPromise();
         }
@@ -435,8 +423,8 @@ export class DocumentService {
           const firebaseVersions$ = isOnline().pipe(
             filter((online) => online && bulletinMode),
             switchMap(() =>
-              this.findDocumentsBySlug(slug, language, rawVersions, true)
-            )
+              this.findDocumentsBySlug(slug, language, rawVersions, true),
+            ),
           );
           return language == "en"
             ? concat(processDocs(of(attempt), versions), firebaseVersions$)
@@ -449,7 +437,7 @@ export class DocumentService {
       if (uniqueVersions?.length > 10) {
         console.warn(
           "(DocumentService) (findDocumentsBySlug) Firebase can only handle up to 10 unique versions to search. You searched for ",
-          rawVersions
+          rawVersions,
         );
       }
 
@@ -491,7 +479,7 @@ export class DocumentService {
                       "in",
                       versions.filter((v) => Boolean(v))?.length > 0
                         ? versions.filter((v) => Boolean(v))
-                        : ["bcp1979"]
+                        : ["bcp1979"],
                     );
                   }
                   return query;
@@ -500,7 +488,7 @@ export class DocumentService {
             } else {
               return of([]);
             }
-          })
+          }),
         )
         .pipe(startWith([]));
 
@@ -510,7 +498,7 @@ export class DocumentService {
           combineLatest([
             this.organizationService.organizationsWithEditor(user?.uid),
             this.organizationService.organizationsWithOwner(user?.uid),
-          ])
+          ]),
         ),
         map(([editorOrgs, ownerOrgs]) => editorOrgs.concat(ownerOrgs)),
         map((orgs) => orgs.filter((org) => org.slug !== "venite")),
@@ -522,27 +510,27 @@ export class DocumentService {
                   .where(
                     "sharing.organization",
                     "in",
-                    orgs.map((org) => org.slug)
+                    orgs.map((org) => org.slug),
                   )
                   .where("slug", "==", slug)
-                  .where("language", "==", language)
+                  .where("language", "==", language),
               )
               .valueChanges()
               .pipe(
                 map((docs) =>
                   versions?.length > 0
                     ? docs.filter((doc) =>
-                        versions.includes(versionToString(doc.version))
+                        versions.includes(versionToString(doc.version)),
                       )
-                    : docs
-                )
+                    : docs,
+                ),
               );
           } else {
             return of([]);
           }
         }),
         filter((orgDocs) => orgDocs?.length > 0),
-        startWith([])
+        startWith([]),
       );
 
       const docs$ = combineLatest([
@@ -557,11 +545,13 @@ export class DocumentService {
               ? mine.concat(org).concat(
                   // filter out anything I own
                   venite.filter((doc) =>
-                    doc?.sharing?.owner ? doc.sharing.owner !== user?.uid : true
-                  )
+                    doc?.sharing?.owner
+                      ? doc.sharing.owner !== user?.uid
+                      : true,
+                  ),
                 )
-              : mine.concat(venite)
-          )
+              : mine.concat(venite),
+          ),
         )
         .pipe(filter((docs) => docs.length > 0));
 
@@ -574,7 +564,7 @@ export class DocumentService {
     language: string = "en",
     versions: string[] = undefined,
     disableOffline: boolean = false,
-    bulletinMode: boolean = false
+    bulletinMode: boolean = false,
   ): Observable<LiturgicalDocument[]> {
     if (!disableOffline) {
       const attempt$ = combineLatest(
@@ -590,14 +580,14 @@ export class DocumentService {
                   "rite-ii",
                   "rite-i",
                   "loc",
-                ].includes(version)
-              )
-          )
+                ].includes(version),
+              ),
+          ),
         ).map((version) =>
           this.http.get<LiturgicalDocument[]>(
-            `/offline/category/${language}-${version}.json`
-          )
-        )
+            `/offline/category/${language}-${version}.json`,
+          ),
+        ),
       ).pipe(
         catchError((e) => {
           console.warn(e);
@@ -607,20 +597,20 @@ export class DocumentService {
           docs
             .flat()
             .filter((doc) =>
-              (doc?.category || []).some((r) => category.indexOf(r) >= 0)
-            )
-        )
+              (doc?.category || []).some((r) => category.indexOf(r) >= 0),
+            ),
+        ),
       );
       // also send Firebase version, if online
       const firebaseVersions$ = isOnline().pipe(
         switchMap((online) =>
           online
             ? this.findDocumentsByCategory(category, language, versions, true)
-            : of([])
-        )
+            : of([]),
+        ),
       );
       return merge(attempt$, firebaseVersions$).pipe(
-        filter((docs) => docs?.length > 0)
+        filter((docs) => docs?.length > 0),
       );
     } else {
       return this.afs
@@ -630,7 +620,7 @@ export class DocumentService {
             .where("language", "==", language)
             .where("sharing.organization", "==", "venite")
             .where("sharing.status", "==", "published")
-            .where("sharing.privacy", "==", "public")
+            .where("sharing.privacy", "==", "public"),
         )
         .valueChanges()
         .pipe(
@@ -638,14 +628,14 @@ export class DocumentService {
           map((docs) => {
             if (versions?.length > 0) {
               return docs.filter((doc) =>
-                versions.includes(versionToString(doc.version))
+                versions.includes(versionToString(doc.version)),
               );
             } else {
               return docs;
             }
           }),
           map((docs) => docs.sort((a, b) => (a.label > b.label ? 1 : -1))),
-          startWith([LOADING])
+          startWith([LOADING]),
           //catchError((error) => this.handleError(error))
         );
     }
@@ -658,17 +648,17 @@ export class DocumentService {
       .pipe(
         // transform from AngularFire `DocumentChangeAction` to `doc`
         map((changeactions) =>
-          changeactions.map((action) => action?.payload?.doc)
+          changeactions.map((action) => action?.payload?.doc),
         ),
         // extra ID and document data and leave the rest behind
-        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() }))),
       );
   }
 
   /** All documents 'owned' by a user with `uid` */
   myLiturgies(
     uid: string,
-    dateLimit?: Date | undefined
+    dateLimit?: Date | undefined,
   ): Observable<IdAndDoc[]> {
     return this.afs
       .collection<LiturgicalDocument>("Document", (ref) => {
@@ -691,37 +681,37 @@ export class DocumentService {
       .pipe(
         // transform from AngularFire `DocumentChangeAction` to `doc`
         map((changeactions) =>
-          changeactions.map((action) => action?.payload?.doc)
+          changeactions.map((action) => action?.payload?.doc),
         ),
         // extra ID and document data and leave the rest behind
         map((docs) =>
           docs.map((doc) => ({
             id: doc.id,
             data: doc.data(),
-          }))
-        )
+          })),
+        ),
       );
   }
 
   myDocuments(uid: string): Observable<IdAndDoc[]> {
     return this.afs
       .collection<LiturgicalDocument>("Document", (ref) =>
-        ref.where("sharing.owner", "==", uid)
+        ref.where("sharing.owner", "==", uid),
       )
       .snapshotChanges()
       .pipe(
         // transform from AngularFire `DocumentChangeAction` to `doc`
         map((changeactions) =>
-          changeactions.map((action) => action?.payload?.doc)
+          changeactions.map((action) => action?.payload?.doc),
         ),
         // extra ID and document data and leave the rest behind
-        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() }))),
       );
   }
 
   myOrganizationDocuments(
     orgs: Organization[],
-    dateLimit?: Date | undefined
+    dateLimit?: Date | undefined,
   ): Observable<IdAndDoc[]> {
     if (orgs?.length > 0) {
       const byPrivacy = (privacy: string) => {
@@ -731,7 +721,7 @@ export class DocumentService {
               .where(
                 "sharing.organization",
                 "in",
-                orgs.map((org) => org.slug)
+                orgs.map((org) => org.slug),
               )
               .where("sharing.privacy", "==", privacy);
             if (dateLimit) {
@@ -745,17 +735,19 @@ export class DocumentService {
           .pipe(
             // transform from AngularFire `DocumentChangeAction` to `doc`
             map((changeactions) =>
-              changeactions.map((action) => action?.payload?.doc)
+              changeactions.map((action) => action?.payload?.doc),
             ),
             // extra ID and document data and leave the rest behind
-            map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+            map((docs) =>
+              docs.map((doc) => ({ id: doc.id, data: doc.data() })),
+            ),
           );
       };
 
       const orgPrivacy = byPrivacy("organization"),
         publicPrivacy = byPrivacy("public");
       return combineLatest([orgPrivacy, publicPrivacy]).pipe(
-        map(([org, pub]) => org.concat(pub))
+        map(([org, pub]) => org.concat(pub)),
       );
     } else {
       return of([]);
@@ -764,20 +756,20 @@ export class DocumentService {
 
   myOrganizationDocumentsWithSlug(
     org: string,
-    slug: string
+    slug: string,
   ): Observable<IdAndDoc[]> {
     return this.afs
       .collection<LiturgicalDocument>("Document", (ref) =>
-        ref.where("sharing.organization", "==", org).where("slug", "==", slug)
+        ref.where("sharing.organization", "==", org).where("slug", "==", slug),
       )
       .snapshotChanges()
       .pipe(
         // transform from AngularFire `DocumentChangeAction` to `doc`
         map((changeactions) =>
-          changeactions.map((action) => action?.payload?.doc)
+          changeactions.map((action) => action?.payload?.doc),
         ),
         // extra ID and document data and leave the rest behind
-        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        map((docs) => docs.map((doc) => ({ id: doc.id, data: doc.data() }))),
       );
   }
 
@@ -788,25 +780,25 @@ export class DocumentService {
           .where("sharing.organization", "==", "venite")
           .where("sharing.status", "==", "published")
           .where("sharing.privacy", "==", "public")
-          .where("slug", "==", slug)
+          .where("slug", "==", slug),
       )
       .valueChanges();
 
     const myDocs$ = this.afs
       .collection<LiturgicalDocument>("Document", (ref) =>
-        ref.where("sharing.owner", "==", uid).where("slug", "==", slug)
+        ref.where("sharing.owner", "==", uid).where("slug", "==", slug),
       )
       .valueChanges();
 
     return combineLatest([veniteDocs$, myDocs$]).pipe(
-      map(([veniteDocs, myDocs]) => veniteDocs.concat(myDocs).length > 0)
+      map(([veniteDocs, myDocs]) => veniteDocs.concat(myDocs).length > 0),
     );
   }
 
   search(
     uid: string,
     search: string,
-    orgs: Organization[]
+    orgs: Organization[],
   ): Observable<IdAndDoc[]> {
     return combineLatest([
       this.myDocuments(uid).pipe(startWith([])),
@@ -815,8 +807,8 @@ export class DocumentService {
       map(([docs, orgDocs]) =>
         docs
           .concat(orgDocs)
-          .filter((doc) => JSON.stringify({ ...doc }).includes(search))
-      )
+          .filter((doc) => JSON.stringify({ ...doc }).includes(search)),
+      ),
     );
   }
 
@@ -836,7 +828,7 @@ export class DocumentService {
 
   saveDocument(
     docId: string,
-    doc: Partial<DTO<LiturgicalDocument>>
+    doc: Partial<DTO<LiturgicalDocument>>,
   ): Observable<any> {
     /*return from(
       this.afs.doc(`Document/${docId}`).set({
@@ -863,7 +855,7 @@ export class DocumentService {
               "Content-type": "application/json",
               Authorization: `Bearer ${token}`,
             },
-          }
+          },
         );
       });
     return of(null);
@@ -927,36 +919,22 @@ export class DocumentService {
 
 function addGloriaToDoc(doc, gloria) {
   if (doc.type === "psalm") {
-    const d = new LiturgicalDocument({
+    return new LiturgicalDocument({
       ...doc,
       metadata: {
         ...doc.metadata,
-        gloria: doc?.version
-          ? docsToOption(
-              gloria.filter(
-                (option) => !option.version || option.version === doc.version
-              )
-            )
-          : docsToOption(gloria),
+        gloria: docsToOption(
+          gloria.filter(
+            (option) => !option.version || option.version === doc.version,
+          ),
+        ),
       },
     });
-    console.log(
-      "addGloriaToDoc",
-      doc.slug,
-      doc,
-      doc.version,
-      docsToOption(
-        gloria.filter(
-          (option) => !option.version || option.version === doc.version
-        )
-      )
-    );
-    return d;
   } else if (doc.type === "option" || doc.type === "liturgy") {
-    return {
+    return new LiturgicalDocument({
       ...doc,
       value: (doc.value || []).map((doc) => addGloriaToDoc(doc, gloria)),
-    };
+    });
   } else {
     return doc;
   }
