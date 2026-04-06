@@ -69,7 +69,7 @@ export class SpeechService {
 
   constructor(
     private platform: PlatformService,
-    private translate: TranslateService
+    private translate: TranslateService,
   ) {}
 
   // Localized strings for nationalities are handled in localization files
@@ -99,7 +99,7 @@ export class SpeechService {
     doc: LiturgicalDocument,
     settings: DisplaySettings,
     index: number = 0,
-    startingUtteranceIndex: number = 0
+    startingUtteranceIndex: number = 0,
   ): Observable<SpeechServiceTracking> {
     //TextToSpeech.stop();
 
@@ -116,7 +116,7 @@ export class SpeechService {
           .replace(/&nbsp;/g, " ")
           .replace(/YHWH/g, "Adonai")
           .replace(/Venite/g, "ven-EE-tay")
-          .replace(/Compline/g, "COMP-linn")
+          .replace(/Compline/g, "COMP-linn"),
       );
     }
 
@@ -132,7 +132,7 @@ export class SpeechService {
     }
 
     function docToUtterances(
-      doc: LiturgicalDocument
+      doc: LiturgicalDocument,
     ): (number | TextWithLanguage)[] {
       let utterances;
       if (doc) {
@@ -171,7 +171,7 @@ export class SpeechService {
               // Filter out unneeded "Heading" value
               .filter(
                 (piece: any) =>
-                  doc?.type !== "heading" || (piece as string) !== "Heading"
+                  doc?.type !== "heading" || (piece as string) !== "Heading",
               )
               // stringfiy each one
               .map((piece: any) => piece.toString())
@@ -179,20 +179,20 @@ export class SpeechService {
               .concat(
                 doc?.metadata?.response && !doc?.metadata?.omit_response
                   ? doc.metadata.response
-                  : []
+                  : [],
               )
               .concat(
                 doc.style === "prayer" &&
                   !doc?.metadata?.response &&
                   !doc?.metadata?.omit_response
                   ? ["Amen"]
-                  : []
+                  : [],
               );
             break;
         }
 
         return utterances.map((text) =>
-          typeof text === "string" ? { text, language: doc.language } : text
+          typeof text === "string" ? { text, language: doc.language } : text,
         );
       } else {
         return [];
@@ -201,17 +201,19 @@ export class SpeechService {
 
     function responsivePrayerToUtterances(
       doc: ResponsivePrayer,
-      delayBetweenLines: number = 250
+      delayBetweenLines: number = 250,
     ): (number | string)[] {
       if ((doc as ResponsivePrayer).style === "preces") {
         return doc.value.map((line) => [line.text, delayBetweenLines]).flat();
       } else if ((doc as ResponsivePrayer).style === "litany") {
+        console.log("SPEECH DOC IS LITANY", doc);
         return doc.value
           .map((line) => [
             line.text,
             delayBetweenLines,
-            doc?.metadata?.response ? doc?.metadata?.response : null,
-            doc?.metadata?.response ? delayBetweenLines : null,
+            line.response ||
+              (doc?.metadata?.response ? doc?.metadata?.response : null),
+            line.response || doc?.metadata?.response ? delayBetweenLines : null,
           ])
           .flat()
           .filter((n) => n !== null);
@@ -224,7 +226,7 @@ export class SpeechService {
     }
 
     function bibleReadingToUtterances(
-      d: BibleReading
+      d: BibleReading,
     ): (number | string | TextWithLanguage)[] {
       const doc = new BibleReading(d);
       doc.compileIntro();
@@ -241,8 +243,8 @@ export class SpeechService {
             (verse as Heading).type === "heading"
               ? docToUtterances(verse as Heading)
               : processText((verse as BibleReadingVerse).text).split(
-                  /[@#'!&(),\[\].+\/]/g
-                )
+                  /[@#'!&(),\[\].+\/]/g,
+                ),
           )
           .flat(),
         // response
@@ -254,19 +256,21 @@ export class SpeechService {
 
     function psalmToUtterances(
       doc: Psalm,
-      pauseLength: number = 1000
+      pauseLength: number = 1000,
     ): (number | string | TextWithLanguage)[] {
       const obj = new Psalm(doc),
         includeAntiphon: boolean = obj.includeAntiphon(),
         filteredValue =
-          obj.style === "psalm" ? obj.filteredVerses() ?? [] : obj.value ?? [];
+          obj.style === "psalm"
+            ? (obj.filteredVerses() ?? [])
+            : (obj.value ?? []);
 
       function antiphonNode(
         antiphon:
           | string
           | Refrain
           | { [x: string]: string | Refrain }
-          | undefined
+          | undefined,
       ): (number | string | TextWithLanguage)[] {
         if (typeof antiphon == "string") {
           const refrain = new Refrain({
@@ -289,7 +293,7 @@ export class SpeechService {
 
           return antiphonNode(
             antiphon[`${date.getMonth() + 1}-${date.getDate()}`] ||
-              antiphon[`${date.getMonth() + 1}/${date.getDate()}`]
+              antiphon[`${date.getMonth() + 1}/${date.getDate()}`],
           );
         } else {
           return [];
@@ -299,7 +303,7 @@ export class SpeechService {
       function headingNode(
         value: string | undefined = undefined,
         level: number = 3,
-        showLatinName: boolean = true
+        showLatinName: boolean = true,
       ): (number | string | TextWithLanguage)[] {
         let label: string = obj.label;
         if (
@@ -335,7 +339,7 @@ export class SpeechService {
       }
 
       function gloriaNode(
-        gloria: string | Refrain
+        gloria: string | Refrain,
       ): (number | string | TextWithLanguage)[] {
         if (typeof gloria === "string") {
           return [gloria];
@@ -394,26 +398,26 @@ export class SpeechService {
                       subdoc: subdocIdx + index,
                       utterance: utteranceIdx + startingUtteranceIndex,
                       data,
-                    }))
+                    })),
                   )
                 : from(
                     this.utteranceFromText(
                       processText(
-                        typeof value === "string" ? value : value.text
+                        typeof value === "string" ? value : value.text,
                       ),
                       (typeof value === "string"
                         ? doc.language
                         : value.language) || "en",
-                      settings
-                    )
+                      settings,
+                    ),
                   ).pipe(
                     switchMap((utterance) => this.speak(utterance, voices)),
                     map((data) => ({
                       subdoc: subdocIdx + index,
                       utterance: utteranceIdx + startingUtteranceIndex,
                       data,
-                    }))
-                  )
+                    })),
+                  ),
             )
         );
       })
@@ -423,7 +427,7 @@ export class SpeechService {
 
   speak(
     utterance: SpeechSynthesisUtterance,
-    voices: SpeechSynthesisVoice[]
+    voices: SpeechSynthesisVoice[],
   ): Observable<any> {
     // use TextToSpeech plugin for Android -- browser SpeechSynthesis works better for web/iOS
     if (Capacitor.getPlatform() === "android" && Capacitor.isNativePlatform()) {
@@ -435,12 +439,12 @@ export class SpeechService {
             rate: utterance.rate,
             lang: utterance.lang,
             category: "playback",
-          })
+          }),
         );
 
         const subscription = merge(
           interval(1).pipe(first(), mapTo(TTSState.Starting)),
-          end$.pipe(mapTo(TTSState.Ending))
+          end$.pipe(mapTo(TTSState.Ending)),
         )
           .pipe(
             takeUntil(end$),
@@ -448,7 +452,7 @@ export class SpeechService {
               state,
               utterance,
               target: utterance,
-            }))
+            })),
           )
           .subscribe(observer);
 
@@ -469,7 +473,7 @@ export class SpeechService {
           state: ev.type === "start" ? TTSState.Starting : undefined,
           target: ev.target,
           utterance: ev.utterance,
-        }))
+        })),
       );
     }
   }
@@ -481,7 +485,7 @@ export class SpeechService {
   async utteranceFromText(
     text: string,
     lang: string,
-    settings: DisplaySettings
+    settings: DisplaySettings,
   ): Promise<SpeechSynthesisUtterance> {
     const voices = await this.getVoices(),
       chosenVoice = this.isOriginalLanguage(lang)
@@ -497,7 +501,7 @@ export class SpeechService {
     }
     u.lang = chosenVoice?.lang || lang;
     u.pitch = 1;
-    u.rate = this.isOriginalLanguage(lang) ? 0.2 : settings.voiceRate ?? 0.75;
+    u.rate = this.isOriginalLanguage(lang) ? 0.2 : (settings.voiceRate ?? 0.75);
     // iOS needs to sloooooow down if using Capacitor TextToSpeech
     // in this case I've just reverted to using the Web Speech Synthesis API on iOS because it's actually better
     // * (Capacitor.getPlatform() === "ios" && Capacitor.isNativePlatform() ? 0.6 : 1);
@@ -546,7 +550,7 @@ export class SpeechService {
                   resolve({ voices: voices });
                   window.speechSynthesis.removeEventListener(
                     "voiceschanged",
-                    handler
+                    handler,
                   );
                 }
               };

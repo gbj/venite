@@ -9,15 +9,15 @@ export async function getYouVersionBook(
   const url = `https://www.bible.com/bible/${bibleNumber}/${bookCode}.${chapter}.${bibleCode}`,
     page = await requestHTML(url);
   const nodes = Array.from(page.querySelectorAll("span"))
-    .filter((span) => (span.getAttribute("class") || "").includes("_verse_"))
+    .filter((span) => (span.getAttribute("class") || "").includes("__verse"))
     .map((node) => {
       let spans = Array.from(node.querySelectorAll("span"));
       let label = "";
       let content = "";
       for (const span of spans) {
-        if (span.getAttribute("class")?.includes("_label_")) {
+        if (span.getAttribute("class")?.includes("__label")) {
           label += span.text;
-        } else if (span.getAttribute("class")?.includes("_content_")) {
+        } else if (span.getAttribute("class")?.includes("__content")) {
           content += " ";
           content += span.text;
         }

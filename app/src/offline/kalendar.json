@@ -2164,6 +2164,66 @@
   ],
   "lff2018": [
     {
+      "slug": "wednesday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "friday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "saturday-1st-lent",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "wednesday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "friday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
+      "slug": "saturday-pentecost",
+      "name": "Ember Day",
+      "collect": "ember-day",
+      "kalendar": "lff2018",
+      "type": {
+        "rank": 2,
+        "name": "Ember"
+      }
+    },
+    {
       "slug": "wednesday-last-epiphany",
       "name": "Ash Wednesday",
       "kalendar": "lff2018",
