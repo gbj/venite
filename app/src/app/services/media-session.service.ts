@@ -7,7 +7,7 @@ import {
   Option,
 } from "@venite/ldf";
 //import { MediaSession } from "media-session";
-import { MediaSession } from "@jofr/capacitor-media-session";
+import { MediaSession } from "@capgo/capacitor-media-session";
 import { PlatformService } from "@venite/ng-platform";
 import { combineLatest, Observable, of, Subscription } from "rxjs";
 import { AudioService } from "../pray/audio.service";

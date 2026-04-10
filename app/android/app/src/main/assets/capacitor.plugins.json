@@ -48,8 +48,8 @@
 		"classpath": "com.capacitorjs.plugins.share.SharePlugin"
 	},
 	{
-		"pkg": "@jofr/capacitor-media-session",
-		"classpath": "io.github.jofr.capacitor.mediasessionplugin.MediaSessionPlugin"
+		"pkg": "@capgo/capacitor-media-session",
+		"classpath": "com.capgo.mediasession.MediaSessionPlugin"
 	},
 	{
 		"pkg": "capacitor-firebase-auth",

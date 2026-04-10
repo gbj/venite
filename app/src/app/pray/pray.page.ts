@@ -99,7 +99,7 @@ import { Share } from "@capacitor/share";
 import { Clipboard } from "@capacitor/clipboard";
 import * as clipboardPolyfill from "clipboard-polyfill";
 
-import { MediaSession } from "@jofr/capacitor-media-session";
+import { MediaSession } from "@capgo/capacitor-media-session";
 import { LoginComponent } from "../auth/login/login.component";
 import { MediaSessionService } from "../services/media-session.service";
 

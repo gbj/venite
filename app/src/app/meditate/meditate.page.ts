@@ -9,7 +9,7 @@ import {
 } from "@venite/ng-service-api";
 import { KeepAwake } from '@capacitor-community/keep-awake';
 //import { MediaSession } from "media-session";
-import { MediaSession } from "@jofr/capacitor-media-session";
+import { MediaSession } from "@capgo/capacitor-media-session";
 import { Observable, of } from "rxjs";
 import { distinct, map, switchMap, tap } from "rxjs/operators";
 import { AudioService } from "../pray/audio.service";

@@ -21,7 +21,7 @@ dependencies {
     implementation project(':capacitor-local-notifications')
     implementation project(':capacitor-preferences')
     implementation project(':capacitor-share')
-    implementation project(':jofr-capacitor-media-session')
+    implementation project(':capgo-capacitor-media-session')
     implementation project(':capacitor-firebase-auth')
     implementation "androidx.webkit:webkit:1.4.0"
 }

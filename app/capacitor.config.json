@@ -1,8 +1,6 @@
 {
   "appId": "app.venite",
   "appName": "Venite",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
   "webDir": "www",
   "plugins": {
     "SplashScreen": {
