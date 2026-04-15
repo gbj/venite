@@ -1,11 +1,4 @@
 # venite
-Spec and rendering components for the Liturgical Document Format (LDF) used by Venite.app.
+Source code for Venite.app.
 
-Ultimately, this will provide:
-1. **Liturgical Document Format** (LDF): an open JSON-based document format capable of representing almost any worship bulletin, psalm, prayer, or other liturgical document
-2. **Components**: a set of web components that
-  - can be embedded in any webpage or HTML-based app to display a liturgical document; currently support IE11 and all modern browsers (Safari, Chrome, Firefox, Edge, Opera, etc.)
-  - can collaboratively edit any liturgical document
-3. **An app** that provides a collaborative editor to work on documents together, based on Operational Transformation.
-
-This is very much a work in progress, and consists of a complete rewrite of the app found at www.venite.app.
+**NOTE**: This mostly servces as backup for my work on this. The codebase is old and brittle, and comes from a time when I didn't know very much; it's been in maintenance mode for a few years. The application works well, but I wouldn't recommend using this as a starting point for new work!
