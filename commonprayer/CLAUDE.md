@@ -39,5 +39,6 @@ firebase deploy       # push www/ to Firebase Hosting
 - **Two tsconfigs.** `tsconfig.deno.json` is the truth (includes `deno.window`, `deno.unstable`). `tsconfig.json` exists only so editors show DOM types; don't use it for builds.
 - Don't commit `www/` — it's build output.
 - Liturgy JSON files are hand-edited canonical data. Changes to these are content changes, not code changes.
+- `src/liturgy/` is the canonical source; `app/src/offline/` holds a separately maintained bundled copy. A content fix usually needs to land in **both** places (or be regenerated into the app).
 - Compile logic (lookups, antiphon insertion) is here, **not in `@venite/ldf`**. Update both when a new doc type needs resolution.
 - No tests. Build success = contract.

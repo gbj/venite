@@ -19,7 +19,11 @@ Venite main app. Ionic 6 + Angular 12.2 + Capacitor 7 (iOS/Android) + Firebase (
   - `ng-pray`, `ng-pray-menu`, `ng-reminders`, `ng-darkmode`, `ng-platform`, `ng-service-api`, `ng-localstorage`.
   - Each has `ng-package.json` and `public-api.ts`. Build into root `dist/`.
   - `ng-service-api` declares DI tokens (`BIBLE_SERVICE`, etc.); app binds implementations in `app.module.ts`.
-- `functions/src/index.ts` — Firebase Cloud Functions (callables for liturgy/calendar/etc.).
+- `src/offline/` — **bundled offline LDF data** shipped with the app. Subdirs:
+  - `liturgy/*.ldf.json` — full precompiled services (Rite I/II, EOW, Daily Devotions, es-LOC/es-Rite-II, compline/morning/evening/noonday, litany, supplication, angelus, eucharist).
+  - `psalter/psalms.json`, `category/{en,es}-*.json`, `lectionary/{bcp1662,bcp1979_*,rclsunday*}.json`, `bible/nrsv_structure.json`, `kalendar.json`, `canticle_table.json`, `colors.json`, `versions.json`, `weeks.json`, `by_slug.json`.
+  - These are **downstream artifacts** of `commonprayer/src/liturgy/` compilation, not canonical sources. When a canonical change lands in `commonprayer/`, the matching offline file here must be regenerated. The files are huge; treat diffs as data, not code.
+- `functions/` — Firebase Cloud Functions. Independent package (`functions/package.json`, `functions/tsconfig.json`, `functions/tslint.json`); single `functions/src/index.ts`. Uses `@venite/bible-api` and `@venite/hymnal-api` server-side.
 - `firestore.rules`, `firestore.indexes.json`, `storage.rules` — security.
 - `src/environments/environment.ts` — Firebase client config (apiKey is public).
 - `capacitor.config.json` — CapacitorFirebaseAuth providers (Google/Twitter/Apple).
