@@ -1063,7 +1063,7 @@
 			"hidden": false,
 			"type": "rubric",
 			"value": [
-				"El Diácono, o el Celebrante, despide al pueblo con estas palabras:s"
+				"El Diácono, o el Celebrante, despide al pueblo con estas palabras:"
 			]
 		},
 		{
@@ -1239,8 +1239,8 @@
 				"conditions": [
 					{
 						"season": {
-							"only": [],
-							"except": ["Easter", "Ascension", "Pentecost", "Pentecost"]
+							"only": ["Easter", "Ascension", "Pentecost", "Pentecost"],
+							"except": []
 						}
 					}
 				]
