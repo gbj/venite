@@ -1,14 +1,4 @@
 PODS:
-  - AppAuth (2.0.0):
-    - AppAuth/Core (= 2.0.0)
-    - AppAuth/ExternalUserAgent (= 2.0.0)
-  - AppAuth/Core (2.0.0)
-  - AppAuth/ExternalUserAgent (2.0.0):
-    - AppAuth/Core
-  - AppCheckCore (11.2.0):
-    - GoogleUtilities/Environment (~> 8.0)
-    - GoogleUtilities/UserDefaults (~> 8.0)
-    - PromisesObjC (~> 2.4)
   - Capacitor (8.3.0):
     - CapacitorCordova
   - CapacitorApp (8.1.0):
@@ -28,13 +18,13 @@ PODS:
   - CapacitorFilesystem (8.1.2):
     - Capacitor
     - IONFilesystemLib (~> 1.1.1)
-  - CapacitorFirebaseAuth (3.0.0-rc.0):
+  - CapacitorFirebaseAuthentication (8.2.0):
     - Capacitor
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - Firebase/Auth
-    - Firebase/Core
-    - GoogleSignIn
+    - CapacitorFirebaseAuthentication/Lite (= 8.2.0)
+    - FirebaseAuth (~> 12.7)
+  - CapacitorFirebaseAuthentication/Lite (8.2.0):
+    - Capacitor
+    - FirebaseAuth (~> 12.7)
   - CapacitorHaptics (8.0.2):
     - Capacitor
   - CapacitorKeyboard (8.0.3):
@@ -49,22 +39,6 @@ PODS:
     - Capacitor
   - CordovaPlugins (8.3.0):
     - CapacitorCordova
-  - FBAEMKit (18.0.3):
-    - FBSDKCoreKit_Basics (= 18.0.3)
-  - FBSDKCoreKit (18.0.3):
-    - FBAEMKit (= 18.0.3)
-    - FBSDKCoreKit_Basics (= 18.0.3)
-  - FBSDKCoreKit_Basics (18.0.3)
-  - FBSDKLoginKit (18.0.3):
-    - FBSDKCoreKit (= 18.0.3)
-  - Firebase/Auth (12.12.0):
-    - Firebase/CoreOnly
-    - FirebaseAuth (~> 12.12.0)
-  - Firebase/Core (12.12.0):
-    - Firebase/CoreOnly
-    - FirebaseAnalytics (~> 12.12.0)
-  - Firebase/CoreOnly (12.12.0):
-    - FirebaseCore (~> 12.12.0)
   - FirebaseAnalytics (12.12.0):
     - FirebaseAnalytics/Default (= 12.12.0)
     - FirebaseCore (~> 12.12.0)
@@ -134,11 +108,6 @@ PODS:
     - GoogleUtilities/Network (~> 8.1)
     - "GoogleUtilities/NSData+zlib (~> 8.1)"
     - nanopb (~> 3.30910.0)
-  - GoogleSignIn (9.1.0):
-    - AppAuth (~> 2.0)
-    - AppCheckCore (~> 11.0)
-    - GTMAppAuth (~> 5.0)
-    - GTMSessionFetcher/Core (~> 3.3)
   - GoogleUtilities/AppDelegateSwizzler (8.1.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -166,10 +135,7 @@ PODS:
   - GoogleUtilities/UserDefaults (8.1.0):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
-  - GTMAppAuth (5.0.0):
-    - AppAuth/Core (~> 2.0)
-    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
-  - GTMSessionFetcher/Core (3.5.0)
+  - GTMSessionFetcher/Core (5.2.0)
   - IONFilesystemLib (1.1.2)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
@@ -189,7 +155,7 @@ DEPENDENCIES:
   - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
   - "CapacitorDevice (from `../../node_modules/@capacitor/device`)"
   - "CapacitorFilesystem (from `../../node_modules/@capacitor/filesystem`)"
-  - CapacitorFirebaseAuth (from `../../node_modules/capacitor-firebase-auth`)
+  - "CapacitorFirebaseAuthentication (from `../../node_modules/@capacitor-firebase/authentication`)"
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
   - "CapacitorLocalNotifications (from `../../node_modules/@capacitor/local-notifications`)"
@@ -200,13 +166,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AppAuth
-    - AppCheckCore
-    - FBAEMKit
-    - FBSDKCoreKit
-    - FBSDKCoreKit_Basics
-    - FBSDKLoginKit
-    - Firebase
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
     - FirebaseAuth
@@ -217,9 +176,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - GoogleAdsOnDeviceConversion
     - GoogleAppMeasurement
-    - GoogleSignIn
     - GoogleUtilities
-    - GTMAppAuth
     - GTMSessionFetcher
     - IONFilesystemLib
     - nanopb
@@ -245,8 +202,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/device"
   CapacitorFilesystem:
     :path: "../../node_modules/@capacitor/filesystem"
-  CapacitorFirebaseAuth:
-    :path: "../../node_modules/capacitor-firebase-auth"
+  CapacitorFirebaseAuthentication:
+    :path: "../../node_modules/@capacitor-firebase/authentication"
   CapacitorHaptics:
     :path: "../../node_modules/@capacitor/haptics"
   CapacitorKeyboard:
@@ -263,8 +220,6 @@ EXTERNAL SOURCES:
     :path: "../capacitor-cordova-ios-plugins"
 
 SPEC CHECKSUMS:
-  AppAuth: 1c1a8afa7e12f2ec3a294d9882dfa5ab7d3cb063
-  AppCheckCore: cc8fd0a3a230ddd401f326489c99990b013f0c4f
   Capacitor: 22e541237135648c9aa736232bb4d2eec35fddcb
   CapacitorApp: 449ffe26375e96f8aaaee625ac6e01e5c57c8650
   CapacitorClipboard: c75fdaa6e622111119f35e7914ecfc67b05efecb
@@ -274,7 +229,7 @@ SPEC CHECKSUMS:
   CapacitorCordova: 2e1e2bb93b2f365309dc4ff18b72b9a69a7814a9
   CapacitorDevice: 14cba6f88d1c3074cbf825fea977c8c526453ff8
   CapacitorFilesystem: 2db285a1ac6e475cc27cae2e1bea999000f9e2be
-  CapacitorFirebaseAuth: 949834e6e763915b4d056e5ffbf2bd95f44cb347
+  CapacitorFirebaseAuthentication: 2ee63174ff22da28bb4535f0e5bcc436bead52a7
   CapacitorHaptics: 296f771ecd89c7a1bd92a7b6826a7d268e2e70f5
   CapacitorKeyboard: 31c8285d92c9d1410071d52449f16d2c6673b6f4
   CapacitorLocalNotifications: 4db83a7f6bdd2f30dcedf5c6f92c415065467a24
@@ -282,11 +237,6 @@ SPEC CHECKSUMS:
   CapacitorShare: 0c58305114538568059bfc07111f22dcb9cb2a82
   CapgoCapacitorMediaSession: 3f952128f87fd7d5e4edf397c10bdafef0eadbde
   CordovaPlugins: d18a0fc0269140e27c1158f7451f757927ae368c
-  FBAEMKit: 2a6b529993713c185b02bc36f8c91129bf78dfb0
-  FBSDKCoreKit: 65d7f7a7d6fcc3aa6eb6e093ec737a4184fc6049
-  FBSDKCoreKit_Basics: 7bc9d8fde8f70985fba2ed7c1d07e319f969a991
-  FBSDKLoginKit: 66d20fcb7afcafc0c420477662f96845cd1a5179
-  Firebase: aa154fee4e9b8eac17aa42344988865b3e857d33
   FirebaseAnalytics: db0dca7e35a503ddf6869e457f4926dc35afe216
   FirebaseAppCheckInterop: c63ae0d003274f145174849c545ab861593beaf9
   FirebaseAuth: bcfebbc0ca055a6335f2252a90e57363d7ea5e65
@@ -297,15 +247,13 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 4e6e162aa4abaaeeeb01dd00179dfc5ad9c2194e
   GoogleAdsOnDeviceConversion: 02fc8fe599acd867e328321effb0d9b2d023a38a
   GoogleAppMeasurement: 3b4687de50ab25ee2d4d541849f10ca8df862a12
-  GoogleSignIn: fcee2257188d5eda57a5e2b6a715550ffff9206d
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
-  GTMAppAuth: 217a876b249c3c585a54fd6f73e6b58c4f5c4238
-  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
+  GTMSessionFetcher: 904bdd2a82c635bcd6f44edf94cc8775c5d1d6e6
   IONFilesystemLib: 21a63377696b2d8fab5632ecfb7d2ac67bddb68a
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 11e0b637842dfb48308d242afc3f448062325aba
 
-PODFILE CHECKSUM: 3c478799f68728ac0c699ee3ee69681f058505ff
+PODFILE CHECKSUM: 3fc4bd5a6d7ea10d4e78cd6665292e2e937b36b4
 
 COCOAPODS: 1.16.2

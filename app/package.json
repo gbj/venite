@@ -9,7 +9,8 @@
     "build": "ng build --prod && ionic deploy manifest",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "bash scripts/postinstall.sh"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +26,7 @@
     "@capacitor-community/firebase-analytics": "^8.0.0",
     "@capacitor-community/keep-awake": "^8.0.0",
     "@capacitor-community/text-to-speech": "^8.0.0",
+    "@capacitor-firebase/authentication": "^8.2.0",
     "@capacitor/android": "^8.3.0",
     "@capacitor/app": "^8.1.0",
     "@capacitor/clipboard": "^8.0.1",
@@ -60,7 +62,6 @@
     "@venite/ng-pray": "^0.6.4",
     "@venite/ng-reminders": "^0.3.4",
     "@venite/ng-service-api": "^0.8.0",
-    "capacitor-firebase-auth": "^3.0.0",
     "clipboard-polyfill": "^3.0.1",
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-androidx-adapter": "^1.1.3",

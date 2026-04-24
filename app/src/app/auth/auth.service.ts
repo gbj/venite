@@ -4,7 +4,7 @@ import { Observable, of } from "rxjs";
 
 import { AngularFireAuth } from "@angular/fire/auth";
 import firebase from "firebase/app";
-import { cfaSignIn, cfaSignOut } from "capacitor-firebase-auth/alternative";
+import { FirebaseAuthentication } from "@capacitor-firebase/authentication";
 import { UserProfile } from "./user/user-profile";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { map, catchError, first, filter } from "rxjs/operators";
@@ -33,26 +33,37 @@ export class AuthService {
     let result: firebase.auth.UserCredential;
 
     if (Capacitor.isNativePlatform()) {
-      let target;
-      switch (provider) {
-        case "Google":
-          target = "google.com";
-          break;
-        case "Twitter":
-          target = "twitter.com";
-          break;
-        case "Apple":
-          target = "apple.com";
-          break;
-      }
-      if (target) {
-        const loading = await this.loading.create({
-          backdropDismiss: true,
-        });
-        await loading.present();
-        const user = await cfaSignIn(target).toPromise();
+      const loading = await this.loading.create({
+        backdropDismiss: true,
+      });
+      await loading.present();
+      try {
+        let signInResult;
+        let credential;
+        if (provider === "Google") {
+          signInResult = await FirebaseAuthentication.signInWithGoogle();
+          credential = firebase.auth.GoogleAuthProvider.credential(
+            signInResult.credential?.idToken
+          );
+        } else if (provider === "Twitter") {
+          signInResult = await FirebaseAuthentication.signInWithTwitter();
+          credential = firebase.auth.TwitterAuthProvider.credential(
+            signInResult.credential?.accessToken,
+            signInResult.credential?.secret
+          );
+        } else if (provider === "Apple") {
+          signInResult = await FirebaseAuthentication.signInWithApple();
+          const oauthProvider = new firebase.auth.OAuthProvider("apple.com");
+          credential = oauthProvider.credential({
+            idToken: signInResult.credential?.idToken,
+            rawNonce: signInResult.credential?.nonce,
+          });
+        }
+        if (credential) {
+          result = await firebase.auth().signInWithCredential(credential);
+        }
+      } finally {
         loading.dismiss();
-        result = user.userCredential;
       }
     } else {
       const loading = await this.loading.create({ backdropDismiss: true });
@@ -120,10 +131,9 @@ export class AuthService {
 
   async logout() {
     if (Capacitor.isNativePlatform()) {
-      cfaSignOut().subscribe();
-    } else {
-      return await firebase.auth().signOut();
+      await FirebaseAuthentication.signOut();
     }
+    return await firebase.auth().signOut();
   }
 
   async signInWithEmailAndPassword(email: string, password: string) {

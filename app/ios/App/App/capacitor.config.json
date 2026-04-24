@@ -6,14 +6,13 @@
 		"SplashScreen": {
 			"launchShowDuration": 0
 		},
-		"CapacitorFirebaseAuth": {
+		"FirebaseAuthentication": {
+			"skipNativeAuth": true,
 			"providers": [
 				"google.com",
 				"twitter.com",
 				"apple.com"
-			],
-			"languageCode": "en",
-			"nativeAuth": false
+			]
 		}
 	},
 	"cordova": {},
@@ -21,6 +20,7 @@
 		"FirebaseAnalytics",
 		"KeepAwakePlugin",
 		"TextToSpeechPlugin",
+		"FirebaseAuthenticationPlugin",
 		"AppPlugin",
 		"ClipboardPlugin",
 		"DevicePlugin",
@@ -31,7 +31,6 @@
 		"PreferencesPlugin",
 		"SharePlugin",
 		"MediaSessionPlugin",
-		"CapacitorFirebaseAuth",
 		"CDVPlugin"
 	]
 }

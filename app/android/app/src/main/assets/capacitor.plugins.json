@@ -12,6 +12,10 @@
 		"classpath": "com.getcapacitor.community.tts.TextToSpeechPlugin"
 	},
 	{
+		"pkg": "@capacitor-firebase/authentication",
+		"classpath": "io.capawesome.capacitorjs.plugins.firebase.authentication.FirebaseAuthenticationPlugin"
+	},
+	{
 		"pkg": "@capacitor/app",
 		"classpath": "com.capacitorjs.plugins.app.AppPlugin"
 	},
@@ -50,9 +54,5 @@
 	{
 		"pkg": "@capgo/capacitor-media-session",
 		"classpath": "com.capgo.mediasession.MediaSessionPlugin"
-	},
-	{
-		"pkg": "capacitor-firebase-auth",
-		"classpath": "com.baumblatt.capacitor.firebase.auth.CapacitorFirebaseAuth"
 	}
 ]

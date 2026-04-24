@@ -11,6 +11,9 @@ project(':capacitor-community-keep-awake').projectDir = new File('../node_module
 include ':capacitor-community-text-to-speech'
 project(':capacitor-community-text-to-speech').projectDir = new File('../node_modules/@capacitor-community/text-to-speech/android')
 
+include ':capacitor-firebase-authentication'
+project(':capacitor-firebase-authentication').projectDir = new File('../node_modules/@capacitor-firebase/authentication/android')
+
 include ':capacitor-app'
 project(':capacitor-app').projectDir = new File('../node_modules/@capacitor/app/android')
 
@@ -40,6 +43,3 @@ project(':capacitor-share').projectDir = new File('../node_modules/@capacitor/sh
 
 include ':capgo-capacitor-media-session'
 project(':capgo-capacitor-media-session').projectDir = new File('../node_modules/@capgo/capacitor-media-session/android')
-
-include ':capacitor-firebase-auth'
-project(':capacitor-firebase-auth').projectDir = new File('../node_modules/capacitor-firebase-auth/android')

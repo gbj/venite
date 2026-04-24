@@ -12,6 +12,7 @@ dependencies {
     implementation project(':capacitor-community-firebase-analytics')
     implementation project(':capacitor-community-keep-awake')
     implementation project(':capacitor-community-text-to-speech')
+    implementation project(':capacitor-firebase-authentication')
     implementation project(':capacitor-app')
     implementation project(':capacitor-clipboard')
     implementation project(':capacitor-device')
@@ -22,7 +23,6 @@ dependencies {
     implementation project(':capacitor-preferences')
     implementation project(':capacitor-share')
     implementation project(':capgo-capacitor-media-session')
-    implementation project(':capacitor-firebase-auth')
     implementation "androidx.webkit:webkit:1.4.0"
 }
 

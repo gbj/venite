@@ -6,14 +6,13 @@
 		"SplashScreen": {
 			"launchShowDuration": 0
 		},
-		"CapacitorFirebaseAuth": {
+		"FirebaseAuthentication": {
+			"skipNativeAuth": true,
 			"providers": [
 				"google.com",
 				"twitter.com",
 				"apple.com"
-			],
-			"languageCode": "en",
-			"nativeAuth": false
+			]
 		}
 	},
 	"cordova": {}
