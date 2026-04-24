@@ -473,6 +473,7 @@
 				"table": { "preference": "lectionary" },
 				"item": "gospel"
 			},
+			"language": "es",
 			"metadata": {
 				"intro": {
 					"value": [
@@ -481,7 +482,7 @@
 							"response": "¡Gloria a ti, Cristo Señor!"
 						}
 					],
-					"language": "en",
+					"language": "es",
 					"hidden": false,
 					"metadata": {},
 					"lastRevision": 13,
