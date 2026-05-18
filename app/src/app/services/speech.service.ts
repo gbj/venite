@@ -390,7 +390,12 @@ export class SpeechService {
             // start at the given offset, but only for the first subdoc
             // (i.e., if we paused at v. 3 of the psalm, start at v 3 -- but don't slice other docs)
             .slice(subdocIdx === 0 ? startingUtteranceIndex : 0)
-            .filter((value) => value || " ")
+            .filter((value) => {
+              if (typeof value === "number") return true;
+              const text =
+                typeof value === "string" ? value : (value?.text ?? "");
+              return /\p{L}|\p{N}/u.test(text);
+            })
             .map((value, utteranceIdx) =>
               typeof value === "number"
                 ? timer(value).pipe(
