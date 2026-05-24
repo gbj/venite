@@ -1918,7 +1918,7 @@
   "ojn-2": [
     {
       "id": "169",
-      "slug": "<omitted>",
+      "slug": null,
       "day": null,
       "nth": 2,
       "week": null,
@@ -2047,7 +2047,7 @@
   "ojn_i-2": [
     {
       "id": "169",
-      "slug": "<omitted>",
+      "slug": null,
       "day": null,
       "nth": 2,
       "week": null,
