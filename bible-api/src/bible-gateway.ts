@@ -28,6 +28,7 @@ export function buildBibleGatewayURL(
   version: string
 ): string {
   const params = new URLSearchParams();
+  citation = citation.replace("Eccles.", "Ecclesiastes");
   params.append("search", citation);
   params.append("version", version);
   return `https://www.biblegateway.com/passage/?${params.toString()}`;
