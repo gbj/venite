@@ -284,8 +284,8 @@ export class DocumentService {
 						style: "gloria",
 						citation: null,
 						value: [
-							"Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
-							"As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
+							"Glory&nbsp;be&nbsp;to&nbsp;the&nbsp;Father, and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Ghost:&nbsp;*",
+							"As&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning, is&nbsp;now,&nbsp;and&nbsp;ever&nbsp;shall&nbsp;be, world&nbsp;without&nbsp;end.&nbsp;Amen.",
 						],
 					}),
 				]);
@@ -299,8 +299,8 @@ export class DocumentService {
 						type: "refrain",
 						slug: "gloria-patri",
 						value: [
-							"Glory&nbsp;to&nbsp;the&nbsp;Father,&nbsp;and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
-							"as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning,&nbsp;is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen.",
+							"Glory&nbsp;to&nbsp;the&nbsp;Father, and&nbsp;to&nbsp;the&nbsp;Son, and&nbsp;to&nbsp;the&nbsp;Holy&nbsp;Spirit:&nbsp;*",
+							"as&nbsp;it&nbsp;was&nbsp;in&nbsp;the&nbsp;beginning, is&nbsp;now, and&nbsp;will&nbsp;be&nbsp;for&nbsp;ever.&nbsp;Amen.",
 						],
 						citation: null,
 						language: "en",
