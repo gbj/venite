@@ -10,227 +10,230 @@ import { BulletinCommands } from "src/app/pray-menu/bulletin-commands";
 import { DocumentService } from "src/app/services/document.service";
 
 @Component({
-  selector: "venite-create-bulletin-modal",
-  templateUrl: "./create-bulletin-modal.component.html",
-  styleUrls: ["./create-bulletin-modal.component.scss"],
+	selector: "venite-create-bulletin-modal",
+	templateUrl: "./create-bulletin-modal.component.html",
+	styleUrls: ["./create-bulletin-modal.component.scss"],
 })
 export class CreateBulletinModalComponent implements OnInit {
-  @Input() modal: any;
+	@Input() modal: any;
 
-  constructor(
-    private auth: AuthService,
-    private organizationService: OrganizationService,
-    private router: Router,
-    private alert: AlertController,
-    private documents: DocumentService,
-    private translate: TranslateService,
-    private loading: LoadingController
-  ) {}
+	constructor(
+		private auth: AuthService,
+		private organizationService: OrganizationService,
+		private router: Router,
+		private alert: AlertController,
+		private documents: DocumentService,
+		private translate: TranslateService,
+		private loading: LoadingController,
+	) {}
 
-  ngOnInit() {}
+	ngOnInit() {}
 
-  dismiss() {
-    this.modal.dismiss();
-  }
+	dismiss() {
+		this.modal.dismiss();
+	}
 
-  async labelSlugAlert(
-    liturgy: LiturgicalDocument,
-    org: string,
-    day: LiturgicalDay
-  ): Promise<{ label: string; slug: string }> {
-    const alert = await this.alert.create({
-      header: this.translate.instant("bulletins.create-a-bulletin"),
-      message: this.translate.instant("bulletins.title-url-message", {
-        base: `/${org}/pray`,
-      }),
-      inputs: [
-        {
-          name: "label",
-          type: "text",
-          placeholder: this.translate.instant("bulletins.title"),
-          value: liturgy?.label,
-        },
-        org && {
-          name: "slug",
-          type: "text",
-          placeholder: this.translate.instant("bulletins.url", {
-            base: `/${org}/pray`,
-          }),
-          value: day?.date
-            ? `${liturgy?.slug || "bulletin"}-${day?.date}`
-            : liturgy?.slug,
-        },
-      ],
-      buttons: [
-        {
-          text: this.translate.instant("editor.cancel"),
-          role: "cancel",
-          cssClass: "secondary",
-        },
-        {
-          text: this.translate.instant("editor.create"),
-        },
-      ],
-    });
+	async labelSlugAlert(
+		liturgy: LiturgicalDocument,
+		org: string,
+		day: LiturgicalDay,
+	): Promise<{ label: string; slug: string }> {
+		const alert = await this.alert.create({
+			header: this.translate.instant("bulletins.create-a-bulletin"),
+			message: this.translate.instant("bulletins.title-url-message", {
+				base: org ? `/${org}/pray` : `/pray`,
+			}),
+			inputs: [
+				{
+					name: "label",
+					type: "text",
+					placeholder: this.translate.instant("bulletins.title"),
+					value: liturgy?.label,
+				},
+				{
+					name: "slug",
+					type: "text",
+					placeholder: this.translate.instant("bulletins.url", {
+						base: org ? `/${org}/pray` : `/pray`,
+					}),
+					value: day?.date
+						? `${liturgy?.slug || "bulletin"}-${day?.date}`
+						: liturgy?.slug,
+				},
+			],
+			buttons: [
+				{
+					text: this.translate.instant("editor.cancel"),
+					role: "cancel",
+					cssClass: "secondary",
+				},
+				{
+					text: this.translate.instant("editor.create"),
+				},
+			],
+		});
 
-    await alert.present();
+		await alert.present();
 
-    const result = await alert.onDidDismiss();
-    const { data } = result;
-    const { values } = result.role === "cancel" ? { values: {} } : data;
-    let problem = false;
+		const result = await alert.onDidDismiss();
+		const { data } = result;
+		const { values } = result.role === "cancel" ? { values: {} } : data;
+		let problem = false;
 
-    if (values.slug && encodeURIComponent(values.slug) !== values.slug) {
-      const url_problem_alert = await this.alert.create({
-        header: this.translate.instant("bulletins.url-problem-header"),
-        message: this.translate.instant("bulletins.url-problem-message", {
-          base: `/${org}/pray`,
-          encoded: encodeURIComponent(values.slug),
-        }),
-        buttons: [
-          {
-            text: this.translate.instant("editor.cancel"),
-            role: "cancel",
-            cssClass: "secondary",
-            handler: async () => (problem = true),
-          },
-          {
-            text: this.translate.instant("editor.create"),
-            handler: () => {},
-          },
-        ],
-      });
+		console.log("here 2!", values);
 
-      await url_problem_alert.present();
-      await url_problem_alert.onDidDismiss();
-    }
+		if (values.slug && encodeURIComponent(values.slug) !== values.slug) {
+			const url_problem_alert = await this.alert.create({
+				header: this.translate.instant("bulletins.url-problem-header"),
+				message: this.translate.instant("bulletins.url-problem-message", {
+					base: org ? `/${org}/pray` : `/pray`,
+					encoded: encodeURIComponent(values.slug),
+				}),
+				buttons: [
+					{
+						text: this.translate.instant("editor.cancel"),
+						role: "cancel",
+						cssClass: "secondary",
+						handler: async () => (problem = true),
+					},
+					{
+						text: this.translate.instant("editor.create"),
+						handler: () => {},
+					},
+				],
+			});
 
-    return problem ? this.labelSlugAlert(liturgy, org, day) : values;
-  }
+			await url_problem_alert.present();
+			await url_problem_alert.onDidDismiss();
+		}
 
-  async createBulletin(event: BulletinCommands) {
-    // ask for a title and URL slug for this bulletin
-    const liturgy = event?.state?.liturgy,
-      orgs$ = this.auth.user.pipe(
-        switchMap((user) =>
-          user ? this.organizationService.organizationsWithUser(user.uid) : []
-        )
-      );
+		return problem ? this.labelSlugAlert(liturgy, org, day) : values;
+	}
 
-    console.log("createBulletin liturgy = ", liturgy);
+	async createBulletin(event: BulletinCommands) {
+		console.log("createBulletin: ", event);
+		// ask for a title and URL slug for this bulletin
+		const liturgy = event?.state?.liturgy,
+			orgs$ = this.auth.user.pipe(
+				switchMap((user) =>
+					user ? this.organizationService.organizationsWithUser(user.uid) : [],
+				),
+			);
 
-    const loading = await this.loading.create({ backdropDismiss: true });
-    await loading.present();
+		console.log("createBulletin liturgy = ", liturgy);
 
-    orgs$.subscribe(async (orgs) => {
-      const org = orgs.map((org) => org.slug)[0];
-      let proceed = true;
+		const loading = await this.loading.create({ backdropDismiss: true });
+		await loading.present();
 
-      await loading.dismiss();
+		orgs$.subscribe(async (orgs) => {
+			const org = orgs.map((org) => org.slug)[0];
+			let proceed = true;
 
-      if (org) {
-        let { label, slug } = await this.labelSlugAlert(
-          liturgy,
-          org,
-          event?.state?.day
-        );
+			await loading.dismiss();
 
-        if (label && slug) {
-          event.state.liturgy.label = label;
-          event.state.liturgy.slug = slug;
+			let { label, slug } = await this.labelSlugAlert(
+				liturgy,
+				org,
+				event?.state?.day,
+			);
 
-          // deduplicate slug
-          if (proceed && slug) {
-            const others = await this.documents
-              .myOrganizationDocumentsWithSlug(org, slug)
-              .pipe(take(1))
-              .toPromise();
-            if (others?.length > 0 && proceed) {
-              proceed = false;
+			if (label && slug) {
+				event.state.liturgy.label = label;
+				event.state.liturgy.slug = slug;
 
-              const alert = await this.alert.create({
-                header: this.translate.instant("bulletins.conflict-found"),
-                message: this.translate.instant(
-                  "bulletins.conflict-found-message"
-                ),
-                buttons: [
-                  {
-                    text: this.translate.instant("editor.cancel"),
-                    role: "cancel",
-                    cssClass: "secondary",
-                  },
-                  {
-                    text: this.translate.instant("bulletins.ok"),
-                    handler: async () => {
-                      liturgy.slug = slug;
-                      console.log("slug is now ", liturgy.slug);
+				// deduplicate slug
+				if (proceed && slug) {
+					const others = org
+						? await this.documents
+								.myOrganizationDocumentsWithSlug(org, slug)
+								.pipe(take(1))
+								.toPromise()
+						: [];
+					if (others?.length > 0 && proceed) {
+						proceed = false;
 
-                      await Promise.all(
-                        others.map(async (other) => {
-                          console.log("renaming ", other.id);
-                          return this.documents
-                            .saveDocument(other.id, {
-                              ...other.data,
-                              slug: `${other.data.slug || "bulletin"}-${
-                                other.data.day?.date || "template"
-                              }`,
-                            })
-                            .toPromise();
-                        })
-                      );
+						const alert = await this.alert.create({
+							header: this.translate.instant("bulletins.conflict-found"),
+							message: this.translate.instant(
+								"bulletins.conflict-found-message",
+							),
+							buttons: [
+								{
+									text: this.translate.instant("editor.cancel"),
+									role: "cancel",
+									cssClass: "secondary",
+								},
+								{
+									text: this.translate.instant("bulletins.ok"),
+									handler: async () => {
+										liturgy.slug = slug;
+										console.log("slug is now ", liturgy.slug);
 
-                      console.log(
-                        "navigating, with hope that window.history.state = ",
-                        event.state
-                      );
-                      console.log(event.commands, event.state);
-                      if (event.commands.length === 8) {
-                        event.commands.push("{}");
-                      }
-                      this.router.navigate(
-                        event.commands.concat([
-                          event.state.liturgy.slug,
-                          event.state.liturgy.label,
-                        ]),
-                        {
-                          state: event.state,
-                          skipLocationChange: true,
-                        }
-                      );
-                      this.dismiss();
-                    },
-                  },
-                ],
-              });
+										await Promise.all(
+											others.map(async (other) => {
+												console.log("renaming ", other.id);
+												return this.documents
+													.saveDocument(other.id, {
+														...other.data,
+														slug: `${other.data.slug || "bulletin"}-${
+															other.data.day?.date || "template"
+														}`,
+													})
+													.toPromise();
+											}),
+										);
 
-              await alert.present();
-            }
-          }
-        } else {
-          proceed = false;
-        }
-      }
+										console.log(
+											"navigating, with hope that window.history.state = ",
+											event.state,
+										);
+										console.log(event.commands, event.state);
+										if (event.commands.length === 8) {
+											event.commands.push("{}");
+										}
+										this.router.navigate(
+											event.commands.concat([
+												event.state.liturgy.slug,
+												event.state.liturgy.label,
+											]),
+											{
+												state: event.state,
+												skipLocationChange: true,
+											},
+										);
+										this.dismiss();
+									},
+								},
+							],
+						});
 
-      // navigate to the newly-created bulletin
-      if (proceed) {
-        console.log("commands = ", event.commands);
-        // if it all default preferences are selected, add {} so the slug/label don't cause it to hang
-        if (event.commands.length === 8) {
-          event.commands.push("{}");
-        }
+						await alert.present();
+					}
+				}
+			} else {
+				proceed = false;
+			}
 
-        this.router.navigate(
-          event.commands.concat([
-            event.state.liturgy.slug,
-            event.state.liturgy.label,
-          ]),
-          {
-            state: event.state,
-            skipLocationChange: true,
-          }
-        );
-        this.dismiss();
-      }
-    });
-  }
+			// navigate to the newly-created bulletin
+			if (proceed) {
+				console.log("commands = ", event.commands);
+				// if it all default preferences are selected, add {} so the slug/label don't cause it to hang
+				if (event.commands.length === 8) {
+					event.commands.push("{}");
+				}
+
+				this.router.navigate(
+					event.commands.concat([
+						event.state.liturgy.slug,
+						event.state.liturgy.label,
+					]),
+					{
+						state: event.state,
+						skipLocationChange: true,
+					},
+				);
+				this.dismiss();
+			}
+		});
+	}
 }
