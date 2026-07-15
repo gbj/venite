@@ -109,25 +109,27 @@ export class CreateDocumentButtonComponent implements OnInit {
         uid,
         template.slug || slugify(template.label)
       ),
-    ]).subscribe(async ([orgs, slug]) => {
-      const docId = await this.documents.newDocument(
-        new LiturgicalDocument({
-          ...template,
-          slug,
-          sharing: new Sharing({
-            owner: userProfile.uid,
-            organization: orgs[0]?.slug,
-            collaborators: [],
-            status: "draft",
-            privacy: "organization",
-          }),
-        })
-      );
+    ])
+      .pipe(take(1)) // create exactly one document
+      .subscribe(async ([orgs, slug]) => {
+        const docId = await this.documents.newDocument(
+          new LiturgicalDocument({
+            ...template,
+            slug,
+            sharing: new Sharing({
+              owner: userProfile.uid,
+              organization: orgs[0]?.slug,
+              collaborators: [],
+              status: "draft",
+              privacy: "organization",
+            }),
+          })
+        );
 
-      this.loading.dismiss();
+        this.loading.dismiss();
 
-      this.newDoc.emit(docId);
-    });
+        this.newDoc.emit(docId);
+      });
   }
 
   uniqueSlugify(org: string, uid: string, s: string): Observable<string> {

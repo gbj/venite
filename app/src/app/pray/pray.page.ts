@@ -985,10 +985,7 @@ export class PrayPage implements OnInit, OnDestroy {
       combineLatest([this.userProfile$, this.userOrgs$])
         .pipe(
           filter(([userProfile, orgs]) => Boolean(userProfile && orgs)),
-          takeWhile(
-            ([userProfile, orgs]) => Boolean(userProfile && orgs?.length > 0),
-            true
-          ),
+          take(1), // create exactly one document
           switchMap(async ([userProfile, orgs]) =>
             this.documents.newDocument(
               new LiturgicalDocument({
@@ -1009,6 +1006,8 @@ export class PrayPage implements OnInit, OnDestroy {
           )
         )
         .subscribe((docId) => {
+          doc.id = docId;
+          this.latestDoc = doc;
           loading.dismiss();
           this.editBulletin(docId);
         });

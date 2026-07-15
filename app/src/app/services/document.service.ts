@@ -830,43 +830,41 @@ export class DocumentService {
 		docId: string,
 		doc: Partial<DTO<LiturgicalDocument>>,
 	): Observable<any> {
-		/*return from(
-      this.afs.doc(`Document/${docId}`).set({
-        ...JSON.parse(
-          JSON.stringify({ ...doc, slug: doc.slug || this.slugify(doc) })
-        ),
-        date_modified: firebase.firestore.Timestamp.now(),
-      })
-    );*/
-		this.auth
-			.currentUser()
-			.getIdToken()
-			.then((token) => {
-				fetch(
-					`https://us-central1-venite-2.cloudfunctions.net/saveDocument?id=${docId}`,
-					//`http://localhost:5002/venite-2/us-central1/saveDocument?id=${docId}`,
-					{
-						method: "POST",
-						body: JSON.stringify({
-							...doc,
-							slug: doc.slug || this.slugify(doc),
-						}),
-						headers: {
-							"Content-type": "application/json",
-							Authorization: `Bearer ${token}`,
-						},
+		// the request is started eagerly, so callers that ignore the returned
+		// observable still save; subscribers (and `toPromise()`) additionally get
+		// to await the result and see failures
+		const request = (async () => {
+			const token = await this.auth.currentUser().getIdToken();
+			const response = await fetch(
+				`https://us-central1-venite-2.cloudfunctions.net/saveDocument?id=${docId}`,
+				//`http://localhost:5002/venite-2/us-central1/saveDocument?id=${docId}`,
+				{
+					method: "POST",
+					body: JSON.stringify({
+						...doc,
+						slug: doc.slug || this.slugify(doc),
+					}),
+					headers: {
+						"Content-type": "application/json",
+						Authorization: `Bearer ${token}`,
 					},
+				},
+			);
+			if (!response.ok) {
+				throw new Error(
+					`Failed to save document ${docId}: ${
+						response.status
+					} ${await response.text()}`,
 				);
-			});
-		return of(null);
-		/*return from(
-      this.afs.doc(`Document/${docId}`).set({
-        ...JSON.parse(
-          JSON.stringify({ ...doc, slug: doc.slug || this.slugify(doc) })
-        ),
-        date_modified: firebase.firestore.Timestamp.now(),
-      })
-    );*/
+			}
+			return response;
+		})();
+
+		// callers that ignore the observable would otherwise raise an unhandled
+		// rejection; subscribers still receive the error through `from()` below
+		request.catch((error) => console.warn(error));
+
+		return from(request);
 	}
 
 	deleteDocument(docId: string) {

@@ -32,7 +32,9 @@ export const saveDocument = functions.https.onRequest(
           await db.collection("Users").doc(uid).get()
         ).data();
         return (
-          uid == org?.owner || uid in org?.editors || orgId in userProfile?.orgs
+          uid == org?.owner ||
+          (org?.editors || []).includes(uid) ||
+          (userProfile?.orgs || []).includes(orgId)
         );
       } else {
         return false;
@@ -70,15 +72,20 @@ export const saveDocument = functions.https.onRequest(
               // permission check -- TODO allow all users
               const data = doc.data();
 
-              if (
-                data &&
-                (uid === data.sharing?.owner ||
-                  (data.sharing?.collaborators || []).includes(uid) ||
-                  (data?.sharing?.organization &&
-                    userInOrg(uid, data.sharing.organization)))
-              ) {
+              const hasPermission =
+                Boolean(data) &&
+                (uid === data?.sharing?.owner ||
+                  (data?.sharing?.collaborators || []).includes(uid) ||
+                  (Boolean(data?.sharing?.organization) &&
+                    (await userInOrg(uid, data?.sharing?.organization))));
+
+              if (hasPermission) {
                 await ref.set({
                   ...request.body,
+                  id: docId,
+                  ...(data?.date_created
+                    ? { date_created: data.date_created }
+                    : {}),
                   date_modified: admin.firestore.Timestamp.now(),
                 });
                 response.status(200).send("Updated document");
