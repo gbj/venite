@@ -84,5 +84,3 @@ export async function loadScore(url: string): Promise<string[]> {
 		.map((path) => (path ? `${baseUrl.origin}${path}` : ""))
 		.filter((url) => url);
 }
-
-loadText("https://hymnary.org/hymn/EH1982/58?media=text").then(console.log).catch(console.error);
