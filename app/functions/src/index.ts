@@ -168,12 +168,12 @@ export const hymnText = functions.https.onRequest(async (request, response) => {
 
   if (url) {
     try {
-      const text = await loadText(url);
+      const text = await loadText(decodeURI(url));
       if (text?.length > 0) {
-        response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
+        //response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
         response.status(200).send(text);
       } else {
-        response.status(404).send(`Text at '${URL}' not found.`);
+        response.status(404).send(`Text at '${url}' not found.`);
       }
     } catch (e) {
       response.status(400).send(e.toString());
@@ -191,7 +191,7 @@ export const hymnImages = functions.https.onRequest(
 
     if (url) {
       try {
-        const urls = await loadScore(url);
+        const urls = await loadScore(decodeURI(url));
         if (urls?.length > 0) {
           response.set("Cache-Control", "public, max-age=2592000"); // allow caching for 2,592,000 seconds = 30 days
           response.status(200).send(urls);
