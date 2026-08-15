@@ -352,6 +352,7 @@ export class SpeechService {
         ...(doc.label ? [doc.label] : []),
         ...(includeAntiphon ? antiphonNode(obj?.metadata?.antiphon) : []),
         ...(filteredValue || doc.value)
+          .filter((section) => (section?.value?.length ?? 0) > 0)
           .map((section) => [
             ...(section.label ? headingNode(section.label, 4, false) : []),
             ...section.value
