@@ -10,5 +10,5 @@
 </figure>
 <form class="visually-hidden">
   <label for="newAvatar">{{'edit-avatar-tooltip' | translate}}</label>
-  <input #newAvatarInput type="file" (change)="handleFiles($event)" name="newAvatar" id="newAvatar"/>
+  <input #newAvatarInput type="file" accept="image/*" (change)="handleFiles($event)" name="newAvatar" id="newAvatar"/>
 </form>
