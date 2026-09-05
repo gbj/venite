@@ -310,8 +310,22 @@ export class DocumentService {
 				]);
 			}
 		} else {
-			this.findDocumentsBySlug("gloria-patri", language, versions);
+			return this.findDocumentsBySlug("gloria-patri", language, versions);
 		}
+	}
+
+	/** Attaches the appropriate Gloria Patri to any psalms nested in `doc`
+	 * (the same treatment `findDocumentsBySlug` gives documents it loads).
+	 * Used for liturgies that arrive via router state and so never pass through
+	 * `findDocumentsBySlug` — e.g., liturgies with inlined psalm text. */
+	addGloria(
+		doc: LiturgicalDocument,
+		language: string = "en",
+		versions: string[] = [],
+	): Observable<LiturgicalDocument> {
+		return this.findGloria(language, versions || []).pipe(
+			map((gloria) => addGloriaToDoc(doc, gloria || [])),
+		);
 	}
 
 	findDocumentsBySlug(
@@ -916,7 +930,9 @@ export class DocumentService {
 }
 
 function addGloriaToDoc(doc, gloria) {
-	if (doc.type === "psalm") {
+	if (doc.type === "psalm" && doc.metadata?.gloria) {
+		return doc;
+	} else if (doc.type === "psalm") {
 		console.log(
 			"addGloriaToDoc",
 			gloria.map((o) => o.version),
