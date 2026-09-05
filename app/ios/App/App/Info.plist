@@ -53,6 +53,10 @@
 	<string>background</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+    <string>Venite uses the camera only if you choose “Take Photo” when setting your profile picture, and never at any other time.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Venite uses the microphone only if you choose “Take Video” when setting your profile picture, since recording a video also records its sound. Venite never records audio at any other time.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
