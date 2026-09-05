@@ -49,6 +49,7 @@ import {
   DisplaySettings,
   SelectableCitation,
   docsToLiturgy,
+  versionToString,
 } from "@venite/ldf";
 import {
   ActionSheetController,
@@ -552,26 +553,36 @@ export class PrayPage implements OnInit, OnDestroy {
           ])
           .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
 
-        return this.prayService
-          .compile(
-            state.liturgy,
-            state.day || state.liturgy?.day,
-            { ...basePrefs, ...state.prefs, ...bulletinPrefs },
-            state.liturgy?.metadata?.liturgyversions || [
-              state.liturgy?.version,
-            ],
-            state.liturgy?.metadata?.preferences
-          )
-          .pipe(
-            map(
-              (doc) =>
-                new LiturgicalDocument({
-                  ...doc,
-                  //@ts-ignore
-                  selected_prefs: doc.selected_prefs || state.prefs,
-                })
+        // A liturgy passed via router state (e.g., from the home menu) hasn't been
+        // through `findDocumentsBySlug`, so any psalms with inlined text will lack
+        // their Gloria Patri. Attach it here so both paths behave the same.
+        const liturgyWithGloria$ = this.documents.addGloria(
+          state.liturgy,
+          state.liturgy?.language || "en",
+          [versionToString(state.liturgy?.version)].filter((v) => Boolean(v))
+        );
+
+        return liturgyWithGloria$.pipe(
+          switchMap((liturgy) =>
+            this.prayService.compile(
+              liturgy,
+              state.day || state.liturgy?.day,
+              { ...basePrefs, ...state.prefs, ...bulletinPrefs },
+              state.liturgy?.metadata?.liturgyversions || [
+                state.liturgy?.version,
+              ],
+              state.liturgy?.metadata?.preferences
             )
-          );
+          ),
+          map(
+            (doc) =>
+              new LiturgicalDocument({
+                ...doc,
+                //@ts-ignore
+                selected_prefs: doc.selected_prefs || state.prefs,
+              })
+          )
+        );
       }),
       shareReplay()
     );
