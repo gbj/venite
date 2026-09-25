@@ -120,6 +120,31 @@
 				"key": "psalterVersion",
 				"label": "Psalter Version"
 			},
+			"litany": {
+				"category": "Supplemental Devotions",
+				"key": "litany",
+				"label": "The Great Litany",
+				"options": [
+					{
+						"metadata": { "alternateYear": false },
+						"value": "no",
+						"label": "—",
+						"default": true
+					},
+					{
+						"value": "rite_i",
+						"default": false,
+						"label": "Rite I Litany Following the Collects",
+						"metadata": { "alternateYear": false }
+					},
+					{
+						"value": "eow",
+						"default": false,
+						"label": "EOW Litany Following the Collects",
+						"metadata": { "alternateYear": false }
+					}
+				]
+			},
 			"angelus": {
 				"key": "angelus",
 				"label": "Angelus",
@@ -2300,6 +2325,13 @@
 			"metadata": { "level": 3 }
 		},
 		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
 			"type": "rubric",
 			"value": [
 				"Here may be sung a hymn or anthem.",
@@ -2307,13 +2339,31 @@
 			],
 			"hidden": false
 		},
-		{ "type": "text", "hidden": false, "style": "authorized-prayers" },
+		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
+			"type": "text",
+			"hidden": false,
+			"style": "authorized-prayers"
+		},
 		{
 			"hidden": false,
 			"type": "meditation",
 			"metadata": { "length": 300, "delay": 0 }
 		},
 		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
 			"type": "rubric",
 			"hidden": false,
 			"value": [
@@ -2321,6 +2371,13 @@
 			]
 		},
 		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
 			"source": { "source": "bcp1979", "api": "", "citation": "p. 101" },
 			"metadata": {},
 			"category": [],
@@ -2339,13 +2396,31 @@
 			"value": [
 				"Almighty God, you have given us grace at this time with one accord to make our common supplication to you; and you have promised through your well-beloved Son that when two or three are gathered together in his Name you will be in the midst of them: Fulfill now, O Lord, our desires and petitions as may be best for us; granting us in this world knowledge of your truth, and in the age to come life everlasting."
 			],
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
 			"label": "A Prayer of St. Chrysostom",
 			"source": { "api": "", "source": "bcp1979", "citation": "p. 102" },
 			"hidden": false,
 			"type": "text",
 			"style": "prayer"
 		},
-		{ "value": ["Then may be said"], "type": "rubric", "hidden": false },
+		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
+			"value": ["Then may be said"],
+			"type": "rubric",
+			"hidden": false
+		},
 		{
 			"type": "responsive",
 			"style": "responsive",
@@ -2356,7 +2431,9 @@
 							"except": ["Easter", "Ascension", "Pentecost"],
 							"only": []
 						}
-					}
+					},
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
 				],
 				"mode": "and"
 			},
@@ -2387,12 +2464,21 @@
 							"except": [],
 							"only": ["Easter", "Ascension", "Pentecost"]
 						}
-					}
+					},
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
 				]
 			},
 			"style": "responsive"
 		},
 		{
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			},
 			"value": ["The Officiant may then conclude with one of the following"],
 			"type": "rubric",
 			"hidden": false
@@ -2402,7 +2488,48 @@
 			"lookup": { "type": "category", "rotate": true },
 			"category": ["Closing Sentence"],
 			"hidden": false,
-			"type": "bible-reading"
+			"type": "bible-reading",
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": false } },
+					{ "preference": { "key": "litany", "value": "eow", "is": false } }
+				]
+			}
+		},
+		{
+			"slug": "litany",
+			"type": "liturgy",
+			"hidden": false,
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "rite_i", "is": true } }
+				]
+			},
+			"category": [],
+			"version": "Rite-I",
+			"metadata": { "liturgyversions": [], "evening": false },
+			"lookup": { "type": "slug", "rotate": false },
+			"language": "en",
+			"label": "The Great Litany"
+		},
+		{
+			"slug": "litany",
+			"type": "liturgy",
+			"hidden": false,
+			"condition": {
+				"mode": "and",
+				"conditions": [
+					{ "preference": { "key": "litany", "value": "eow", "is": true } }
+				]
+			},
+			"category": [],
+			"version": "EOW",
+			"metadata": { "liturgyversions": [], "evening": false },
+			"lookup": { "type": "slug", "rotate": false },
+			"language": "en",
+			"label": "The Great Litany"
 		},
 		{
 			"type": "heading",
